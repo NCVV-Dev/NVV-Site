@@ -21,6 +21,7 @@ body[data-theme="nvv"] {
 	background-size: cover;
 	background-image: url(/media/background_parallax.png);
 	transition: 0.5s;
+	overflow-y: scroll;
 	/* MAIN PAGE */
 	--sidebarbg: #222222;
 	--sidebarbutton: #181b1b;
@@ -56,6 +57,7 @@ body[data-theme="ncl"] {
 	background-size: cover;
 	background-image: url(media/background_ncoriginal.jpg);
 	transition: 0.5s;
+	overflow-y: scroll;
 	--sidebarbg: #263340;
 	--sidebarbutton: #49779c;
 	--sidebarbuttonhover: #40C192;
@@ -87,7 +89,24 @@ h1 {
 	font-family: Major Mono Display;
 	text-align: center;
 	font-size: 40px;
-	margin-top: 100px;
+	margin-top: 30px;
+	opacity: 0;
+	animation-fill-mode: forwards;
+    animation-name: h1anim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 100ms;
+}
+/*		Header animation		*/
+@keyframes h1anim {
+	0% {
+		margin-top: 30px;
+		opacity: 0;
+	}
+	100% {
+		margin-top: 50px;
+		opacity: 1;
+	}
 }
 
 p {
@@ -95,9 +114,23 @@ p {
 	font-family: Major Mono Display;
 	text-align: center;
 	font-size: 18px;
-	margin-bottom: 50px;
+	opacity: 0;
+	animation-fill-mode: forwards;
+    animation-name: panim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 300ms;
 }
 
+/*		Animation added		*/
+@keyframes panim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
 /*     Button Style    */
 .button {
@@ -262,7 +295,7 @@ hidden {
 }
 
 
-/* End of visual cfg button */
+/*		End of visual cfg button		*/
 input[type=text] {
 	width: 27em;
 	padding: 12px 20px;
@@ -310,7 +343,7 @@ input[type=submit]:hover {
 }
 
 
-/*   LA/TOS information on upload page    */
+/*		LA/TOS information on upload page		*/
 .rules {
 	text-align: center;
 	margin-top: 30px;
@@ -325,7 +358,7 @@ input[type=submit]:hover {
 }
 
 
-/*    Success and fail pages (Needs rework)    */
+/*		Success and fail pages (Needs rework)		*/
 .success {
 	text-align: center;
 	margin-top: 30px;
@@ -382,10 +415,10 @@ input[type=submit]:hover {
 }
 
 
-/* Sidebar Panel */
+/*		Sidebar Panel		*/
 .sidebar {
 	position: fixed;
-	left: 0;
+	left: -80px;
 	top: 0;
 	height: 100%;
 	width: 78px;
@@ -394,7 +427,26 @@ input[type=submit]:hover {
 	transition: all 0.5s ease;
 	font-family: Coda;
 	z-index: 1;
+	animation-fill-mode: forwards;
+    animation-name: sidebarappear;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-delay: 400ms;
 }
+
+
+/*		Sidebar Animation		*/
+@keyframes sidebarappear {
+	0% {
+		left: -80px;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
+	}
+}
+
 
 .sidebar.open {
 	width: 250px;
@@ -590,6 +642,22 @@ h1 .headert {
 	font-size: 22px;
 	white-space: pre-line;
 	line-height: 1.4;
+	opacity: 0;
+	animation-fill-mode: forwards;
+    animation-name: tostextanim;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-delay: 100ms;
+}
+
+/*		Text Content Animation of LA/TOS Page		*/
+@keyframes tostextanim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .textcont a {
@@ -685,10 +753,27 @@ h1 .headert {
 }
 
 .cfg__title {
+	position: relative;
 	font-weight: 800;
 	color: var(--tostextcolor);
 	font-size: 2.1rem;
 	margin-bottom: 0.4rem;
+	opacity: 0;
+	animation-fill-mode: forwards;
+    animation-name: cfgtitleanim;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-delay: 300ms;
+}
+
+/*		Title of Tab Animation		*/
+@keyframes cfgtitleanim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .cfg__subtitle {
@@ -709,6 +794,7 @@ h1 .headert {
 }
 
 .cfg__button {
+	position: relative;
 	display: inline-block;
 	background-color: var(--buttonbg);
 	color: var(--tostextcolor);
@@ -717,6 +803,24 @@ h1 .headert {
 	border-radius: 5px;
 	font-family: Roboto;
 	transition: 0.5s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+    animation-name: cfgbuttonanim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 350ms;
+}
+
+/*		Download Button Animation		*/
+@keyframes cfgbuttonanim {
+	0% {
+		top: 10px;
+		opacity: 0;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
 }
 
 .cfg__button:hover {
