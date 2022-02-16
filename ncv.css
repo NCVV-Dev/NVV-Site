@@ -2,6 +2,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+* {
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body[data-theme="nvv"] {
 	font-family: Verdana;
 	text-align: center;
@@ -94,18 +99,7 @@ p {
 }
 
 
-/*     Sub menus
-
-a, a:hover{
-  text-decoration: none;
-  color:var(--linkhover);
-  transition-duration: 0.5s;
-}
-*/
-
-
 /*     Button Style    */
-
 .button {
 	background-color: var(--buttonbg);
 	border: none;
@@ -151,7 +145,7 @@ a, a:hover{
 }
 
 
-/*    Preloader    */
+/*   Loading icon with waving animation    */
 
 #status {
 	z-index: 95;
@@ -181,6 +175,8 @@ a, a:hover{
 	}
 }
 
+
+/*    Progress line (width increases by js)    */
 #progress {
 	position: fixed !important;
 	z-index: 95 !important;
@@ -188,7 +184,6 @@ a, a:hover{
 	background: #0F9696;
 	position: absolute;
 	width: 0;
-	/* will be increased by JS */
 	bottom: 99.65%;
 	transition: 1s 0.4s;
 	-webkit-box-shadow: 0 0 20px #0F9696;
@@ -220,15 +215,13 @@ a, a:hover{
 
 
 /*    All the contect but not the side panel.    */
-
 .cont {
 	position: relative;
 	margin-left: 78px;
 }
 
 
-/* Visual Config Upload Page */
-
+/*	Visual Config Upload Page	*/
 .contentform {
 	margin-top: 30px;
 	text-align: center;
@@ -256,7 +249,6 @@ a, a:hover{
 
 
 /* Upload visual cfg button */
-
 input[type=file] {
 	visibility: hidden;
 	display: none;
@@ -271,7 +263,6 @@ hidden {
 
 
 /* End of visual cfg button */
-
 input[type=text] {
 	width: 27em;
 	padding: 12px 20px;
@@ -319,8 +310,7 @@ input[type=submit]:hover {
 }
 
 
-/*   LA/TOS information on upload page.    */
-
+/*   LA/TOS information on upload page    */
 .rules {
 	text-align: center;
 	margin-top: 30px;
@@ -335,8 +325,7 @@ input[type=submit]:hover {
 }
 
 
-/*    Success and fail pages.    */
-
+/*    Success and fail pages (Needs rework)    */
 .success {
 	text-align: center;
 	margin-top: 30px;
@@ -393,13 +382,7 @@ input[type=submit]:hover {
 }
 
 
-/* SIDENAV */
-
-* {
-	padding: 0;
-	box-sizing: border-box;
-}
-
+/* Sidebar Panel */
 .sidebar {
 	position: fixed;
 	left: 0;
@@ -569,7 +552,7 @@ input[type=submit]:hover {
 }
 
 
-/*    LA/TOS CSS    */
+/*    LA/TOS Page CSS    */
 
 h1 .headert {
 	color: white;
@@ -660,7 +643,7 @@ h1 .headert {
 }
 
 
-/* NEW CFG TABS (NEEDS POLISHING) */
+/*	Visual config tabs	*/
 
 .cfg {
 	width: 90%;
@@ -749,8 +732,7 @@ h1 .headert {
 }
 
 
-/*    Text on the end of the cfg page.    */
-
+/*    Text on the end of the cfg page    */
 .endtabstext {
 	margin: 50px;
 	font-family: Bebas Neue;
@@ -759,8 +741,7 @@ h1 .headert {
 }
 
 
-/*    Icon for scrolling to the top    */
-
+/*    Icon for scrolling to the top (Needs rework)    */
 .scrolltotopicon {
 	position: fixed;
 	bottom: 30px;
@@ -787,7 +768,6 @@ h1 .headert {
 
 
 /*    Numbers of pages in the end of cfgs.    */
-
 .pages {
 	position: relative;
 	margin-bottom: 50px;
@@ -826,7 +806,6 @@ h1 .headert {
 
 
 /*  Fancy hat. Happy New Year 2022! :) */
-
 .crhat {
 	position: relative;
 	width: 140px;
@@ -843,8 +822,7 @@ h1 .headert {
 }
 
 
-/* Mods Page */
-
+/* Mods Page CSS */
 .column {
 	position: relative;
 	float: left;
@@ -936,7 +914,7 @@ h1 .headert {
 }
 
 
-/* Flexible columns */
+/*		Flexible columns		*/
 
 @media screen and (max-width: 604px) {
 	.column {
@@ -1047,7 +1025,7 @@ h1 .headert {
 }
 
 
-/* Suggest Modal and Overlay */
+/*		Suggest Modal and Overlay		*/
 
 #modal__overlay {
 	display: none;
@@ -1155,8 +1133,7 @@ h1 .headert {
 }
 
 
-/* Announcement */
-
+/*		Announcement		*/
 .announcement {
 	position: sticky;
 	height: 60px;
@@ -1182,7 +1159,7 @@ h1 .headert {
 }
 
 
-/* Reworking all links (and text styles) */
+/*		Reworked link styles and types		*/
 
 .default__link {
 	text-decoration: none;
@@ -1257,7 +1234,7 @@ h1 .headert {
 }
 
 
-/* Trying to rework config tabs and make them flexible (BETA)
+/* Trying to rework config tabs and make them flexible
 
 @media screen and (max-width: 1240px){
   .cfg{
