@@ -1242,8 +1242,22 @@ h1 .headert {
 	position: sticky;
 	height: 60px;
 	background-color: var(--itemtabhovereffect);
-	border-radius: 5px;
 	overflow: hidden;
+	opacity: 0;
+	animation-fill-mode: forwards;
+    animation-name: announceanim;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
+}
+
+@keyframes announceanim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .announcement a {
@@ -1256,10 +1270,11 @@ h1 .headert {
 .announcement div {
 	position: relative;
 	font-family: Coda;
-	font-size: 22px;
+	font-size: 20px;
 	text-align: center;
 	top: 15px;
 	color: white;
+	letter-spacing: 1px;
 }
 
 
