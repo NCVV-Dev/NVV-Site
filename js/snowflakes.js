@@ -12,7 +12,7 @@
   var resetPosition = false;
 
   // Handle accessibility
-  var enableAnimations = false;
+  var enableAnimations = true;
   var reduceMotionQuery = matchMedia("(prefers-reduced-motion)");
 
   // Handle animation accessibility preferences 
