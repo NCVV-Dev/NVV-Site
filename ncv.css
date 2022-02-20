@@ -7,6 +7,12 @@ html {
 	box-sizing: border-box;
 }
 
+font{
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+}
+
 body[data-theme="nvv"] {
 	font-family: Verdana;
 	text-align: center;
@@ -77,11 +83,18 @@ body[data-theme="ncl"] {
 }
 
 @font-face {
-	font-family: "Audiowide", sans-serif;
-	font-family: "Bebas Neue", sans-serif;
-	font-family: "Coda", sans-serif;
+	font-family: 'Audiowide', sans-serif;
+	src: url(https://fonts.googleapis.com/css?family=Audiowide);
+	font-family: 'Bebas Neue', sans-serif;
+	src: url(https://fonts.googleapis.com/css?family=Bebas+Neue);
+	font-family: 'Coda', sans-serif;
+	src: url(https://fonts.googleapis.com/css?family=Coda);
 	font-family: 'Roboto', sans-serif;
+	src: url(https://fonts.googleapis.com/css?family=Roboto);
 	font-family: 'Major Mono Display', sans-serif;
+	src: url(https://fonts.googleapis.com/css?family=Major+Mono+Display);
+	font-family: 'Montserrat', sans-serif;
+	src: url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 }
 
 h1 {
@@ -141,7 +154,6 @@ p {
 	cursor: pointer;
 	transition: 0.7;
 	-webkit-transition: 0.7s;
-	-moz-transition: 0.7s;
 	-o-transition: 0.7;
 	width: 14em;
 	height: 3em;
@@ -220,7 +232,6 @@ p {
 	bottom: 99.65%;
 	transition: 1s 0.4s;
 	-webkit-box-shadow: 0 0 20px #0F9696;
-	-moz-box-shadow: 0 0 20px #0F9696;
 	box-shadow: 0 0 20px #0F9696;
 }
 
@@ -302,7 +313,6 @@ input[type=text] {
 	margin: 8px 0;
 	border: 1px solid var(--itemtaboutline);
 	-webkit-transition: 0.7s;
-	-moz-transition: 0.7s;
 	-o-transition: 0.7s;
 	transition: 0.7s;
 	outline: none;
@@ -325,7 +335,6 @@ input[type=submit] {
 	text-decoration: none;
 	cursor: pointer;
 	-webkit-transition: 0.7s;
-	-moz-transition: 0.7s;
 	-o-transition: 0.7s;
 	transition: 0.7s;
 	width: 14em;
@@ -712,7 +721,6 @@ h1 .headert {
 	margin: 50px 0px 50px 80px;
 	border: 1px solid var(--itemtaboutline);
 	border-radius: 15px;
-	-moz-border-radius: 15px;
 	transition-duration: 1s;
 	overflow: hidden;
 }
@@ -735,7 +743,6 @@ h1 .headert {
 	max-width: 600px;
 	max-height: 600px;
 	border-radius: 15px;
-	-moz-border-radius: 15px;
 }
 
 .cfg__content {
@@ -782,7 +789,7 @@ h1 .headert {
 	line-height: 1.8;
 	color: var(--tostextcolor);
 	margin-bottom: 3.125rem;
-	font-family: Coda;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .cfg__button {
@@ -899,24 +906,6 @@ h1 .headert {
 .a:hover {
 	background-color: var(--buttonhover) !important;
 }
-
-
-/*  Fancy hat. Happy New Year 2022! :) */
-.crhat {
-	position: relative;
-	width: 140px;
-	height: 140px;
-	background-image: url(/media/crhat.png);
-	background-size: 140px;
-	background-repeat: no-repeat;
-	left: 25px;
-	top: 100px;
-	-webkit-transform: rotate(-20deg);
-	-moz-transform: rotate(-20deg);
-	-o-transform: rotate(-20deg);
-	transform: rotate(-20deg);
-}
-
 
 /* Mods Page CSS */
 .column {
