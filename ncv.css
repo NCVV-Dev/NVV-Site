@@ -1279,7 +1279,6 @@ h1 .headert {
 
 
 /*		Reworked link styles and types		*/
-
 .default__link {
 	text-decoration: none;
 	color: var(--tostextcolor);
@@ -1335,7 +1334,7 @@ h1 .headert {
 }
 
 .contributor35 {
-	background-image: linear-gradient( -225deg, #5c40c4 0%, #44107a 100%, );
+	background-image: linear-gradient( -225deg, #18bbbb 0%, #3f3f3f 100%);
 	background-size: auto auto;
 	background-clip: border-box;
 	background-size: 200% auto;
@@ -1352,6 +1351,69 @@ h1 .headert {
 	}
 }
 
+.contributor45 {
+	color: #39727279;
+	animation: contr45anim 2s ease-in-out infinite;
+}
+
+@keyframes contr45anim {
+	0% {
+		color: #39727279;
+	}
+	13% {
+		color: #42f7b4;
+	}
+	100% {
+		color: #39727279;
+	}
+}
+
+.contributor50 i{
+	position: relative;
+	top: 3px;
+	font-size: 25px;
+}
+
+.contributor60 {
+	color: #fff;
+	text-shadow: 0 0 7px #ffffff;
+}
+
+.contributor70{
+	background: radial-gradient(#ff109b, #8c48fa);
+	background-clip: border-box;
+	text-shadow: 0px 0px 5px rgb(255 255 255 / 61%), -1px -1px 1px rgb(255 255 255 / 61%), 1px 0px 5px rgb(204 0 255), 0px -2px 1px rgba(234, 46, 255, 0), 1px 0px 5px rgb(211 37 255), 0px -2px 1px rgb(255 255 255), 0px 1px 1px rgb(166 0 248 / 56%), -1px 3px 1px rgb(166 0 248 / 33%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.contributor80{
+	background: linear-gradient(180deg, #ff36a5 0%, #4d8bff 100%, #ffe657);
+	text-shadow: 1px 0px 5px rgb(204 0 255), 1px 0px 5px rgb(211 37 255);
+    background-clip: border-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.contributor100 {
+	text-shadow: 2px 2px 4px #FF0000;
+	background: radial-gradient(circle, #ff8001 01%, #ff0b56 63%, #d50007 77%);
+	  background-clip: border-box;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+
+}
+
+.contributor100 i{
+	position: relative;
+	top: 2px;
+}
+
+.contributor50 {
+	color: #f5ff6a;
+}
 
 /* Trying to rework config tabs and make them flexible
 
