@@ -9,9 +9,11 @@ btn.onclick = function() {
   $("#modal__overlay").slideToggle(500);
 }
 
-nofound.onclick = function() {
-  $("#upl__modal").slideToggle(500);
-  $("#modal__overlay").slideToggle(500);
+if (window.location.pathname == '/mods/') {
+  nofound.onclick = function() {
+    $("#upl__modal").slideToggle(500);
+    $("#modal__overlay").slideToggle(500);
+  }
 }
 
 span.onclick = function() {
