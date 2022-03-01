@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
     <title>Null Core Visuals Vault</title>
     <meta charset="UTF-8">
     <meta property="og:type" content="website">
@@ -18,361 +17,395 @@
     <link rel="icon" href="/media/ncc.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
-</head>
-
-<body data-theme="nvv">
+  </head>
+  <body data-theme="nvv">
     <div id="modal__overlay"></div>
     <div id="snowflakeContainer">
-        <span class="snowflake"></span>
+      <span class="snowflake"></span>
     </div>
     <div id="status"></div>
     <div id="progress"></div>
     <div class="announcement">
-        <div>Say #nowar to slavic brothers!</div>
+      <div>Say #nowar to slavic brothers!</div>
     </div>
     <div class="cont">
-        <div id="upl__modal" class="upl__modal">
-            <div class="modal__content">
-              <div class="modal__header">
-                <span class="close" id="closei">&times;</span>
-                <h2>Upload visual config</h2>
-              </div>
-              <div class="modal__body">
-                <form class="contentform__mod" action="upload.php" method="post" enctype="multipart/form-data" >
-                    <button class="button" id="uploadTrigger">Select File</button>
-                    <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
-                    <h2>Enter your nickname</h2><input type="text" name="textName" id="authorName" method="get" autocomplete="off" required>
-                    <h2>Enter your Steam/Telegram profile</h2><input type="text" name="textSteam" id="authorSteam" method="get" autocomplete="off" required>
-                    <h2>Enter your config description</h2><input type="text" name="textDesc" id="cfgDesc" method="get" autocomplete="off" required>
-                    <input type="submit" value="Upload NCVP" name="submit">
-                </form>
-              </div>
-            </div>
+      <div id="upl__modal" class="upl__modal">
+        <div class="modal__content">
+          <div class="modal__header">
+            <span class="close" id="closei">&times;</span>
+            <h2>Upload visual config</h2>
+          </div>
+          <div class="modal__body">
+            <form class="contentform__mod" action="upload.php" method="post" enctype="multipart/form-data">
+              <button class="button" id="uploadTrigger">Select File</button>
+              <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
+              <h2>Enter your nickname</h2>
+              <input type="text" name="textName" id="authorName" autocomplete="off" required>
+              <h2>Enter your Steam/Telegram profile</h2>
+              <input type="text" name="textSteam" id="authorSteam" autocomplete="off" required>
+              <h2>Enter your config description</h2>
+              <input type="text" name="textDesc" id="cfgDesc" autocomplete="off" required>
+              <input type="submit" value="Upload NCVP" name="submit">
+            </form>
+          </div>
         </div>
-        <h1>null core visuals vault</h1>
-        <p>all your null core visual configs in one place.</p>
-        <br>
-        <div class="sidebar">
-            <div class="logo-details">
-                <div class="logo_name">NVV</div>
-                <i class='bx bx-menu' id="btn"></i>
-            </div>
-            <ul class="nav-list">
-                <li>
-                    <a href="/mods/">
-                        <i class='bx bxs-dashboard'></i>
-                        <span class="links_name">Go to Mods</span>
-                    </a>
-                    <span class="tooltip">Go to Mods</span>
-                </li>
-                <li id="openmodal">
-                    <a style="cursor: pointer;">
-                     <i class='bx bx-import'></i>
-                      <span class="links_name">Upload Visuals</span>
-                    </a>
-                    <span class="tooltip">Upload Visuals</span>
-                </li>
-                <li>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/archive/refs/heads/main.zip">
-                        <i class='bx bxs-download'></i>
-                        <span class="links_name">Download Master</span>
-                    </a>
-                    <span class="tooltip">Download all configs from github</span>
-                </li>
-                <li>
-                    <a href="/tos/">
-                        <i class='bx bxs-book'></i>
-                        <span class="links_name">LA/TOS</span>
-                    </a>
-                    <span class="tooltip">LA/TOS and FAQ</span>
-                </li>
-                <li>
-                    <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
-                        <i class='bx bx-brush'></i>
-                        <span class="links_name">Switch Theme</span>
-                    </a>
-                    <span class="tooltip">Switch Theme</span>
-                </li>
-                <li>
-                    <a href="https://github.com/harmonyzt/NVV-Site/issues/new" target="_blank">
-                        <i class='bx bxs-message-error' ></i>
-                        <span class="links_name">Report Issues</span>
-                    </a>
-                    <span class="tooltip">Found a bug? Broken link? Mismatched images? Report here</span>
-                </li>
-                <li>
-                    <a href="https://paypal.me/nvvdev" target="_blank">
-                        <i class='bx bxl-paypal'></i>
-                        <span class="links_name">Donate</span>
-                    </a>
-                    <span class="tooltip">Buy me a coffee!</span>
-                </li>
-                <li>
-                    <a id="dynamicst"></a>
-                </li>
-            </ul>
+      </div>
+      <h1>null core visuals vault</h1>
+      <p>all your null core visual configs in one place.</p>
+      <br>
+      <div class="sidebar">
+        <div class="logo-details">
+          <div class="logo_name">NVV</div>
+          <i class='bx bx-menu' id="btn"></i>
         </div>
-        <div class="cfgrow">
-            <div class="cfg">
-                <div class="cfg__img-container"><img src="/media/menus/fatalitymenu.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Fatality Theme <span style="color: cyan; font-size: 20px;">[Featured!]</span></h2>
-                    <p class="cfg__subtitle">Uploader: <a class="default__link" href="https://steamcommunity.com/profiles/76561198303076440" target="_blank">HeXz</a> // Uploaded: April 6 2021. </p>
-                    <p class="cfg__desc">Sick looking fatality-styled menu. In-game visuals are close to defaults with some changes.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Anime-Styled.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/mfed.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Dark-Blue <span style="color: cyan; font-size: 20px;">[Featured!]</span></h2>
-                    <p class="cfg__subtitle">Author: <a class="default__link" href="http://steamcommunity.com/profiles/76561198388506317" target="_blank">M-FeD</a> // Uploaded: December 15 2021. </p>
-                    <p class="cfg__desc">Blue-Dark'ish visual config. Includes skybox for better experience.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/mfedy.ncvp?raw=true" class="cfg__button">Download</a> <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Skybox_M-FeD.7z?raw=true" class="cfg__button" style="background-image: url('/media/skybox_mfedy.png');">Download skybox</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/flowh.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Floowhooks <span style="color: cyan; font-size: 20px;">[Featured!]</span></h2>
-                    <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: April 4 2021. </p>
-                    <p class="cfg__desc">Floowhook visuals.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/flowhooks2.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/eye.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">EYE <span style="color: cyan; font-size: 20px;">[Featured!]</span></h2>
-                    <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: July 7 2021. </p>
-                    <p class="cfg__desc">Dark-purple theme with some gold and red colors.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/EYE.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/elited.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Elite Dangerous <span style="color: cyan; font-size: 20px;">[Featured!]</span></h2>
-                    <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: April 7 2021. </p>
-                    <p class="cfg__desc">Good looking visual config and unique colorscheme.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Elite%20Dangerous%20(fixed%20spy).ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/rijin.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Rijin Theme <span style="color: cyan; font-size: 20px;">[Featured!]</span></h2>
-                    <p class="cfg__subtitle">Author: <a class="default__link" href="https://steamcommunity.com/profiles/76561199079659947" target="_blank">TwoTrick</a> // Uploaded: November 20 2021. </p>
-                    <p class="cfg__desc">Clean rijin-styled visuals.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/rijin.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/blackpink.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Black-Pink</h2>
-                    <p class="cfg__subtitle">Author: <span class="default__link">CardinalA</span> // Uploaded: April 6 2021. </p>
-                    <p class="cfg__desc">Pretty nice visual config for casual playing. Includes skybox for better experience.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/ByCardinalA.ncvp?raw=true" class="cfg__button">Download</a> <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/skybox.rar?raw=true" class="cfg__button" style="background-image: url('/media/sky177rt.png');">Download skybox</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/V952.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Classic</h2>
-                    <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 7 2021. </p>
-                    <p class="cfg__desc">Default visual config.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/V952.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/hfps.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">High Perfomance</h2>
-                    <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 4 2021. </p>
-                    <p class="cfg__desc">High-Perfomance visual config. No WM, viewmodel modulation. Has a slight fps boost.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/HFPS.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/greenbyheart.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Green Theme</h2>
-                    <p class="cfg__subtitle">Author: <a class="default__link" href="http://steamcommunity.com/profiles/76561198866772113" target="_blank">Heart</a> // Uploaded: April 4 2021. </p>
-                    <p class="cfg__desc">Green-Themed visual config.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Green%20by%20heart.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/krw.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Simplified Pink Theme</h2>
-                    <p class="cfg__subtitle">Author: <a class="contributor" href="http://steamcommunity.com/profiles/76561198258919721 " target="_blank">krawi</a> // Uploaded: May 23 2021. </p>
-                    <p class="cfg__desc">Pink outlines only with transparent radar.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/krawis.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/hrm.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Purple Insanity</h2>
-                    <p class="cfg__subtitle">Author: <a class="default__link" href="https://t.me/harmony_zt" target="_blank">harmony</a> // Uploaded: May 23 2021. </p>
-                    <p class="cfg__desc">Purple'ish color scheme.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/hrm.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/menus/gsmenu.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">GameSense Theme</h2>
-                    <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 6 2021. </p>
-                    <p class="cfg__desc">GameSense menu colorscheme, render groups and ESP in general are optimized for fps.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/gs.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/purplebyheart.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Purple Theme</h2>
-                    <p class="cfg__subtitle">Author: <a class="default__link" href="http://steamcommunity.com/profiles/76561198866772113" target="_blank">Heart</a> // Uploaded: April 4 2021. </p>
-                    <p class="cfg__desc">Just a purple version of visuals from previous "Green Theme".</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/gs.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/menus/awmenu.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Aimware Theme</h2>
-                    <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 4 2021. </p>
-                    <p class="cfg__desc">Aimware-styled visuals.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/aimware.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/menus/redpinkmenu.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Red-Pink</h2>
-                    <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 4 2021. </p>
-                    <p class="cfg__desc">Quite nice visual config with retro-styled pink menu.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Red-Pink.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/gamma.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Gamma</h2>
-                    <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 5 2021. </p>
-                    <p class="cfg__desc">Simplified standart visual config.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Gamma.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/coldblue.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Cold Blue</h2>
-                    <p class="cfg__subtitle">Author: <a class="default__link" href="http://steamcommunity.com/profiles/76561198388506317" target="_blank">M-FeD</a> // Uploaded: April 5 2021. </p>
-                    <p class="cfg__desc">Very comfy visual config with ESP turned off for playing legit.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/NoESP%20Cold%20Blue.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/redwhite.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">White-Red</h2>
-                    <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 5 2021. </p>
-                    <p class="cfg__desc">White-pink in-game visuals with red-styled menu.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Red%20White.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/menus/templeosmenu.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Temple OS Theme</h2>
-                    <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 5 2021. </p>
-                    <p class="cfg__desc">Tribute to Terry Davis.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/TempleOS.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/greenthemebyc.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Temple OS Theme</h2>
-                    <p class="cfg__subtitle">Author: <span class="default__link">Cyanide</span> // Uploaded: April 5 2021. </p>
-                    <p class="cfg__desc">Pretty good loking visuals.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Green%20Theme%20by%20Cyanide.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media_optimized/anime.jpg" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Anime Style</h2>
-                    <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 5 2021. </p>
-                    <p class="cfg__desc">Somehow it is related to anime. Looks like it. But it's quite good.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Anime-Styled.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/kali.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">Kali Linux Theme</h2>
-                    <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: May 23 2021. </p>
-                    <p class="cfg__desc">Kali Linux color scheme.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/kali.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
-
-            <div class="cfg" style="margin-top: 50px;">
-                <div class="cfg__img-container"><img src="/media/egh.png" alt=""></div>
-                <div class="cfg__content">
-                    <h2 class="cfg__title">EGH</h2>
-                    <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: May 7 2021. </p>
-                    <p class="cfg__desc">Become unstoppable.</p>
-                    <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/EGH.ncvp?raw=true" class="cfg__button">Download</a>
-                </div>
-            </div>
+        <ul class="nav-list">
+          <li>
+            <a href="/mods/">
+              <i class='bx bxs-dashboard'></i>
+              <span class="links_name">Go to Mods</span>
+            </a>
+            <span class="tooltip">Go to Mods</span>
+          </li>
+          <li id="openmodal">
+            <a style="cursor: pointer;">
+              <i class='bx bx-import'></i>
+              <span class="links_name">Upload Visuals</span>
+            </a>
+            <span class="tooltip">Upload Visuals</span>
+          </li>
+          <li>
+            <a href="https://github.com/harmonyzt/NullcoreVault/archive/refs/heads/main.zip">
+              <i class='bx bxs-download'></i>
+              <span class="links_name">Download Master</span>
+            </a>
+            <span class="tooltip">Download all configs from github</span>
+          </li>
+          <li>
+            <a href="/tos/">
+              <i class='bx bxs-book'></i>
+              <span class="links_name">LA/TOS</span>
+            </a>
+            <span class="tooltip">LA/TOS and FAQ</span>
+          </li>
+          <li>
+            <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
+              <i class='bx bx-brush'></i>
+              <span class="links_name">Switch Theme</span>
+            </a>
+            <span class="tooltip">Switch Theme</span>
+          </li>
+          <li>
+            <a href="https://github.com/harmonyzt/NVV-Site/issues/new" target="_blank">
+              <i class='bx bxs-message-error'></i>
+              <span class="links_name">Report Issues</span>
+            </a>
+            <span class="tooltip">Found a bug? Broken link? Mismatched images? Report here</span>
+          </li>
+          <li>
+            <a href="https://paypal.me/nvvdev" target="_blank">
+              <i class='bx bxl-paypal'></i>
+              <span class="links_name">Donate</span>
+            </a>
+            <span class="tooltip">Buy me a coffee!</span>
+          </li>
+          <li>
+            <a id="dynamicst"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="cfgrow">
+        <div class="cfg">
+          <div class="cfg__img-container">
+            <img src="/media/menus/fatalitymenu.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Fatality Theme <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            </h2>
+            <p class="cfg__subtitle">Uploader: <a class="default__link" href="https://steamcommunity.com/profiles/76561198303076440" target="_blank">HeXz</a> // Uploaded: April 6 2021. </p>
+            <p class="cfg__desc">Sick looking fatality-styled menu. In-game visuals are close to defaults with some changes.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Anime-Styled.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
         </div>
-        <div class="endtabstext">Looks like you're all caught up... Or are you?</div>
-        <!--<i class='bx bxs-up-arrow' id="scrolltotoparrow" onclick='window.scrollTo({top: 0, behavior: "smooth"});'></i>
-        <div class="scrolltotopicon" onclick='window.scrollTo({top: 0, behavior: "smooth"});'></div>-->
-        <div class="pages">
-            <a class="pagebtn active">1</a>
-            <a class="pagebtn nostylelink" href="/2/">2</a>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/mfed.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Dark-Blue <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            </h2>
+            <p class="cfg__subtitle">Author: <a class="default__link" href="http://steamcommunity.com/profiles/76561198388506317" target="_blank">M-FeD</a> // Uploaded: December 15 2021. </p>
+            <p class="cfg__desc">Blue-Dark'ish visual config. Includes skybox for better experience.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/mfedy.ncvp?raw=true" class="cfg__button">Download</a>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Skybox_M-FeD.7z?raw=true" class="cfg__button" style="background-image: url('/media/skybox_mfedy.png');">Download skybox</a>
+          </div>
         </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/flowh.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Floowhooks <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            </h2>
+            <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: April 4 2021. </p>
+            <p class="cfg__desc">Floowhook visuals.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/flowhooks2.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/eye.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">EYE <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            </h2>
+            <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: July 7 2021. </p>
+            <p class="cfg__desc">Dark-purple theme with some gold and red colors.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/EYE.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/elited.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Elite Dangerous <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            </h2>
+            <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: April 7 2021. </p>
+            <p class="cfg__desc">Good looking visual config and unique colorscheme.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Elite%20Dangerous%20(fixed%20spy).ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/rijin.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Rijin Theme <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            </h2>
+            <p class="cfg__subtitle">Author: <a class="default__link" href="https://steamcommunity.com/profiles/76561199079659947" target="_blank">TwoTrick</a> // Uploaded: November 20 2021. </p>
+            <p class="cfg__desc">Clean rijin-styled visuals.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/rijin.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/blackpink.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Black-Pink</h2>
+            <p class="cfg__subtitle">Author: <span class="default__link">CardinalA</span> // Uploaded: April 6 2021. </p>
+            <p class="cfg__desc">Pretty nice visual config for casual playing. Includes skybox for better experience.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/ByCardinalA.ncvp?raw=true" class="cfg__button">Download</a>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/skybox.rar?raw=true" class="cfg__button" style="background-image: url('/media/sky177rt.png');">Download skybox</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/V952.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Classic</h2>
+            <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 7 2021. </p>
+            <p class="cfg__desc">Default visual config.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/V952.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/hfps.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">High Perfomance</h2>
+            <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 4 2021. </p>
+            <p class="cfg__desc">High-Perfomance visual config. No WM, viewmodel modulation. Has a slight fps boost.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/HFPS.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/greenbyheart.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Green Theme</h2>
+            <p class="cfg__subtitle">Author: <a class="default__link" href="http://steamcommunity.com/profiles/76561198866772113" target="_blank">Heart</a> // Uploaded: April 4 2021. </p>
+            <p class="cfg__desc">Green-Themed visual config.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Green%20by%20heart.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/krw.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Simplified Pink Theme</h2>
+            <p class="cfg__subtitle">Author: <a class="contributor" href="http://steamcommunity.com/profiles/76561198258919721 " target="_blank">krawi</a> // Uploaded: May 23 2021. </p>
+            <p class="cfg__desc">Pink outlines only with transparent radar.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/krawis.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/hrm.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Purple Insanity</h2>
+            <p class="cfg__subtitle">Author: <a class="default__link" href="https://t.me/harmony_zt" target="_blank">harmony</a> // Uploaded: May 23 2021. </p>
+            <p class="cfg__desc">Purple'ish color scheme.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/hrm.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/menus/gsmenu.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">GameSense Theme</h2>
+            <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 6 2021. </p>
+            <p class="cfg__desc">GameSense menu colorscheme, render groups and ESP in general are optimized for fps.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/gs.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/purplebyheart.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Purple Theme</h2>
+            <p class="cfg__subtitle">Author: <a class="default__link" href="http://steamcommunity.com/profiles/76561198866772113" target="_blank">Heart</a> // Uploaded: April 4 2021. </p>
+            <p class="cfg__desc">Just a purple version of visuals from previous "Green Theme".</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/gs.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/menus/awmenu.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Aimware Theme</h2>
+            <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 4 2021. </p>
+            <p class="cfg__desc">Aimware-styled visuals.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/aimware.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/menus/redpinkmenu.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Red-Pink</h2>
+            <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 4 2021. </p>
+            <p class="cfg__desc">Quite nice visual config with retro-styled pink menu.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Red-Pink.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/gamma.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Gamma</h2>
+            <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 5 2021. </p>
+            <p class="cfg__desc">Simplified standart visual config.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Gamma.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/coldblue.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Cold Blue</h2>
+            <p class="cfg__subtitle">Author: <a class="default__link" href="http://steamcommunity.com/profiles/76561198388506317" target="_blank">M-FeD</a> // Uploaded: April 5 2021. </p>
+            <p class="cfg__desc">Very comfy visual config with ESP turned off for playing legit.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/NoESP%20Cold%20Blue.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/redwhite.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">White-Red</h2>
+            <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 5 2021. </p>
+            <p class="cfg__desc">White-pink in-game visuals with red-styled menu.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Red%20White.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/menus/templeosmenu.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Temple OS Theme</h2>
+            <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 5 2021. </p>
+            <p class="cfg__desc">Tribute to Terry Davis.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/TempleOS.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/greenthemebyc.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Temple OS Theme</h2>
+            <p class="cfg__subtitle">Author: <span class="default__link">Cyanide</span> // Uploaded: April 5 2021. </p>
+            <p class="cfg__desc">Pretty good loking visuals.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Green%20Theme%20by%20Cyanide.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media_optimized/anime.jpg" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Anime Style</h2>
+            <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: April 5 2021. </p>
+            <p class="cfg__desc">Somehow it is related to anime. Looks like it. But it's quite good.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Anime-Styled.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/kali.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">Kali Linux Theme</h2>
+            <p class="cfg__subtitle">Uploader: <span class="default__link">Admin</span> // Uploaded: May 23 2021. </p>
+            <p class="cfg__desc">Kali Linux color scheme.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/kali.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+        <div class="cfg" style="margin-top: 50px;">
+          <div class="cfg__img-container">
+            <img src="/media/egh.png" alt="">
+          </div>
+          <div class="cfg__content">
+            <h2 class="cfg__title">EGH</h2>
+            <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: May 7 2021. </p>
+            <p class="cfg__desc">Become unstoppable.</p>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/EGH.ncvp?raw=true" class="cfg__button">Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="endtabstext">Looks like you're all caught up... Or are you?</div>
+      <!--<i class='bx bxs-up-arrow' id="scrolltotoparrow" onclick='window.scrollTo({top: 0, behavior: "smooth"});'></i><div class="scrolltotopicon" onclick='window.scrollTo({top: 0, behavior: "smooth"});'></div>-->
+      <div class="pages">
+        <a class="pagebtn active">1</a>
+        <a class="pagebtn nostylelink" href="/2/">2</a>
+      </div>
     </div>
-</body>
-<script src="/js/loaderfunc.js"></script>
-<script src="/js/sidemenufunc.js"></script>
-<script src="/js/snowflakes.js"></script>
-<script src="/js/themecookies.js"></script>
-<script src="/js/modalfunc.js"></script>
-<script src="/js/dynamicstatus.js"></script>
-<script src="/js/uploadtrigger.js"></script>
+    <script src="/js/loaderfunc.js"></script>
+    <script src="/js/sidemenufunc.js"></script>
+    <script src="/js/snowflakes.js"></script>
+    <script src="/js/themecookies.js"></script>
+    <script src="/js/modalfunc.js"></script>
+    <script src="/js/dynamicstatus.js"></script>
+    <script src="/js/uploadtrigger.js"></script>
+  </body>
 </html>
