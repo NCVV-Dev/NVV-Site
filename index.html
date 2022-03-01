@@ -18,6 +18,7 @@
     <link rel="icon" href="/media/ncc.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
@@ -26,6 +27,7 @@
 </head>
 
 <body data-theme="nvv">
+    <div id="modal__overlay"></div>
     <div id="snowflakeContainer">
         <span class="snowflake"></span>
     </div>
@@ -35,6 +37,24 @@
         <div>Say #nowar to slavic brothers!</div>
       </div>
     <div class="cont">
+        <div id="upl__modal" class="upl__modal">
+            <div class="modal__content">
+              <div class="modal__header">
+                <span class="close" id="closei">&times;</span>
+                <h2>Upload visual config</h2>
+              </div>
+              <div class="modal__body">
+                <form class="contentform__mod" action="upload.php" method="post" enctype="multipart/form-data" >
+                    <button class="button" id="uploadTrigger">Select File</button>
+                    <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
+                    <h2>Enter your nickname</h2><input type="text" name="textName" id="authorName" method="get" autocomplete="off" required>
+                    <h2>Enter your Steam/Telegram profile</h2><input type="text" name="textSteam" id="authorSteam" method="get" autocomplete="off" required>
+                    <h2>Enter your config description</h2><input type="text" name="textDesc" id="cfgDesc" method="get" autocomplete="off" required>
+                    <input type="submit" value="Upload NCVP" name="submit">
+                </form>
+              </div>
+            </div>
+        </div>
         <h1>null core visuals vault</h1>
         <p>all your null core visual configs in one place.</p>
         <br>
@@ -51,13 +71,13 @@
                     </a>
                     <span class="tooltip">Go to Mods</span>
                 </li>
-                <li>
-                    <a href="/upl/">
-                        <i class='bx bx-import'></i>
-                        <span class="links_name">Upload Visuals</span>
+                <li id="openmodal">
+                    <a style="cursor: pointer;">
+                     <i class='bx bx-import'></i>
+                      <span class="links_name">Upload Visuals</span>
                     </a>
                     <span class="tooltip">Upload Visuals</span>
-                </li>
+                  </li>
                 <li>
                     <a href="https://github.com/harmonyzt/NullcoreVault/archive/refs/heads/main.zip">
                         <i class='bx bxs-download'></i>
@@ -352,6 +372,7 @@
 <script src="/js/sidemenufunc.js"></script>
 <script src="/js/snowflakes.js"></script>
 <script src="/js/themecookies.js"></script>
+<script src="/js/modalfunc.js"></script>
 <script src="/js/dynamicstatus.js"></script>
-
+<script src="/js/uploadtrigger.js"></script>
 </html>
