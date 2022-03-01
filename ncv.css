@@ -1224,6 +1224,7 @@ h1 .headert {
 	height: 60px;
 	background-color: var(--itemtabhovereffect);
 	overflow: hidden;
+	margin-left: 78px;
 	opacity: 0;
 	animation-fill-mode: forwards;
     animation-name: announceanim;
@@ -1273,15 +1274,16 @@ h1 .headert {
 
 .other__clickablelink {
 	text-decoration: none;
-	color: var(--linkhover)
+	color: var(--linkhover);
+}
+
+.other__clickablelink:hover {
+	color: var(--linkhover);
+	cursor:pointer;
 }
 
 .nostylelink {
 	text-decoration: none;
-}
-
-.other__clickablelink:hover {
-	color: var(--linkhover)
 }
 
 .contributor {
