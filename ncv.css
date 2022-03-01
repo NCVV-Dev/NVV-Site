@@ -825,7 +825,7 @@ h1 .headert {
 
 .cfg__button:hover {
 	background-color: var(--buttonhover);
-	color: var(--tostextcolor);
+	color: white;
 }
 
 .cfg__upl {
@@ -960,7 +960,7 @@ h1 .headert {
 
 .down_button:hover {
 	background-color: var(--buttonhover);
-	color: var(--tostextcolor);
+	color: white;
 }
 
 .column__content {
