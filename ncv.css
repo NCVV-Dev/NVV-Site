@@ -162,6 +162,7 @@ p {
 	z-index: 1;
 	margin: 3px;
 	border-radius: 5px;
+	margin-top: 30px;
 }
 
 .button:hover {
@@ -1264,6 +1265,7 @@ h1 .headert {
 .default__link {
 	text-decoration: none;
 	color: var(--tostextcolor);
+	transition: 0.5s;
 }
 
 .default__link:hover {
@@ -1274,11 +1276,11 @@ h1 .headert {
 
 .other__clickablelink {
 	text-decoration: none;
-	color: var(--linkhover);
+	color:#a2fff0 !important;
+	transition: 0.5s;
 }
 
 .other__clickablelink:hover {
-	color: var(--linkhover);
 	cursor:pointer;
 }
 
