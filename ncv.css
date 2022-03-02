@@ -999,6 +999,11 @@ h1 .headert {
 	transition: 1s ease-in-out;
 }
 
+.mod__sectiontext{
+	position: relative;
+	margin-top: 30px;
+	font-size: 30px;
+}
 
 /*		Flexible columns		*/
 
