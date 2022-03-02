@@ -10,7 +10,7 @@ function search() {
         }
         else {
             x[i].style.display="inline";  
-            isMatch = true;               
+            isMatch = true;
         }
     }
     $block.toggle(!isMatch);
