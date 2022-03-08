@@ -428,7 +428,7 @@ input[type=submit]:hover {
 /*		Sidebar Panel		*/
 .sidebar {
 	position: fixed;
-	left: -80px;
+	left: 0;
 	top: 0;
 	height: 100%;
 	width: 78px;
@@ -438,7 +438,6 @@ input[type=submit]:hover {
 	font-family: Coda;
 	z-index: 1;
 }
-
 
 .sidebar.open {
 	width: 250px;
