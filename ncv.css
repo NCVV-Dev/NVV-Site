@@ -786,11 +786,11 @@ h1 .headert {
 }
 
 .cfg__desc {
-	font-size: 1.2rem;
+	font-size: 23px;
 	line-height: 1.8;
 	color: var(--tostextcolor);
 	margin-bottom: 3.125rem;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Open Sans",sans-serif;
 }
 
 .cfg__button {
