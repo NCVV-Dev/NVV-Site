@@ -437,24 +437,6 @@ input[type=submit]:hover {
 	transition: all 0.5s ease;
 	font-family: Coda;
 	z-index: 1;
-	animation-fill-mode: forwards;
-    animation-name: sidebarappear;
-    animation-duration: 0.7s;
-    animation-iteration-count: 1;
-    animation-delay: 400ms;
-}
-
-
-/*		Sidebar Animation		*/
-@keyframes sidebarappear {
-	0% {
-		left: -80px;
-		opacity: 0;
-	}
-	100% {
-		left: 0;
-		opacity: 1;
-	}
 }
 
 
