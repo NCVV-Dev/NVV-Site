@@ -25,28 +25,31 @@ body[data-theme="nvv"] {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(/media/background_parallax.png);
+	background-image: linear-gradient(to right bottom, #2a2531, #2e2a38, #32303e, #363545, #393b4c, #3c4052, #3e4658, #414b5e, #445165, #47586c, #495e72, #4c6579);
 	transition: 0.5s;
 	overflow-y: scroll;
 	/* MAIN PAGE */
-	--sidebarbg: #222222;
-	--sidebarbutton: #181b1b;
+	--sidebarbg: #3D4355;
+		--sidebargradient:#4C6579;
+	--sidebarbutton: #526d83;
 	--sidebarbuttonhover: #12a5a5;
 	--headercolor: #ffffff;
 	--pcolor: #ffffff;
 	--generaltextcolor: #ffffff;
-	--itemtabcolor: #3f3f3f;
-	--itemtaboutline: #333;
+	--itemtabcolor: #3D4355;
+	--itemtaboutline: #4C6579;
 	--itemtabhover: #0F9696;
-	--itemtabhovereffect: #565656;
+	--itemtabhovereffect: #526d83;
 	--linkhover: #8defef;
-	--buttonbg: #272727;
-	--buttonhover: #12a5a5;
-	--tabcontents: #333333;
+	--buttonbg: #526d83;
+	--buttonhover: #5a8999;
+	--tabcontents: #3D4355;
+	--announcement: #4c6579;
 	/* LA/TOS THEME */
 	--tostextcolor: rgb(255, 255, 255);
 	--answertextcolor: #70eaea;
 	--questiontextcolor: white;
+	--tosqm: #cc8041;
 }
 
 body[data-theme="ncl"] {
@@ -65,6 +68,7 @@ body[data-theme="ncl"] {
 	transition: 0.5s;
 	overflow-y: scroll;
 	--sidebarbg: #263340;
+		--sidebargradient:#2f4152;
 	--sidebarbutton: #49779c;
 	--sidebarbuttonhover: #40C192;
 	--headercolor: #ffffff;
@@ -78,22 +82,26 @@ body[data-theme="ncl"] {
 	--buttonbg: #436c8e;
 	--buttonhover: #40C192;
 	--tabcontents: #233342;
+	--announcement: #335673;
+	/* LA/TOS THEME */
 	--tostextcolor: #c7c7c7;
+	--answertextcolor: #70eaea;
+	--questiontextcolor: white;
 	--tosqm: #cc8041;
 }
 
 @font-face {
-	font-family: 'Audiowide', sans-serif;
+	font-family: 'Audiowide' sans-serif;
 	src: url(https://fonts.googleapis.com/css?family=Audiowide);
-	font-family: 'Bebas Neue', sans-serif;
+	font-family: 'Bebas Neue' sans-serif;
 	src: url(https://fonts.googleapis.com/css?family=Bebas+Neue);
-	font-family: 'Coda', sans-serif;
+	font-family: 'Coda' sans-serif;
 	src: url(https://fonts.googleapis.com/css?family=Coda);
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto' sans-serif;
 	src: url(https://fonts.googleapis.com/css?family=Roboto);
-	font-family: 'Major Mono Display', sans-serif;
+	font-family: 'Major Mono Display' sans-serif;
 	src: url(https://fonts.googleapis.com/css?family=Major+Mono+Display);
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat' sans-serif;
 	src: url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 }
 
@@ -166,7 +174,7 @@ p {
 }
 
 .button:hover {
-	box-shadow: inset 14em 0 0 0 var(--sidebarbuttonhover);
+	box-shadow: inset 14em 0 0 0 var(--buttonhover);
 }
 
 
@@ -309,7 +317,7 @@ hidden {
 
 /*		End of visual cfg button		*/
 input[type=text] {
-	width: 27em;
+	width: 20em;
 	padding: 12px 20px;
 	margin: 8px 0;
 	border: 1px solid var(--itemtaboutline);
@@ -319,13 +327,14 @@ input[type=text] {
 	outline: none;
 	background-color: var(--tabcontents);
 	color: white;
-	font-family: Coda;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	letter-spacing: 2px;
 	border-radius: 5px;
+	font-size: 18px;
 }
 
 input[type=text]:focus {
-	border: 1px solid #0F9696;
+	border: 1px solid var(--buttonhover);
 	background-color: var(--tabcontents);
 }
 
@@ -432,7 +441,7 @@ input[type=submit]:hover {
 	top: 0;
 	height: 100%;
 	width: 78px;
-	background: var(--sidebarbg);
+	background-image: linear-gradient(to bottom, var(--sidebarbg),var(--sidebargradient));
 	padding: 6px 14px;
 	transition: all 0.5s ease;
 	font-family: Coda;
@@ -540,12 +549,13 @@ input[type=submit]:hover {
 	border-radius: 12px;
 	align-items: center;
 	text-decoration: none;
-	transition: all 0.4s ease;
-	background: var(--sidebarbutton);
+	transition: all 0.5s ease-in-out;
+	background-color: var(--sidebarbutton);
 }
 
 .sidebar li a:hover {
-	background: #12a5a5;
+	transition: all 0.5s ease-in-out;
+	background: var(--buttonhover);
 }
 
 .sidebar li a .links_name {
@@ -555,7 +565,7 @@ input[type=submit]:hover {
 	white-space: nowrap;
 	opacity: 0;
 	pointer-events: none;
-	transition: 0.4s;
+	transition: all 0.5s ease-in-out;
 }
 
 .sidebar.open li a .links_name {
@@ -699,7 +709,7 @@ h1 .headert {
 .cfg {
 	width: 90%;
 	display: flex;
-	background-color: var(--tabcontents);
+	background-color: var(--sidebarbg);
 	margin: 50px 0px 50px 80px;
 	border: 1px solid var(--itemtaboutline);
 	border-radius: 15px;
@@ -707,11 +717,6 @@ h1 .headert {
 	overflow: hidden;
 }
 
-.cfg:hover,
-.cfg:focus,
-.cfg:active {
-	box-shadow: 0px 0px 10px 0px var(--itemtabhovereffect);
-}
 
 .cfg__img-container {
 	flex-shrink: 0;
@@ -980,12 +985,6 @@ h1 .headert {
 	transition: 1s ease-in-out;
 }
 
-.mod__sectiontext{
-	position: relative;
-	margin-top: 30px;
-	font-size: 30px;
-}
-
 /*		Flexible columns		*/
 
 @media screen and (max-width: 604px) {
@@ -1209,7 +1208,7 @@ h1 .headert {
 .announcement {
 	position: sticky;
 	height: 60px;
-	background-color: var(--itemtabhovereffect);
+	background-color: var(--announcement);
 	overflow: hidden;
 	margin-left: 78px;
 }
@@ -1230,12 +1229,6 @@ h1 .headert {
 	font-family: Coda;
 	letter-spacing: 1px;
 	top: 15px;
-	background: #005BBB;
-	background: -webkit-linear-gradient(to top, #005BBB 50%, #FFD500 50%);
-	background: -moz-linear-gradient(to top, #005BBB 50%, #FFD500 50%);
-	background: linear-gradient(to top, #005BBB 50%, #FFD500 50%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
 
 /*		Reworked link styles and types		*/
