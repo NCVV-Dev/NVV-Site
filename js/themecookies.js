@@ -35,10 +35,10 @@ function switchtheme(){
 }
   
 if(getCookie("themebtn") == 'pressed'){
-      localStorage.setItem('data-theme', 'ncl');
-      document.body.setAttribute('data-theme', 'ncl');
-    } else {
       localStorage.setItem('data-theme', 'nvv');
       document.body.setAttribute('data-theme', 'nvv');
+    } else {
+      localStorage.setItem('data-theme', 'ncl');
+      document.body.setAttribute('data-theme', 'ncl');
 }
   
