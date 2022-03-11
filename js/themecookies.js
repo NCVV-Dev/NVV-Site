@@ -22,14 +22,13 @@ function getCookie(cname) {
 }
   
 function switchtheme(){
-    if(localStorage.getItem('data-theme') == 'nvv') {
-      document.body.setAttribute('data-theme', 'ncl');
-      localStorage.setItem('data-theme', 'ncl')
+    if(localStorage.getItem('data-theme') == 'ncl') {
+      document.body.setAttribute('data-theme', 'nvv');
+      localStorage.setItem('data-theme', 'nvv')
       setCookie("themebtn", "pressed", 365)
     } else {
-      document.body.setAttribute('data-theme', 'nvv');
-      localStorage.setItem('data-theme', 'nvv');
-      document.body.setAttribute('data-theme', 'nvv');
+      document.body.setAttribute('data-theme', 'ncl');
+      localStorage.setItem('data-theme', 'ncl');
       setCookie("themebtn", "notpressed", 365)
     }
 }
