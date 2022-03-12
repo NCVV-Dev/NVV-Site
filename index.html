@@ -24,7 +24,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body data-theme="ncl">
+  <body data-theme="nvv">
+    <div class="welcome_overlay">
+      <div class="welcome_header_container">
+        <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
+        <div class="welcome_header2">Dedicated site to the Null Core training software for TF2 and it's visual configs - upload your own, download and share your visual configs and mods with others right away!</div>
+        <div class="downbuttons">
+          <a class="welcbutton" onclick ="WelcomeButtonAction()">Start Exploring</a>
+          <a class="welcbutton" onclick ="WelcomeButtonRedirect()">Visit Mods Page</a>
+        </div>
+      </div>
+      <div class="welcome_imgcontainer">
+        <img src="/media/menus/animemenu.png">
+      </div>
+      <div class="welc_media">
+        <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site" target="_blank"><i class='bx bxl-github'></i></a>
+        <a class="welcbutton" href="https://t.me/ncvisualsvault" target="_blank"><i class='bx bxl-telegram'></i></a>
+      </div>
+    </div>
     <div id="modal__overlay"></div>
     <div id="snowflakeContainer">
       <span class="snowflake"></span>
@@ -108,13 +125,6 @@
             <span class="tooltip">Found a bug? Broken link? Mismatched images? Report here</span>
           </li>
           <li>
-            <a href="https://paypal.me/nvvdev" target="_blank">
-              <i class='bx bxl-paypal'></i>
-              <span class="links_name">Donate</span>
-            </a>
-            <span class="tooltip">Buy me a coffee!</span>
-          </li>
-          <li>
             <a id="dynamicst"></a>
           </li>
         </ul>
@@ -125,7 +135,7 @@
             <img src="/media/menus/fatalitymenu.png" alt="">
           </div>
           <div class="cfg__content">
-            <h2 class="cfg__title">Fatality Theme <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            <h2 class="cfg__title">Fatality Theme <span style="color: var(--featureditem); font-size: 20px;">[Featured!]</span>
             </h2>
             <p class="cfg__subtitle">Uploader: <a class="default__link" href="https://steamcommunity.com/profiles/76561198303076440" target="_blank">HeXz</a> // Uploaded: April 6 2021. </p>
             <p class="cfg__desc">Sick looking fatality-styled menu. In-game visuals are close to defaults with some changes.</p>
@@ -137,7 +147,7 @@
             <img src="/media_optimized/mfed.jpg" alt="">
           </div>
           <div class="cfg__content">
-            <h2 class="cfg__title">Dark-Blue <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            <h2 class="cfg__title">Dark-Blue <span style="color: var(--featureditem); font-size: 20px;">[Featured!]</span>
             </h2>
             <p class="cfg__subtitle">Author: <a class="default__link" href="http://steamcommunity.com/profiles/76561198388506317" target="_blank">M-FeD</a> // Uploaded: December 15 2021. </p>
             <p class="cfg__desc">Blue-Dark'ish visual config. Includes skybox for better experience.</p>
@@ -150,7 +160,7 @@
             <img src="/media/flowh.png" alt="">
           </div>
           <div class="cfg__content">
-            <h2 class="cfg__title">Floowhooks <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            <h2 class="cfg__title">Floowhooks <span style="color: var(--featureditem); font-size: 20px;">[Featured!]</span>
             </h2>
             <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: April 4 2021. </p>
             <p class="cfg__desc">Floowhook visuals.</p>
@@ -162,7 +172,7 @@
             <img src="/media/eye.png" alt="">
           </div>
           <div class="cfg__content">
-            <h2 class="cfg__title">EYE <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            <h2 class="cfg__title">EYE <span style="color: var(--featureditem); font-size: 20px;">[Featured!]</span>
             </h2>
             <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: July 7 2021. </p>
             <p class="cfg__desc">Dark-purple theme with some gold and red colors.</p>
@@ -174,7 +184,7 @@
             <img src="/media/elited.png" alt="">
           </div>
           <div class="cfg__content">
-            <h2 class="cfg__title">Elite Dangerous <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            <h2 class="cfg__title">Elite Dangerous <span style="color: var(--featureditem); font-size: 20px;">[Featured!]</span>
             </h2>
             <p class="cfg__subtitle">Uploader: <a class="contributor5" href="https://t.me/The_Cluster" target="_blank">Cluster</a> // Uploaded: April 7 2021. </p>
             <p class="cfg__desc">Good looking visual config and unique colorscheme.</p>
@@ -186,7 +196,7 @@
             <img src="/media/rijin.jpg" alt="">
           </div>
           <div class="cfg__content">
-            <h2 class="cfg__title">Rijin Theme <span style="color: cyan; font-size: 20px;">[Featured!]</span>
+            <h2 class="cfg__title">Rijin Theme <span style="color: var(--featureditem); font-size: 20px;">[Featured!]</span>
             </h2>
             <p class="cfg__subtitle">Author: <a class="default__link" href="https://steamcommunity.com/profiles/76561199079659947" target="_blank">TwoTrick</a> // Uploaded: November 20 2021. </p>
             <p class="cfg__desc">Clean rijin-styled visuals.</p>
@@ -354,9 +364,9 @@
           </div>
           <div class="cfg__content">
             <h2 class="cfg__title">Temple OS Theme</h2>
-            <p class="cfg__subtitle">Author: <span class="default__link">Cyanide</span> // Uploaded: April 5 2021. </p>
+            <p class="cfg__subtitle">Author: <span class="default__link">var(--featureditem)ide</span> // Uploaded: April 5 2021. </p>
             <p class="cfg__desc">Pretty good loking visuals.</p>
-            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Green%20Theme%20by%20Cyanide.ncvp?raw=true" class="cfg__button">Download</a>
+            <a href="https://github.com/harmonyzt/NullcoreVault/blob/main/Green%20Theme%20by%20var(--featureditem)ide.ncvp?raw=true" class="cfg__button">Download</a>
           </div>
         </div>
         <div class="cfg" style="margin-top: 50px;">
@@ -407,5 +417,6 @@
     <script src="/js/dynamicstatus.js"></script>
     <script src="/js/uploadtrigger.js"></script>
     <script src="/js/annc.js"></script>
+    <script src="/js/welcomepagefunc.js"></script>
   </body>
 </html>

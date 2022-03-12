@@ -24,7 +24,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
   </head>
-  <body data-theme="ncl">
+  <body data-theme="nvv">
+    <div class="welcome_overlay">
+      <div class="welcome_header_container">
+        <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
+        <div class="welcome_header2">Dedicated site to the Null Core training software for TF2 and it's visual configs - upload your own, download and share your visual configs and mods with others right away!</div>
+        <div class="downbuttons">
+          <a class="welcbutton" onclick ="WelcomeButtonAction()">Start Exploring</a>
+          <a class="welcbutton" onclick ="WelcomeButtonRedirect()">Visit Mods Page</a>
+        </div>
+      </div>
+      <div class="welcome_imgcontainer">
+        <img src="/media/menus/animemenu.png">
+      </div>
+      <div class="welc_media">
+        <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site" target="_blank"><i class='bx bxl-github'></i></a>
+        <a class="welcbutton" href="https://t.me/ncvisualsvault" target="_blank"><i class='bx bxl-telegram'></i></a>
+      </div>
+    </div>
     <div id="modal__overlay"></div>
     <div id="snowflakeContainer">
       <span class="snowflake"></span>
@@ -99,13 +116,6 @@
               <span class="links_name">Report Issues</span>
             </a>
             <span class="tooltip">Found a bug? Broken link? Not working mods? Report here</span>
-          </li>
-          <li>
-            <a href="https://paypal.me/nvvdev" target="_blank">
-              <i class='bx bxl-paypal'></i>
-              <span class="links_name">Donate</span>
-            </a>
-            <span class="tooltip">Buy me a coffee!</span>
           </li>
           <li>
             <a id="dynamicst"></a>
@@ -271,4 +281,5 @@
   <script src="/js/modalfunc.js"></script>
   <script src="/js/dynamicstatus.js"></script>
   <script src="/js/annc.js"></script>
+  <script src="/js/welcomepagefunc.js"></script>
 </html>
