@@ -25,31 +25,31 @@ body[data-theme="nvv"] {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: linear-gradient(to right bottom, #2a2531, #2e2a38, #32303e, #363545, #393b4c, #3c4052, #3e4658, #414b5e, #445165, #47586c, #495e72, #4c6579);
-	transition: 0.5s;
+	background: #21222c;
 	overflow-y: scroll;
 	/* MAIN PAGE */
-	--sidebarbg: #3D4355;
-		--sidebargradient:#4C6579;
-	--sidebarbutton: #526d83;
-	--sidebarbuttonhover: #12a5a5;
+	--sidebarbg: #15171b;
+	--sidebarbutton: rgba(149,128,255,0.7);
+	--sidebarbuttonhover: #ff80bf;
 	--headercolor: #ffffff;
 	--pcolor: #ffffff;
 	--generaltextcolor: #ffffff;
-	--itemtabcolor: #3D4355;
-	--itemtaboutline: #4C6579;
-	--itemtabhover: #0F9696;
-	--itemtabhovereffect: #526d83;
-	--linkhover: #8defef;
-	--buttonbg: #526d83;
-	--buttonhover: #5a8999;
-	--tabcontents: #3D4355;
-	--announcement: #4c6579;
+	--itemtabcolor: #414558;
+	--itemtaboutline: #6b66c0;
+	--itemtabhover: #353277;
+	--itemtabhovereffect: #6b66c0;
+	--linkhover: rgba(149,128,255,0.7);
+	--buttonbg: rgba(149,128,255,0.7);
+	--buttonhover: #ff80bf;
+	--tabcontents: rgba(171, 154, 255, 0.1);
+	--announcement: #414558;
+	--iconshield:#ff80bf;
+	--featureditem: #ff80bf;
 	/* LA/TOS THEME */
 	--tostextcolor: rgb(255, 255, 255);
-	--answertextcolor: #70eaea;
+	--answertextcolor: #80ffea;
 	--questiontextcolor: white;
-	--tosqm: #cc8041;
+	--tosqm: #ff9580;
 }
 
 body[data-theme="ncl"] {
@@ -68,7 +68,6 @@ body[data-theme="ncl"] {
 	transition: 0.5s;
 	overflow-y: scroll;
 	--sidebarbg: #263340;
-		--sidebargradient:#2f4152;
 	--sidebarbutton: #49779c;
 	--sidebarbuttonhover: #40C192;
 	--headercolor: #ffffff;
@@ -83,6 +82,8 @@ body[data-theme="ncl"] {
 	--buttonhover: #40C192;
 	--tabcontents: #233342;
 	--announcement: #335673;
+	--iconshield:#fff;
+	--featureditem:#18bbbb;
 	/* LA/TOS THEME */
 	--tostextcolor: #c7c7c7;
 	--answertextcolor: #70eaea;
@@ -91,17 +92,17 @@ body[data-theme="ncl"] {
 }
 
 @font-face {
-	font-family: 'Audiowide' sans-serif;
+	font-family: 'Audiowide';
 	src: url(https://fonts.googleapis.com/css?family=Audiowide);
-	font-family: 'Bebas Neue' sans-serif;
+	font-family: 'Bebas Neue';
 	src: url(https://fonts.googleapis.com/css?family=Bebas+Neue);
-	font-family: 'Coda' sans-serif;
+	font-family: 'Coda';
 	src: url(https://fonts.googleapis.com/css?family=Coda);
-	font-family: 'Roboto' sans-serif;
+	font-family: 'Roboto';
 	src: url(https://fonts.googleapis.com/css?family=Roboto);
-	font-family: 'Major Mono Display' sans-serif;
+	font-family: 'Major Mono Display';
 	src: url(https://fonts.googleapis.com/css?family=Major+Mono+Display);
-	font-family: 'Montserrat' sans-serif;
+	font-family: 'Montserrat';
 	src: url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 }
 
@@ -235,7 +236,7 @@ p {
 	position: fixed !important;
 	z-index: 95 !important;
 	height: 4px;
-	background: #0F9696;
+	background: var(--sidebarbuttonhover);
 	position: absolute;
 	width: 0;
 	bottom: 99.65%;
@@ -441,7 +442,7 @@ input[type=submit]:hover {
 	top: 0;
 	height: 100%;
 	width: 78px;
-	background-image: linear-gradient(to bottom, var(--sidebarbg),var(--sidebargradient));
+	background: var(--sidebarbg);
 	padding: 6px 14px;
 	transition: all 0.5s ease;
 	font-family: Coda;
@@ -549,13 +550,14 @@ input[type=submit]:hover {
 	border-radius: 12px;
 	align-items: center;
 	text-decoration: none;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.15s ease-in-out;
 	background-color: var(--sidebarbutton);
 }
 
 .sidebar li a:hover {
-	transition: all 0.5s ease-in-out;
-	background: var(--buttonhover);
+	transition: all 0.15s ease-in-out;
+	background: var(--sidebarbuttonhover);
+	transform: scale(1.1);
 }
 
 .sidebar li a .links_name {
@@ -709,7 +711,7 @@ h1 .headert {
 .cfg {
 	width: 90%;
 	display: flex;
-	background-color: var(--sidebarbg);
+	background-color: var(--itemtabcolor);
 	margin: 50px 0px 50px 80px;
 	border: 1px solid var(--itemtaboutline);
 	border-radius: 15px;
@@ -812,6 +814,7 @@ h1 .headert {
 .cfg__button:hover {
 	background-color: var(--buttonhover);
 	color: white;
+	transform: scale(1.1);
 }
 
 .cfg__upl {
@@ -947,6 +950,7 @@ h1 .headert {
 .down_button:hover {
 	background-color: var(--buttonhover);
 	color: white;
+	transform: scale(1.05);
 }
 
 .column__content {
@@ -1054,7 +1058,7 @@ h1 .headert {
 }
 
 .stat i {
-	color: var(--itemtabhover);
+	color: var(--iconshield);
 	font-size: 27px;
 	margin-top: 2px;
 }
@@ -1093,6 +1097,7 @@ h1 .headert {
 	color: var(--tostextcolor);
 	font-family: Roboto;
 	font-size: 16px;
+	text-decoration: none;
 }
 
 
@@ -1211,6 +1216,7 @@ h1 .headert {
 	background-color: var(--announcement);
 	overflow: hidden;
 	margin-left: 78px;
+	transition: all 1s;
 }
 
 .announcement a {
@@ -1379,8 +1385,254 @@ h1 .headert {
 	color: #f5ff6a;
 }
 
-/* Trying to rework config tabs and make them flexible
+/*		Welcome Page		*/
 
+.welcome_overlay{
+	z-index: 9999;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgb(13,18,22);
+	background: linear-gradient(152deg, rgba(13,18,22,1) 0%, rgba(16,16,40,1) 52%, rgba(34,25,45,1) 100%);
+	overflow: hidden;
+	transition: 0.7s all ease-in-out;
+}
+
+.welcome_header_container{
+	position: relative;
+	text-align: left;
+	top: 30%;
+    left: 10%;
+	width: 600px;
+	height: 400px;
+	transition: 0.5s;
+}
+
+.welcome_header{
+	position: relative;
+	font-family: "Open Sans",sans-serif;
+	font-size: 30px;
+	font-weight: 700;
+	color: white;
+	opacity: 0;
+	bottom: 15px;
+	animation-fill-mode: forwards;
+    animation-name: wcheaderanim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 100ms;
+}
+
+@keyframes wcheaderanim  {
+	0% {
+		opacity: 0;
+		bottom: 15px;
+	}
+	100% {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+
+.welcome_header2{
+	position: relative;
+	margin-top: 25px;
+	font-family: "Open Sans",sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	width: 530px;
+	color: #a7bfe9;
+	opacity: 0;
+	transition: all 0.5s;
+	bottom: 15px;
+	transition: all 0.5s;
+	animation-fill-mode: forwards;
+    animation-name: wcheaderanim2;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 200ms;
+}
+
+@keyframes wcheaderanim2  {
+	0% {
+		opacity: 0;
+		bottom: 15px;
+	}
+	100% {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+
+.welcome_imgcontainer {
+	position: absolute;
+	left: 60%;
+	top: 150px;
+	padding-top: 50px;
+	transition: all 0.3s ease-in-out;
+	height: 500px;
+}
+
+.welcome_imgcontainer img {
+	position: absolute;
+	pointer-events: none;
+	top: 15px;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+    animation-name: wcimganim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 300ms;
+}
+
+@keyframes wcimganim  {
+	0% {
+		opacity: 0;
+		top: 15px;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.downbuttons {
+	margin-top: 50px;
+	width: 150px;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+    animation-name: wchebtnanim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 400ms;
+}
+
+@keyframes wchebtnanim  {
+	0% {
+		opacity: 0;
+		top: 15px;
+	}
+	100% {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.welcbutton {
+	backface-visibility: hidden;
+	background: #332cf2;
+	border-radius: .375rem;
+	color: var(--tostextcolor);
+	cursor: pointer;
+	display: inline-block;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 18px;
+	padding: 12px;
+	position: relative;
+	text-align: center;
+	transform: translateZ(0) scale(1);
+	transition: transform .2s;
+	user-select: none;
+	-webkit-user-select: none;
+	margin-top: 10px;
+	width: 160px;
+}
+
+
+.welcbutton:hover {
+	transform: scale(1.05);
+	color: white;
+	transition: all 100ms ease-in-out;
+}
+
+.welcbutton:hover:active {
+	transform: scale(1.05) translateY(.125rem);
+}
+
+.welcbutton:focus {
+	outline: 0 solid transparent;
+}
+
+.welcbutton:focus:before {
+	border-width: .125rem;
+	content: "";
+	left: calc(-1*.375rem);
+	pointer-events: none;
+	position: absolute;
+	top: calc(-1*.375rem);
+	transition: border-radius;
+	user-select: none;
+}
+
+.welcbutton:focus:not(:focus-visible) {
+	outline: 0 solid transparent;
+}
+
+.welcbutton:active {
+	transform: translateY(.125rem);
+}
+
+.welc_media {
+	position: fixed;
+	bottom:92%;
+	margin-top: 15px;
+	left:15px;
+	opacity: 0;
+	animation-fill-mode: forwards;
+    animation-name: wcmediaanim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 400ms;
+}
+
+@keyframes wcmediaanim  {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.welc_media a{
+	width: 50px;
+}
+
+.welc_media i{
+	font-size: 25px;
+}
+
+.welc_media_text {
+	position: relative;
+	color: var(--tostextcolor);
+	font-family: "Open Sans",sans-serif;
+	font-size: 28px;
+	font-weight: 700;
+}
+
+@media screen and (max-width: 1240px){
+	.welcome_imgcontainer {
+		opacity: 0;
+	}
+
+	.welcome_header_container {
+		top: 30%;
+		left: 25%;
+	}
+
+	.downbuttons {
+		position: relative;
+		left: 30%;
+	  }
+
+	  .welcome_header2{
+		text-align: center;
+	}
+
+}
+/* Trying to rework config tabs and make them flexible
 @media screen and (max-width: 1240px){
   .cfg{
     position: relative;
