@@ -1396,6 +1396,7 @@ h1 .headert {
 	background: linear-gradient(152deg, rgba(13,18,22,1) 0%, rgba(16,16,40,1) 52%, rgba(34,25,45,1) 100%);
 	overflow: hidden;
 	transition: 0.7s all ease-in-out;
+	display: none;
 }
 
 .welcome_header_container{

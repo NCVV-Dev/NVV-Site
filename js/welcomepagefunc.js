@@ -3,6 +3,9 @@ const wlcoverlay = document.querySelector(".welcome_overlay");
 if(getCookie("FirstTime") != false){
     wlcoverlay.style.opacity = 0;
     wlcoverlay.style.display = "none";
+} else {
+  wlcoverlay.style.opacity = 1;
+  wlcoverlay.style.display = "block";
 };
 
 function WelcomeButtonAction() {
