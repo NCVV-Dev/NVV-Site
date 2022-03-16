@@ -1,21 +1,21 @@
 const wlcoverlay = document.querySelector(".welcome_overlay");
 
-if(getCookie("FirstTime") != false){
+if (getCookie("FirstTime") != false) {
     wlcoverlay.style.opacity = 0;
     wlcoverlay.style.display = "none";
 } else {
-  wlcoverlay.style.opacity = 1;
-  wlcoverlay.style.display = "block";
+    wlcoverlay.style.opacity = 1;
+    wlcoverlay.style.display = "block";
 };
 
 function WelcomeButtonAction() {
-    setTimeout(function(){ 
+    setTimeout(function() {
         wlcoverlay.style.opacity = 0;
         setCookie("FirstTime", "false", 365);
-      }, 500);
-      setTimeout(function(){ 
+    }, 500);
+    setTimeout(function() {
         wlcoverlay.style.display = "none";
-      }, 1100);
+    }, 1100);
 };
 
 function WelcomeButtonRedirect() {
