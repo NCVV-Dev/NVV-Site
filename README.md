@@ -20,4 +20,5 @@ This repository is **highly maintained**. That means every created issue and pul
 Some of the files will not appear in this repository such as **.php** files or some of downloadable content of mods page.
 
 ## Contributors
-- #### Be the first one!
+- #### Krawi - For pinpointing issues and providing feedback on updates
+- #### Eso - For pinpointing issues
