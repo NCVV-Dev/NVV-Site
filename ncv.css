@@ -193,33 +193,6 @@ html {
 	width: 10px;
 	height: 10px;
  }
- /* Loading icon with waving animation */
- #status {
-	z-index: 95;
-	position: fixed;
-	width: 50px;
-	height: 50px;
-	left: 95%;
-	text-align: center;
-	margin-top: 20px;
-	background-image: url(/media/ncc_c.png);
-	background-repeat: no-repeat;
-	background-size: 50px;
-	animation: ease-in-out infinite alternate;
-	animation-name: preloader-anim;
-	animation-duration: 0.3s;
-	filter: saturate(3);
-	-webkit-filter: saturate(3);
-	transition: 1s 0.4s;
- }
- @keyframes preloader-anim {
-	0% {
-	   top: 5px;
-	}
-	100% {
-	   top: 0;
-	}
- }
  /* Progress line (width increases by js) */
  #progress {
 	position: fixed !important;
@@ -230,8 +203,8 @@ html {
 	width: 0;
 	bottom: 99.65%;
 	transition: 1s 0.4s;
-	-webkit-box-shadow: 0 0 20px #0f9696;
-	box-shadow: 0 0 20px #0f9696;
+	-webkit-box-shadow: 0 0 20px var(--sidebarbuttonhover);;
+	box-shadow: 0 0 20px var(--sidebarbuttonhover);;
  }
  .buttonp {
 	background-color: var(--itemtabcolor);
