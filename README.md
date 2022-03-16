@@ -22,3 +22,4 @@ Some of the files will not appear in this repository such as **.php** files or s
 ## Contributors
 - #### Krawi - For pinpointing issues and providing feedback on updates
 - #### Eso - For pinpointing issues
+- #### Sinner - For pinpointing issues and providing feedback on updates
