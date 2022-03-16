@@ -6,7 +6,6 @@
 
     function loadbar() {
         var prog = id("progress"),
-            ic = id("status"),
             img = document.images,
             c = 0,
             tot = img.length;
@@ -23,12 +22,7 @@
             setTimeout(function() {
                 prog.style.opacity = "none";
                 prog.style.opacity = 0;
-                ic.style.opacity = 0;
             }, 1800);
-
-            setTimeout(function() {
-                ic.style.opacity = "none";
-            }, 1900);
 
         }
         for (var i = 0; i < tot; i++) {
