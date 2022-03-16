@@ -1,288 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>NVV - Mods Vault</title>
-    <link rel="stylesheet" type="text/css" href="/ncv.css">
-    <meta charset="UTF-8">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://ncvisualsvault.cc">
-    <meta property="og:image" content="https://ncvisualsvault.cc/media/ncc_small.png">
-    <meta property="og:title" content="Mods Vault">
-    <meta property="og:description" content="Only good mods for Team Fortress 2">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta name="description" content="All the TF2 mods you need for smooth gameplay.">
-    <meta name="keywords" content="Null Core Visuals, Null Core Cheat Visuals, NC Visuals, Null Core Visuals Config, NC Visuals Config, Null Core Visuals Vault, NC Visuals Vault, NCVV, NVV, ncc visuals, Nullcore visuals, nc visuals, nullcore visuals">
-    <meta name="theme-color" content="#414949">
-    <meta name="theme-color" content="#272828">
-    <link rel="icon" href="/media/ncc.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
-  </head>
-  <body data-theme="nvv">
-    <div class="welcome_overlay">
+
+<head>
+   <title>NVV - Mods Vault</title>
+   <link rel="stylesheet" type="text/css" href="/ncv.css">
+   <meta charset="UTF-8">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="http://ncvisualsvault.cc">
+   <meta property="og:image" content="https://ncvisualsvault.cc/media/ncc_small.png">
+   <meta property="og:title" content="Mods Vault">
+   <meta property="og:description" content="Only good mods for Team Fortress 2">
+   <meta property="twitter:card" content="summary_large_image">
+   <meta name="description" content="All the TF2 mods you need for smooth gameplay.">
+   <meta name="keywords" content="Null Core Visuals, Null Core Cheat Visuals, NC Visuals, Null Core Visuals Config, NC Visuals Config, Null Core Visuals Vault, NC Visuals Vault, NCVV, NVV, ncc visuals, Nullcore visuals, nc visuals, nullcore visuals">
+   <meta name="theme-color" content="#414949">
+   <meta name="theme-color" content="#272828">
+   <link rel="icon" href="/media/ncc.ico" type="image/x-icon">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
+</head>
+
+<body data-theme="nvv">
+   <div class="welcome_overlay">
       <div class="welcome_header_container">
-        <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
-        <div class="welcome_header2">Dedicated site to the Null Core training software for TF2 and it's visual configs - upload your own, download and share your visual configs and mods with others right away!</div>
-        <div class="downbuttons">
-          <a class="welcbutton" onclick ="WelcomeButtonAction()">Start Exploring</a>
-          <a class="welcbutton" onclick ="WelcomeButtonRedirect()">Visit Mods Page</a>
-        </div>
+         <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
+         <div class="welcome_header2">Dedicated site to the Null Core training software for TF2 and it's visual configs - upload your own, download and share your visual configs and mods with others right away!</div>
+         <div class="downbuttons">
+            <a class="welcbutton" onclick="WelcomeButtonAction()">Start Exploring</a>
+            <a class="welcbutton" onclick="WelcomeButtonRedirect()">Visit Mods Page</a>
+         </div>
       </div>
       <div class="welcome_imgcontainer">
-        <img src="/media/menus/animemenu.png">
+         <img src="/media/menus/animemenu.png">
       </div>
       <div class="welc_media">
-        <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site" target="_blank"><i class='bx bxl-github'></i></a>
-        <a class="welcbutton" href="https://t.me/ncvisualsvault" target="_blank"><i class='bx bxl-telegram'></i></a>
+         <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site" target="_blank"><i class='bx bxl-github'></i></a>
+         <a class="welcbutton" href="https://t.me/ncvisualsvault" target="_blank"><i class='bx bxl-telegram'></i></a>
       </div>
-    </div>
-    <div id="modal__overlay"></div>
-    <div id="snowflakeContainer">
+   </div>
+   <div id="modal__overlay"></div>
+   <div id="snowflakeContainer">
       <span class="snowflake"></span>
-    </div>
-    <div id="status"></div>
-    <div id="progress"></div>
-    <div class="announcement">
+   </div>
+   <div id="status"></div>
+   <div id="progress"></div>
+   <div class="announcement">
       <noscript>
-        <div class ="nojs">Seems like JavaScript is not supported or disabled on your browser. Some features might not work.</div>
+         <div class="nojs">Seems like JavaScript is not supported or disabled on your browser. Some features might not work.</div>
       </noscript>
       <div class="nowar"></div>
-    </div>
-    <div class="cont">
+   </div>
+   <div class="cont">
       <div id="upl__modal" class="upl__modal">
-        <div class="modal__content">
-          <div class="modal__header">
-            <span class="close" id="closei">&times;</span>
-            <h2>Submit your mod</h2>
-          </div>
-          <div class="modal__body">
-            <form class="contentform__mod" action="suggestmod.php" method="post" enctype="multipart/form-data">
-              <h2>Put your mod link</h2>
-              <input type="text" name="textConfigLink" autocomplete="off" required>
-              <h2>Include some information (Optional)</h2>
-              <input type="text" name="textModDesc" autocomplete="off">
-              <h2>Enter your nickname</h2>
-              <input type="text" name="textAuthor" autocomplete="off" required>
-              <h2>Put your contact link</h2>
-              <input type="text" name="textAuthorLink" autocomplete="off">
-              <input type="submit" value="Submit" name="submit">
-            </form>
-          </div>
-        </div>
+         <div class="modal__content">
+            <div class="modal__header">
+               <span class="close" id="closei">&times;</span>
+               <h2>Submit your mod</h2>
+            </div>
+            <div class="modal__body">
+               <form class="contentform__mod" action="suggestmod.php" method="post" enctype="multipart/form-data">
+                  <h2>Put your mod link</h2>
+                  <input type="text" name="textConfigLink" autocomplete="off" required>
+                  <h2>Include some information (Optional)</h2>
+                  <input type="text" name="textModDesc" autocomplete="off">
+                  <h2>Enter your nickname</h2>
+                  <input type="text" name="textAuthor" autocomplete="off" required>
+                  <h2>Put your contact link</h2>
+                  <input type="text" name="textAuthorLink" autocomplete="off">
+                  <input type="submit" value="Submit" name="submit">
+               </form>
+            </div>
+         </div>
       </div>
       <h1>mods vault</h1>
       <p>all the mods you need for smooth gameplay.</p>
       <br>
       <div class="sidebar">
-        <div class="logo-details">
-          <div class="logo_name">NVV</div>
-          <i class='bx bx-menu' id="btn"></i>
-        </div>
-        <ul class="nav-list">
-          <li>
-            <a href="/">
-              <i class='bx bxs-share'></i>
-              <span class="links_name">Go home</span>
-            </a>
-            <span class="tooltip">Return to home page</span>
-          </li>
-          <li id="openmodal">
-            <a style="cursor: pointer;">
-              <i class='bx bx-import'></i>
-              <span class="links_name">Submit mod</span>
-            </a>
-            <span class="tooltip">Submit your own mod you'd like to see here!</span>
-          </li>
-          <li>
-            <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
-              <i class='bx bx-brush'></i>
-              <span class="links_name">Switch Theme</span>
-            </a>
-            <span class="tooltip">Switch Theme</span>
-          </li>
-          <li>
-            <a href="/tos/">
-              <i class='bx bxs-book'></i>
-              <span class="links_name">LA/TOS</span>
-            </a>
-            <span class="tooltip">LA/TOS and FAQ</span>
-          </li>
-          <li>
-            <a href="https://github.com/harmonyzt/NVV-Site/issues/new" target="_blank">
-              <i class='bx bxs-message-error'></i>
-              <span class="links_name">Report Issues</span>
-            </a>
-            <span class="tooltip">Found a bug? Broken link? Not working mods? Report here</span>
-          </li>
-          <li>
-            <a id="dynamicst"></a>
-          </li>
-        </ul>
+         <div class="logo-details">
+            <div class="logo_name">NVV</div>
+            <i class='bx bx-menu' id="btn"></i>
+         </div>
+         <ul class="nav-list">
+            <li>
+               <a href="/">
+                  <i class='bx bxs-share'></i>
+                  <span class="links_name">Go home</span>
+               </a>
+               <span class="tooltip">Return to home page</span>
+            </li>
+            <li id="openmodal">
+               <a style="cursor: pointer;">
+                  <i class='bx bx-import'></i>
+                  <span class="links_name">Submit mod</span>
+               </a>
+               <span class="tooltip">Submit your own mod you'd like to see here!</span>
+            </li>
+            <li>
+               <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
+                  <i class='bx bx-brush'></i>
+                  <span class="links_name">Switch Theme</span>
+               </a>
+               <span class="tooltip">Switch Theme</span>
+            </li>
+            <li>
+               <a href="/tos/">
+                  <i class='bx bxs-book'></i>
+                  <span class="links_name">LA/TOS</span>
+               </a>
+               <span class="tooltip">LA/TOS and FAQ</span>
+            </li>
+            <li>
+               <a href="https://github.com/harmonyzt/NVV-Site/issues/new" target="_blank">
+                  <i class='bx bxs-message-error'></i>
+                  <span class="links_name">Report Issues</span>
+               </a>
+               <span class="tooltip">Found a bug? Broken link? Not working mods? Report here</span>
+            </li>
+            <li>
+               <a id="dynamicst"></a>
+            </li>
+         </ul>
       </div>
       <div class="menu_div">
-        <input type="text" id="searchbar" placeholder="Search for mods... Or use tags" onkeyup="search()" autocomplete="off">
-        <div class="row">
-          <div class="column">
-            <a class="mod__author">Admin</a>
-            <div class="stat">
-              <i class='bx bxs-shield'></i>
-              <span class="txtis">Mod might contain some visual glitches.</span>
+         <input type="text" id="searchbar" placeholder="Search for mods... Or use tags" onkeyup="search()" autocomplete="off">
+         <div class="row">
+            <div class="column">
+               <a class="mod__author">Admin</a>
+               <div class="stat">
+                  <i class='bx bxs-shield'></i>
+                  <span class="txtis">Mod might contain some visual glitches.</span>
+               </div>
+               <h2 style="display: none;">Overhaul</h2>
+               <h2>Overhaul Anim. Pack</h2>
+               <p>All-In-One overhaul animation pack. Does not include pyro animations.</p>
+               <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/All-Class%20Animation%20Overhaul%20pack.rar?raw=true" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Overhaul</h2>
-            <h2>Overhaul Anim. Pack</h2>
-            <p>All-In-One overhaul animation pack. Does not include pyro animations.</p>
-            <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/All-Class%20Animation%20Overhaul%20pack.rar?raw=true" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author">Admin</a>
-            <div class="stat">
-              <i class='bx bxs-shield'></i>
-              <span class="txtis">Mod might contain some visual glitches</span>
+            <div class="column">
+               <a class="mod__author">Admin</a>
+               <div class="stat">
+                  <i class='bx bxs-shield'></i>
+                  <span class="txtis">Mod might contain some visual glitches</span>
+               </div>
+               <h2 style="display: none;">Perfomance Misc</h2>
+               <h2>Taunt Fix</h2>
+               <p>Never miss taunting players ever again.</p>
+               <a href="https://ncvisualsvault.cc/download/TauntFix.vpk" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Perfomance Misc</h2>
-            <h2>Taunt Fix</h2>
-            <p>Never miss taunting players ever again.</p>
-            <a href="https://ncvisualsvault.cc/download/TauntFix.vpk" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author">Admin</a>
-            <div class="stat">
-              <i class='bx bxs-shield'></i>
-              <span class="txtis">Mod might contain some visual glitches</span>
+            <div class="column">
+               <a class="mod__author">Admin</a>
+               <div class="stat">
+                  <i class='bx bxs-shield'></i>
+                  <span class="txtis">Mod might contain some visual glitches</span>
+               </div>
+               <h2 style="display: none;">Perfomance Overhaul</h2>
+               <h2>Clear Water</h2>
+               <p>Replaces water textures with one-colored texture for better visibility.</p>
+               <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Water%20Replacement.vpk?raw=true" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Perfomance Overhaul</h2>
-            <h2>Clear Water</h2>
-            <p>Replaces water textures with one-colored texture for better visibility.</p>
-            <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Water%20Replacement.vpk?raw=true" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author">Admin</a>
-            <div class="stat">
-              <i class='bx bxs-check-shield'></i>
-              <span class="txtis">Mod is verified</span>
+            <div class="column">
+               <a class="mod__author">Admin</a>
+               <div class="stat">
+                  <i class='bx bxs-check-shield'></i>
+                  <span class="txtis">Mod is verified</span>
+               </div>
+               <h2 style="display: none;">Perfomance Misc</h2>
+               <h2>Removal Pack</h2>
+               <p>Disables unnecessary things like ambient sounds or tutorial tips for you.</p>
+               <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Mastercomfig%20removal%20pack.rar?raw=true" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Perfomance Misc</h2>
-            <h2>Removal Pack</h2>
-            <p>Disables unnecessary things like ambient sounds or tutorial tips for you.</p>
-            <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Mastercomfig%20removal%20pack.rar?raw=true" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author">Admin</a>
-            <div class="stat">
-              <i class='bx bxs-shield'></i>
-              <span class="txtis">Mod might contain some visual glitches</span>
+            <div class="column">
+               <a class="mod__author">Admin</a>
+               <div class="stat">
+                  <i class='bx bxs-shield'></i>
+                  <span class="txtis">Mod might contain some visual glitches</span>
+               </div>
+               <h2 style="display: none;">Overhaul Models</h2>
+               <h2>Clear Spawn Doors</h2>
+               <p>Makes all the spawn doors transparent for better visibility.</p>
+               <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Clear-Spawn-Doors.vpk?raw=true" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Overhaul Models</h2>
-            <h2>Clear Spawn Doors</h2>
-            <p>Makes all the spawn doors transparent for better visibility.</p>
-            <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Clear-Spawn-Doors.vpk?raw=true" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author">Admin</a>
-            <div class="stat">
-              <i class='bx bxs-check-shield'></i>
-              <span class="txtis">Mod is verified</span>
+            <div class="column">
+               <a class="mod__author">Admin</a>
+               <div class="stat">
+                  <i class='bx bxs-check-shield'></i>
+                  <span class="txtis">Mod is verified</span>
+               </div>
+               <h2 style="display: none;">Overhaul Sounds</h2>
+               <h2>Understable Pyro</h2>
+               <p>Replaces all sounds for pyro making him able to speak.</p>
+               <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Understandable%20Pyro.vpk?raw=true" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Overhaul Sounds</h2>
-            <h2>Understable Pyro</h2>
-            <p>Replaces all sounds for pyro making him able to speak.</p>
-            <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Understandable%20Pyro.vpk?raw=true" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author">Admin</a>
-            <div class="stat">
-              <i class='bx bxs-check-shield'></i>
-              <span class="txtis">Mod is verified</span>
+            <div class="column">
+               <a class="mod__author">Admin</a>
+               <div class="stat">
+                  <i class='bx bxs-check-shield'></i>
+                  <span class="txtis">Mod is verified</span>
+               </div>
+               <h2 style="display: none;">Perfomance Textures</h2>
+               <h2>Flat Textures</h2>
+               <p>Makes all world textures flat, has a slight FPS boost.</p>
+               <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/flattexturesv1.zip?raw=true" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Perfomance Textures</h2>
-            <h2>Flat Textures</h2>
-            <p>Makes all world textures flat, has a slight FPS boost.</p>
-            <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/flattexturesv1.zip?raw=true" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author">Admin</a>
-            <div class="stat">
-              <i class='bx bxs-check-shield'></i>
-              <span class="txtis">Mod is verified</span>
+            <div class="column">
+               <a class="mod__author">Admin</a>
+               <div class="stat">
+                  <i class='bx bxs-check-shield'></i>
+                  <span class="txtis">Mod is verified</span>
+               </div>
+               <h2 style="display: none;">Overhaul Textures</h2>
+               <h2>HQ Class Textures</h2>
+               <p>Replaces all class and weapons textures to HQ ones.</p>
+               <a href="https://ncvisualsvault.cc/download/beta-skins-hd.rar" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Overhaul Textures</h2>
-            <h2>HQ Class Textures</h2>
-            <p>Replaces all class and weapons textures to HQ ones.</p>
-            <a href="https://ncvisualsvault.cc/download/beta-skins-hd.rar" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author">Admin</a>
-            <div class="stat">
-              <i class='bx bxs-check-shield'></i>
-              <span class="txtis">Mod is verified</span>
+            <div class="column">
+               <a class="mod__author">Admin</a>
+               <div class="stat">
+                  <i class='bx bxs-check-shield'></i>
+                  <span class="txtis">Mod is verified</span>
+               </div>
+               <h2 style="display: none;">Sounds</h2>
+               <h2>HL1 Footstep Sounds</h2>
+               <p>Replaces footsteps sounds from Half-Life 1.</p>
+               <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Footsteps.rar?raw=true" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Sounds</h2>
-            <h2>HL1 Footstep Sounds</h2>
-            <p>Replaces footsteps sounds from Half-Life 1.</p>
-            <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Footsteps.rar?raw=true" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author contributor" href="http://steamcommunity.com/profiles/76561198258919721" target="_blank">krawi</a>
-            <div class="stat">
-              <i class='bx bxs-check-shield'></i>
-              <span class="txtis">Mod is verified</span>
+            <div class="column">
+               <a class="mod__author contributor" href="http://steamcommunity.com/profiles/76561198258919721" target="_blank">krawi</a>
+               <div class="stat">
+                  <i class='bx bxs-check-shield'></i>
+                  <span class="txtis">Mod is verified</span>
+               </div>
+               <h2 style="display: none;">Overhaul</h2>
+               <h2>Pulsing KS Sheens</h2>
+               <p>Makes killstreak weapons sheen cover all weapon and pulse.</p>
+               <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Pulsing%20Killstreak%20Sheens.vpk?raw=true" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Overhaul</h2>
-            <h2>Pulsing KS Sheens</h2>
-            <p>Makes killstreak weapons sheen cover all weapon and pulse.</p>
-            <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Pulsing%20Killstreak%20Sheens.vpk?raw=true" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author contributor" href="http://steamcommunity.com/profiles/76561198258919721" target="_blank">krawi</a>
-            <div class="stat">
-              <i class='bx bxs-check-shield'></i>
-              <span class="txtis">Mod is verified</span>
+            <div class="column">
+               <a class="mod__author contributor" href="http://steamcommunity.com/profiles/76561198258919721" target="_blank">krawi</a>
+               <div class="stat">
+                  <i class='bx bxs-check-shield'></i>
+                  <span class="txtis">Mod is verified</span>
+               </div>
+               <h2 style="display: none;">Overhaul Sounds</h2>
+               <h2>Quiet Noicemakers</h2>
+               <p>Makes all noisemakers sounds barely noticable.</p>
+               <a href="https://ncvisualsvault.cc/download/Quiet_Noisemakers.vpk" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Overhaul Sounds</h2>
-            <h2>Quiet Noicemakers</h2>
-            <p>Makes all noisemakers sounds barely noticable.</p>
-            <a href="https://ncvisualsvault.cc/download/Quiet_Noisemakers.vpk" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author" href="http://steamcommunity.com/profiles/76561199209842553" target="_blank">JackJacob</a>
-            <div class="stat">
-              <i class='bx bxs-check-shield'></i>
-              <span class="txtis">Mod is verified</span>
+            <div class="column">
+               <a class="mod__author" href="http://steamcommunity.com/profiles/76561199209842553" target="_blank">JackJacob</a>
+               <div class="stat">
+                  <i class='bx bxs-check-shield'></i>
+                  <span class="txtis">Mod is verified</span>
+               </div>
+               <h2 style="display: none;">Textures Perfomance</h2>
+               <h2>Developer Textures</h2>
+               <p>Replacing most of the textures to <a class="other__clickablelink" href="/media/mod_previews/Developer_Texture_preview.png" target="_blank">this</a> one. Has a slight fps boost. </p>
+               <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/devtextures_v2.vpk?raw=true" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Textures Perfomance</h2>
-            <h2>Developer Textures</h2>
-            <p>Replacing most of the textures to <a class="other__clickablelink" href="/media/mod_previews/Developer_Texture_preview.png" target="_blank">this</a> one. Has a slight fps boost. </p>
-            <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/devtextures_v2.vpk?raw=true" class="down_button">Download</a>
-          </div>
-          <div class="column">
-            <a class="mod__author" href="http://steamcommunity.com/profiles/76561199209842553" target="_blank">JackJacob</a>
-            <div class="stat">
-              <i class='bx bxs-check-shield'></i>
-              <span class="txtis">Mod is verified</span>
+            <div class="column">
+               <a class="mod__author" href="http://steamcommunity.com/profiles/76561199209842553" target="_blank">JackJacob</a>
+               <div class="stat">
+                  <i class='bx bxs-check-shield'></i>
+                  <span class="txtis">Mod is verified</span>
+               </div>
+               <h2 style="display: none;">Fun Sprites</h2>
+               <h2>Trollface Crit Icon</h2>
+               <p>Replacing "CRIT!" icon with an icon of trollface upon critting an enemy.</p>
+               <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Crit-Trollface.vpk?raw=true" class="down_button">Download</a>
             </div>
-            <h2 style="display: none;">Fun Sprites</h2>
-            <h2>Trollface Crit Icon</h2>
-            <p>Replacing "CRIT!" icon with an icon of trollface upon critting an enemy.</p>
-            <a href="https://github.com/harmonyzt/NVV-Mods/blob/main/Crit-Trollface.vpk?raw=true" class="down_button">Download</a>
-          </div>
-        </div>
-          <div class="not-found" id="nofoundmod" style="display:none">We found... Nothing :( <a style="cursor: pointer;" class="other__clickablelink">Wanna submit your own mod?</a>
-        </div>
+         </div>
+         <div class="not-found" id="nofoundmod" style="display:none">We found... Nothing :( <a style="cursor: pointer;" class="other__clickablelink">Wanna submit your own mod?</a>
+         </div>
       </div>
-    </div>
-  </body>
-  <script src="/js/themecookies.js"></script>
-  <script src="/js/welcomepagefunc.js"></script>
-  <script src="/js/loaderfunc.js"></script>
-  <script src="/js/sidemenufunc.js"></script>
-  <script src="/js/modalfunc.js"></script>
-  <script src="/js/dynamicstatus.js"></script>
-  <script src="/js/uploadtrigger.js"></script>
-  <script src="/js/annc.js"></script>
+   </div>
+</body>
+<script src="/js/themecookies.js"></script>
+<script src="/js/welcomepagefunc.js"></script>
+<script src="/js/loaderfunc.js"></script>
+<script src="/js/sidemenufunc.js"></script>
+<script src="/js/modalfunc.js"></script>
+<script src="/js/dynamicstatus.js"></script>
+<script src="/js/uploadtrigger.js"></script>
+<script src="/js/annc.js"></script>
+
 </html>
