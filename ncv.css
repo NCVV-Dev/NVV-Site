@@ -13,6 +13,17 @@ font{
 	-webkit-font-smoothing: antialiased !important;
 }
 
+.nojs {
+	position: relative;
+	margin: auto;
+	color: rgb(253, 78, 78);
+	font-size: 20px;
+	font-weight: 700;
+	font-family: Coda;
+	letter-spacing: 1px;
+	top: 15px;
+}
+
 body[data-theme="nvv"] {
 	font-family: Verdana;
 	text-align: center;
@@ -1633,6 +1644,7 @@ h1 .headert {
 	}
 
 }
+
 /* Trying to rework config tabs and make them flexible
 @media screen and (max-width: 1240px){
   .cfg{
