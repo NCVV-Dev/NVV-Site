@@ -611,7 +611,7 @@ html {
 	width: 90%;
 	display: flex;
 	background-color: var(--itemtabcolor);
-	margin: 50px 0px 50px 80px;
+	margin: 50px 0px 50px 100px;
 	border: 1px solid var(--itemtaboutline);
 	border-radius: 15px;
 	transition-duration: 1s;
@@ -628,6 +628,7 @@ html {
 	max-width: 600px;
 	max-height: 600px;
 	border-radius: 15px;
+	transition: all 300ms;
  }
  .cfg__content {
 	flex-basis: auto;
@@ -771,7 +772,7 @@ html {
  .a:hover {
 	background-color: var(--buttonhover) !important;
  }
- /* Mods Page CSS */
+ /*		Mods Page CSS		*/
  .column {
 	position: relative;
 	float: left;
@@ -788,6 +789,21 @@ html {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	opacity: 0;
+	animation-fill-mode: forwards;
+	animation-name: columnanim;
+	animation-duration: 500ms;
+	animation-iteration-count: 1;
+	animation-delay: 100ms;
+ }
+/*		Column Animation		*/
+ @keyframes columnanim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
  }
  .row {
 	width: 100%;
@@ -848,11 +864,7 @@ html {
 	margin-top: 30px;
 	color: var(--tostextcolor);
  }
- .column.fade {
-	opacity: 0;
-	transition: 1s ease-in-out;
- }
- /* Flexible columns */
+ /* Flexible columns for five items in the row */
  @media screen and (max-width: 604px) {
 	.column {
 	   margin-top: 40px;
@@ -877,6 +889,11 @@ html {
 	.column {
 	   left: 10.5%;
 	}
+	.cfg {
+		transform: scale(0.75);
+		margin: 0;
+		width: 100%;
+	}
  }
  @media screen and (max-width: 450px) {
 	.column {
@@ -885,15 +902,10 @@ html {
  }
  @media screen and (min-width: 1920px) {
 	.column {
-	   width: 285px;
-	   height: 180px;
-	   padding: 5px;
-	   margin-left: 3.786666667%;
-	   margin-top: 35px;
-	}
-	.down_button {
-	   left: 27.5%;
-	   top: 120px;
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		margin-top: 90px !important;
+		margin-left: 5.856666667%;
 	}
  }
  @media screen and (max-width: 1600px) {
