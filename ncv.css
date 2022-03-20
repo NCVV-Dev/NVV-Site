@@ -193,7 +193,7 @@ html {
 	width: 10px;
 	height: 10px;
  }
- /* Progress line (width increases by js) */
+ /* Progress line (Width increases by JS) */
  #progress {
 	position: fixed !important;
 	z-index: 95 !important;
@@ -610,8 +610,11 @@ html {
  .cfg {
 	width: 90%;
 	display: flex;
+	position: relative;
+	align-content: center;
+	left: 10vh;
+	margin-top: 30px;
 	background-color: var(--itemtabcolor);
-	margin: 50px 0px 50px 100px;
 	border: 1px solid var(--itemtaboutline);
 	border-radius: 15px;
 	transition-duration: 1s;
@@ -891,8 +894,8 @@ html {
 	}
 	.cfg {
 		transform: scale(0.75);
-		margin: 0;
 		width: 100%;
+		left: 2vh;
 	}
  }
  @media screen and (max-width: 450px) {
