@@ -16,7 +16,7 @@ html {
 	color: rgb(253, 78, 78);
 	font-size: 20px;
 	font-weight: 700;
-	font-family: Coda;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	letter-spacing: 1px;
 	top: 15px;
  }
@@ -1069,7 +1069,7 @@ html {
 	text-align: center;
 	color: var(--linkhover);
  }
- .nowar {
+ #dynamicannc {
 	position: relative;
 	margin: auto;
 	color: var(--tostextcolor);
