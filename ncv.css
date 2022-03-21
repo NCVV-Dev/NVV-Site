@@ -34,6 +34,7 @@ html {
 	background-size: cover;
 	background: #21222c;
 	overflow-y: scroll;
+	scrollbar-width: thin;
 	--sidebarbg: #15171b;
 	--sidebarbutton: rgba(149, 128, 255, 0.7);
 	--sidebarbuttonhover: #ff80bf;
@@ -70,8 +71,8 @@ html {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url(media/background_ncoriginal.jpg);
-	transition: 0.5s;
 	overflow-y: scroll;
+	scrollbar-width: thin;
 	--sidebarbg: #263340;
 	--sidebarbutton: #49779c;
 	--sidebarbuttonhover: #40c192;
@@ -1080,7 +1081,8 @@ html {
 	font-weight: 700;
 	font-family: Coda;
 	letter-spacing: 1px;
-	top: 15px;
+	top: .7rem;
+	transition: all 1s;
  }
  /* Reworked link styles and types */
  .default__link {
