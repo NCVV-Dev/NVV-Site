@@ -1,10 +1,6 @@
 html {
 	scroll-behavior: smooth;
  }
- * {
-	padding: 0;
-	box-sizing: border-box;
- }
  font {
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 	text-rendering: optimizeLegibility !important;
@@ -34,7 +30,6 @@ html {
 	background-size: cover;
 	background: #21222c;
 	overflow-y: scroll;
-	scrollbar-width: thin;
 	--sidebarbg: #15171b;
 	--sidebarbutton: rgba(149, 128, 255, 0.7);
 	--sidebarbuttonhover: #ff80bf;
@@ -72,7 +67,6 @@ html {
 	background-size: cover;
 	background-image: url(media/background_ncoriginal.jpg);
 	overflow-y: scroll;
-	scrollbar-width: thin;
 	--sidebarbg: #263340;
 	--sidebarbutton: #49779c;
 	--sidebarbuttonhover: #40c192;
@@ -95,6 +89,12 @@ html {
 	--answertextcolor: #70eaea;
 	--questiontextcolor: white;
 	--tosqm: #cc8041;
+ }
+ * {
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-color: #414558 transparent;
+	scrollbar-width: thin;
  }
  @font-face {
 	font-family: "Audiowide";
