@@ -1092,7 +1092,6 @@ html {
  }
  .default__link:hover {
 	text-decoration: none;
-	color: var(--tostextcolor);
 	cursor: pointer;
  }
  .other__clickablelink {
