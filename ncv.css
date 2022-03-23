@@ -717,7 +717,8 @@ html {
  }
  /* Text on the end of the cfg page */
  .endtabstext {
-	margin: 50px;
+	position: relative;
+	margin: 100px;
 	font-family: Bebas Neue;
 	color: var(--tostextcolor);
 	font-size: 30px;
