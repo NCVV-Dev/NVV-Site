@@ -707,7 +707,7 @@ html {
  .cfg__button:hover {
 	background-color: var(--buttonhover);
 	color: white;
-	transform: scale(1.1);
+	transform: scale(1.05);
  }
  .cfg__upl {
 	height: 30px;
