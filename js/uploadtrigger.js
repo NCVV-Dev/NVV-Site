@@ -1,3 +1,1 @@
-$("#uploadTrigger").click(function() {
-    $("#uploadFile").click();
-});
+$("#uploadTrigger").click(function(){$("#uploadFile").click()});
