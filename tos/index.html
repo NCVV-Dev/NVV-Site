@@ -1,171 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>NVV - LA/TOS</title>
-    <link rel="stylesheet" type="text/css" href="/ncv.css?random=<?php echo filemtime('ncv.css'); ?">
-    <meta charset="UTF-8">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ncvisualsvault.cc/">
-    <meta property="og:image" content="https://ncvisualsvault.cc/media/ncc_small.png">
-    <meta property="og:title" content="NVV LA/TOS">
-    <meta property="og:description" content="Terms of Service and FAQ.">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta name="description" content="Nullcore Visuals Vault TOS and FAQ.">
-    <meta name="keywords" content="Null Core Visuals, Null Core Cheat Visuals, NC Visuals, Null Core Visuals Config, NC Visuals Config, Null Core Visuals Vault, NC Visuals Vault, NCVV, NVV, ncc visuals, Nullcore visuals">
-    <meta name="theme-color" content="#414949">
-    <meta name="theme-color" content="#272828">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/media/ncc.ico" type="image/x-icon">
-    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </head>
-  <body data-theme="nvv">
-    <div class="welcome_overlay">
+
+<head>
+   <title>NVV - LA/TOS</title>
+   <link rel="stylesheet" type="text/css" href="/ncv.css?random=<?php echo filemtime('ncv.css'); ?">
+   <meta charset="UTF-8">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://ncvisualsvault.cc/">
+   <meta property="og:image" content="https://ncvisualsvault.cc/media/ncc_small.png">
+   <meta property="og:title" content="NVV LA/TOS">
+   <meta property="og:description" content="Terms of Service and FAQ.">
+   <meta property="twitter:card" content="summary_large_image">
+   <meta name="description" content="Nullcore Visuals Vault TOS and FAQ.">
+   <meta name="keywords" content="Null Core Visuals, Null Core Cheat Visuals, NC Visuals, Null Core Visuals Config, NC Visuals Config, Null Core Visuals Vault, NC Visuals Vault, NCVV, NVV, ncc visuals, Nullcore visuals">
+   <meta name="theme-color" content="#414949">
+   <meta name="theme-color" content="#272828">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" href="/media/ncc.ico" type="image/x-icon">
+   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body data-theme="nvv">
+   <div class="welcome_overlay">
       <div class="welcome_header_container">
-        <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
-        <div class="welcome_header2">Dedicated site to the Null Core training software for TF2 and it's visual configs - upload your own, download and share your visual configs and mods with others right away!</div>
-        <div class="downbuttons">
-          <a class="welcbutton" onclick ="WelcomeButtonAction()">Start Exploring</a>
-          <a class="welcbutton" onclick ="WelcomeButtonRedirect()">Visit Mods Page</a>
-        </div>
+         <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
+         <div class="welcome_header2">Dedicated site to the Null Core training software for TF2 and it's visual configs - upload your own, download and share your visual configs and mods with others right away!</div>
+         <div class="downbuttons">
+            <a class="welcbutton" onclick="WelcomeButtonAction()">Start Exploring</a>
+            <a class="welcbutton" onclick="WelcomeButtonRedirect()">Visit Mods Page</a>
+         </div>
       </div>
       <div class="welcome_imgcontainer">
-        <img src="/media/menus/animemenu.png">
+         <img src="/media/menus/animemenu.png">
       </div>
       <div class="welc_media">
-        <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site" target="_blank"><i class='bx bxl-github'></i></a>
-        <a class="welcbutton" href="https://t.me/ncvisualsvault" target="_blank"><i class='bx bxl-telegram'></i></a>
+         <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site" target="_blank"><i class='bx bxl-github'></i></a>
+         <a class="welcbutton" href="https://t.me/ncvisualsvault" target="_blank"><i class='bx bxl-telegram'></i></a>
       </div>
-    </div>
+   </div>
    <!--
    <div id="snowflakeContainer">
       <span class="snowflake"></span>
    </div>
    -->
-    <div id="progress"></div>
-    <div class="announcement">
+   <div id="progress"></div>
+   <div class="announcement">
       <noscript>
          <div class="nojs">Seems like JavaScript is not supported or disabled on your browser. Some features might not work.</div>
       </noscript>
       <div id="dynamicannc"></div>
    </div>
-    <div class="cont">
+   <div class="cont">
       <div class="sidebar">
-        <div class="logo-details">
-          <div class="logo_name">NVV</div>
-          <i class="bx bx-menu" id="btn"></i>
-        </div>
-        <ul class="nav-list">
-          <li>
-            <a href="/">
-              <i class='bx bxs-share'></i>
-              <span class="links_name">Go home</span>
-            </a>
-            <span class="tooltip">Return to home page</span>
-          </li>
-          <li>
-            <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
-              <i class='bx bx-brush'></i>
-              <span class="links_name">Switch Theme</span>
-            </a>
-            <span class="tooltip">Switch Theme</span>
-          </li>
-          <li>
-            <a href="https://github.com/harmonyzt/NVV-Site/issues/new" target="_blank">
-              <i class='bx bxs-message-error'></i>
-              <span class="links_name">Report Issues</span>
-            </a>
-            <span class="tooltip">Found a bug? Broken link? Mismatched images? Report here</span>
-          </li>
-          <li>
-            <a id="dynamicst"></a>
-          </li>
-        </ul>
+         <div class="logo-details">
+            <div class="logo_name">NVV</div>
+            <i class="bx bx-menu" id="btn"></i>
+         </div>
+         <ul class="nav-list">
+            <li>
+               <a href="/">
+                  <i class='bx bxs-share'></i>
+                  <span class="links_name">Go home</span>
+               </a>
+               <span class="tooltip">Return to home page</span>
+            </li>
+            <li>
+               <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
+                  <i class='bx bx-brush'></i>
+                  <span class="links_name">Switch Theme</span>
+               </a>
+               <span class="tooltip">Switch Theme</span>
+            </li>
+            <li>
+               <a href="https://github.com/harmonyzt/NVV-Site/issues/new" target="_blank">
+                  <i class='bx bxs-message-error'></i>
+                  <span class="links_name">Report Issues</span>
+               </a>
+               <span class="tooltip">Found a bug? Broken link? Mismatched images? Report here</span>
+            </li>
+            <li>
+               <a id="dynamicst"></a>
+            </li>
+         </ul>
       </div>
       <h1 class="headert">la / tos</h1>
       <p class="pt">terms of service</p>
       <div class="textcont">
-        <div class="pTitle">Uploading a config</div>
-  1) Visuals should not be similar to already existing ones on the site, with some exceptions, like <b>default Null Core's menu colorscheme.</b>
-  
-  2) It's highly recommended to fill all the fields when submitting a visual config and provide as much information as possible about it. This increases the chances of the appearance of the config on the site and it's speed.
-  
-  3) If user has skyboxes he would like to add with his uploaded visual config, he must provide the skyboxes in <b>"Additional Information"</b> field by putting a link or <b><a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">write to a public chat</a></b> after uploading.
-  
-  4) Any kind of attempt to bypass uploading system (spamming, using scripts to automatically upload many visual configs, etc.) will be considered as <b>a threat to the site and it's services,</b> resulting in your <b>IP permanently suspended</b> from using our services.
-  
-  5) This is not an advertising site. Unfairly trying to claim someone's visuals will result in a denial and in some cases - suspension.
-  
-  6) Telegram links that have been linked to groups or chats instead of user <b>will be removed or denied.</b> Incorrect telegram links also could be restored by <b><a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">messaging here.</a></b>
-  
-  7) If user did not message about his changed telegram username within 7 days, it will be <b>removed without any possible chance of restoring</b> it.
-  
-  8) Submitted configs through the uploading page has a <b>higher priority</b> than configs that has been sent directly to dev / public chat.
-  
-  9) <b>As LA/TOS of NCL says</b> - "NCL has not reviewed all of the websites linked to its website and is not responsible for the contents of any such linked website. The inclusion of any link does not imply endorsement by NCL. Use of any such linked website is at the user's own risk."
-  
-  10) By uploading your visual config you agree with NVV that you will <b>provide your IP address.</b> Your IP address is stored privately and is used only <b>in case of suspension.</b> This does not apply to <b>all pages</b> on the site.
+         <div class="pTitle">Uploading a config</div>
+         <div class="tos_textline">1) Visuals should not be similar to already existing ones on the site, with some exceptions, like <b>default Null Core's menu colorscheme.</b></div>
+         <div class="tos_textline">2) It's highly recommended to fill all the fields when submitting a visual config and provide as much information as possible about it. This increases the chances of the appearance of the config on the site and it's speed.</div>
+         <div class="tos_textline">3) If user has skyboxes he would like to add with his uploaded visual config, he must provide the skyboxes in <b>"Additional Information"</b> field by putting a link or <b><a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">write to a public chat</a></b> after uploading.</div>
+         <div class="tos_textline">4) Any kind of attempt to bypass uploading system (spamming, using scripts to automatically upload many visual configs, etc.) will be considered as <b>a threat to the site and it's services,</b> resulting in your <b>IP permanently suspended</b> from using our services.</div>
+         <div class="tos_textline">5) This is not an advertising site. Unfairly trying to claim someone's visuals will result in a denial and in some cases - suspension.</div>
+         <div class="tos_textline">6) Telegram links that have been linked to groups or chats instead of user <b>will be removed or denied.</b> Incorrect telegram links also could be restored by <b><a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">messaging here.</a></b></div>
+         <div class="tos_textline">7) If user did not message about his changed telegram username within 7 days, it will be <b>removed without any possible chance of restoring</b> it.</div>
+         <div class="tos_textline">8) Submitted configs through the uploading page has a <b>higher priority</b> than configs that has been sent directly to dev / public chat.</div>
+         <div class="tos_textline">9) <b>As LA/TOS of NCL says</b> - "NCL has not reviewed all of the websites linked to its website and is not responsible for the contents of any such linked website. The inclusion of any link does not imply endorsement by NCL. Use of any such linked website is at the user's own risk."</div>
+         <div class="tos_textline">10) By uploading your visual config you agree with NVV that you will <b>provide your IP address.</b> Your IP address is stored privately and is used only <b>in case of suspension.</b> This does not apply to <b>all pages</b> on the site.</div>
+         <div class="tos_textline">11) User is allowed to put own screenshots and skyboxes of the game with visuals he is uploading (or screenshots of any skybox) in "Additional Information" field, but only from trusted resources (such as Gamebanana, Imgur, Pastebin, Discord, Google, Flickr etc). If not, this will result in <b>denial.</b></div>
+         <div class="tos_textline">12) User is allowed to request a <b>removal of the content</b> which has been uploaded to the site from adminstration. This requires messaging from the telegram account which was included in information fields before. Unfortunately <b>we do not cooperate with steam accounts</b> or delete visual configs which has no known author/uploader.</div>
+         <div class="pTitle">Suggesting a mod</div>
+         <div class="tos_textline">1) User is allowed to put links only from trusted resources (Gamebanana, Google Drive, Yandex Drive, Discord), if not, request will be denied. User is also allowed to put two or more links in one field. This is acceptable by uploading system as long as it doesn't exceed 2000 characters.</div>
+         <div class="tos_textline">2) If the following link is not a mod or doesn't lead to one, request will be <b>denied.</b> If user continues to perform such actions, <b>this will be considered as uploading system abuse and will result in suspension.</b></div>
+         <div class="tos_textline">3) If current mod <b>already exists</b> on the page / user wants to upload similar one with some changes, user must include information about the mod in the "Include some information" field about the changes. <b>Otherwise request will be denied.</b></div>
+         <div class="tos_textline">4) By suggesting a mod you agree with NVV that you will <b>provide your IP address.</b> Your IP address is stored privately and is used only <b>in case of suspension.</b> This does not apply to <b>all pages</b> on the site.</div>
+      </div>
 
-  11) User is allowed to put own screenshots and skyboxes of the game with visuals he is uploading (or screenshots of any skybox) in "Additional Information" field, but only from trusted resources (such as Gamebanana, Imgur, Pastebin, Discord, Google, Flickr etc). If not, this will result in <b>denial.</b>
+      <p class="faqq">f.a.q</p>
+      <div class="textcont"><span class="qm">Q: I want to upload my visuals, how do I do it?</span>
+         <div class="answer">A: You can submit your own config on <a class="other__clickablelink" href="https://ncvisualsvault.cc/upl/" target="_blank">this page</a>.</div>
 
-  12) User is allowed to request a <b>removal of the content</b> which has been uploaded to the site from adminstration. This requires messaging from the telegram account which was included in information fields before. Unfortunately <b>we do not cooperate with steam accounts</b> or delete visual configs which has no known author/uploader.
-  <div class="pTitle">Suggesting a mod</div>
-  1) User is allowed to put links only from trusted resources (Gamebanana, Google Drive, Yandex Drive, Discord), if not, request will be denied.  User is also allowed to put two or more links in one field. This is acceptable by uploading system as long as it doesn't exceed 2000 characters.
+         <span class="qm">Q: Someone just upload my own visuals without me knowing, what can I do?</span>
+         <div class="answer">A: Unfortunately, NVV cannot help. Once config is uploaded on the site, it has a right to stay under uploader's name.</div>
 
-  2) If the following link is not a mod or doesn't lead to one, request will be <b>denied.</b> If user continues to perform such actions, <b>this will be considered as uploading system abuse and will result in suspension.</b>
+         <span class="qm">Q: I submitted my config and it still didn't appear on the site. Why?</span>
+         <div class="answer">A: To submit and verify / upload your visual config it can take from 1 to 6 days. Such times can be explained by the fact that also with your uploaded config the site patch comes out.</div>
 
-  3) If current mod <b>already exists</b> on the page / user wants to upload similar one with some changes, user must include information about the mod in the "Include some information" field about the changes. <b>Otherwise request will be denied.</b>
+         <span class="qm">Q: What contacts I can leave when I am submitting my config?</span>
+         <div class="answer">A: As uploading page says - You can leave both of your steam and telegram accounts. We suggest you to link steam account to be sure no one will claim your telegram username after you've changed it.</div>
 
-  4) By suggesting a mod you agree with NVV that you will <b>provide your IP address.</b> Your IP address is stored privately and is used only <b>in case of suspension.</b> This does not apply to <b>all pages</b> on the site.
-</div>
-  
-    <p class="faqq">f.a.q</p>
-  <div class="textcont"><span class="qm">Q: I want to upload my visuals, how do I do it?</span>
-  <div class="answer">A: You can submit your own config on <a class="other__clickablelink" href="https://ncvisualsvault.cc/upl/" target="_blank">this page</a>.</div>
- 
-  <span class="qm">Q: Someone just upload my own visuals without me knowing, what can I do?</span>
-  <div class="answer">A: Unfortunately, NVV cannot help. Once config is uploaded on the site, it has a right to stay under uploader's name.</div>
-  
-  <span class="qm">Q: I submitted my config and it still didn't appear on the site. Why?</span>
-  <div class="answer">A: To submit and verify / upload your visual config it can take from 1 to 6 days. Such times can be explained by the fact that also with your uploaded config the site patch comes out.</div>
-  
-  <span class="qm">Q: What contacts I can leave when I am submitting my config?</span>
-  <div class="answer">A: As uploading page says - You can leave both of your steam and telegram accounts. We suggest you to link steam account to be sure no one will claim your telegram username after you've changed it.</div>
+         <span class="qm">Q: I want to know where or at what state my visual config is. Can I know such information?</span>
+         <div class="answer">A: Uploader has a right to know where his visual config at. Such question can be answered at <a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">public telegram chat</a>.</div>
 
-  <span class="qm">Q: I want to know where or at what state my visual config is. Can I know such information?</span>
-  <div class="answer">A: Uploader has a right to know where his visual config at. Such question can be answered at <a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">public telegram chat</a>.</div>
+         <span class="qm">Q: I wanna help with site development! Is there any options?</span>
+         <div class="answer">A: Of course. Your suggestions will be listened at our <a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">public telegram chat</a> or at <a class="other__clickablelink" href="https://github.com/harmonyzt/NVV-Site/issues/new" target="_blank">GitHub</a>.</div>
 
-  <span class="qm">Q: I wanna help with site development! Is there any options?</span>
-  <div class="answer">A: Of course. Your suggestions will be listened at our <a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">public telegram chat</a> or at <a class="other__clickablelink" href="https://github.com/harmonyzt/NVV-Site/issues/new" target="_blank">GitHub</a>.</div>
+         <span class="qm">Q: Can I suggest my own mod pack on the mods page?</span>
+         <div class="answer">A: Yes, user is allowed to provide pack of TF2 mods. NVV will review it and upload it under uploader's name shortly after. User can also choose to separate all of the mods from the mod pack so NVV will upload them all separately.</div>
 
-  <span class="qm">Q: Can I suggest my own mod pack on the mods page?</span>
-  <div class="answer">A: Yes, user is allowed to provide pack of TF2 mods. NVV will review it and upload it under uploader's name shortly after. User can also choose to separate all of the mods from the mod pack so NVV will upload them all separately.</div>
+         <span class="qm">Q: How do I verify my mod I suggested on the mods page?</span>
+         <div class="answer">A: NVV reviews every mod equally and gives it a special rating which can value from 1 to 5. Every rated mod that goes after 2 to 3 is mod that might contain visual glitches or minor bugs. Ratings lower that 2 might contain potential glitches that can hurt your gameplay experience and ratings higher than 4 gets 'Mod is verified' with check mark in the shield icon.</div>
 
-  <span class="qm">Q: How do I verify my mod I suggested on the mods page?</span>
-  <div class="answer">A: NVV reviews every mod equally and gives it a special rating which can value from 1 to 5. Every rated mod that goes after 2 to 3 is mod that might contain visual glitches or minor bugs. Ratings lower that 2 might contain potential glitches that can hurt your gameplay experience and ratings higher than 4 gets 'Mod is verified' with check mark in the shield icon.</div>
-
-  <span class="qm">Q: What does the colors and effects of the uploader's name represent?</span>
-  <div class="answer">A: This represents how much a person contributed to the site. Here's list of colors -
-  - For contributing to the site in any kind - <span class="contributor">Greenish color</span>
-  - 5 uploaded mods/configs - <span class="contributor5">Light blue color</span>
-  - 10 uploaded mods/configs - <span class="contributor10">Light green color</span>
-  - 15 uploaded mods/configs - <span class="contributor15">Purple color</span>
-  - 25 uploaded mods/configs - <span class="contributor25">Magneta color</span>
-  - 35 uploaded mods/configs - <span class="contributor35">Special effect</span>
-  - 45 uploaded mods/configs - <span class="contributor45">Special effect</span>
-  - 50 uploaded mods/configs - <span class="contributor50">Special color with badge <i class='bx bxs-bolt'></i></span>
-  - 60 uploaded mods/configs - <span class="contributor60">Special effect</span>
-  - 70 uploaded mods/configs - <span class="contributor70">Special effect</span>
-  - 80 uploaded mods/configs - <span class="contributor80">Special effect</span>
-  - 100 uploaded mods/configs - <span class="contributor100">Special effect with badge <i class='bx bxs-crown'></i></span>
-  </div>
-</div>
-</div>
+         <span class="qm">Q: What does the colors and effects of the uploader's name represent?</span>
+         <div class="answer">A: This represents how much a person contributed to the site. Here's list of colors - - For contributing to the site in any kind - <span class="contributor">Greenish color</span> - 5 uploaded mods/configs - <span class="contributor5">Light blue color</span> - 10 uploaded mods/configs - <span class="contributor10">Light green color</span> - 15 uploaded mods/configs - <span class="contributor15">Purple color</span> - 25 uploaded mods/configs - <span class="contributor25">Magneta color</span> - 35 uploaded mods/configs - <span class="contributor35">Special effect</span> - 45 uploaded mods/configs - <span class="contributor45">Special effect</span> - 50 uploaded mods/configs - <span class="contributor50">Special color with badge <i class='bx bxs-bolt'></i></span> - 60 uploaded mods/configs - <span class="contributor60">Special effect</span> - 70 uploaded mods/configs - <span class="contributor70">Special effect</span> - 80 uploaded mods/configs - <span class="contributor80">Special effect</span> - 100 uploaded mods/configs - <span class="contributor100">Special effect with badge <i class='bx bxs-crown'></i></span>
+         </div>
+      </div>
+   </div>
 </body>
 <script src="/js/themecookies.js"></script>
 <script src="/js/welcomepagefunc.js"></script>
@@ -173,4 +149,5 @@
 <script src="/js/sidemenufunc.js"></script>
 <script src="https://ncvisualsvault.cc/js/dynamicannc.js?random=<?php echo filemtime('dynamicannc.js?'); ?>"></script>
 <script src="https://ncvisualsvault.cc/js/dynamicstatus.js?random=<?php echo filemtime('dynamicstatus.js'); ?>"></script>
+
 </html>

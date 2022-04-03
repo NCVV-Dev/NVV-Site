@@ -551,7 +551,6 @@ html {
 	font-family: Roboto;
 	color: var(--tostextcolor);
 	font-size: 22px;
-	white-space: pre-line;
 	line-height: 1.4;
 	opacity: 0;
 	animation-fill-mode: forwards;
