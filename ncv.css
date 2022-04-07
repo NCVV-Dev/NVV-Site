@@ -559,6 +559,9 @@ html {
 	animation-iteration-count: 1;
 	animation-delay: 100ms;
  }
+ .tos_textline{
+	margin-top: 15px;
+ }
  /* Text Content Animation of LA/TOS Page */
  @keyframes tostextanim {
 	0% {
