@@ -4,3 +4,6 @@
 # Ignore .zip and .rar files
 *.zip
 *.rar
+
+# Ignore .txt files
+.txt

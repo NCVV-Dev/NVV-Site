@@ -1416,4 +1416,22 @@ html {
 	   text-align: center;
 	}
  }
- 
+ /* Status Page CSS */
+ .outagedate {
+	 font-weight: bold;
+ }
+ .outagedate i{
+	 font-size: 30px;
+	 position: relative;
+	 top: 3px;
+ }
+ .outageinfo{
+	font-weight: normal;
+	margin-left: 15px;
+ }
+ .outageinfo i{
+	 font-size: 12px;
+ }
+.outageinfotext{
+	font-size: 25px;
+}

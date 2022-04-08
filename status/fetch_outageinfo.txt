@@ -1,0 +1,6 @@
+<div class="outagedate"><i class="bx bxs-check-circle"></i> April 9th 2022 - <span class="outagecomment">The issue was successfully fixed</span></div>
+<hr size="5" width="100%" color="gray">
+<div class="outageinfo">
+<div class="outageinfotext">Major PHP outage occurred due to the not updating the main PHP. Uploading system was trying to upload files to non-existing folder which was deleted previously. All of the uploaded visual configs from April 8th 3:00pm are not recoverable.</div>
+</div>
+<hr size="5" width="100%" color="gray"> 
