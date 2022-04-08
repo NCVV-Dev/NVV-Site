@@ -6,4 +6,4 @@
 *.rar
 
 # Ignore .txt files
-.txt
+*.txt
