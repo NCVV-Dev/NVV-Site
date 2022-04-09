@@ -551,7 +551,7 @@ html {
 	margin-top: 40px;
 	font-family: Roboto;
 	color: var(--tostextcolor);
-	margin: 8rem;
+	margin: 5rem;
 	font-size: 28px;
 	line-height: 1.4;
 	transition: all .5s ease-in-out;
@@ -1419,6 +1419,7 @@ html {
  /* Status Page CSS */
  .outagedate {
 	 font-weight: bold;
+	 color: white;
  }
  .outagedate i{
 	 font-size: 30px;
@@ -1434,4 +1435,25 @@ html {
  }
 .outageinfotext{
 	font-size: 25px;
+}
+.statusdetailedbox{
+	overflow: hidden;
+	margin: 0;
+	position: relative;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	background-color: var(--itemtabcolor);
+	color: white;
+	height: 80px;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+.detl__text{
+	text-align: center;
+	width: 100%;
+	display: inline;
+}
+.detl__text div {
+	display: inline;
 }
