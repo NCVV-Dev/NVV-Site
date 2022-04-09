@@ -1418,6 +1418,7 @@ html {
  }
  /* Status Page CSS */
  .outagedate {
+	 margin-top: 55px;
 	 font-weight: bold;
 	 color: white;
  }
