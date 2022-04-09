@@ -91,15 +91,18 @@
       </div>
       <h1 class="headert">site status</h1>
       <p class="pt">outages and other information</p>
-      <div class="textcont" id="outageinfdyn">
-          Fetching last updates...
+      <div class="textcont">
+
+         <div class="fetchinfo" id="outageinfdyn">
+            Fetching last updates...
+         </div>
      </div>
 </body>
 <script src="/js/themecookies.js"></script>
 <script src="/js/welcomepagefunc.js"></script>
 <script src="/js/loaderfunc.js"></script>
 <script src="/js/sidemenufunc.js"></script>
-<script src="/js/statusfetch.js?random=<?php echo filemtime('statusfetch.js?'); ?>"></script>
+<script src="/js/statusfetch.js"></script>
 <script src="https://ncvisualsvault.cc/js/dynamicannc.js?random=<?php echo filemtime('dynamicannc.js?'); ?>"></script>
 <script src="https://ncvisualsvault.cc/js/dynamicstatus.js?random=<?php echo filemtime('dynamicstatus.js'); ?>"></script>
 
