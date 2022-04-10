@@ -588,7 +588,7 @@ html {
  /* Visual config tabs */
  .cfgvrow {
 	display: table;
-    width: 100%; /*Optional*/
+    width: 100%;
  }
 
  .cfg {
