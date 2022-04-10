@@ -586,17 +586,22 @@ html {
 	}
  }
  /* Visual config tabs */
+ .cfgvrow {
+	display: table;
+    width: 100%; /*Optional*/
+ }
+
  .cfg {
+	position: relative;
 	width: 90%;
 	display: flex;
-	position: relative;
 	align-content: center;
 	left: 10vh;
 	margin-top: 30px;
 	background-color: var(--itemtabcolor);
 	border: 1px solid var(--itemtaboutline);
 	border-radius: 15px;
-	transition-duration: 1s;
+	transition-duration: .5s;
 	overflow: hidden;
  }
  .cfg__img-container {
@@ -696,7 +701,7 @@ html {
  /* Text on the end of the cfg page */
  .endtabstext {
 	position: relative;
-	margin: 100px;
+	margin: 50px;
 	font-family: Bebas Neue;
 	color: var(--tostextcolor);
 	font-size: 30px;
@@ -871,6 +876,22 @@ html {
  @media screen and (max-width: 1080px) {
 	.column {
 	   left: 10.5%;
+	}
+}
+@media screen and (max-width: 929px){
+	.cfg__img-container{
+		display: none;
+	}
+	.cfg {
+		float:left;
+		width: 50% !important;
+		height: 500px;
+	}
+}
+@media screen and (max-width: 500px){
+	.cfg{
+		float: none;
+		width: 100% !important;
 	}
 }
 @media screen and (max-width:1248px){
