@@ -888,7 +888,7 @@ html {
 		height: 500px;
 	}
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
 	.cfg{
 		float: none;
 		width: 100% !important;
