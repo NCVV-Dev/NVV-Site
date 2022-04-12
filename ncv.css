@@ -520,12 +520,34 @@ html {
 		text-align: center;
 	}
  }
+ .optionsbox {
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	border-radius: 10px;
+	background-color: var(--announcement);
+	overflow: hidden
+ }
+ .optionsbox__content{
+	text-align: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+ }
+ .optionsbox__title{
+	font-weight: bold;
+	margin-bottom: 15px;
+ }
+ .optionsbox__text{
+	height: 100%;
+	vertical-align: middle;
+ }
  /* Visual config tabs */
  .cfgvrow {
 	display: table;
     width: 100%;
  }
-
  .cfg {
 	position: relative;
 	width: 90%;
@@ -827,6 +849,9 @@ html {
 	.cfg{
 		float: none;
 		width: 100% !important;
+	}
+	.optionsbox{
+		display: none;
 	}
 }
 @media screen and (max-width:1248px){

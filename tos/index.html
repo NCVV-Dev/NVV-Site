@@ -92,6 +92,18 @@
       <h1 class="headert">la / tos</h1>
       <p class="pt">terms of service</p>
       <div class="textcont">
+         <div class="optionsbox">
+            <div class="optionsbox__content">
+               <div class="optionsbox__text">
+                  <div class="optionsbox__title">Request removal of the content</div>
+                  Put your telegram username or link
+                  <form class="contentform__mod" action="requestremoval.php" method="post" enctype="multipart/form-data">
+                     <input type="text" name="removalTelegram" autocomplete="off" required>
+                     <input type="submit" value="Submit" name="submit">
+                  </form>
+               </div>
+            </div>
+         </div>
          <div class="pTitle">Uploading a config</div>
          <div class="tos_textline">1) Visuals should not be similar to already existing ones on the site, with some exceptions, like <b>default Null Core's menu colorscheme.</b></div>
          <div class="tos_textline">2) It's highly recommended to fill all the fields when submitting a visual config and provide as much information as possible about it. This affects the time spent reviewing the visual config.</div>
