@@ -517,7 +517,8 @@ html {
 		margin: 3rem;
 	}
 	.pTitle {
-		text-align: center;
+		display: flex;
+		justify-content: center;
 	}
  }
  .optionsbox {
