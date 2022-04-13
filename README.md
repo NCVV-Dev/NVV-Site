@@ -10,7 +10,7 @@
 **NVV** aka **'Null Core - Visuals Vault'** site built in pure **HTML, CSS and JavaScript** without using any building frameworks. This repository was created in order to make easier to create update notes and provide to users an easier way to **contribute to the site**.
 
 ## Contribution
-This repository is **highly maintained**. That means every created issue and pull request here will be reviewed and the action will be taken in the **short amount of time**.
+This repository is **highly maintained**. Every created issue and pull request here will be **reviewed** and the action will be taken in the **short amount of time**.
 
 ### How can I contribute?
 - **Pinpointing any bugs or issues**
@@ -33,7 +33,7 @@ Some of the files will not appear in this repository such as **.php** files or s
 **NVV** также известный как **'Null Core — Visuals Vault'**, написанный на чистом **HTML, CSS и JavaScript** без использования каких-либо фреймворков. Этот репозиторий был создан для того, чтобы упростить создание логов об обновлениях и предоставить пользователям более простой способ **вносить свой вклад в данный проект**.
 
 ## Участие
-Данный репозиторий **имеет приоритет для разработчика**. Это означает, что каждая созданная здесь проблема или пожелание будут рассмотрены, и действие будет предпринято в **короткий промежуток времени**.
+Данный репозиторий **имеет приоритет для разработчика**. Каждая созданная здесь **проблема или пожелание** будут рассмотрены, и действие будет предпринято в **короткий промежуток времени**.
 
 ### Как я могу помочь?
 - **Выявление любых ошибок или проблем**
