@@ -564,7 +564,8 @@ html {
  }
  .cfg__img-container {
 	flex-shrink: 0;
-	flex-basis: 500px;
+	max-height: 500px;
+	max-width: 500px;
  }
  .cfg__img-container img {
 	object-fit: cover;
