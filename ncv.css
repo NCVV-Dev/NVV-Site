@@ -624,6 +624,7 @@ html {
 	color: var(--tostextcolor);
 	text-decoration: none;
 	padding: 1.05rem 2rem;
+	margin: 5px;
 	border-radius: 5px;
 	font-family: Roboto;
 	transition: 0.5s;
