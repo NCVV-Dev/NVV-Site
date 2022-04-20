@@ -162,9 +162,9 @@ html {
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
-	transition: 0.7;
+	transition: 0.7s;
 	-webkit-transition: 0.7s;
-	-o-transition: 0.7;
+	-o-transition: 0.7s;
 	width: 14em;
 	height: 3em;
 	font-family: Coda;
