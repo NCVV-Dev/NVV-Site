@@ -552,6 +552,7 @@ html {
  .cfg {
 	position: relative;
 	width: 90%;
+	max-height: 405px;
 	display: flex;
 	align-content: center;
 	left: 10vh;
@@ -818,20 +819,15 @@ html {
 	margin-top: 30px;
 	color: var(--tostextcolor);
  }
- /* Flexible columns for five items in the row */
+ /* Flexible columns for five items in the row on different resolutions */
+ @media screen and (max-width: 450px) {
+	.column {
+	   left: 15%;
+	}
+ }
  @media screen and (max-width: 604px) {
 	.column {
 	   margin-top: 40px;
-	}
- }
- @media screen and (max-width: 1600px) {
-	.column {
-	   margin-left: 3.256666667%;
-	}
- }
- @media screen and (max-width: 1534px) {
-	.column {
-	   margin-left: 2.656666667%;
 	}
  }
  @media screen and (max-width: 810px) {
@@ -839,12 +835,41 @@ html {
 	   left: 15%;
 	}
  }
- @media screen and (max-width: 1080px) {
+ @media screen and (max-width: 1534px) {
 	.column {
-	   left: 10.5%;
+	   margin-left: 2.656666667%;
+	}
+ }
+ @media screen and (max-width: 1600px) {
+	.column {
+	   margin-left: 3.306666667%;
+	}
+	/* Scale visuals config image here to prevent making more instances */
+
+}
+ @media screen and (min-width: 1920px) {
+	.column {
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		margin-top: 90px !important;
+		margin-left: 5.856666667%;
 	}
 }
-@media screen and (max-width: 929px){
+/* Visual config tabs scaling start */
+@media screen and (max-width: 600px){
+	.cfg{
+		float: none;
+		width: 100% !important;
+	}
+	.optionsbox{
+		display: none;
+	}
+	.cfg__title span{
+		display: none;
+	}
+}
+/* Make two rows of visual configs without an image for space */
+@media screen and (max-width: 1055px){
 	.cfg__img-container{
 		display: none;
 	}
@@ -854,45 +879,30 @@ html {
 		height: 500px;
 		border-radius: 0;
 		margin: 0;
+		max-height: max-content;
 	}
-}
-@media screen and (max-width: 600px){
-	.cfg{
-		float: none;
-		width: 100% !important;
-	}
-	.optionsbox{
+	.cfg__title span{
 		display: none;
 	}
+	.cfg__content{
+		margin: 15px;
+	}
 }
+/* Free space to prevent content overflow before switching to screen and (max-width: 929px) */
+@media screen and (max-width:970px){
+	.cfg__content{
+		padding: 3px;
+	}
+}
+/* Move tabs fully to the left */
 @media screen and (max-width:1248px){
 	.cfg {
 		width: 100%;
 		left: 0;
 		position: relative;
 	}
-	.cfg__img-container img {
-		border-radius: 0;
-	}
- }
- @media screen and (max-width: 450px) {
-	.column {
-	   left: 15%;
-	}
- }
- @media screen and (min-width: 1920px) {
-	.column {
-		transform: scale(1.2);
-		-webkit-transform: scale(1.2);
-		margin-top: 90px !important;
-		margin-left: 5.856666667%;
-	}
- }
- @media screen and (max-width: 1600px) {
-	.column {
-	   margin-left: 3.306666667%;
-	}
- }
+}
+/* Visual config tabs scaling end */
  .stat {
 	position: absolute;
 	background-color: var(--itemtabcolor);
