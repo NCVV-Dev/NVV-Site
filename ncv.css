@@ -334,10 +334,14 @@ html {
  }
  .sidebar .logo-details .logo_name {
 	color: #fff;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: 600;
-	opacity: 0;
-	transition: all 0.5s ease;
+	opacity: 0; 
+	transition: all 200ms ease;
+ }
+ #sidebarlogo__nc {
+	position: fixed;
+	margin: 20px;
  }
  .sidebar.open .logo-details .icon,
  .sidebar.open .logo-details .logo_name {
@@ -368,7 +372,6 @@ html {
  }
  .sidebar .nav-list {
 	margin-top: 20px;
-	height: 100%;
  }
  .sidebar li {
 	position: relative;
@@ -409,6 +412,7 @@ html {
 	text-decoration: none;
 	transition: all 0.15s ease-in-out;
 	background-color: var(--sidebarbutton);
+	overflow: hidden;
  }
  .sidebar li a:hover {
 	transition: all 0.15s ease-in-out;
@@ -567,9 +571,7 @@ html {
 	flex-shrink: 0;
 	min-height: 500px;
 	min-width: 500px;
-
-	max-height: 500px;
-	max-width: 500px;
+	max-height: 415px;
  }
  .cfg__img-container img {
 	object-fit: cover;
