@@ -578,8 +578,7 @@ html {
 	height: 100%;
 	width: 100%;
 	max-width: 500px;
-	max-height: 500px;
-
+	max-height: 405px;
 	border-radius: 15px;
 	transition: all 300ms;
  }
