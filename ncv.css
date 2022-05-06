@@ -112,16 +112,13 @@ html {
  }
  h1 {
 	color: var(--headercolor);
-	font-family: Major Mono Display;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 700;
 	text-align: center;
 	font-size: 40px;
 	margin-top: 30px;
-	opacity: 0;
-	animation-fill-mode: forwards;
-	animation-name: h1anim;
-	animation-duration: 1s;
-	animation-iteration-count: 1;
-	animation-delay: 100ms;
  }
  /* Header animation */
  @keyframes h1anim {
@@ -139,11 +136,6 @@ html {
 	font-family: Major Mono Display;
 	text-align: center;
 	font-size: 18px;
-	opacity: 0;
-	animation-fill-mode: forwards;
-	animation-name: panim;
-	animation-duration: 1s;
-	animation-iteration-count: 1;
 	animation-delay: 300ms;
  }
  /* Animation added */
@@ -586,6 +578,7 @@ html {
 	flex-basis: auto;
 	padding: 20px;
 	margin: auto;
+	transition: all 1s;
  }
  .cfg__title {
 	position: relative;
@@ -593,13 +586,7 @@ html {
 	color: var(--tostextcolor);
 	font-size: 2.1rem;
 	margin-bottom: 0.4rem;
-	opacity: 0;
-	transition: all 0.5s ease-in-out;
-	animation-fill-mode: forwards;
-	animation-name: cfgtitleanim;
-	animation-duration: 1.5s;
-	animation-iteration-count: 1;
-	animation-delay: 300ms;
+	animation-delay: 350ms;
  }
  /* Title of Tab Animation */
  @keyframes cfgtitleanim {
@@ -637,12 +624,6 @@ html {
 	border-radius: 5px;
 	font-family: Roboto;
 	transition: 0.5s;
-	opacity: 0;
-	animation-fill-mode: forwards;
-	animation-name: cfgbuttonanim;
-	animation-duration: 1s;
-	animation-iteration-count: 1;
-	animation-delay: 350ms;
  }
  /* Download Button Animation */
  @keyframes cfgbuttonanim {
