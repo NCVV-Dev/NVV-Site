@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-   <title>NVV - Site Status</title>
+   <title>NVV - Mods Vault</title>
    <link rel="stylesheet" type="text/css" href="/ncv.css?random=<?php echo filemtime('ncv.css'); ?>">
    <meta charset="UTF-8">
    <meta property="og:type" content="website">
-   <meta property="og:url" content="https://ncvisualsvault.cc/">
+   <meta property="og:url" content="https://ncvisualsvault.cc">
    <meta property="og:image" content="https://ncvisualsvault.cc/media/ncc_small.png">
-   <meta property="og:title" content="NVV - Site Status">
-   <meta property="og:description" content="Check out the last updates on the site and outages.">
+   <meta property="og:title" content="Mods Vault">
+   <meta property="og:description" content="Only good mods for Team Fortress 2">
    <meta property="twitter:card" content="summary_large_image">
-   <meta name="description" content="Null Core Visuals Vault - Site Status Page">
-   <meta name="keywords" content="Null Core Visuals, Null Core Cheat Visuals, NC Visuals, Null Core Visuals Config, NC Visuals Config, Null Core Visuals Vault, NC Visuals Vault, NCVV, NVV, ncc visuals, Nullcore visuals">
+   <meta name="description" content="All the TF2 mods you need for smooth gameplay.">
+   <meta name="keywords" content="Null Core Visuals, Null Core Cheat Visuals, NC Visuals, Null Core Visuals Config, NC Visuals Config, Null Core Visuals Vault, NC Visuals Vault, NCVV, NVV, ncc visuals, Nullcore visuals, nc visuals, nullcore visuals">
    <meta name="theme-color" content="#414949">
    <meta name="theme-color" content="#272828">
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,6 +34,7 @@
          <div class="welcome_header2">Dedicated site to the Null Core training software for TF2 and it's visual configs - upload your own, download and share your visual configs and mods with others right away!</div>
          <div class="downbuttons">
             <a class="welcbutton" onclick="WelcomeButtonAction()">Start Exploring</a>
+            <a class="welcbutton" onclick="WelcomeButtonRedirect()">Visit Mods Page</a>
          </div>
       </div>
       <div class="welcome_imgcontainer">
@@ -44,6 +45,7 @@
          <a class="welcbutton" href="https://t.me/ncvisualsvault" target="_blank"><i class='bx bxl-telegram'></i></a>
       </div>
    </div>
+   <div id="modal__overlay"></div>
    <!--
    <div id="snowflakeContainer">
       <span class="snowflake"></span>
@@ -57,9 +59,33 @@
       <div id="dynamicannc"></div>
    </div>
    <div class="cont">
+      <div id="upl__modal" class="upl__modal">
+         <div class="modal__content">
+            <div class="modal__header">
+               <span class="close" id="closei">&times;</span>
+               <h2>Submit your mod</h2>
+            </div>
+            <div class="modal__body">
+               <form class="contentform__mod" action="suggestmod.php" method="post" enctype="multipart/form-data">
+                  <h2>Put your mod link</h2>
+                  <input type="text" name="textConfigLink" autocomplete="off" required>
+                  <h2>Include some information (Optional)</h2>
+                  <input type="text" name="textModDesc" autocomplete="off">
+                  <h2>Enter your nickname</h2>
+                  <input type="text" name="textAuthor" autocomplete="off" required>
+                  <h2>Put your contact link</h2>
+                  <input type="text" name="textAuthorLink" autocomplete="off">
+                  <input type="submit" value="Submit" name="submit">
+               </form>
+            </div>
+         </div>
+      </div>
+      <h1 class="animate__animated animate__fadeInDown">mods vault</h1>
+      <p class="animate__animated animate__fadeInDown">all the mods you need for smooth gameplay.</p>
+      <br>
       <div class="sidebar">
          <div class="logo-details">
-            <i class="bx bx-menu" id="btn"></i>
+            <i class='bx bx-menu' id="btn"></i>
          </div>
          <ul class="nav-list">
             <li>
@@ -77,37 +103,52 @@
                <span class="tooltip">Switch Theme</span>
             </li>
             <li>
+               <a href="/tos/">
+                  <i class='bx bxs-book'></i>
+                  <span class="links_name">LA/TOS</span>
+               </a>
+               <span class="tooltip">LA/TOS and FAQ</span>
+            </li>
+            <li>
                <a href="https://github.com/harmonyzt/NVV-Site/issues/new" target="_blank">
                   <i class='bx bxs-message-error'></i>
                   <span class="links_name">Report Issues</span>
                </a>
-               <span class="tooltip">Found a bug? Broken link? Mismatched images? Report here</span>
+               <span class="tooltip">Found a bug? Broken link? Not working mods? Report here</span>
             </li>
             <li style="cursor: pointer;">
                <a id="dynamicst"></a>
             </li>
          </ul>
       </div>
-      <h1 class="headert animate__animated animate__fadeInDown">site status</h1>
-      <p class="pt animate__animated animate__fadeInDown">outages and other information</p>
-      <div class="textcont">
-         <div class="statusdetailedbox">
-            <div class="detl__text">
-               Global status:
-               <div id="globalstatus">Fetching</div>
+      <div class="menu_div">
+         <input type="text" id="searchbar" placeholder="Search for mods... Or use tags" onkeyup="search()" autocomplete="off">
+         <div class="row">
+            <div class="column">
+               <a class="mod__author">Admin</a>
+               <div class="stat">
+                  <i class='bx bxs-shield'></i>
+                  <span class="txtis">Mod might contain some visual glitches.</span>
+               </div>
+               <h2></h2>
+               <p></p>
+               <a href="" class="down_button">Download</a>
             </div>
          </div>
-         <div class="fetchinfo" id="outageinfdyn">
-            Fetching last updates...
+         <div class="not-found" id="nofoundmod" style="display:none">We found... Nothing :( <a style="cursor: pointer;" class="other__clickablelink">Wanna submit your own mod?</a>
          </div>
       </div>
+   </div>
+   <script src="/js/themecookies.js"></script>
+   <script src="/js/welcomepagefunc.js"></script>
+   <script src="/js/loaderfunc.js"></script>
+   <script src="/js/sidemenufunc.js"></script>
+   <script src="/js/modalfunc.js"></script>
+   <script src="/js/uploadtrigger.js"></script>
+   <script src="/js/searchitem.js"></script>
+   <script src="/js/preventresubmit.js"></script>
+   <script src="https://ncvisualsvault.cc/js/dynamicannc.js?random=<?php echo filemtime('dynamicannc.js?'); ?>"></script>
+   <script src="https://ncvisualsvault.cc/js/dynamicstatus.js?random=<?php echo filemtime('dynamicstatus.js'); ?>"></script>
 </body>
-<script src="/js/statusfetch.js"></script>
-<script src="/js/themecookies.js"></script>
-<script src="/js/welcomepagefunc.js"></script>
-<script src="/js/loaderfunc.js"></script>
-<script src="/js/sidemenufunc.js"></script>
-<script src="https://ncvisualsvault.cc/js/dynamicannc.js?random=<?php echo filemtime('dynamicannc.js?'); ?>"></script>
-<script src="https://ncvisualsvault.cc/js/dynamicstatus.js?random=<?php echo filemtime('dynamicstatus.js'); ?>"></script>
 
 </html>
