@@ -147,28 +147,6 @@ html {
 	   opacity: 1;
 	}
  }
- /* Default Button CSS */
- .button {
-	background-color: var(--buttonbg);
-	border: none;
-	color: white;
-	text-decoration: none;
-	cursor: pointer;
-	transition: 0.7s;
-	-webkit-transition: 0.7s;
-	-o-transition: 0.7s;
-	width: 14em;
-	height: 3em;
-	font-family: Coda;
-	font-size: 17px;
-	z-index: 1;
-	margin: 3px;
-	border-radius: 5px;
-	margin-top: 30px;
- }
- .button:hover {
-	box-shadow: inset 14em 0 0 0 var(--buttonhover);
- }
  /* Snowflakes */
  #snowflakeContainer {
 	position: absolute;
