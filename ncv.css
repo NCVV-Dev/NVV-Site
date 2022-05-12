@@ -120,7 +120,7 @@ html {
 	font-size: 40px;
 	margin-top: 30px;
  }
- /* Header animation */
+ /* Header Animation */
  @keyframes h1anim {
 	0% {
 	   margin-top: 30px;
@@ -138,7 +138,7 @@ html {
 	font-size: 18px;
 	animation-delay: 300ms;
  }
- /* Animation added */
+ /* Animation */
  @keyframes panim {
 	0% {
 	   opacity: 0;
@@ -147,7 +147,7 @@ html {
 	   opacity: 1;
 	}
  }
- /* Button Style */
+ /* Default Button CSS */
  .button {
 	background-color: var(--buttonbg);
 	border: none;
@@ -186,7 +186,7 @@ html {
 	width: 10px;
 	height: 10px;
  }
- /* Progress line (Width increases by JS) */
+ /* Progress line */
  #progress {
 	position: fixed !important;
 	z-index: 95 !important;
@@ -218,7 +218,7 @@ html {
 	display: none;
 	background-color: var(--tabcontents);
  }
- /* All the contect but not the side panel. */
+ /* All the content but not the side panel. */
  .cont {
 	position: relative;
 	margin-left: 78px;
@@ -409,7 +409,7 @@ html {
  .sidebar li a:hover {
 	transition: all 0.15s ease-in-out;
 	background: var(--sidebarbuttonhover);
-	transform: scale(1.1);
+	transform: translate(0, -2px);
  }
  .sidebar li a .links_name {
 	color: #fff;
@@ -623,7 +623,7 @@ html {
 	margin: 5px;
 	border-radius: 5px;
 	font-family: Roboto;
-	transition: 0.5s;
+	transition: .25s;
  }
  /* Download Button Animation */
  @keyframes cfgbuttonanim {
@@ -639,7 +639,7 @@ html {
  .cfg__button:hover {
 	background-color: var(--buttonhover);
 	color: white;
-	transform: scale(1.05);
+	transform: translate(0, -2px);
  }
  .cfg__upl {
 	height: 30px;
