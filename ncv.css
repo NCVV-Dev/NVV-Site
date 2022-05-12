@@ -10,7 +10,7 @@ html {
 	position: relative;
 	margin: auto;
 	color: rgb(253, 78, 78);
-	font-size: 20px;
+	font-size: 1.5rem;
 	font-weight: 700;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	letter-spacing: 1px;
@@ -117,7 +117,7 @@ html {
 	letter-spacing: 3px;
 	font-weight: 700;
 	text-align: center;
-	font-size: 40px;
+	font-size: 3rem;
 	margin-top: 30px;
  }
  /* Header Animation */
@@ -135,7 +135,7 @@ html {
 	color: var(--pcolor);
 	font-family: Major Mono Display;
 	text-align: center;
-	font-size: 18px;
+	font-size: 1.5rem;
 	animation-delay: 300ms;
  }
  /* Animation */
@@ -146,6 +146,28 @@ html {
 	100% {
 	   opacity: 1;
 	}
+ }
+ /* Modal Buttons */
+ .modalbutton {
+	background-color: var(--buttonbg);
+	border: none;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.7s;
+	-webkit-transition: 0.7s;
+	-o-transition: 0.7s;
+	width: 14em;
+	height: 3em;
+	font-family: Coda;
+	font-size: 1.10rem;
+	z-index: 1;
+	margin: 3px;
+	border-radius: 5px;
+	margin-top: 30px;
+ }
+ .modalbutton:hover {
+	box-shadow: inset 14em 0 0 0 var(--buttonhover);
  }
  /* Snowflakes */
  #snowflakeContainer {
@@ -177,21 +199,6 @@ html {
 	-webkit-box-shadow: 0 0 20px var(--sidebarbuttonhover);;
 	box-shadow: 0 0 20px var(--sidebarbuttonhover);;
  }
- .buttonp {
-	background-color: var(--itemtabcolor);
-	color: white;
-	text-decoration: none;
-	cursor: pointer;
-	transition: 0.5s;
-	width: 10em;
-	height: 3em;
-	font-family: Coda;
-	font-size: 17px;
-	border: none;
- }
- .buttonp:hover {
-	box-shadow: inset 10em 0 0 0 var(--itemtabhovereffect);
- }
  .invisible {
 	display: none;
 	background-color: var(--tabcontents);
@@ -201,29 +208,7 @@ html {
 	position: relative;
 	margin-left: 78px;
  }
- /* Visual Config Upload Page */
- .contentform {
-	margin-top: 30px;
-	text-align: center;
-	background-color: var(--itemtabcolor);
-	margin: 150px;
-	padding: 20px;
-	border-radius: 15px;
-	position: relative;
-	overflow: hidden;
- }
- .contentform h2 {
-	font-family: Roboto;
-	font-size: 20px;
-	color: var(--tostextcolor);
-	letter-spacing: 1px;
- }
- .alert-sucess {
-	font-family: Roboto;
-	font-size: 20px;
-	color: var(--tostextcolor);
- }
- /* Upload visual cfg button */
+ /* Upload visual cfg button (default button is hidden) */
  input[type="file"] {
 	visibility: hidden;
 	display: none;
@@ -234,7 +219,6 @@ html {
 	display: none;
 	z-index: 0;
  }
- /* End of visual cfg button */
  input[type="text"] {
 	width: 20em;
 	padding: 12px 20px;
@@ -249,7 +233,7 @@ html {
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 	letter-spacing: 2px;
 	border-radius: 5px;
-	font-size: 18px;
+	font-size: 1.10rem;
  }
  input[type="text"]:focus {
 	border: 1px solid var(--buttonhover);
@@ -267,7 +251,7 @@ html {
 	width: 14em;
 	height: 3em;
 	font-family: Coda;
-	font-size: 17px;
+	font-size: 1.10rem;
 	z-index: 1;
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -322,12 +306,10 @@ html {
 	top: 50%;
 	right: 0;
 	transform: translateY(-50%);
-	font-size: 22px;
+	font-size: 1.7rem;
 	transition: all 0.4s ease;
-	font-size: 23px;
 	text-align: center;
 	cursor: pointer;
-	transition: all 0.5s ease;
  }
  .sidebar.open .logo-details #btn {
 	text-align: right;
@@ -336,7 +318,6 @@ html {
 	color: #fff;
 	height: 60px;
 	min-width: 50px;
-	font-size: 28px;
 	text-align: center;
 	line-height: 60px;
  }
@@ -357,8 +338,8 @@ html {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	padding: 6px 12px;
 	border-radius: 4px;
-	font-size: 15px;
-	font-weight: 400;
+	font-size: 1rem;
+	font-family: Coda;
 	opacity: 0;
 	white-space: nowrap;
 	pointer-events: none;
@@ -391,8 +372,8 @@ html {
  }
  .sidebar li a .links_name {
 	color: #fff;
-	font-size: 15px;
-	font-weight: 400;
+	font-size: 1rem;
+	font-family: Roboto;
 	white-space: nowrap;
 	opacity: 0;
 	pointer-events: none;
@@ -405,48 +386,28 @@ html {
  .sidebar li i {
 	height: 50px;
 	line-height: 50px;
-	font-size: 23px;
+	font-size: 1.5rem;
 	border-radius: 12px;
- }
- .home-section {
-	position: relative;
-	background: #e4e9f7;
-	min-height: 100vh;
-	top: 0;
-	left: 78px;
-	width: calc(100% - 78px);
-	transition: all 0.5s ease;
-	z-index: 2;
- }
- .sidebar.open ~ .home-section {
-	left: 250px;
-	width: calc(100% - 250px);
- }
- .home-section .text {
-	display: inline-block;
-	color: #11101d;
-	font-size: 25px;
-	font-weight: 500;
-	margin: 18px;
  }
  /* LA/TOS Page CSS */
  h1 .headert {
 	color: white;
 	font-family: Major Mono Display;
 	text-align: center;
-	font-size: 50px;
+	font-size: 3rem;
  }
  .pt {
 	color: white;
 	font-family: Major Mono Display;
 	text-align: center;
-	font-size: 30px;
+	font-size: 1.5rem;
  }
  .faqq {
 	color: white;
 	font-family: Major Mono Display;
 	text-align: center;
-	font-size: 30px;
+	font-size: 2.5rem;
+	font-weight: bold;
  }
  .qm {
 	color: var(--tosqm);
@@ -461,7 +422,7 @@ html {
 	font-family: Roboto;
 	color: var(--tostextcolor);
 	margin: 5rem;
-	font-size: 28px;
+	font-size: 2rem;
 	line-height: 1.4;
 	transition: all .5s ease-in-out;
  }
@@ -471,7 +432,6 @@ html {
  .textcont a {
 	font-family: Roboto;
 	color: var(--tostextcolor);
-	font-size: 28px;
  }
  .pTitle {
 	position: relative;
@@ -576,7 +536,7 @@ html {
 	}
  }
  .cfg__subtitle {
-	font-size: 19px;
+	font-size: 1rem;
 	font-weight: 800;
 	letter-spacing: 1px;
 	color: var(--tostextcolor);
@@ -584,12 +544,12 @@ html {
 	font-family: Roboto;
  }
  .cfg__desc {
-	 transition: all 0.5s ease-in-out;
-	font-size: 23px;
+	transition: all 0.5s ease-in-out;
+	font-size: 1.5rem;
 	line-height: 1.8;
 	color: var(--tostextcolor);
 	margin-bottom: 3.125rem;
-	font-family: "Open Sans", sans-serif;
+	font-family: Roboto;
  }
  .cfg__button {
 	position: relative;
@@ -631,62 +591,9 @@ html {
 	margin: 50px;
 	font-family: Bebas Neue;
 	color: var(--tostextcolor);
-	font-size: 30px;
+	font-size: 2rem;
  }
- /* Icon for scrolling to the top (Needs rework) */
- .scrolltotopicon {
-	position: fixed;
-	bottom: 30px;
-	width: 50px;
-	height: 50px;
-	opacity: 0.3;
-	left: 96.5%;
-	cursor: pointer;
-	background-image: url(media/ncc_c.png);
-	background-size: 50px;
- }
- #scrolltotoparrow {
-	position: fixed;
-	bottom: 90px;
-	width: 30px;
-	height: 30px;
-	opacity: 0.3;
-	left: 96.7%;
-	cursor: pointer;
-	font-size: 40px;
-	color: var(--itemtabhover);
- }
- /* Numbers of pages in the end of cfgs. */
- .pages {
-	position: relative;
-	margin-bottom: 50px;
-	align-content: center;
- }
- .pages a {
-	transition-duration: 0.5s;
-	padding: 20px;
-	padding-top: 13px;
-	padding-bottom: 13px;
-	font-size: 17px;
-	font-family: Coda;
-	border-radius: 3px;
-	color: var(--tostextcolor);
-	background-color: var(--buttonbg);
-	cursor: pointer;
- }
- .pages a:hover {
-	background-color: var(--buttonhover) !important;
- }
- .pages a:active {
-	background-color: var(--buttonhover) !important;
- }
- .pages .pagebtn:active {
-	background-color: var(--buttonhover) !important;
- }
- .active,
- .a:hover {
-	background-color: var(--buttonhover) !important;
- }
+
  /*		Mods Page CSS		*/
  .column {
 	position: relative;
