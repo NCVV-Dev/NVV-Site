@@ -12,4 +12,5 @@
 *vscode*
 
 #
-archived_mod
+**/archived_mod/
+archived_mod/*.html
