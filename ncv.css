@@ -497,6 +497,7 @@ html {
 	border-radius: 15px;
 	transition-duration: .5s;
 	overflow: hidden;
+	--animate-duration: 1.5s;
  }
  .cfg__img-container {
 	flex-shrink: 0;
@@ -521,9 +522,10 @@ html {
  }
  .cfg__title {
 	position: relative;
-	font-weight: 800;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+	font-weight: 800 !important;
 	color: var(--tostextcolor);
-	font-size: 2.1rem;
+	font-size: 2.5rem;
 	margin-bottom: 0.4rem;
 	animation-delay: 350ms;
  }
@@ -546,7 +548,7 @@ html {
  }
  .cfg__desc {
 	transition: all 0.5s ease-in-out;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	line-height: 1.8;
 	color: var(--tostextcolor);
 	margin-bottom: 3.125rem;
@@ -842,6 +844,7 @@ html {
 	width: 75%;
 	left: 50%;
 	margin-left: -36%;
+	top: 10%;
 	transition: opacity 1s;
  }
  /* Modal Content */
@@ -965,7 +968,6 @@ html {
 	color: rgb(98, 252, 206);
  }
  .contributor5 {
-	font-family: Coda;
 	text-decoration: none;
 	color: lightblue;
 	font-weight: lighter;
@@ -1152,6 +1154,7 @@ html {
 	padding-top: 50px;
 	transition: all 0.3s ease-in-out;
 	height: 500px;
+	--animate-duration: .3s;
  }
  .welcome_imgcontainer img {
 	position: absolute;
