@@ -70,7 +70,7 @@ body[data-theme="ncl"] {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url(media/background_ncoriginal.jpg);
-	background-color: white;
+	background-color: black;
 	overflow-y: scroll;
 	--sidebarbg: #263340;
 	--sidebarbutton: #49779c;
