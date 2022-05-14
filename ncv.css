@@ -1040,6 +1040,7 @@ h1 .headert {
 	padding: 2px 16px;
 	background-color: var(--itemtabhovereffect);
 	color: white;
+	border-radius: 5px;
 }
 
 .modal__body {
