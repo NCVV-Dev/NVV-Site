@@ -8,7 +8,7 @@
 # Ignore .txt files
 *.txt
 
-# Ignore any vscode files or folders
+# Ignore any vscode files and folders
 *vscode*
 
 # Ignore archived files and folders
