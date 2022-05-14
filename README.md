@@ -2,7 +2,6 @@
   <img src=".github/media/NVV.png" align="center">
 </p>
 <h3 align="center"> Null Core - Visuals Vault Site Source Code </h3>
-[![Jekyll site CI](https://github.com/harmonyzt/NVV-Site/actions/workflows/jekyll.yml/badge.svg?branch=main)](https://github.com/harmonyzt/NVV-Site/actions/workflows/jekyll.yml)
 
 ## Introduction
 
