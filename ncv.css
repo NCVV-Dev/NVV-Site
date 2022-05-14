@@ -691,7 +691,6 @@ h1 .headert {
 	margin-top: 55px;
 	transition: 0.5s ease-in-out;
 	border-radius: 5px;
-	list-style-type: none;
 	list-style: none;
 	background-color: var(--itemtabcolor);
 	background-position: center;
