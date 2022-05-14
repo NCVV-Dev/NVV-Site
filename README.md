@@ -3,6 +3,8 @@
 </p>
 <h3 align="center"> Null Core - Visuals Vault Site Source Code </h3>
 
+<div align="center"><img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=vulnerabilities"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=reliability_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=ncloc"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=sqale_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=security_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=bugs"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=sqale_index"></div>
+
 ## Introduction
 
 ### English
