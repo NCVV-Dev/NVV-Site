@@ -525,6 +525,7 @@ h1 .headert {
 }
 
 .optionsbox__text {
+	color: white;
 	height: 100%;
 	vertical-align: middle;
 }
