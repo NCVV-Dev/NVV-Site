@@ -122,6 +122,7 @@ body[data-theme="ncl"] {
 	height: 100%;
 	width: 100%;
 	position: absolute;
+	
 }
 
 h1 {
@@ -584,17 +585,6 @@ h1 .headert {
 	animation-delay: 350ms;
 }
 
-/* Title of Tab Animation */
-@keyframes cfgtitleanim {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
-}
-
 .cfg__subtitle {
 	font-size: 1rem;
 	font-weight: 800;
@@ -624,19 +614,6 @@ h1 .headert {
 	border-radius: 5px;
 	font-family: Roboto, sans-serif;
 	transition: .25s;
-}
-
-/* Download Button Animation */
-@keyframes cfgbuttonanim {
-	0% {
-		top: 10px;
-		opacity: 0;
-	}
-
-	100% {
-		top: 0;
-		opacity: 1;
-	}
 }
 
 .cfg__button:hover {
@@ -677,23 +654,6 @@ h1 .headert {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	opacity: 0;
-	animation-fill-mode: forwards;
-	animation-name: columnanim;
-	animation-duration: 500ms;
-	animation-iteration-count: 1;
-	animation-delay: 100ms;
-}
-
-/*		Column Animation		*/
-@keyframes columnanim {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
 }
 
 .row {
@@ -1332,23 +1292,6 @@ h1 .headert {
 	width: 150px;
 	opacity: 0;
 	transition: all 0.5s ease-in-out;
-	animation-fill-mode: forwards;
-	animation-name: wchebtnanim;
-	animation-duration: 1s;
-	animation-iteration-count: 1;
-	animation-delay: 400ms;
-}
-
-@keyframes wchebtnanim {
-	0% {
-		opacity: 0;
-		top: 15px;
-	}
-
-	100% {
-		top: 0;
-		opacity: 1;
-	}
 }
 
 .welcbutton {
