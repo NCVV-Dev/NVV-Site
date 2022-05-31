@@ -1,0 +1,1 @@
+getText("fetch_outageinfo.txt");async function getText(file){let FetchObj=await fetch(file);let FetchTxt=await FetchObj.text();document.getElementById("outageinfdyn").innerHTML=FetchTxt}
