@@ -279,7 +279,6 @@ input[type="submit"]:hover {
 	background: var(--sidebarbg);
 	transition: all 0.5s ease;
 	overflow: hidden;
-	transition: all 0.5s;
 	height: 50px;
 }
 
@@ -310,11 +309,6 @@ input[type="submit"]:hover {
 	font-family: Roboto, sans-serif;
 	transition: all 0.5s ease-in-out;
 	text-align: center;
-}
-
-.sidebar em {
-	text-align: center;
-	font-size: 1.5rem;
 }
 
 .sidebar a:after{
