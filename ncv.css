@@ -1050,28 +1050,24 @@ h1 .headert {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	color: lightblue;
-	font-weight: lighter;
 }
 
 .contributor10 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	color: lightgreen;
-	font-weight: 100;
 }
 
 .contributor15 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	color: rebeccapurple;
-	font-weight: 200;
 }
 
 .contributor20 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	color: magenta;
-	font-weight: 300;
 }
 
 .contributor25 {
@@ -1083,7 +1079,6 @@ h1 .headert {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	animation: contr25anim 2s linear infinite;
-	font-weight: 400;
 }
 
 @keyframes contr25anim {
@@ -1096,7 +1091,6 @@ h1 .headert {
 	font-family: Roboto, sans-serif;
 	color: #39727279;
 	animation: contr45anim 2s ease-in-out infinite;
-	font-weight: 500;
 }
 
 @keyframes contr45anim {
