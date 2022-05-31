@@ -33,9 +33,9 @@ body[data-theme="nvv"] {
 	background-size: cover;
 	background-color: #21222c;
 	overflow-y: scroll;
-	--sidebarbg: #15171b;
-	--sidebarbutton: rgba(149, 128, 255, 0.7);
-	--sidebarbuttonhover: #ff80bf;
+	--navbarbg: #15171b;
+	--navbarbutton: rgba(149, 128, 255, 0.7);
+	--navbarbuttonhover: #ff80bf;
 	--headercolor: #ffffff;
 	--pcolor: #ffffff;
 	--generaltextcolor: #ffffff;
@@ -72,9 +72,9 @@ body[data-theme="ncl"] {
 	background-image: url(/media/background_ncoriginal.jpg);
 	background-color: black;
 	overflow-y: scroll;
-	--sidebarbg: #263340;
-	--sidebarbutton: #49779c;
-	--sidebarbuttonhover: #40c192;
+	--navbarbg: #263340;
+	--navbarbutton: #49779c;
+	--navbarbuttonhover: #40c192;
 	--headercolor: #ffffff;
 	--pcolor: #ffffff;
 	--generaltextcolor: #ffffff;
@@ -198,12 +198,12 @@ p {
 	position: fixed !important;
 	z-index: 95 !important;
 	height: 4px;
-	background: var(--sidebarbuttonhover);
+	background: var(--navbarbuttonhover);
 	width: 0;
 	bottom: 99.65%;
 	transition: 1s 0.4s;
-	-webkit-box-shadow: 0 0 20px var(--sidebarbuttonhover);
-	box-shadow: 0 0 20px var(--sidebarbuttonhover);
+	-webkit-box-shadow: 0 0 20px var(--navbarbuttonhover);
+	box-shadow: 0 0 20px var(--navbarbuttonhover);
 }
 
 .invisible {
@@ -274,23 +274,22 @@ input[type="submit"]:hover {
 	box-shadow: inset 14em 0 0 0 var(--buttonhover);
 }
 
-/* Sidebar Panel */
-.sidebar {
-	background: var(--sidebarbg);
+/* navbar Panel */
+.navbar__wrapper{
+	background-color: var(--navbarbg);
+	width: 100%;
+	transition: all 0.5s ease;
+}
+
+.navbar {
+	display: inline-flex;
+	background: var(--navbarbg);
 	transition: all 0.5s ease;
 	overflow: hidden;
 	height: 50px;
 }
 
-.sidebar em {
-	color: #fff;
-	height: 60px;
-	min-width: 50px;
-	text-align: center;
-	line-height: 60px;
-}
-
-.sidebar a {
+.navbar a {
 	position: relative;
 	display: inline-block;
 	color: #f2f2f2;
@@ -302,7 +301,7 @@ input[type="submit"]:hover {
 	padding: 15px;
 }
 
-.sidebar a .links_name {
+.navbar a .links_name {
 	position: relative;
 	color: #fff;
 	font-size: 1rem;
@@ -311,7 +310,7 @@ input[type="submit"]:hover {
 	text-align: center;
 }
 
-.sidebar a:after{
+.navbar a:before{
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -321,11 +320,11 @@ input[type="submit"]:hover {
 	content: '.';
 	color: transparent;
 	background: var(--itemtabhovereffect);
-	height: 1px;
+	height: 3px;
 	transition: all 300ms ease-in-out;
 }
 
-.sidebar a:hover:after {
+.navbar a:hover:before {
 	width: 100%;
 }
 
@@ -749,7 +748,7 @@ h1 .headert {
 	position: absolute;
 	visibility: hidden;
 	width: 120px;
-	background-color: var(--sidebarbutton);
+	background-color: var(--navbarbutton);
 	color: var(--tostextcolor);
 	text-align: center;
 	border-radius: 5px;
@@ -872,7 +871,7 @@ h1 .headert {
 
 .close:hover,
 .close:focus {
-	color: var(--sidebarbuttonhover);
+	color: var(--navbarbuttonhover);
 	text-decoration: none;
 	cursor: pointer;
 }
