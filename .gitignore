@@ -10,8 +10,3 @@
 
 # Ignore any vscode files and folders
 *vscode*
-
-# Ignore archived files and folders
-**/archived_mod/
-
-archived_mod/*.html
