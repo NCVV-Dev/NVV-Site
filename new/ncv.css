@@ -470,6 +470,7 @@ h1 .headert {
 	margin-top: auto;
 	display: flex;
 	flex-wrap: wrap;
+	color: white;
 }
 
 .cfg__author{
