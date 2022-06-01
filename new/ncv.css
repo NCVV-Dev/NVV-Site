@@ -447,8 +447,6 @@ h1 .headert {
 .cfg__tab {
 	display: flex;
 	height: auto;
-	cursor: pointer;
-	overflow: hidden;
 	flex-direction: column;
 	align-content: center;
 	background-color: var(--itemtabcolor);
