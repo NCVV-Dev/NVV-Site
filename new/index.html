@@ -26,7 +26,7 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
 </head>
 
-<body data-theme="nvv">
+<body data-theme="nvv" onload="initpicture()">
    <div class="navbar__wrapper">
    <div class="navbar">
          <a style="cursor: pointer;" id="openmodal">
@@ -95,11 +95,34 @@
                </div>
             </div>
          </div>
+         <div class="cfg__wrapper animate__animated animate__fadeIn">
+            <div class="cfg__tab">
+               <div class="cfg__image__wrapper">
+                  <img class="cfg__image" loading="lazy" src="/media/menus/fatalitymenu.png" alt=""></img>
+               </div>
+               <div class="cfg__body">
+                  <div class="cfg__title">
+                     Fatality
+                  </div>
+                  <div class="cfg__author">
+                     Uploader: <a class="default__link" href="https://steamcommunity.com/profiles/76561198303076440" target="_blank" rel="noopener">HeXz</a> //  Uploaded: April 6 2021
+                  </div>
+                  <div class="cfg__descr">
+                     Sick looking fatality-styled menu. In-game visuals are close to defaults with some changes.
+                  </div>
+                  <div class="cfg__downloadbtn">
+                     <a class="cfg__dwnbtn">Download <em class='bx bxs-download'></em></a>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
       </div>
+      <div id="preview" onclick="this.style.display='none';"></div>
    </div>
 </body>
 <script src="js/themecookies.js"></script>
+<script src="js/pictureprev.js"></script>
 <script src="js/welcomepagefunc.js"></script>
 <script src="js/loaderfunc.js"></script>
 <script src="js/preventresubmit.js"></script>

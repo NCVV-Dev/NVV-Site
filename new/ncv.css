@@ -443,7 +443,8 @@ h1 .headert {
 }
 
 .cfg__image:hover{
-	transform: scale(2.0);
+	cursor: pointer;
+	transform: scale(1.1);
 }
 
 .cfg__image__wrapper {
@@ -491,7 +492,7 @@ h1 .headert {
 
 .cfg__dwnbtn {
 	background-color: var(--buttonbg);
-	color: var(--tostextcolor);
+	color: white;
 	text-decoration: none;
 	padding: 0.5rem 1.7rem;
 	border-radius: 3px;
@@ -508,9 +509,22 @@ h1 .headert {
 
 .cfg__dwnbtn:hover {
 	background-color: var(--buttonhover);
-	color: white;
 	cursor: pointer;
 }
+
+#preview {
+	display: none;
+	position: absolute;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-size: contain;
+	background-repeat: no-repeat no-repeat;
+	background-position: center center;
+	background-color: black;
+  }
 
 /* Text on the end of the cfg page */
 .endtabstext {
