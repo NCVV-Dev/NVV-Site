@@ -1285,7 +1285,6 @@ h1 .headert {
 .downbuttons {
 	margin-top: 50px;
 	width: 150px;
-	opacity: 0;
 	transition: all 0.5s ease-in-out;
 }
 
