@@ -71,51 +71,30 @@
          </div>
       </noscript>
       <div class="cont">
-         <div id="upl__modal" class="upl__modal">
-            <div class="modal__content">
-               <div class="modal__header"> <span class="close" id="closei">&times;</span>
-                  <h2>Upload visual config</h2>
-               </div>
-               <div class="modal__body">
-                  <form class="contentform__mod" action="upload.php" method="post" enctype="multipart/form-data">
-                     <button class="modalbutton" id="uploadTrigger">Select File</button>
-                     <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
-                     <h2>Enter your nickname</h2>
-                     <input type="text" name="textName" id="authorName" autocomplete="off" required>
-                     <h2>Enter your Steam/Telegram profile</h2>
-                     <input type="text" name="textSteam" id="authorSteam" autocomplete="off" required>
-                     <h2>Enter your config description</h2>
-                     <input type="text" name="textDesc" id="cfgDesc" autocomplete="off">
-                     <input type="submit" value="Upload NCVP" name="submit">
-                  </form>
-               </div>
-            </div>
-         </div>
          <h1 class="animate__animated animate__fadeInDown">null core - visuals vault</h1>
          <p class="animate__animated animate__fadeInDown">all your null core visual configs in one place.</p>
          <div class="cfgvrow">
-         <div class="cfg__wrapper">
+         <div class="cfg__wrapper animate__animated animate__fadeIn">
             <div class="cfg__tab">
                <div class="cfg__image__wrapper">
-                  <img class="cfg__image" loading="lazy" src="/media/fatality.png" alt=""></img>
+                  <img class="cfg__image" loading="lazy" src="/media/menus/fatalitymenu.png" alt=""></img>
                </div>
                <div class="cfg__body">
                   <div class="cfg__title">
                      Fatality
                   </div>
                   <div class="cfg__author">
-                     Uploader: <a class="">Test</a>
+                     Uploader: <a class="default__link" href="https://steamcommunity.com/profiles/76561198303076440" target="_blank" rel="noopener">HeXz</a> //  Uploaded: April 6 2021
                   </div>
                   <div class="cfg__descr">
                      Sick looking fatality-styled menu. In-game visuals are close to defaults with some changes.
                   </div>
                   <div class="cfg__downloadbtn">
-                     <a class="cfg__dwnbtn">Download <em></em></a>
+                     <a class="cfg__dwnbtn">Download <em class='bx bxs-download'></em></a>
                   </div>
                </div>
             </div>
          </div>
-
       </div>
       </div>
    </div>
@@ -123,8 +102,6 @@
 <script src="js/themecookies.js"></script>
 <script src="js/welcomepagefunc.js"></script>
 <script src="js/loaderfunc.js"></script>
-<script src="js/modalfunc.js"></script>
-<script src="js/uploadtrigger.js"></script>
 <script src="js/preventresubmit.js"></script>
 <script src="https://ncvisualsvault.cc/js/dynamicannc.js?v=<?php echo filemtime('dynamicannc.js?'); ?>"></script>
 
