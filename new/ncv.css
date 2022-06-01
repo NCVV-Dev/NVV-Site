@@ -902,7 +902,6 @@ h1 .headert {
 .downbuttons {
 	margin-top: 50px;
 	width: 150px;
-	opacity: 0;
 	transition: all 0.5s ease-in-out;
 }
 
@@ -924,6 +923,7 @@ h1 .headert {
 	-webkit-user-select: none;
 	margin-top: 10px;
 	width: 160px;
+	z-index: 3;
 }
 
 .welcbutton:hover {
