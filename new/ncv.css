@@ -197,7 +197,7 @@ p {
 #progress {
 	position: fixed !important;
 	z-index: 95 !important;
-	height: 4px;
+	height: 2px;
 	background: var(--navbarbuttonhover);
 	width: 0;
 	bottom: 99.65%;
