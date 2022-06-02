@@ -34,6 +34,7 @@ body[data-theme="nvv"] {
 	background-color: #21222c;
 	overflow-y: scroll;
 	--navbarbg: #15171b;
+	--navbarbgtransparent: #151715b4;
 	--navbarbutton: rgba(149, 128, 255, 0.7);
 	--navbarbuttonhover: #ff80bf;
 	--headercolor: #ffffff;
@@ -46,6 +47,8 @@ body[data-theme="nvv"] {
 	--linkhover: rgba(149, 128, 255, 0.7);
 	--buttonbg: rgba(149, 128, 255, 0.7);
 	--buttonhover: #ff80bf;
+	--buttonsubmitbg: #319671;
+	--buttonsubmithover: #41bd8f;
 	--tabcontents: rgba(171, 154, 255, 0.1);
 	--announcement: #414558;
 	--iconshield: #ff80bf;
@@ -75,6 +78,7 @@ body[data-theme="ncl"] {
 	background-color: black;
 	overflow-y: scroll;
 	--navbarbg: #344455;
+	--navbarbgtransparent:#344455b4;
 	--navbarbutton: #49779c;
 	--navbarbuttonhover: #40c192;
 	--headercolor: #ffffff;
@@ -87,6 +91,8 @@ body[data-theme="ncl"] {
 	--linkhover: #8defef;
 	--buttonbg: #436c8e;
 	--buttonhover: #40c192;
+	--buttonsubmitbg: #40c192;
+	--buttonsubmithover: #56ffc1;
 	--tabcontents: #233342;
 	--announcement: #335673;
 	--iconshield: #fff;
@@ -219,6 +225,33 @@ p {
 	position: relative;
 }
 
+/* Button upload config in main page */
+.opt__wrapper{
+	margin-top: 30px;
+	margin-bottom: 60px;
+	padding: 0 50px;
+	animation-delay: 400ms;
+}
+
+.opt__submitcfg{
+	background-color: var(--buttonsubmitbg);
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem;
+	border-radius: 3px;
+	font-family: Roboto, sans-serif;
+	transition: all 300ms ease;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	opacity: 0.8;
+}
+
+.opt__submitcfg:hover{
+	/*background-color: var(--buttonsubmithover);
+	cursor: pointer;*/
+	cursor: not-allowed;
+}
+
 /* Upload visual cfg button (default button is hidden) */
 input[type="file"] {
 	visibility: hidden;
@@ -287,12 +320,16 @@ input[type="submit"]:hover {
 
 .navbar {
 	width: 100%;
-	background: var(--navbarbg);
+	background: var(--navbarbgtransparent);
 	transition: all 300ms ease;
 	overflow: hidden;
 	height: 50px;
 	position: fixed;
 	z-index: 1;
+}
+
+.navbar:hover{
+	background: var(--navbarbg);
 }
 
 .navbar a {
@@ -305,6 +342,7 @@ input[type="submit"]:hover {
 	transition: all 300ms ease-in-out;
 	height: 100%;
 	padding: 15px;
+	font-weight: bold;
 }
 
 .navbar a .links_name {
@@ -391,9 +429,9 @@ h1 .headert {
 
 .pTitle {
 	position: relative;
-	font-family: Roboto, sans-serif;
+	font-family: Verdana, sans-serif;
 	color: var(--latostitle);
-	font-size: 30px;
+	font-size: 25px;
 	margin-bottom: 25px;
 	margin-top: 25px;
 	font-weight: bold;
@@ -479,7 +517,7 @@ h1 .headert {
 	font-weight: 500;
 	margin-top: 10px;
 	font-family: Roboto, sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	color: white;
 }
 
@@ -495,6 +533,20 @@ h1 .headert {
 	transition: all 0.5s ease-in-out;
 	font-size: 1.2rem;
 	font-weight: normal;
+	line-height: 1.8;
+	color: var(--tostextcolor);
+	font-family: Roboto, sans-serif;
+	min-height: 120px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.not__provided {
+	margin: 15px;
+	transition: all 0.5s ease-in-out;
+	font-size: 1.2rem;
+	font-weight: normal;
+	font-style: italic;
 	line-height: 1.8;
 	color: var(--tostextcolor);
 	font-family: Roboto, sans-serif;
@@ -696,31 +748,25 @@ h1 .headert {
 	color: rgb(98, 252, 206);
 }
 
-.contributor5 {
+.contributor2 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	color: lightblue;
 }
 
-.contributor10 {
+.contributor3 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	color: lightgreen;
 }
 
-.contributor15 {
-	font-family: Roboto, sans-serif;
-	text-decoration: none;
-	color: rebeccapurple;
-}
-
-.contributor20 {
+.contributor5 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	color: magenta;
 }
 
-.contributor25 {
+.contributor10 {
 	font-family: Roboto, sans-serif;
 	background-image: linear-gradient(-225deg, #18bbbb 0%, #3f3f3f 100%);
 	background-size: 200% auto;
@@ -737,7 +783,7 @@ h1 .headert {
 	}
 }
 
-.contributor45 {
+.contributor15 {
 	font-family: Roboto, sans-serif;
 	color: #39727279;
 	animation: contr45anim 2s ease-in-out infinite;
@@ -757,25 +803,14 @@ h1 .headert {
 	}
 }
 
-.contributor50 {
-	color: #f5ff6a;
-}
-
-.contributor50 i {
-	position: relative;
-	top: 3px;
-	font-size: 25px;
-	font-weight: 600;
-}
-
-.contributor60 {
+.contributor20 {
 	font-family: Roboto, sans-serif;
 	color: #fff;
 	text-shadow: 0 0 7px #ffffff;
 	font-weight: 700;
 }
 
-.contributor70 {
+.contributor30 {
 	font-family: Roboto, sans-serif;
 	background: radial-gradient(#ff109b, #8c48fa);
 	background-clip: border-box;
@@ -789,7 +824,7 @@ h1 .headert {
 	font-weight: 800;
 }
 
-.contributor80 {
+.contributor40 {
 	font-family: Roboto, sans-serif;
 	background: linear-gradient(180deg, #ff36a5 0%, #4d8bff 100%, #ffe657);
 	text-shadow: 1px 0px 5px rgb(204 0 255), 1px 0px 5px rgb(211 37 255);
@@ -799,9 +834,9 @@ h1 .headert {
 	font-weight: 900;
 }
 
-.contributor100 {
+.contributor50 {
 	font-family: Roboto, sans-serif;
-	text-shadow: 2px 2px 4px #ff0000;
+	text-shadow: 2px 2px 4px #a600ff;
 	background: radial-gradient(circle, #ff8001 01%, #ff0b56 63%, #d50007 77%);
 	background-clip: border-box;
 	-webkit-text-fill-color: transparent;
@@ -809,9 +844,14 @@ h1 .headert {
 	font-weight: 1000;
 }
 
-.contributor100 i {
-	position: relative;
-	top: 2px;
+.admin {
+	font-family: Roboto, sans-serif;
+	text-shadow: 2px 2px 4px #ff0000;
+	background: radial-gradient(circle, #ff8001 01%, #ff0b56 63%, #d50007 77%);
+	background-clip: border-box;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	font-weight: 800;
 }
 
 /* Welcome Page */
