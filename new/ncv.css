@@ -499,7 +499,7 @@ h1 .headert {
 .cfg__descr{
 	margin: 15px;
 	transition: all 0.5s ease-in-out;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	font-weight: normal;
 	line-height: 1.8;
 	color: var(--tostextcolor);
