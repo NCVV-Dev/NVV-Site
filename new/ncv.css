@@ -149,9 +149,8 @@ p {
 	margin-bottom: 60px;
 }
 
-.featured__item{
-	color: var(--featureditem);
-	font-size: 25px
+.solidbackground{
+	background: var(--latosbackgr) !important;
 }
 
 /* Modal Buttons */
