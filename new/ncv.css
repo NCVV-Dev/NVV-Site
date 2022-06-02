@@ -504,6 +504,9 @@ h1 .headert {
 	line-height: 1.8;
 	color: var(--tostextcolor);
 	font-family: Roboto, sans-serif;
+	min-height: 120px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .cfg__dwnbtn {
