@@ -604,12 +604,29 @@ h1 .headert {
 
 /* Announcement */
 .announcement {
-	position: sticky;
-	height: 60px;
+	position: relative;
+	height: auto;
 	background-color: var(--announcement);
 	overflow: hidden;
-	margin-left: 78px;
 	transition: all 1s;
+	padding: 10px;
+}
+
+.announcetext {
+	position: relative;
+	margin: auto;
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: Coda, sans-serif;
+	letter-spacing: 1px;
+	transition: all 1s;
+}
+
+.announcement em {
+	position: relative;
+	font-size: 30px;
+	top: 0.3rem;
 }
 
 .announcement a {
