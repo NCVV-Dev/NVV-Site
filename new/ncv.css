@@ -514,7 +514,7 @@ h1 .headert {
 	color: white;
 	text-decoration: none;
 	padding: 0.5rem 1.7rem;
-	border-radius: 3px;
+	border-radius: 5px;
 	font-family: Roboto, sans-serif;
 	transition: all 300ms ease;
 	font-weight: 500;
