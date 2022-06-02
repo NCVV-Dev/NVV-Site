@@ -996,10 +996,19 @@ h1 .headert {
 }
 
 .announcement a {
+	position: relative;
+	margin: auto;
+	color: var(--answertextcolor);
+	font-size: 25px;
+	font-weight: 700;
 	font-family: Coda, sans-serif;
-	font-size: 22px;
-	text-align: center;
-	color: var(--linkhover);
+	letter-spacing: 1px;
+	top: .7rem;
+	transition: all 1s;
+}
+
+.announcement a:hover {
+	cursor: pointer;
 }
 
 #dynamicannc {
