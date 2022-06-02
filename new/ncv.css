@@ -518,8 +518,8 @@ h1 .headert {
 	z-index: 9999;
 	top: 0;
 	left: 0;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	background-size: contain;
 	background-repeat: no-repeat no-repeat;
 	background-position: center center;
