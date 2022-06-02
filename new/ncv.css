@@ -55,6 +55,8 @@ body[data-theme="nvv"] {
 	--answertextcolor: #80ffea;
 	--questiontextcolor: white;
 	--tosqm: #ff9580;
+	--latosbackgr: #21222c;
+	--latostitle: #6b66c0;
 }
 
 body[data-theme="ncl"] {
@@ -94,6 +96,8 @@ body[data-theme="ncl"] {
 	--answertextcolor: #70eaea;
 	--questiontextcolor: white;
 	--tosqm: #cc8041;
+	--latosbackgr: #22313F;
+	--latostitle: #18bbbb;
 }
 
 * {
