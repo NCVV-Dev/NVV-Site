@@ -354,7 +354,9 @@ h1 .headert {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-align: center;
 	font-size: 2.5rem;
-	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 7px;
+	font-weight: 700;
 }
 
 .qm {
