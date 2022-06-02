@@ -523,7 +523,7 @@ h1 .headert {
 	background-size: contain;
 	background-repeat: no-repeat no-repeat;
 	background-position: center center;
-	background-color: black;
+	background-color: rgba(49, 49, 49, 0.345);
   }
 
 /* Text on the end of the cfg page */
