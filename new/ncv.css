@@ -527,10 +527,6 @@ h1 .headert {
 	top: 2px;
 }
 
-.cfg__dwnbtn:hover {
-	background-color: var(--buttonhover);
-	cursor: pointer;
-}
 
 #preview {
 	display: none;
