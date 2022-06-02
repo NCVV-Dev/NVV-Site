@@ -490,12 +490,6 @@ h1 .headert {
 	color: white;
 }
 
-.cfg__author{
-	font-weight: normal;
-	margin-top: 10px;
-	color: white;
-}
-
 .cfg__descr{
 	margin: 15px;
 	transition: all 0.5s ease-in-out;
