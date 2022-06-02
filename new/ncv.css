@@ -520,6 +520,13 @@ h1 .headert {
 	font-weight: 500;
 }
 
+.cfg__dwnbtn:hover {
+	background-color: var(--buttonhover);
+	cursor: pointer;
+	-webkit-transform: translateY(-2px);
+	transform: translateY(-2px);
+}
+
 .cfg__downloadbtn em {
 	position: relative;
 	font-size: 20px;
