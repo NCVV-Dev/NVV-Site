@@ -426,7 +426,7 @@ h1 .headert {
 
 .cfg__tab {
 	display: flex;
-	height: auto;
+	height:auto;
 	flex-direction: column;
 	align-content: center;
 	background-color: var(--itemtabcolor);
