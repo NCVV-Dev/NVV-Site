@@ -418,7 +418,7 @@ h1 .headert {
 /* Visual config tabs */
 .cfgvrow {
 	display: grid;
-	grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+	grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
 	grid-gap: 25px;
 	align-items: stretch;
 	padding: 0 50px
