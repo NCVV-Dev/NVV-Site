@@ -397,7 +397,7 @@ h1 .headert {
 	margin-bottom: 25px;
 	margin-top: 25px;
 	font-weight: bold;
-	transition: all .7s ease-in-out;
+	transition: all 300ms ease;
 }
 
 .answer {
