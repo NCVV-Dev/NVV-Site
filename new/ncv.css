@@ -475,6 +475,14 @@ h1 .headert {
 	text-align: center;
 }
 
+.cfg__author{
+	font-weight: 500;
+	margin-top: 10px;
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	color: white;
+}
+
 .cfg__downloadbtn{
 	margin-top: auto;
 	display: flex;
