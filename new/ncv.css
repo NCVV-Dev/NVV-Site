@@ -34,6 +34,7 @@ body[data-theme="nvv"] {
 	background-color: #21222c;
 	overflow-y: scroll;
 	--navbarbg: #15171b;
+	--navbarbgtransparent: #151715b4;
 	--navbarbutton: rgba(149, 128, 255, 0.7);
 	--navbarbuttonhover: #ff80bf;
 	--headercolor: #ffffff;
@@ -46,6 +47,8 @@ body[data-theme="nvv"] {
 	--linkhover: rgba(149, 128, 255, 0.7);
 	--buttonbg: rgba(149, 128, 255, 0.7);
 	--buttonhover: #ff80bf;
+	--buttonsubmitbg: #319671;
+	--buttonsubmithover: #41bd8f;
 	--tabcontents: rgba(171, 154, 255, 0.1);
 	--announcement: #414558;
 	--iconshield: #ff80bf;
@@ -55,6 +58,8 @@ body[data-theme="nvv"] {
 	--answertextcolor: #80ffea;
 	--questiontextcolor: white;
 	--tosqm: #ff9580;
+	--latosbackgr: #21222c;
+	--latostitle: #6b66c0;
 }
 
 body[data-theme="ncl"] {
@@ -72,7 +77,8 @@ body[data-theme="ncl"] {
 	background-image: url(/media/background_ncoriginal.jpg);
 	background-color: black;
 	overflow-y: scroll;
-	--navbarbg: #263340;
+	--navbarbg: #344455;
+	--navbarbgtransparent:#344455b4;
 	--navbarbutton: #49779c;
 	--navbarbuttonhover: #40c192;
 	--headercolor: #ffffff;
@@ -85,6 +91,8 @@ body[data-theme="ncl"] {
 	--linkhover: #8defef;
 	--buttonbg: #436c8e;
 	--buttonhover: #40c192;
+	--buttonsubmitbg: #40c192;
+	--buttonsubmithover: #56ffc1;
 	--tabcontents: #233342;
 	--announcement: #335673;
 	--iconshield: #fff;
@@ -94,6 +102,8 @@ body[data-theme="ncl"] {
 	--answertextcolor: #70eaea;
 	--questiontextcolor: white;
 	--tosqm: #cc8041;
+	--latosbackgr: #22313F;
+	--latostitle: #18bbbb;
 }
 
 * {
@@ -132,7 +142,7 @@ h1 {
 	font-weight: 700;
 	text-align: center;
 	font-size: 2.5rem;
-	margin-top: 70px;
+	margin-top: 40px;
 }
 
 p {
@@ -142,12 +152,11 @@ p {
 	font-size: 1.3rem;
 	animation-delay: 300ms;
 	font-weight: bold;
-	margin-bottom: 40px;
+	margin-bottom: 60px;
 }
 
-.featured__item{
-	color: var(--featureditem);
-	font-size: 25px
+.solidbackground{
+	background: var(--latosbackgr) !important;
 }
 
 /* Modal Buttons */
@@ -197,7 +206,7 @@ p {
 #progress {
 	position: fixed !important;
 	z-index: 95 !important;
-	height: 4px;
+	height: 2px;
 	background: var(--navbarbuttonhover);
 	width: 0;
 	bottom: 99.65%;
@@ -214,6 +223,33 @@ p {
 /* All the content but not the side panel. */
 .cont {
 	position: relative;
+}
+
+/* Button upload config in main page */
+.opt__wrapper{
+	margin-top: 30px;
+	margin-bottom: 60px;
+	padding: 0 50px;
+	animation-delay: 400ms;
+}
+
+.opt__submitcfg{
+	background-color: var(--buttonsubmitbg);
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem;
+	border-radius: 3px;
+	font-family: Roboto, sans-serif;
+	transition: all 300ms ease;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	opacity: 0.8;
+}
+
+.opt__submitcfg:hover{
+	/*background-color: var(--buttonsubmithover);
+	cursor: pointer;*/
+	cursor: not-allowed;
 }
 
 /* Upload visual cfg button (default button is hidden) */
@@ -274,21 +310,26 @@ input[type="submit"]:hover {
 	box-shadow: inset 14em 0 0 0 var(--buttonhover);
 }
 
-/* navbar Panel */
-.navbar__wrapper{
+/* navbar panel */
+.navbar__wrapper {
 	background-color: var(--navbarbg);
 	width: 100%;
-	transition: all 0.5s ease;
-	position: fixed;
-	z-index: 1;
+	transition: all 300ms ease;
+	height: 50px;
 }
 
 .navbar {
 	width: 100%;
-	background: var(--navbarbg);
-	transition: all 0.5s ease;
+	background: var(--navbarbgtransparent);
+	transition: all 300ms ease;
 	overflow: hidden;
 	height: 50px;
+	position: fixed;
+	z-index: 1;
+}
+
+.navbar:hover{
+	background: var(--navbarbg);
 }
 
 .navbar a {
@@ -301,6 +342,7 @@ input[type="submit"]:hover {
 	transition: all 300ms ease-in-out;
 	height: 100%;
 	padding: 15px;
+	font-weight: bold;
 }
 
 .navbar a .links_name {
@@ -347,13 +389,17 @@ h1 .headert {
 
 .faqq {
 	color: white;
-	font-family: Major Mono Display, sans-serif;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-align: center;
 	font-size: 2.5rem;
-	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 7px;
+	font-weight: 700;
 }
 
 .qm {
+	font-weight: bold;
+	font-size: 1.6rem;
 	color: var(--tosqm);
 }
 
@@ -369,7 +415,7 @@ h1 .headert {
 	margin: 5rem;
 	font-size: 1.6rem;
 	line-height: 1.4;
-	transition: all .5s ease-in-out;
+	transition: all 300ms ease-in-out;
 }
 
 .tos_textline {
@@ -383,13 +429,13 @@ h1 .headert {
 
 .pTitle {
 	position: relative;
-	font-family: Roboto, sans-serif;
-	color: #0f9696;
-	font-size: 30px;
+	font-family: Verdana, sans-serif;
+	color: var(--latostitle);
+	font-size: 25px;
 	margin-bottom: 25px;
 	margin-top: 25px;
 	font-weight: bold;
-	transition: all .7s ease-in-out;
+	transition: all 300ms ease;
 }
 
 .answer {
@@ -407,55 +453,29 @@ h1 .headert {
 	}
 }
 
-.optionsbox {
-	position: relative;
-	width: 100%;
-	height: fit-content;
-	border-radius: 10px;
-	background-color: var(--announcement);
-	overflow: hidden
-}
-
-.optionsbox__content {
-	text-align: center;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	padding: 5px;
-}
-
-.optionsbox__title {
-	font-weight: bold;
-	margin-bottom: 15px;
-}
-
-.optionsbox__text {
-	color: white;
-	height: 100%;
-	vertical-align: middle;
-}
-
 /* Visual config tabs */
 .cfgvrow {
-	grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
 	display: grid;
-	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+	grid-gap: 25px;
 	align-items: stretch;
-	padding: 0 50px
+	padding: 0 50px;
 }
 
 .cfg__tab {
 	display: flex;
-	height: auto;
+	height:auto;
 	flex-direction: column;
 	align-content: center;
 	background-color: var(--itemtabcolor);
 	border: 1px solid var(--itemtaboutline);
-	border-radius: 5px;
+	border-radius: 10px;
 	transition-duration: .5s;
 	overflow: hidden;
 	user-select: none;
-	box-shadow: 0 2px 10px rgba(0,0,0,.25);
+	-webkit-box-shadow: -3px 3px 75px -21px rgba(0,0,0,0.75);
+	-moz-box-shadow: -3px 3px 75px -21px rgba(0,0,0,0.75);
+	box-shadow: -3px 3px 75px -21px rgba(0,0,0,0.75);
 }
 
 .cfg__image {
@@ -469,11 +489,12 @@ h1 .headert {
 }
 
 .cfg__image:hover{
-	transform: scale(2.5);
+	cursor: pointer;
+	transform: scale(1.1);
 }
 
 .cfg__image__wrapper {
- overflow: hidden;
+ 	overflow: hidden;
 }
 
 .cfg__body {
@@ -492,41 +513,86 @@ h1 .headert {
 	text-align: center;
 }
 
+.cfg__author{
+	font-weight: 500;
+	margin-top: 10px;
+	font-family: Roboto, sans-serif;
+	font-size: 18px;
+	color: white;
+}
+
 .cfg__downloadbtn{
 	margin-top: auto;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-}
-
-.cfg__author{
-	margin-top: 10px;
 	color: white;
 }
 
 .cfg__descr{
 	margin: 15px;
 	transition: all 0.5s ease-in-out;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
+	font-weight: normal;
 	line-height: 1.8;
 	color: var(--tostextcolor);
 	font-family: Roboto, sans-serif;
+	min-height: 120px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.not__provided {
+	margin: 15px;
+	transition: all 0.5s ease-in-out;
+	font-size: 1.2rem;
+	font-weight: normal;
+	font-style: italic;
+	line-height: 1.8;
+	color: var(--tostextcolor);
+	font-family: Roboto, sans-serif;
+	min-height: 120px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .cfg__dwnbtn {
 	background-color: var(--buttonbg);
-	color: var(--tostextcolor);
+	color: white;
 	text-decoration: none;
 	padding: 0.5rem 1.7rem;
-	border-radius: 3px;
+	border-radius: 5px;
 	font-family: Roboto, sans-serif;
 	transition: all 300ms ease;
+	font-weight: 500;
 }
 
 .cfg__dwnbtn:hover {
 	background-color: var(--buttonhover);
-	color: white;
+	cursor: pointer;
+	-webkit-transform: translateY(-2px);
+	transform: translateY(-2px);
 }
+
+.cfg__downloadbtn em {
+	position: relative;
+	font-size: 20px;
+	top: 2px;
+}
+
+
+#preview {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-repeat: no-repeat no-repeat;
+	background-position: center center;
+	background-color: rgba(49, 49, 49, 0.345);
+  }
 
 /* Text on the end of the cfg page */
 .endtabstext {
@@ -573,7 +639,6 @@ h1 .headert {
 	color: var(--tostextcolor);
 }
 
-
 .column__content {
 	position: relative;
 	opacity: 100%;
@@ -605,273 +670,31 @@ h1 .headert {
 	color: var(--tostextcolor);
 }
 
-/* Flexible columns for five items in the row on different resolutions */
-@media screen and (max-width: 450px) {
-	.column {
-		left: 15%;
-	}
-}
-
-@media screen and (max-width: 604px) {
-	.column {
-		margin-top: 40px;
-	}
-}
-
-@media screen and (max-width: 810px) {
-	.column {
-		left: 15%;
-	}
-}
-
-@media screen and (max-width: 1534px) {
-	.column {
-		margin-left: 2.656666667%;
-	}
-}
-
-@media screen and (max-width: 1600px) {
-	.column {
-		margin-left: 3.306666667%;
-	}
-
-	/* Scale visuals config image here to prevent making more instances */
-
-}
-
-@media screen and (min-width: 1920px) {
-	.column {
-		transform: scale(1.2);
-		-webkit-transform: scale(1.2);
-		margin-top: 90px !important;
-		margin-left: 5.856666667%;
-	}
-}
-
-/* Visual config tabs scaling start */
-@media screen and (max-width: 600px) {
-	.cfg {
-		float: none;
-		width: 100% !important;
-	}
-
-	.optionsbox {
-		display: none;
-	}
-
-	.cfg__title span {
-		display: none;
-	}
-}
-
-/* Make two rows of visual configs without an image for space */
-@media screen and (max-width: 1055px) {
-	.cfg__image__container {
-		display: none;
-	}
-
-	.cfg {
-		float: left;
-		width: 50% !important;
-		height: 500px;
-		border-radius: 0;
-		margin: 0;
-		max-height: max-content;
-	}
-
-	.cfg__title span {
-		display: none;
-	}
-
-	.cfg__content {
-		margin: 15px;
-	}
-}
-
-/* Free space to prevent content overflow before switching to screen and (max-width: 929px) */
-@media screen and (max-width:970px) {
-	.cfg__content {
-		padding: 3px;
-	}
-}
-
-/* Move tabs fully to the left */
-@media screen and (max-width:1248px) {
-	.cfg {
-		width: 100%;
-		left: 0;
-		position: relative;
-	}
-}
-
-/* Visual config tabs scaling end */
-.stat {
-	position: absolute;
-	background-color: var(--itemtabcolor);
-	top: -32px;
-	left: 20px;
-	width: 45px;
-	height: 32px;
-	border-radius: 5px 5px 0px 0px;
-}
-
-.stat em {
-	color: var(--iconshield);
-	font-size: 27px;
-	margin-top: 2px;
-}
-
-.stat .txtis {
-	position: absolute;
-	visibility: hidden;
-	width: 120px;
-	background-color: var(--navbarbutton);
-	color: var(--tostextcolor);
-	text-align: center;
-	border-radius: 5px;
-	padding: 5px;
-	margin-left: -60px;
-	bottom: 30px;
-	opacity: 0;
-	transition: opacity 0.5s;
-	font-size: 13px;
-	font-family: Roboto, sans-serif;
-	left: 100px;
-}
-
-.stat:hover .txtis {
-	visibility: visible;
-	opacity: 1;
-}
-
-.mod__author {
-	position: absolute;
-	background-color: var(--itemtabcolor);
-	left: 130px;
-	height: 32px;
-	top: -32px;
-	border-radius: 5px 5px 0px 0px;
-	padding: 5px 15px;
-	color: var(--tostextcolor);
-	font-family: Roboto, sans-serif;
-	font-size: 16px;
-	text-decoration: none;
-}
-
-/* Suggest Modal and Overlay */
-#modal__overlay {
-	display: none;
-	position: fixed;
-	background-color: var(--tabcontents);
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 1;
-	opacity: 0.5;
-}
-
-.upl__modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	height: 100%;
-	width: 75%;
-	left: 12%;
-	top: 15%;
-	transition: opacity 1s;
-}
-
-/* Modal Content */
-.modal__content {
-	position: relative;
-	background-color: var(--itemtabcolor);
-	margin: auto;
-	padding: 0;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	-webkit-animation-name: animatemodal;
-	-webkit-animation-duration: 1s;
-	animation-name: animatemodal;
-	animation-duration: 1s;
-	height: 650px;
-	width: 450px;
-	border-radius: 5px;
-}
-
-.modal__body p {
-	color: var(--tostextcolor);
-	font-family: Roboto, sans-serif;
-}
-
-.modal__body h2 {
-	color: var(--tostextcolor);
-	font-family: Roboto, sans-serif;
-	font-size: 20px;
-}
-
-@-webkit-keyframes animatemodal {
-	from {
-		top: -10px;
-		opacity: 0;
-	}
-
-	to {
-		top: 0;
-		opacity: 1;
-	}
-}
-
-@keyframes animatemodal {
-	from {
-		top: -10px;
-		opacity: 0;
-	}
-
-	to {
-		top: 0;
-		opacity: 1;
-	}
-}
-
-.close {
-	color: var(--tostextcolor);
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-	transition-duration: 1s;
-	position: absolute;
-	right: 10px;
-	top: 17px;
-}
-
-.close:hover,
-.close:focus {
-	color: var(--navbarbuttonhover);
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.modal__header {
-	padding: 2px 16px;
-	background-color: var(--itemtabhovereffect);
-	color: white;
-	border-radius: 5px;
-}
-
-.modal__body {
-	padding: 2px 16px;
-}
-
 /* Announcement */
 .announcement {
-	position: sticky;
-	height: 60px;
+	position: relative;
+	height: auto;
 	background-color: var(--announcement);
 	overflow: hidden;
-	margin-left: 78px;
 	transition: all 1s;
+	padding: 10px;
+}
+
+.announcetext {
+	position: relative;
+	margin: auto;
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: Coda, sans-serif;
+	letter-spacing: 1px;
+	transition: all 1s;
+}
+
+.announcement em {
+	position: relative;
+	font-size: 30px;
+	top: 0.3rem;
 }
 
 .announcement a {
@@ -925,31 +748,25 @@ h1 .headert {
 	color: rgb(98, 252, 206);
 }
 
-.contributor5 {
+.contributor2 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	color: lightblue;
 }
 
-.contributor10 {
+.contributor3 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	color: lightgreen;
 }
 
-.contributor15 {
-	font-family: Roboto, sans-serif;
-	text-decoration: none;
-	color: rebeccapurple;
-}
-
-.contributor20 {
+.contributor5 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	color: magenta;
 }
 
-.contributor25 {
+.contributor10 {
 	font-family: Roboto, sans-serif;
 	background-image: linear-gradient(-225deg, #18bbbb 0%, #3f3f3f 100%);
 	background-size: 200% auto;
@@ -966,7 +783,7 @@ h1 .headert {
 	}
 }
 
-.contributor45 {
+.contributor15 {
 	font-family: Roboto, sans-serif;
 	color: #39727279;
 	animation: contr45anim 2s ease-in-out infinite;
@@ -986,21 +803,14 @@ h1 .headert {
 	}
 }
 
-.contributor50 i {
-	position: relative;
-	top: 3px;
-	font-size: 25px;
-	font-weight: 600;
-}
-
-.contributor60 {
+.contributor20 {
 	font-family: Roboto, sans-serif;
 	color: #fff;
 	text-shadow: 0 0 7px #ffffff;
 	font-weight: 700;
 }
 
-.contributor70 {
+.contributor30 {
 	font-family: Roboto, sans-serif;
 	background: radial-gradient(#ff109b, #8c48fa);
 	background-clip: border-box;
@@ -1014,7 +824,7 @@ h1 .headert {
 	font-weight: 800;
 }
 
-.contributor80 {
+.contributor40 {
 	font-family: Roboto, sans-serif;
 	background: linear-gradient(180deg, #ff36a5 0%, #4d8bff 100%, #ffe657);
 	text-shadow: 1px 0px 5px rgb(204 0 255), 1px 0px 5px rgb(211 37 255);
@@ -1024,9 +834,9 @@ h1 .headert {
 	font-weight: 900;
 }
 
-.contributor100 {
+.contributor50 {
 	font-family: Roboto, sans-serif;
-	text-shadow: 2px 2px 4px #ff0000;
+	text-shadow: 2px 2px 4px #a600ff;
 	background: radial-gradient(circle, #ff8001 01%, #ff0b56 63%, #d50007 77%);
 	background-clip: border-box;
 	-webkit-text-fill-color: transparent;
@@ -1034,13 +844,14 @@ h1 .headert {
 	font-weight: 1000;
 }
 
-.contributor100 i {
-	position: relative;
-	top: 2px;
-}
-
-.contributor50 {
-	color: #f5ff6a;
+.admin {
+	font-family: Roboto, sans-serif;
+	text-shadow: 2px 2px 4px #ff0000;
+	background: radial-gradient(circle, #ff8001 01%, #ff0b56 63%, #d50007 77%);
+	background-clip: border-box;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	font-weight: 800;
 }
 
 /* Welcome Page */
@@ -1164,7 +975,6 @@ h1 .headert {
 .downbuttons {
 	margin-top: 50px;
 	width: 150px;
-	opacity: 0;
 	transition: all 0.5s ease-in-out;
 }
 
@@ -1186,6 +996,7 @@ h1 .headert {
 	-webkit-user-select: none;
 	margin-top: 10px;
 	width: 160px;
+	z-index: 3;
 }
 
 .welcbutton:hover {
@@ -1278,54 +1089,4 @@ h1 .headert {
 	.welcome_header2 {
 		text-align: center;
 	}
-}
-
-/* Status Page CSS */
-.outagedate {
-	margin-top: 55px;
-	font-weight: bold;
-	color: white;
-}
-
-.outagedate i {
-	font-size: 30px;
-	position: relative;
-	top: 3px;
-}
-
-.outageinfo {
-	font-weight: normal;
-	margin-left: 15px;
-}
-
-.outageinfo i {
-	font-size: 12px;
-}
-
-.outageinfotext {
-	font-size: 25px;
-}
-
-.statusdetailedbox {
-	overflow: hidden;
-	margin: 0;
-	position: relative;
-	display: flex;
-	align-items: center;
-	align-content: center;
-	background-color: var(--itemtabcolor);
-	color: white;
-	height: 80px;
-	border-radius: 10px;
-	margin-bottom: 30px;
-}
-
-.detl__text {
-	text-align: center;
-	width: 100%;
-	display: inline;
-}
-
-.detl__text div {
-	display: inline;
 }
