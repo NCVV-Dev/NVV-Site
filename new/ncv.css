@@ -9,14 +9,14 @@ font {
 }
 
 .nojs {
-	position: relative;
 	margin: auto;
 	color: rgb(253, 78, 78);
-	font-size: 1.5rem;
 	font-weight: 700;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	letter-spacing: 1px;
-	top: 15px;
+	position: relative;
+	font-size: 20px;
+	font-family: Coda, sans-serif;
+	transition: all 1s;
 }
 
 body[data-theme="nvv"] {
@@ -489,7 +489,7 @@ h1 .headert {
 }
 
 .cfg__image:hover{
-	cursor: pointer;
+	cursor:zoom-in;
 	transform: scale(1.1);
 }
 
