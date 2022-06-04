@@ -26,7 +26,7 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
 </head>
 
-<body data-theme="nvv" onload="initpicture()">
+<body data-theme="nvv" class="solidbackground">
    <div class="welcome_overlay">
       <div class="welcome_header_container">
          <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
@@ -72,7 +72,7 @@
          </a>
       </div>
    </div>
-   <div class="bodywrapper">
+   <div class="bodywrapper" style="height: 0;">
       <div id="modal__overlay"></div>
       <div id="progress"></div>
       <noscript>
@@ -83,18 +83,51 @@
       <div class="announcement">
          <div class="announcetext">Welcome to beta UI of NVV! We're finishing other pages and final checks to provide quality of our services before we make it our main UI <em class='bx bxs-check-shield bx-flashing'></em></div>
       </div>
-      <div class="cont">
-         <p class="animate__animated animate__fadeInDown">submit visual config</p>
-
-
+        <h1 class="animate__animated animate__fadeInDown">submit config</h1>
+        <div class="clm">
+            <div class="infocolumn">
+                <h1>TOS Reminder</h1>
+                <div class="reminderline">
+                    - Make sure you have default skyboxes (or none) selected in your visual settings. Otherwise it'll be denied without further reviewing.
+                </div>
+                <div class="reminderline">
+                    - You have a higher priority by uploading through the website.
+                </div>
+                <div class="reminderline">
+                    - You are allowed to put screenshot links of skyboxes and download links. If link is not trusted, it'll be denied without further reviewing.
+                </div>
+                <div class="reminderline">
+                    - Submit request with any offensive content will be denied without further reviewing.
+                </div>
+            </div>
+            <div class="infocolumn">
+                <form class="contentform" action="upload.php" method="post" enctype="multipart/form-data">
+                    <div class="uploadbtnwrapper">
+                        <button class="fileuplbtn" id="uploadTrigger">Select File</button>
+                        <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
+                    </div>
+                    <h2>Enter your username*</h2>
+                    <input type="text" name="textName" id="authorName" autocomplete="off" required>
+                    <h2>Enter your Steam/Telegram profile</h2>
+                    <input type="text" name="textSteam" id="authorSteam" autocomplete="off">
+                    <h2>Enter your config description</h2>
+                    <input type="text" name="textDesc" id="cfgDesc" autocomplete="off">
+                    <div class="uploadbtnwrapper">
+                        <input type="submit" value="Submit" name="submit">
+                    </div>
+                 </form>
+            </div>
+            <div class="infocolumn">
+                
+            </div>
       </div>
       <div id="preview" class="animate__animated animate__fadeIn" onclick="this.style.display='none';"></div>
    </div>
 </body>
-<script src="js/themecookies.js"></script>
-<script src="js/pictureprev.js"></script>
-<script src="js/welcomepagefunc.js"></script>
-<script src="js/loaderfunc.js"></script>
-<script src="js/preventresubmit.js"></script>
+<script src="/new/js/themecookies.js"></script>
+<script src="/new/js/welcomepagefunc.js"></script>
+<script src="/new/js/loaderfunc.js"></script>
+<script src="/new/js/uploadtrigger.js"></script>
+<script src="/new/js/preventresubmit.js"></script>
 
 </html>
