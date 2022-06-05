@@ -94,7 +94,7 @@ body[data-theme="ncl"] {
 	--buttonbg: #436c8e;
 	--buttonhover: #40c192;
 	--buttonsubmitbg: #40c192;
-	--buttonsubmithover: #56ffc1;
+	--buttonsubmithover: #48d7a3;
 	--tabcontents: #233342;
 	--announcement: #335673;
 	--iconshield: #fff;
@@ -239,19 +239,17 @@ p {
 	background-color: var(--buttonsubmitbg);
 	color: white;
 	text-decoration: none;
-	padding: 0.5rem;
+	padding: 0.5rem 1rem;
 	border-radius: 3px;
 	font-family: Roboto, sans-serif;
 	transition: all 300ms ease;
 	font-size: 1rem;
 	letter-spacing: 1px;
-	opacity: 0.8;
 }
 
 .opt__submitcfg:hover{
-	/*background-color: var(--buttonsubmithover);
-	cursor: pointer;*/
-	cursor: not-allowed;
+	background-color: var(--buttonsubmithover);
+	cursor: pointer;
 }
 
 /* Upload visual cfg button (default button is hidden) */
@@ -269,7 +267,7 @@ input[type="file"] {
 
 input[type="text"] {
 	width: 20em;
-	padding: 12px 20px;
+	padding: 11px 15px;
 	margin: 8px 0;
 	border: 1px solid var(--itemtaboutline);
 	-webkit-transition: 0.7s;
@@ -315,27 +313,25 @@ input[type="submit"]:hover {
 /* Column grid for submit page */
 .clm {
 	display: grid;
-	grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
-	grid-gap: 25px;
+	grid-template-columns: repeat(auto-fill,minmax(300px,60vh));
+	position: relative;
 	align-items: stretch;
-	padding: 0 50px;
+	padding: 0 20px;
+	justify-content: center;
+	flex-wrap: nowrap;
 }
 
 /* Columns for submit page */
 .infocolumn {
 	display: flex;
-	height:auto;
+	height: auto;
 	flex-direction: column;
 	align-content: center;
-	background-color: var(--itemtabcolor);
-	border: 1px solid var(--itemtaboutline);
 	border-radius: 10px;
+	margin: 20px;
 	transition-duration: .5s;
 	overflow: hidden;
 	user-select: none;
-	-webkit-box-shadow: -3px 3px 75px -21px rgba(0,0,0,0.75);
-	-moz-box-shadow: -3px 3px 75px -21px rgba(0,0,0,0.75);
-	box-shadow: -3px 3px 75px -21px rgba(0,0,0,0.75);
 }
 
 /* Styling of middle column */
@@ -401,6 +397,20 @@ input[type="submit"]:hover {
 	text-align: left;
 }
 
+/* Styling of right column */
+.helpline {
+	font-family: Roboto, sans-serif;
+	font-size: 20px;
+	margin: 15px;
+	color: var(--tostextcolor);
+	text-align: left;
+	white-space: pre-line
+}
+.helpdesk {
+	text-align: center !important;
+	font-size: 20px !important;
+}
+
 /* navbar panel */
 .navbar__wrapper {
 	background-color: var(--navbarbg);
@@ -411,16 +421,12 @@ input[type="submit"]:hover {
 
 .navbar {
 	width: 100%;
-	background: var(--navbarbgtransparent);
+	background: var(--navbarbg);
 	transition: all 300ms ease;
 	overflow: hidden;
 	height: 50px;
 	position: fixed;
 	z-index: 1;
-}
-
-.navbar:hover{
-	background: var(--navbarbg);
 }
 
 .navbar a {
@@ -670,7 +676,7 @@ h1 .headert {
 	top: 2px;
 }
 
-
+/* Background of image preview */
 #preview {
 	display: none;
 	position: fixed;
@@ -683,7 +689,7 @@ h1 .headert {
 	background-repeat: no-repeat no-repeat;
 	background-position: center center;
 	background-color: rgba(49, 49, 49, 0.345);
-  }
+}
 
 /* Text on the end of the cfg page */
 .endtabstext {
@@ -833,6 +839,7 @@ h1 .headert {
 	text-decoration: none;
 }
 
+/* Contributor roles */
 .contributor {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
