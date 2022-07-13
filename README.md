@@ -5,6 +5,8 @@
 
 <div align="center"><img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=vulnerabilities"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=reliability_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=ncloc"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=sqale_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=security_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=bugs"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=sqale_index"></div>
 
+<h3 align="center"> No ads, no any kind of transactions, no third party social trackers or information-collecting services/trackers. Just for people. </h3>
+
 ## Introduction
 
 ### English
