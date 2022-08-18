@@ -11,7 +11,7 @@
 
 ### English
 
-**NVV** aka **'Null Core - Visuals Vault'** site built in pure **HTML, CSS and JavaScript** without using any building frameworks. This repository was created in order to make easier to create update notes and provide to users an easier way to **contribute to the site**.
+**NVV** aka **'Null Core - Visuals Vault'** site built in pure **HTML, CSS and JavaScript** without using any building frameworks. This repository was made in order to create update notes and provide to users an easier way to **contribute to the site**.
 
 ## Contribution
 This repository is **highly maintained**. Every created issue and pull request here will be **reviewed** and the action will be taken in the **short amount of time**.
@@ -22,7 +22,7 @@ This repository is **highly maintained**. Every created issue and pull request h
 - **Creating a suggestion (Please choose the "Feature Request" template in "Issues" tab)**
 
 ## Files
-Some of the files will not appear in this repository such as **.php** files or some of downloadable content of mods page.
+Some of the files will not appear in this repository such as **.php** files or downloadable content of mods page.
 
 ## Contributors
 - #### Krawi - For pinpointing issues and providing feedback on updates
