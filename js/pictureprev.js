@@ -2,7 +2,7 @@ function initpicture() {
     const images = document.querySelectorAll('.cfgvrow img');
     const screenprev = document.querySelector('#preview');
     const backgroundstyles = {
-       "background-size": '50%',
+       "background-size": '60%',
     };
 
     images.forEach(img => {
