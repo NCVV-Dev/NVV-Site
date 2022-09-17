@@ -769,12 +769,14 @@ h1 .headert {
 
 /* Announcement */
 .announcement {
-	position: relative;
+	position: fixed;
 	height: auto;
 	background-color: var(--announcement);
 	overflow: hidden;
 	transition: all 1s;
 	padding: 10px;
+	width: 100%;
+	z-index: 1;
 }
 
 .announcetext {
@@ -799,6 +801,7 @@ h1 .headert {
 	font-size: 22px;
 	text-align: center;
 	color: var(--linkhover);
+	text-decoration: none;
 }
 
 #dynamicannc {
