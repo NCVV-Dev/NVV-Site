@@ -144,7 +144,7 @@ h1 {
 	font-weight: 700;
 	text-align: center;
 	font-size: 2.5rem;
-	margin-top: 40px;
+	margin-top: 80px;
 }
 
 p {
@@ -557,6 +557,10 @@ h1 .headert {
 	grid-gap: 25px;
 	align-items: stretch;
 	padding: 0 50px;
+}
+
+.cfgvrow.mods{
+	grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
 }
 
 .cfg__tab {

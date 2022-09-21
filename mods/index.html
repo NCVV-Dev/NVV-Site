@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>NC - Visuals Vault</title>
+   <link rel="stylesheet" type="text/css" href="/ncv.css?v=<?php echo filemtime('ncv.css'); ?>">
+   <meta charset="UTF-8">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://ncvisualsvault.cc/mods/">
+   <meta property="og:image" content="https://ncvisualsvault.cc/media/nvv_big.png">
+   <meta property="og:title" content="Visuals Vault Mods">
+   <meta property="og:description" content="All your TF2 mods in one place.">
+   <meta property="twitter:card" content="summary_large_image">
+   <meta name="description" content="All your TF2 mods in one place.">
+   <meta name="keywords" content="Null Core Visuals, Null Core Cheat Visuals, NC Visuals, Null Core Visuals Config, NC Visuals Config, Null Core Visuals Vault, NC Visuals Vault, NCVV, NVV, ncc visuals, Nullcore visuals, nc visuals, nullcore visuals">
+   <meta name="theme-color" content="#414949">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha384-Gu3KVV2H9d+yA4QDpVB7VcOyhJlAVrcXd0thEjr4KznfaFPLe0xQJyonVxONa4ZC" crossorigin="anonymous">
+   <link rel="icon" href="/media/nvv.ico" type="image/x-icon">
+   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" integrity="sha384-szzW+tv8NF9jnkb0sE8BJLynVZ+vy3EkdLAUSHZ/R0lgsVZh6VbOTZnvdAC1RIZf" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
+</head>
+
+<body data-theme="nvv">
+   <div class="welcome_overlay">
+      <div class="welcome_header_container">
+         <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
+         <div class="welcome_header2">Dedicated site to the Null Core training software for Team Fortress 2 and it's visual configs - upload your own, download and share your visual configs with others right away!</div>
+         <div class="downbuttons">
+            <a class="welcbutton" onclick="WelcomeButtonAction()">Start Exploring</a>
+         </div>
+      </div>
+      <div class="welcome_imgcontainer">
+         <img src="/media/menus/animemenu.png" alt="Image">
+      </div>
+      <div class="welc_media">
+         <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site/" rel="noopener" target="_blank"><em class='bx bxl-github'></em></a>
+         <a class="welcbutton" href="https://t.me/ncvisualsvault/" rel="noopener" target="_blank"><em class='bx bxl-telegram'></em></a>
+         <a class="welcbutton" href="https://nullcoreproject.net/" rel="noopener" target="_blank"><em class='bx bx-border-all' style="color: #18bbbb;"></em></a>
+      </div>
+      <div class="welcome_bottomtext">
+         No ads, no any kind of transactions, no third party social trackers or information-collecting services/trackers. Just for people. 
+      </div>
+   </div>
+   <div class="navbar__wrapper">
+      <div class="navbar">
+         <a href="/" rel="noopener">
+            <span class="links_name">Main Page</span>
+         </a>
+         <a href="" rel="noopener">
+            <span class="links_name">Download All Mods (Unsafe)</span>
+         </a>
+         <a href="/tos/">
+            <span class="links_name">LA/TOS</span>
+         </a>
+         <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
+            <span class="links_name">Switch Theme</span>
+         </a>
+         <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener">
+            <span class="links_name">Report an Issue</span>
+         </a>
+         <a href="/contacts/" rel="noopener">
+            <span class="links_name">Contacts</span>
+         </a>
+      </div>
+   </div>
+   <div class="bodywrapper">
+      <div id="modal__overlay"></div>
+      <div id="progress"></div>
+      <noscript>
+         <div class="announcement">
+            <div class="nojs">Seems like JavaScript is not supported or disabled on your browser. Some features might not work</div>
+         </div>
+      </noscript>
+      <div class="announcement">
+         <a class="announcetext contributor10" href="https://t.me/ncvisualsvault" rel="noopener" target="_blank">Join our current Null Core subscription giveaway!</a>
+      </div>
+      <h1 class="animate__animated animate__fadeInDown">mods vault</h1>
+      <p class="animate__animated animate__fadeInDown">only good mods</p>
+      <div class="cont">
+         <div class="opt__wrapper animate__animated animate__fadeInDown">
+            <a href="" class="opt__submitcfg">Submit Mod</a>
+         </div>
+         <div class="cfgvrow mods">
+
+            <div class="cfg__wrapper animate__animated animate__fadeIn">
+               <div class="cfg__tab">
+                  <div class="cfg__body">
+                     <div class="cfg__title">
+                        Overhaul Animaiton Pack
+                     </div>
+                     <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                     </div>
+                     <div class="cfg__descr">
+                        All-In-One overhaul animation pack. Does not include pyro animations.
+                     </div>
+                     <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://github.com/harmonyzt/NVV-Mods/blob/main/All-Class%20Animation%20Overhaul%20pack.rar?raw=true" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        Taunt Fix
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Never miss taunting players ever again.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/download/TauntFix.vpk" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        Clear Water
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Replaces water textures with one-colored texture for better visibility.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://github.com/harmonyzt/NVV-Mods/blob/main/Water%20Replacement.vpk?raw=true" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        Removal Pack
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Disables unnecessary things like ambient sounds or tutorial tips for you.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://github.com/harmonyzt/NVV-Mods/blob/main/Mastercomfig%20removal%20pack.rar?raw=true" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        Taunt Fix
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Never miss taunting players ever again.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/download/TauntFix.vpk" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        Transparent Spawn Doors
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Makes all the spawn doors transparent for better visibility.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://github.com/harmonyzt/NVV-Mods/blob/main/Clear-Spawn-Doors.vpk?raw=true" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        Understable Pyro
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Replaces all sounds for pyro making him able to speak.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://github.com/harmonyzt/NVV-Mods/blob/main/Understandable%20Pyro.vpk?raw=true" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        Flat Textures
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Makes all world textures flat, has a slight FPS boost.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://github.com/harmonyzt/NVV-Mods/blob/main/flattexturesv1.zip?raw=true" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        High Quality Textures
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Replaces all class and weapons textures to better ones.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/download/beta-skins-hd.rar" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        HL1 Footstep Sounds
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Replaces footsteps sounds from Half-Life 1.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://github.com/harmonyzt/NVV-Mods/blob/main/Clear-Spawn-Doors.vpk?raw=true" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        Pulsing KS Sheens
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link contributor" target="_blank" rel="noopener" href="http://steamcommunity.com/profiles/76561198258919721">krawi</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Makes killstreak weapons sheen cover all weapon and pulse.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://github.com/harmonyzt/NVV-Mods/blob/main/Clear-Spawn-Doors.vpk?raw=true" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="cfg__wrapper animate__animated animate__fadeIn">
+                <div class="cfg__tab">
+                   <div class="cfg__body">
+                      <div class="cfg__title">
+                        Quiet Noicemakers
+                      </div>
+                      <div class="cfg__author">
+                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                      </div>
+                      <div class="cfg__descr">
+                        Makes all noisemakers sounds barely noticable.
+                      </div>
+                      <div class="cfg__downloadbtn">
+                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/download/Quiet_Noisemakers.vpk" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+         </div>
+      </div>
+   </div>
+</body>
+<script src="/js/themecookies.js"></script>
+<script src="/js/welcomepagefunc.js"></script>
+<script src="/js/loaderfunc.js"></script>
+<script src="/js/preventresubmit.js"></script>
+
+</html>
