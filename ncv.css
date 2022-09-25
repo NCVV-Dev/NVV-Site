@@ -401,10 +401,9 @@ input[type="submit"]:hover {
 .helpline {
 	font-family: Roboto, sans-serif;
 	font-size: 20px;
-	margin: 15px;
+	margin: 10px;
 	color: var(--tostextcolor);
 	text-align: left;
-	white-space: pre-line
 }
 .helpdesk {
 	text-align: center !important;
