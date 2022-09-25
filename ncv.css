@@ -621,6 +621,10 @@ h1 .headert {
 	color: white;
 }
 
+.cfg__author.nodescr {
+	margin-bottom: 30px;
+}
+
 .cfg__downloadbtn{
 	margin-top: auto;
 	display: flex;
