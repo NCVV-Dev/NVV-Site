@@ -27,10 +27,6 @@ body[data-theme="nvv"] {
 	-ms-user-select: none;
 	-webkit-user-select: none;
 	margin: 0;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	background: linear-gradient(152deg,
 	rgba(13, 18, 22, 1) 0%,
 	rgba(16, 16, 40, 1) 52%,
