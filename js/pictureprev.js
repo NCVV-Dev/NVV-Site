@@ -1,15 +1,1 @@
-function initpicture() {
-    const images = document.querySelectorAll('.cfgvrow img');
-    const screenprev = document.querySelector('#preview');
-    const backgroundstyles = {
-       "background-size": '60%',
-    };
-
-    images.forEach(img => {
-        img.addEventListener('click', function () {
-            screenprev.style.backgroundImage = 'url(' + img.src + ')';
-            screenprev.style.display = 'block';
-            Object.assign(screenprev.style, backgroundstyles);
-        });
-    });
-}
+function initpicture(){let e=document.querySelectorAll(".cfgvrow img"),c=document.querySelector("#preview"),r={"background-size":"60%"};e.forEach(e=>{e.addEventListener("click",function(){c.style.backgroundImage="url("+e.src+")",c.style.display="block",Object.assign(c.style,r)})})}
