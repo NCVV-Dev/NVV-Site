@@ -107,6 +107,50 @@ body[data-theme="ncl"] {
 	--latostitle: #18bbbb;
 }
 
+body[data-theme="fware"] {
+	font-family: Verdana, sans-serif;
+	text-align: center;
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	margin: 0;
+	background-image: url(/fedoraware/media/bg.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow-y: scroll;
+	--navbarbg: rgba(39, 12, 39, 0.63);
+	--navbarbgtransparent: #151715b4;
+	--navbarbutton: rgba(149, 128, 255, 0.7);
+	--navbarbuttonhover: #ff80bf;
+	--warn: rgb(253, 78, 78);
+	--headercolor: #ffffff;
+	--pcolor: #ffffff;
+	--generaltextcolor: #ffffff;
+	--itemtabcolor: #414558;
+	--itemtaboutline: #6b66c0;
+	--itemtabhover: #353277;
+	--itemtabhovereffect: #6b66c0;
+	--linkhover: rgba(149, 128, 255, 0.7);
+	--buttonbg: rgba(149, 128, 255, 0.7);
+	--buttonhover: #ff80bf;
+	--buttonsubmitbg: #319671;
+	--buttonsubmithover: #41bd8f;
+	--tabcontents: rgba(171, 154, 255, 0.1);
+	--announcement: #414558;
+	--iconshield: #ff80bf;
+	--featureditem: #ff80bf;
+	/* LA/TOS THEME */
+	--tostextcolor: rgb(255, 255, 255);
+	--answertextcolor: #80ffea;
+	--questiontextcolor: white;
+	--tosqm: #ff9580;
+	--latosbackgr: #21222c;
+	--latostitle: #6b66c0;
+}
+
 * {
 	padding: 0;
 	box-sizing: border-box;
@@ -967,7 +1011,6 @@ h1 .headert {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background: rgb(13, 18, 22);
 	background: linear-gradient(152deg,
 			rgba(13, 18, 22, 1) 0%,
 			rgba(16, 16, 40, 1) 52%,
