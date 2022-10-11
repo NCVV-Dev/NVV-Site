@@ -49,6 +49,8 @@ function moveSnowflakes() {
         resetPosition = !1
     }
     requestAnimationFrame(moveSnowflakes)
+
+    return 1;
 }
 
 function getPosition(e, t) {
