@@ -1,4 +1,4 @@
-var browserWidth, browserHeight, snowflakes = [],
+let browserWidth, browserHeight, snowflakes = [],
     numberOfSnowflakes = 50,
     resetPosition = !1,
     enableAnimations = !1,
@@ -21,13 +21,13 @@ function setTransform(e, t, s, o) {
 }
 
 function generateSnowflakes() {
-    var e = document.querySelector(".snowflake"),
+    let e = document.querySelector(".snowflake"),
         t = e.parentNode;
     t.style.display = "block", browserWidth = document.documentElement.clientWidth, browserHeight = document.documentElement.clientHeight;
-    for (var s = 0; s < numberOfSnowflakes; s++) {
-        var o = e.cloneNode(!0);
+    for (let s = 0; s < numberOfSnowflakes; s++) {
+        let o = e.cloneNode(!0);
         t.appendChild(o);
-        var n = getPosition(50, browserWidth),
+        let n = getPosition(50, browserWidth),
             i = getPosition(50, browserHeight),
             r = new Snowflake(o, 5 + 40 * Math.random(), n, i);
         snowflakes.push(r)
@@ -37,13 +37,13 @@ function generateSnowflakes() {
 
 function moveSnowflakes() {
     if (enableAnimations)
-        for (var e = 0; e < snowflakes.length; e++) {
+        for (let e = 0; e < snowflakes.length; e++) {
             (t = snowflakes[e]).update()
         }
     if (resetPosition) {
         browserWidth = document.documentElement.clientWidth, browserHeight = document.documentElement.clientHeight;
         for (e = 0; e < snowflakes.length; e++) {
-            var t;
+            let t;
             (t = snowflakes[e]).xPos = getPosition(50, browserWidth), t.yPos = getPosition(50, browserHeight)
         }
         resetPosition = !1

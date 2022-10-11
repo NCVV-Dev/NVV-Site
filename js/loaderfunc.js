@@ -5,7 +5,7 @@
     }
 
     function loadbar() {
-        var prog = id("progress"),
+        let prog = id("progress"),
             img = document.images,
             c = 0,
             tot = img.length;
@@ -15,7 +15,7 @@
 
         function imgLoaded() {
             c += 1;
-            var perc = ((100 / tot * c) << 0) + "%";
+            let perc = ((100 / tot * c) << 0) + "%";
             prog.style.width = perc;
             if (c === tot) {
                 return doneLoading()
@@ -28,8 +28,8 @@
                 prog.style.opacity = 0
             }, 1800)
         }
-        for (var i = 0; i < tot; i += 1) {
-            var tImg = new Image();
+        for (let i = 0; i < tot; i += 1) {
+            let tImg = new Image();
             tImg.onload = imgLoaded;
             tImg.onerror = imgLoaded;
             tImg.src = img[i].src
