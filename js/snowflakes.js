@@ -9,7 +9,7 @@ function setAccessibilityState() {
 }
 
 function setup() {
-    enableAnimations && (window.addEventListener("DOMContentLoaded", generateSnowflakes, !1), window.addEventListener("resize", setResetFlag, !1))
+    enableAnimations && (window.addEventListener("DOMContentLoaded", generateSnowflakes, !1), window.addEventListener("resize", setResetFlag, !1));
 }
 
 function Snowflake(e, t, s, o) {
@@ -62,5 +62,8 @@ function setResetFlag(e) {
     resetPosition = !0
 }
 setAccessibilityState(), reduceMotionQuery.addListener(setAccessibilityState), setup(), Snowflake.prototype.update = function() {
-    this.counter += this.speed / 5e3, this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40, this.yPos += Math.sin(this.counter) / 40 + this.speed / 30, this.scale = .5 + Math.abs(10 * Math.cos(this.counter) / 20), setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element), this.yPos > browserHeight && (this.yPos = -50)
+    this.counter += this.speed / 5e3, this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
+    this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
+    this.scale = .5 + Math.abs(10 * Math.cos(this.counter) / 20);
+    setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element), this.yPos > browserHeight && (this.yPos = -50);
 };
