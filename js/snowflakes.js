@@ -30,9 +30,10 @@ function generateSnowflakes() {
         let n = getPosition(50, browserWidth),
             i = getPosition(50, browserHeight),
             r = new Snowflake(o, 5 + 40 * Math.random(), n, i);
-        snowflakes.push(r)
+        snowflakes.push(r);
     }
-    t.removeChild(e), moveSnowflakes()
+    t.removeChild(e);
+    moveSnowflakes();
 }
 
 function moveSnowflakes() {
