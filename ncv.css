@@ -674,12 +674,11 @@ h1 .headert {
 }
 
 .cfg__author {
-	font-weight: 500;
+	font-weight: 600;
 	margin-top: 10px;
 	font-family: Roboto, sans-serif;
 	font-size: 20px;
 	color: white;
-	font-weight: 600;
 }
 
 .cfg__author.mods {
