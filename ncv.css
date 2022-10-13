@@ -158,6 +158,19 @@ body[data-theme="fware"] {
 	scrollbar-width: thin;
 }
 
+.underdev {
+	color: var(--generaltextcolor);
+	margin: 150px;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.underdev em {
+	position: relative;
+	top: 3px;
+	font-size: 28px;
+}
+
 @font-face {
 	font-family: "Audiowide";
 	src: url(https://fonts.googleapis.com/css?family=Audiowide);
@@ -200,7 +213,7 @@ p {
 	margin-bottom: 60px;
 }
 
-.solidbackground{
+.solidbackground {
 	background: var(--latosbackgr) !important;
 }
 
