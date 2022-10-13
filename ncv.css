@@ -740,6 +740,7 @@ h1 .headert {
 .upload_info:hover {
 	cursor: pointer;
 }
+
 .upload_info.tooltip {
 	position: relative;
 	z-index: 4;
@@ -750,9 +751,6 @@ h1 .headert {
 	opacity: 0;
 	pointer-events: none;
 	position: absolute;
-}
-
-.upload_info.tooltip:before {
 	background: var(--latosbackgr);
 	border-radius: 3px;
 	color: var(--generaltextcolor);
