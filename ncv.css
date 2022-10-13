@@ -648,7 +648,7 @@ h1 .headert {
 }
 
 .cfg__title{
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: bold;
 	color: white;
 	text-overflow: ellipsis;
@@ -660,8 +660,9 @@ h1 .headert {
 	font-weight: 500;
 	margin-top: 10px;
 	font-family: Roboto, sans-serif;
-	font-size: 18px;
+	font-size: 20px;
 	color: white;
+	font-weight: 600;
 }
 
 .cfg__author.nodescr {
