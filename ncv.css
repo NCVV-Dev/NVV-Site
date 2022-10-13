@@ -728,11 +728,15 @@ h1 .headert {
 
 .upload_info {
 	position: relative;
-	top: 5px;
+	top: 4px;
 	left: 15px;
 	color: var(--generaltextcolor);
+}
+
+.upload_info em {
 	font-size: 27px;
 }
+
 .upload_info:hover {
 	cursor: pointer;
 }
