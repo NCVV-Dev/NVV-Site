@@ -660,7 +660,7 @@ h1 .headert {
 	transition: all 300ms ease;
 }
 
-.cfg__title{
+.cfg__title {
 	font-size: 25px;
 	font-weight: bold;
 	color: white;
@@ -669,7 +669,11 @@ h1 .headert {
 	text-align: center;
 }
 
-.cfg__author{
+.cfg__title.mods {
+	font-size: 20px;
+}
+
+.cfg__author {
 	font-weight: 500;
 	margin-top: 10px;
 	font-family: Roboto, sans-serif;
@@ -678,18 +682,22 @@ h1 .headert {
 	font-weight: 600;
 }
 
+.cfg__author.mods {
+	font-size: 15px;
+}
+
 .cfg__author.nodescr {
 	margin-bottom: 30px;
 }
 
-.cfg__downloadbtn{
+.cfg__downloadbtn {
 	margin-top: auto;
 	display: flex;
 	flex-wrap: wrap;
 	color: white;
 }
 
-.cfg__descr{
+.cfg__descr {
 	margin-top: 18px;
 	transition: all 0.5s ease-in-out;
 	font-size: 1.1rem;
