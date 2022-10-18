@@ -10,8 +10,8 @@ function switchrandomizing(){
 
 $(function() {
     if(getCookie("EnableShuffle") == "true" && localStorage.getItem('enableshuffle') == 'true'){
-    var parent = $("#randomize");
-    var divs = parent.children();
+    let parent = $("#randomize");
+    let divs = parent.children();
     divs.sort(function(a, b) {
       return 0.5 - Math.random();
     });
