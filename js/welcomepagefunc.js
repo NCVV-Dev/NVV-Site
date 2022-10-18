@@ -5,6 +5,8 @@ if (getCookie("FirstTime") != false) {
 } else {
     wlcoverlay.style.opacity = 1;
     wlcoverlay.style.display = "block"
+    setCookie("EnableShuffle", "true", 365)
+    localStorage.setItem('enableshuffle', 'true');
 };
 
 function WelcomeButtonAction() {

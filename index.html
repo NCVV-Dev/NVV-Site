@@ -35,9 +35,7 @@
             <a class="welcbutton" onclick="WelcomeButtonAction()">Start Exploring</a>
          </div>
       </div>
-      <div class="welcome_imgcontainer">
-         <img src="/media/menus/animemenu.png" alt="Image">
-      </div>
+      <div class="welcome_imgcontainer" id="randomimage"></div>
       <div class="welc_media">
          <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site/" rel="noopener" target="_blank"><em class='bx bxl-github'></em></a>
          <a class="welcbutton" href="https://t.me/ncvisualsvault/" rel="noopener" target="_blank"><em class='bx bxl-telegram'></em></a>
@@ -61,6 +59,9 @@
          <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
             <span class="links_name">Switch Theme</span>
          </a>
+         <a onclick="switchrandomizing()" class="themesw" style="cursor: pointer;">
+            <span class="links_name">Switch Shuffling</span>
+         </a>
          <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener">
             <span class="links_name">Report an Issue</span>
          </a>
@@ -83,7 +84,7 @@
          <div class="opt__wrapper animate__animated animate__fadeInDown">
             <a href="/submit/" class="opt__submitcfg">Submit Visual Config</a>
          </div>
-         <div class="cfgvrow">
+         <div class="cfgvrow" id="randomize">
             <div class="cfg__wrapper animate__animated animate__fadeIn">
                <div class="cfg__tab">
                   <div class="cfg__image__wrapper">
@@ -1865,10 +1866,12 @@
       <div id="preview" class="animate__animated animate__fadeIn" onclick="this.style.display='none';"></div>
    </div>
 </body>
+<script src="js/welcomerandomimage.js" crossorigin="anonymous"></script>
 <script src="js/themecookies.js" crossorigin="anonymous"></script>
 <script src="js/pictureprev.js" crossorigin="anonymous"></script>
 <script src="js/welcomepagefunc.js" crossorigin="anonymous"></script>
 <script src="js/loaderfunc.js" crossorigin="anonymous"></script>
 <script src="js/preventresubmit.js" crossorigin="anonymous"></script>
+<script src="js/shufflecontent.js" crossorigin="anonymous"></script>
 
 </html>
