@@ -1393,17 +1393,17 @@ h1 .headert {
 /* Notification */ 
 #nf__popup {
 	visibility: hidden;
-	min-width: 250px;
-	margin-left: -125px;
-	background-color: var(--announcement);
+	min-width: 350px;
+	margin-left: -170px;
+	background-color: var(--navbarbg);
 	text-align: center;
-	border-radius: 2px;
+	border-radius: 5px;
 	padding: 16px;
 	position: fixed;
 	z-index: 1;
 	left: 50%;
 	bottom: 100px;
-	font-size: 17px;
+	font-size: 15px;
 	font-weight: 700;
   }
   

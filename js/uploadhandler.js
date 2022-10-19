@@ -12,7 +12,7 @@ $(function() {
         eraseCookie("submit");
     } else if(getCookie("submit") == 'fail') {
         t.style.color="var(--warn)";
-        t.innerHTML = "Failed to submit your visual config :(";
+        t.innerHTML = "Something went wrong :(";
         t.className = "show";
         eraseCookie("submit");
     }
