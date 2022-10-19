@@ -9,13 +9,13 @@ $(function() {
         t.style.color="var(--buttonsubmitbg)";
         t.innerHTML =  "Visual config submitted!";
         t.className = "show";
-        eraseCookie("submit");
     } else if(getCookie("submit") == 'fail') {
         t.style.color="var(--warn)";
         t.innerHTML = "Something went wrong :(";
         t.className = "show";
-        eraseCookie("submit");
     }
+
+    eraseCookie("submit");
 
     setTimeout(function(){ 
         t.className = t.className.replace("show", "");
