@@ -3,7 +3,7 @@ function eraseCookie(name) {
 }
 
 $(function() {
-    var t = document.getElementById("nf__popup");
+    let t = document.getElementById("nf__popup");
 
     if(getCookie("submit") == 'success'){
         t.style.color="var(--buttonsubmitbg)";
