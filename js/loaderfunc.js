@@ -1,4 +1,3 @@
-;
 (function() {
     function id(v) {
         return document.getElementById(v)
