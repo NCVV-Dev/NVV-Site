@@ -9,6 +9,6 @@ function initpicture() {
             c.style.backgroundImage = "url(" + e.src + ")";
             c.style.display = "block";
             Object.assign(c.style, r);
-        })
-    })
-}
+        });
+    });
+};
