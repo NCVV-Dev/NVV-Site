@@ -1,10 +1,1 @@
-$(function() {
-    let ImageArray = new Array();
-    ImageArray[0] = "https://ncvisualsvault.cc/media/menus/raizomenu.png";
-    ImageArray[1] = "https://ncvisualsvault.cc/media_optimized/menus/mh4menu.jpg";
-    ImageArray[2] = "https://ncvisualsvault.cc/media/menus/LBAmenu.png";
-    ImageArray[3] = "https://ncvisualsvault.cc/media/menus/animemenu.png";
-    ImageArray[4] = "https://ncvisualsvault.cc/media/menus/coldbluemenu.png";
-    let number = Math.floor(Math.random()*ImageArray.length);
-    return document.getElementById("randomimage").innerHTML = '<img src="'+ImageArray[number]+'" />';
-})
+$(function(){let n=[];n[0]="https://ncvisualsvault.cc/media/menus/raizomenu.png",n[1]="https://ncvisualsvault.cc/media_optimized/menus/mh4menu.jpg",n[2]="https://ncvisualsvault.cc/media/menus/LBAmenu.png",n[3]="https://ncvisualsvault.cc/media/menus/animemenu.png",n[4]="https://ncvisualsvault.cc/media/menus/coldbluemenu.png";let e=Math.floor(Math.random()*n.length);return document.getElementById("randomimage").innerHTML='<img src="'+n[e]+'" />'});
