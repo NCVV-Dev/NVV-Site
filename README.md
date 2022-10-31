@@ -1,9 +1,9 @@
 <p align="center">
   <img src=".github/media/NVV.png" align="center">
 </p>
-<h3 align="center"> Null Core - Visuals Vault Site Source Code </h3>
+<h3 align="center">Null Core - Visuals Vault Site Source Code</h3>
 
-<div align="center"><img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=vulnerabilities"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=reliability_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=ncloc"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=sqale_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=security_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=bugs"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=sqale_index"></div>
+<div align="center"><img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=reliability_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=ncloc"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=sqale_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=security_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=bugs"> <img src="https://sonarcloud.io/api/project_badges/measure?project=harmonyzt_NVV-Site&metric=sqale_index"></div>
 
 <h3 align="center"> No ads, no any kind of transactions, no third party social trackers or information-collecting services/trackers. Just for people. </h3>
 
@@ -11,10 +11,10 @@
 
 ### English
 
-**NVV** aka **'Null Core - Visuals Vault'** site built in pure **HTML, CSS and JavaScript** without using any building frameworks. This repository was made in order to create update notes and provide to users an easier way to **contribute to the site**.
+**NVV** aka **'Null Core - Visuals Vault'** website built in pure **HTML, CSS and JavaScript** without using any building frameworks. This repository was made in order to create update notes and provide to users an easier way to **contribute to the site**.
 
 ## Contribution
-This repository is **highly maintained**. Every created issue and pull request here will be **reviewed** and the action will be taken in the **short amount of time**.
+This repository is **highly maintained**. Every issue or pull request made here will be **reviewed** and the action will be taken in the **short amount of time**.
 
 ### How can I contribute?
 - **Pinpointing any bugs or issues (Please choose the "Bug Report" template in "Issues" tab)**
@@ -28,6 +28,9 @@ Some of the files will not appear in this repository such as **.php** files or d
 - #### Krawi - For pinpointing issues and providing feedback on updates
 - #### Eso - For pinpointing issues
 - #### [Sinner](https://github.com/SinnerK0N) - For pinpointing issues and providing feedback on updates
+- #### Teki - For providing feedback on updates
+- #### dqz - For providing feedback on updates
+- #### Teki - For providing feedback on updates and pinpointing issues
 
 ### Russian (Русский)
 
