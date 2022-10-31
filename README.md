@@ -26,10 +26,10 @@ Some of the files will not appear in this repository such as **.php** files or d
 
 ## Contributors
 - #### [Sinner](https://github.com/SinnerK0N) - For pinpointing issues and providing feedback on updates
-- #### Krawi - For pinpointing issues and providing feedback on updates
+- #### krawi - For pinpointing issues and providing feedback on updates
 - #### Teki - For pinpointing issues and providing feedback on updates
 - #### dqz - For providing feedback on updates
-- #### Eso - For pinpointing issues
+- #### eso - For pinpointing issues
 
 ### Russian (Русский)
 
