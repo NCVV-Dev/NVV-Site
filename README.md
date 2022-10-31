@@ -25,12 +25,11 @@ This repository is **highly maintained**. Every issue or pull request made here 
 Some of the files will not appear in this repository such as **.php** files or downloadable content of mods page.
 
 ## Contributors
-- #### Krawi - For pinpointing issues and providing feedback on updates
-- #### Eso - For pinpointing issues
 - #### [Sinner](https://github.com/SinnerK0N) - For pinpointing issues and providing feedback on updates
-- #### Teki - For providing feedback on updates
+- #### Krawi - For pinpointing issues and providing feedback on updates
+- #### Teki - For pinpointing issues and providing feedback on updates
 - #### dqz - For providing feedback on updates
-- #### Teki - For providing feedback on updates and pinpointing issues
+- #### Eso - For pinpointing issues
 
 ### Russian (Русский)
 
