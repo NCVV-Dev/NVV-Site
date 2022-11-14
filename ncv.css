@@ -1007,15 +1007,22 @@ h1 .headert {
 
 .contributor10 {
 	font-family: Roboto, sans-serif;
+	background-image: linear-gradient(-225deg, #18bbbb 0%, #ffffff 100%);
+	background-size: 200% auto;
 	color: #fff;
-	text-shadow: 0 0 7px #ffffff;
-	font-weight: 700;
+	font-weight: 600;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: contr10anim 1.5s linear infinite;
 }
 
 .contributor15 {
 	font-family: Roboto, sans-serif;
 	color: #39727279;
 	animation: contr15anim 2s ease-in-out infinite;
+	font-weight: 600;
+	text-shadow: 0 0 7px #66d9d979;
 }
 
 @keyframes contr15anim {
@@ -1033,18 +1040,14 @@ h1 .headert {
 }
 
 .contributor20 {
+
 	font-family: Roboto, sans-serif;
-	background-image: linear-gradient(-225deg, #18bbbb 0%, #ffffff 100%);
-	background-size: 200% auto;
 	color: #fff;
-	font-weight: 600;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: contr20anim 1.5s linear infinite;
+	text-shadow: 0 0 7px #ffffff;
+	font-weight: 700;
 }
 
-@keyframes contr20anim {
+@keyframes contr10anim {
 	to {
 		background-position: 200% center;
 	}
@@ -1067,7 +1070,7 @@ h1 .headert {
 .contributor40 {
 	font-family: Roboto, sans-serif;
 	background: linear-gradient(180deg, #ff36a5 0%, #4d8bff 100%, #ffe657);
-	text-shadow: 1px 0px 5px rgb(204 0 255), 1px 0px 5px rgb(211 37 255);
+	text-shadow: 1px 0px 5px rgb(204 0 255), 1px 0px 3px rgb(211 37 255);
 	background-clip: border-box;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1093,6 +1096,32 @@ h1 .headert {
 	-webkit-background-clip: text;
 	font-weight: 800;
 }
+
+.contributor30__tabstyle {
+	background: rgb(16,0,55);
+	background: linear-gradient(50deg, rgba(16,0,55,1) 0%, #8c48fa 100%);
+	border: 1px solid #8c48fa;
+	-webkit-box-shadow: -3px 3px 75px -21px rgba(182, 101, 248, 0.298);
+	-moz-box-shadow: -3px 3px 75px -21px rgba(182, 101, 248, 0.298);
+	box-shadow: -3px 3px 75px -21px rgba(182, 101, 248, 0.298);
+}
+
+.contributor30__tabstyle:hover {
+	border: 1px solid rgb(190, 119, 199);
+	-webkit-box-shadow: -3px 3px 75px -21px rgba(203, 141, 253, 0.423);
+	-moz-box-shadow: -3px 3px 75px -21px rgba(203, 141, 253, 0.423);
+	box-shadow: -3px 3px 75px -21px rgba(203, 141, 253, 0.423);
+}
+
+.contributor30__btncolor {
+	background: rgb(147, 96, 163);
+}
+
+.contributor30__btncolor:hover {
+	background: rgb(218, 115, 249);
+}
+
+.contributor30__color
 
 /* Welcome Page */
 .welcome_overlay {
