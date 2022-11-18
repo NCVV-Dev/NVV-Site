@@ -1019,23 +1019,22 @@ h1 .headert {
 
 .contributor15 {
 	font-family: Roboto, sans-serif;
-	color: #39727279;
-	animation: contr15anim 2s ease-in-out infinite;
+	color: #247676;
+	animation: contr15anim 3s ease-in-out infinite;
 	font-weight: 600;
-	text-shadow: 0 0 7px #66d9d979;
 }
 
 @keyframes contr15anim {
 	0% {
-		color: #39727279;
+		color: #247676;
 	}
 
-	13% {
-		color: #42f7b4;
+	5% {
+		color: #45efef;
 	}
 
 	100% {
-		color: #39727279;
+		color: #247676;
 	}
 }
 
@@ -1095,6 +1094,40 @@ h1 .headert {
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 	font-weight: 800;
+}
+
+.v952 {
+	font-family: Roboto, sans-serif;
+	text-shadow: 2px 2px 4px #1d949e;
+	background: radial-gradient(circle, #01e6ff 01%, #1cad98 63%, #1896a9 77%);
+	background-clip: border-box;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	font-weight: 1000;
+}
+
+.v952__tabstyle {
+	background: rgb(15,150,150);
+	background: linear-gradient(157deg, rgba(15,150,150,1) 0%, rgba(35,115,131,1) 55%, rgba(41,59,76,1) 100%);
+	border: 1px solid #0F9696;
+	-webkit-box-shadow: -3px 3px 75px -21px rgba(15, 150, 150, 0.645);
+	-moz-box-shadow: -3px 3px 75px -21px rgba(15, 150, 150, 0.645);
+	box-shadow: -3px 3px 75px -21px rgba(15, 150, 150, 0.645);
+}
+
+.v952__tabstyle:hover {
+	border: 1px solid rgb(20, 188, 188);
+	-webkit-box-shadow: -3px 3px 75px -21px rgba(15, 150, 150, 1);
+	-moz-box-shadow: -3px 3px 75px -21px rgba(15, 150, 150, 1);
+	box-shadow: -3px 3px 75px -21px rgba(15, 150, 150, 1);
+}
+
+.v952__color {
+	background-color: #129d9d;
+}
+
+.v952__color:hover {
+	background-color: #17b6b6;
 }
 
 .contributor30__tabstyle {
