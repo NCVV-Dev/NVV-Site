@@ -1470,7 +1470,7 @@ h1 .headert {
 	text-align: left !important;
 }
 
-/* Notification */ 
+/* Notification Styles */ 
 #nf__popup {
 	visibility: hidden;
 	width: 100%;
@@ -1510,7 +1510,7 @@ h1 .headert {
 	to {bottom: -30px; opacity: 0;}
 }
 
-/* Download Count DIV */ 
+/* Download Count div */ 
 .dwn__count {
 	position: relative;
 	font-family: cursive;
