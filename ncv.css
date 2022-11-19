@@ -1509,3 +1509,14 @@ h1 .headert {
 	from {bottom: 0; opacity: 1;}
 	to {bottom: -30px; opacity: 0;}
 }
+
+/* Download Count DIV */ 
+.dwn__count {
+	position: relative;
+	margin-top: auto;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	width: 100px;
+	height: 5px;
+	float: right;
+	bottom: 25px;
+}
