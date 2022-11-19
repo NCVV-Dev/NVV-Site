@@ -1513,10 +1513,11 @@ h1 .headert {
 /* Download Count DIV */ 
 .dwn__count {
 	position: relative;
-	margin-top: auto;
 	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	width: 100px;
-	height: 5px;
-	float: right;
-	bottom: 25px;
+	left: 30px;
+	top: 5px
+}
+
+.dwn__count em {
+	font-size: 25px;
 }
