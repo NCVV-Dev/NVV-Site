@@ -1522,7 +1522,7 @@ h1 .headert {
 /* Download Count div */ 
 .dwn__count {
 	position: relative;
-	font-family: cursive;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	left: 50px;
 	top: 7px;
 	color: var(--generaltextcolor);
