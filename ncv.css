@@ -125,7 +125,8 @@ body[data-theme="fware"] {
 	-ms-user-select: none;
 	-webkit-user-select: none;
 	margin: 0;
-	background-image: url(/fedoraware/media/bg.png);
+	background: rgb(15,4,8);
+	background: linear-gradient(157deg, rgba(15,4,8,1) 0%, rgba(42,9,30,1) 55%, rgba(75,30,30,1) 100%);
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -142,7 +143,7 @@ body[data-theme="fware"] {
 	--itemtabcolor: #414558;
 	--itemtaboutline: #6b66c0;
 	--itemtabhover: #353277;
-	--itemtabhovereffect: #6b66c0;
+	--itemtabhovereffect: rgb(255, 101, 101);
 	--linkhover: rgba(149, 128, 255, 0.7);
 	--buttonbg: rgba(149, 128, 255, 0.7);
 	--buttonhover: #ff80bf;
@@ -159,6 +160,8 @@ body[data-theme="fware"] {
 	--tosqm: #ff9580;
 	--latosbackgr: #21222c;
 	--latostitle: #6b66c0;
+	/* Image Preview Background */
+	--imagepreview: rgba(30, 56, 52, 0.345);
 }
 
 * {
