@@ -3,7 +3,7 @@ function search() {
 	input=input.toLowerCase();
 	let cfgw = document.getElementsByClassName('cfg__wrapper');
 	
-	for (i = 0; i < cfgw.length; i++) {
+	for (let i = 0; i < cfgw.length; i++) {
 		if (!cfgw[i].innerHTML.toLowerCase().includes(input)) {
 			cfgw[i].style.display="none";
 		}
