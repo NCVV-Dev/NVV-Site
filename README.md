@@ -13,6 +13,8 @@
 
 **NVV** aka **'Null Core - Visuals Vault'** website built in pure **HTML, CSS and JavaScript** without using any building frameworks. This repository was made in order to create update notes and provide to users an easier way to **contribute to the site**.
 
+**Now is cooperated with [Fedoraware](https://fedoraware.ncvisualsvault.cc/)**
+
 ## Contribution
 This repository is **highly maintained**. Every issue or pull request made here will be **reviewed** and the action will be taken in the **short amount of time**.
 
