@@ -1142,30 +1142,6 @@ h1 .headert {
 	background-color: #17b6b6;
 }
 
-.contributor30__tabstyle {
-	background: rgb(16,0,55);
-	background: linear-gradient(50deg, rgba(16,0,55,1) 0%, #8c48fa 100%);
-	border: 1px solid #8c48fa;
-	-webkit-box-shadow: -3px 3px 75px -21px rgba(182, 101, 248, 0.298);
-	-moz-box-shadow: -3px 3px 75px -21px rgba(182, 101, 248, 0.298);
-	box-shadow: -3px 3px 75px -21px rgba(182, 101, 248, 0.298);
-}
-
-.contributor30__tabstyle:hover {
-	border: 1px solid rgb(190, 119, 199);
-	-webkit-box-shadow: -3px 3px 75px -21px rgba(203, 141, 253, 0.423);
-	-moz-box-shadow: -3px 3px 75px -21px rgba(203, 141, 253, 0.423);
-	box-shadow: -3px 3px 75px -21px rgba(203, 141, 253, 0.423);
-}
-
-.contributor30__btncolor {
-	background: rgb(147, 96, 163);
-}
-
-.contributor30__btncolor:hover {
-	background: rgb(218, 115, 249);
-}
-
 /* Welcome Page */
 .welcome_overlay {
 	z-index: 9999;
