@@ -316,6 +316,14 @@ p {
 	letter-spacing: 1px;
 }
 
+.errorstate {
+	position: relative;
+	top: 4px;
+	margin-left: 5px;
+	color: var(--warn);
+	font-size: 25px;
+}
+
 .opt__submitcfg:hover{
 	background-color: var(--buttonsubmithover);
 	cursor: pointer;

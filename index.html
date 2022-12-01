@@ -80,11 +80,14 @@
             <div class="nojs">Seems like JavaScript is not supported or disabled on your browser. Some features might not work</div>
          </div>
       </noscript>
+      <div class="announcement">
+         <div class="announcetext" style="color:var(--warn)">Due to the Null Core's database corruption, new visual config upload has been paused</div>
+      </div>
       <h1 class="animate__animated animate__fadeInDown">null core - visuals vault</h1>
       <p class="animate__animated animate__fadeInDown">all your null core visual configs in one place</p>
       <div class="cont">
          <div class="opt__wrapper animate__animated animate__fadeInDown">
-            <a href="/submit/" class="opt__submitcfg">Submit Visual Config</a>
+            <a href="/submit/" class="opt__submitcfg">Submit Visual Config</a><em class='bx bxs-error-circle errorstate'></em>
          </div>
          <div class="search__bar animate__animated animate__fadeIn">
             <input type="text" id="searchbar" placeholder="Search for visuals... Or use tags" autocomplete="off" onkeyup="search()">
@@ -2161,15 +2164,6 @@
    </div>
 </body>
 
-<script src="js/welcomerandomimage.js" crossorigin="anonymous"></script>
-<script src="js/themecookies.js" crossorigin="anonymous"></script>
-<script src="js/pictureprev.js" crossorigin="anonymous"></script>
-<script src="js/welcomepagefunc.js" crossorigin="anonymous"></script>
-<script src="js/loaderfunc.js" crossorigin="anonymous"></script>
-<script src="js/preventresubmit.js" crossorigin="anonymous"></script>
-<script src="js/shufflecontent.js" crossorigin="anonymous"></script>
-<script src="js/uploadhandler.js" crossorigin="anonymous"></script>
-<script src="js/searchitem.js" crossorigin="anonymous"></script>
-<script src="js/downloads_manager.js" crossorigin="anonymous" defer></script>
+<script src="/js/main.js"></script>
 
 </html>

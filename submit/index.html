@@ -102,11 +102,11 @@
                         <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
                     </div>
                     <h2>Enter your username<span>*</span></h2>
-                    <input type="text" name="textName" id="authorName" autocomplete="off" required>
+                    <input type="text" name="textName" id="authorName" autocomplete="off" minlength="3" maxlength="32" required>
                     <h2>Enter your Steam/Telegram profile</h2>
-                    <input type="text" name="textSteam" id="authorSteam" autocomplete="off">
+                    <input type="text" name="textSteam" id="authorSteam" maxlength="300"  autocomplete="off">
                     <h2>Additional information/Description</h2>
-                    <input type="text" name="textDesc" id="cfgDesc" autocomplete="off">
+                    <input type="text" name="textDesc" id="cfgDesc" maxlength="300" autocomplete="off">
                     <div class="uploadbtnwrapper">
                         <input type="submit" value="Submit" name="submit">
                     </div>
@@ -126,11 +126,7 @@
       </div>
    </div>
 </body>
-<script src="/js/welcomerandomimage.js" crossorigin="anonymous"></script>
-<script src="/js/themecookies.js" crossorigin="anonymous"></script>
-<script src="/js/welcomepagefunc.js" crossorigin="anonymous"></script>
-<script src="/js/loaderfunc.js" crossorigin="anonymous"></script>
-<script src="/js/uploadtrigger.js" crossorigin="anonymous"></script>
-<script src="/js/preventresubmit.js" crossorigin="anonymous"></script>
+
+<script src="/js/main.js"></script>
 
 </html>
