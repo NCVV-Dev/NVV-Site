@@ -1522,3 +1522,16 @@ h1 .headert {
 	color: var(--tostextcolor);
 }
 
+/* Hat */
+.chrat {
+	position: relative;
+}
+
+.crhat img {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	top: 115px;
+	left: 285px;
+	transform: rotate(10deg);
+}
