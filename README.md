@@ -26,13 +26,6 @@ This repository is **highly maintained**. Every issue or pull request made here 
 ## Files
 Some of the files will not appear in this repository such as **.php** files or downloadable content of mods page.
 
-## Contributors
-- #### [Sinner](https://github.com/SinnerK0N) - For pinpointing issues and providing feedback on updates
-- #### krawi - For pinpointing issues and providing feedback on updates
-- #### Teki - For pinpointing issues and providing feedback on updates
-- #### dqz - For providing feedback on updates
-- #### eso - For pinpointing issues
-
 ### Russian (Русский)
 
 **NVV** также известный как **'Null Core — Visuals Vault'**, написанный на чистом **HTML, CSS и JavaScript** без использования каких-либо фреймворков. Этот репозиторий был создан для того, чтобы упростить создание логов об обновлениях и предоставить пользователям более простой способ **вносить свой вклад в данный проект**.
