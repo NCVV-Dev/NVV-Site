@@ -69,8 +69,6 @@ body[data-theme="nvv"] {
 	--imagepreview: rgba(48, 42, 72, 0.345);
 	/* Tag Color */
 	--tagbg: #610aed89;
-	/* Compability for tags */
-	--tagcontr10: rgb(99,5,34);
 }
 
 body[data-theme="ncl"] {
@@ -121,59 +119,6 @@ body[data-theme="ncl"] {
 	--imagepreview: rgba(30, 56, 52, 0.345);
 	/* Tag Color */
 	--tagbg: #18bbbbab;
-	/* Compability for tags */
-	--tagcontr10: rgb(134, 21, 56);
-}
-
-body[data-theme="fware"] {
-	font-family: Verdana, sans-serif;
-	text-align: center;
-	user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-webkit-user-select: none;
-	margin: 0;
-	background: rgb(15,4,8);
-	background: linear-gradient(157deg, rgba(15,4,8,1) 0%, rgba(42,9,30,1) 55%, rgba(75,30,30,1) 100%);
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	overflow-y: scroll;
-	--navbarbg: rgba(39, 12, 39, 0.63);
-	--navbarbgtransparent: #151715b4;
-	--navbarbutton: rgba(149, 128, 255, 0.7);
-	--navbarbuttonhover: #ff80bf;
-	--warn: rgb(253, 78, 78);
-	--headercolor: #ffffff;
-	--pcolor: #ffffff;
-	--generaltextcolor: #ffffff;
-	--itemtabcolor: #414558;
-	--itemtaboutline: #6b66c0;
-	--itemtabhover: #353277;
-	--itemtabhovereffect: rgb(255, 101, 101);
-	--linkhover: rgba(149, 128, 255, 0.7);
-	--buttonbg: rgba(149, 128, 255, 0.7);
-	--buttonhover: #ff80bf;
-	--buttonsubmitbg: #319671;
-	--buttonsubmithover: #41bd8f;
-	--tabcontents: rgba(171, 154, 255, 0.1);
-	--announcement: #414558;
-	--iconshield: #ff80bf;
-	--featureditem: #ff80bf;
-	/* LA/TOS THEME */
-	--tostextcolor: rgb(255, 255, 255);
-	--answertextcolor: #80ffea;
-	--questiontextcolor: white;
-	--tosqm: #ff9580;
-	--latosbackgr: #21222c;
-	--latostitle: #6b66c0;
-	/* Image Preview Background */
-	--imagepreview: rgba(30, 56, 52, 0.345);
-	/* Tag Color */
-	--tagbg: #6b66c0;
-	/* Compability for tags */
-	--tagcontr10: rgb(134, 21, 56);
 }
 
 * {
@@ -1187,34 +1132,6 @@ h1 .headert {
 	background-color: #17b6b6;
 }
 
-/* Contributor10 Theme */
-.contr10__tabstyle {
-	background: rgb(99,5,34);
-	background: linear-gradient(209deg, rgba(99,5,34,1) 0%, rgba(177,34,78,1) 23%, rgba(114,30,159,1) 100%);
-	border: 1px solid rgb(113, 15, 46);
-	-webkit-box-shadow: -3px 3px 75px -21px rgb(113, 15, 46);
-	-moz-box-shadow: -3px 3px 75px -21px rgb(113, 15, 46);
-	box-shadow: -3px 3px 75px -21px rgb(113, 15, 46);
-}
-
-.contr10__tabstyle:hover {
-	border: 1px solid rgb(180, 38, 83);
-	-webkit-box-shadow: -3px 3px 75px -21px rgba(180, 38, 83, 0.62);
-	-moz-box-shadow: -3px 3px 75px -21px rgba(180, 38, 83, 0.62);
-	box-shadow: -3px 3px 75px -21px rgba(180, 38, 83, 0.62);
-}
-
-.contr10__color {
-	background-color: rgb(150, 58, 200);
-}
-
-.contr10__color:hover {
-	background-color: rgb(195, 84, 255);
-}
-
-.tagcontr10 {
-	background-color: var(--tagcontr10);
-}
 
 /* Welcome Page */
 .welcome_overlay {
