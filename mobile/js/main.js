@@ -52,60 +52,6 @@ document.addEventListener(
     !1
 );
 
-// Welcome Page Functionality
-const wlcoverlay = document.querySelector(".welcome_overlay");
-if (getCookie("FirstTime") != false) {
-    wlcoverlay.style.opacity = 0;
-    wlcoverlay.style.display = "none"
-} else {
-    wlcoverlay.style.opacity = 1;
-    wlcoverlay.style.display = "block";
-    setCookie("EnableShuffle", "true", 365);
-};
-
-function WelcomeButtonAction() {
-    setTimeout(function() {
-        wlcoverlay.style.opacity = 0;
-        setCookie("FirstTime", "false", 365);
-    }, 500);
-    setTimeout(function() {
-        wlcoverlay.style.display = "none"
-    }, 1100);
-};
-
-// Random Image for Welcome Page
-$(function() {
-    let ImageArray = new Array();
-    ImageArray[0] = "https://ncvisualsvault.cc/media/menus/raizomenu.png";
-    ImageArray[1] = "https://ncvisualsvault.cc/media_optimized/menus/mh4menu.jpg";
-    ImageArray[2] = "https://ncvisualsvault.cc/media/menus/LBAmenu.png";
-    ImageArray[3] = "https://ncvisualsvault.cc/media/menus/animemenu.png";
-    ImageArray[4] = "https://ncvisualsvault.cc/media/menus/coldbluemenu.png";
-    let number = Math.floor(Math.random()*ImageArray.length);
-    return document.getElementById("randomimage").innerHTML = '<img src="'+ImageArray[number]+'" />';
-})
-
-// Theme Switch Functionality
-if (getCookie("themebtn") == 'pressed') {
-    localStorage.setItem('data-theme', 'ncl');
-    document.body.setAttribute('data-theme', 'ncl')
-} else {
-    localStorage.setItem('data-theme', 'nvv');
-    document.body.setAttribute('data-theme', 'nvv')
-}
-
-function switchtheme() {
-    if (localStorage.getItem('data-theme') == 'nvv') {
-        document.body.setAttribute('data-theme', 'ncl');
-        localStorage.setItem('data-theme', 'ncl');
-        setCookie("themebtn", "pressed", 365)
-    } else {
-        document.body.setAttribute('data-theme', 'nvv');
-        localStorage.setItem('data-theme', 'nvv');
-        setCookie("themebtn", "notpressed", 365)
-    }
-}
-
 // Find the most downloaded config and assign icon with text to the tab
 let highestNumber = 0;
 document.querySelectorAll('.dwn__count').forEach(elem => {
@@ -161,22 +107,6 @@ function search() {
 		}
 	}
 }
-
-// Notification System
-$(function () {
-    let e = document.getElementById("nf__popup");
-    "success" == getCookie("submit")
-        ? ((e.style.color = "let(--buttonsubmitbg)"), (e.innerHTML = "Visual config submitted!"), (e.className = "show"))
-        : "fail" == getCookie("submit") && ((e.style.color = "var(--warn)"), (e.innerHTML = "Something went wrong :("), (e.className = "show")),
-        eraseCookie("submit"),
-        setTimeout(function () {
-            e.className = e.className.replace("show", "");
-        }, 3e3);
-});
-
-// Trigger for upload button
-$("#uploadTrigger").click(function(){$("#uploadFile").click()});
-
 // Snowflakes!
 var snowflakes = [];
 
@@ -324,50 +254,3 @@ function getPosition(offset, size) {
 function setResetFlag(e) {
   resetPosition = true;
 }
-
-var t = document.getElementById("nf__popup");
-
-function switchrandomizing(){
-    if(getCookie("EnableShuffle") == "true"){
-        setCookie("EnableShuffle", "false", 365);
-        localStorage.setItem('enableshuffle', 'false');
-
-        t.style.color="var(--warn)";
-        t.innerHTML =  "Visual config shuffle disabled";
-        t.className = "show";
-        setTimeout(function(){ 
-            t.className = t.className.replace("show", "");
-        }, 3000);
-    } else {
-        setCookie("EnableShuffle", "true", 365);
-        localStorage.setItem('enableshuffle', 'true');
-
-        t.style.color="var(--buttonsubmitbg)";
-        t.innerHTML =  "Visual config shuffle enabled!";
-        t.className = "show";
-        setTimeout(function(){ 
-            t.className = t.className.replace("show", "");
-        }, 3000);
-    }
-}
-
-$(function() {
-    if(getCookie("EnableShuffle") == "true" && localStorage.getItem('enableshuffle') == 'true'){
-    let parent = $("#randomize");
-    let divs = parent.children();
-    divs.sort(function(a, b) {
-      return 0.5 - Math.random();
-    });
-    parent.append(divs);
-
-    t.style.color="var(--buttonsubmitbg)";
-    t.innerHTML =  "Shuffling visual configs...";
-    t.className = "show";
-    setTimeout(function(){ 
-        t.className = t.className.replace("show", "");
-    }, 3000);
-} else {
-    localStorage.setItem('enableshuffle', 'false');
-    setCookie("EnableShuffle", "false", 365)
-}
-});

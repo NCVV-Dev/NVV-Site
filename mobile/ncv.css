@@ -8,17 +8,6 @@ font {
 	-webkit-font-smoothing: antialiased !important;
 }
 
-.nojs {
-	margin: auto;
-	color: rgb(253, 78, 78);
-	font-weight: 700;
-	letter-spacing: 1px;
-	position: relative;
-	font-size: 20px;
-	font-family: Coda, sans-serif;
-	transition: all 1s;
-}
-
 body[data-theme="nvv"] {
 	font-family: Verdana, sans-serif;
 	text-align: center;
@@ -125,57 +114,6 @@ body[data-theme="ncl"] {
 	--tagcontr10: rgb(134, 21, 56);
 }
 
-body[data-theme="fware"] {
-	font-family: Verdana, sans-serif;
-	text-align: center;
-	user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-webkit-user-select: none;
-	margin: 0;
-	background: rgb(15,4,8);
-	background: linear-gradient(157deg, rgba(15,4,8,1) 0%, rgba(42,9,30,1) 55%, rgba(75,30,30,1) 100%);
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	overflow-y: scroll;
-	--navbarbg: rgba(39, 12, 39, 0.63);
-	--navbarbgtransparent: #151715b4;
-	--navbarbutton: rgba(149, 128, 255, 0.7);
-	--navbarbuttonhover: #ff80bf;
-	--warn: rgb(253, 78, 78);
-	--headercolor: #ffffff;
-	--pcolor: #ffffff;
-	--generaltextcolor: #ffffff;
-	--itemtabcolor: #414558;
-	--itemtaboutline: #6b66c0;
-	--itemtabhover: #353277;
-	--itemtabhovereffect: rgb(255, 101, 101);
-	--linkhover: rgba(149, 128, 255, 0.7);
-	--buttonbg: rgba(149, 128, 255, 0.7);
-	--buttonhover: #ff80bf;
-	--buttonsubmitbg: #319671;
-	--buttonsubmithover: #41bd8f;
-	--tabcontents: rgba(171, 154, 255, 0.1);
-	--announcement: #414558;
-	--iconshield: #ff80bf;
-	--featureditem: #ff80bf;
-	/* LA/TOS THEME */
-	--tostextcolor: rgb(255, 255, 255);
-	--answertextcolor: #80ffea;
-	--questiontextcolor: white;
-	--tosqm: #ff9580;
-	--latosbackgr: #21222c;
-	--latostitle: #6b66c0;
-	/* Image Preview Background */
-	--imagepreview: rgba(30, 56, 52, 0.345);
-	/* Tag Color */
-	--tagbg: #6b66c0;
-	/* Compability for tags */
-	--tagcontr10: rgb(134, 21, 56);
-}
-
 * {
 	padding: 0;
 	box-sizing: border-box;
@@ -221,10 +159,10 @@ h1 {
 	color: var(--headercolor);
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-transform: uppercase;
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 	font-weight: 700;
 	text-align: center;
-	font-size: 2.5rem;
+	font-size: 1.5rem;
 	margin-top: 80px;
 }
 
@@ -232,7 +170,7 @@ p {
 	color: var(--pcolor);
 	font-family: Major Mono Display, sans-serif;
 	text-align: center;
-	font-size: 1.3rem;
+	font-size: 1rem;
 	animation-delay: 300ms;
 	font-weight: bold;
 	margin-bottom: 60px;
@@ -240,30 +178,6 @@ p {
 
 .solidbackground {
 	background: var(--latosbackgr) !important;
-}
-
-/* Modal Buttons */
-.modalbutton {
-	background-color: var(--buttonbg);
-	border: none;
-	color: white;
-	text-decoration: none;
-	cursor: pointer;
-	transition: 0.7s;
-	-webkit-transition: 0.7s;
-	-o-transition: 0.7s;
-	width: 14em;
-	height: 3em;
-	font-family: Coda, sans-serif;
-	font-size: 1.10rem;
-	z-index: 1;
-	margin: 3px;
-	border-radius: 5px;
-	margin-top: 30px;
-}
-
-.modalbutton:hover {
-	box-shadow: inset 14em 0 0 0 var(--buttonhover);
 }
 
 /* Snowflakes */
@@ -308,55 +222,8 @@ p {
 	position: relative;
 }
 
-/* Button upload config in main page */
-.opt__wrapper{
-	margin-top: 30px;
-	margin-bottom: 60px;
-	padding: 0 50px;
-	animation-delay: 400ms;
-}
-
-.opt__submitcfg{
-	background-color: var(--buttonsubmitbg);
-	color: white;
-	text-decoration: none;
-	padding: 0.5rem 1rem;
-	border-radius: 3px;
-	font-family: Roboto, sans-serif;
-	transition: all 300ms ease-in-out;
-	font-size: 1rem;
-	letter-spacing: 1px;
-}
-
-.errorstate {
-	position: relative;
-	top: 4px;
-	margin-left: 5px;
-	color: var(--warn);
-	font-size: 25px;
-}
-
-.opt__submitcfg:hover{
-	background-color: var(--buttonsubmithover);
-	cursor: pointer;
-	box-shadow: 0px 0px 15px 1px var(--buttonsubmitglow);
-}
-
-/* Upload visual cfg button (default button is hidden) */
-input[type="file"] {
-	visibility: hidden;
-	display: none;
-	z-index: 0;
-}
-
-.hidden {
-	visibility: hidden;
-	display: none;
-	z-index: 0;
-}
-
 input[type="text"] {
-	width: 20em;
+	width: 15em;
 	padding: 11px 15px;
 	margin: 8px 0;
 	border: 1px solid var(--itemtaboutline);
@@ -373,12 +240,12 @@ input[type="text"] {
 }
 
 #searchbar {
-	width: 20em;
+	width: 15em;
 	margin-bottom: 50px;
 }
 
 #searchbar:focus {
-	width: 25em;
+	width: 20em;
 }
 
 input[type="text"]:focus {
@@ -409,253 +276,13 @@ input[type="submit"]:hover {
 	transform: translateY(-2px);
 }
 
-/* Column grid for submit page */
-.clm {
-	display: grid;
-	grid-template-columns: repeat(auto-fill,minmax(300px,60vh));
-	position: relative;
-	align-items: stretch;
-	padding: 0 20px;
-	justify-content: center;
-	flex-wrap: nowrap;
-}
-
-/* Columns for submit page */
-.infocolumn {
-	display: flex;
-	height: auto;
-	flex-direction: column;
-	align-content: center;
-	border-radius: 10px;
-	margin: 20px;
-	transition-duration: .5s;
-	overflow: hidden;
-	user-select: none;
-}
-
-/* Styling of middle column */
-.infocolumn h1{
-	color: var(--generaltextcolor);
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-weight: 700;
-	text-align: center;
-	font-size: 23px;
-	margin: 20px;
-}
-
-.uploadbtnwrapper {
-	justify-content: center;
-	margin-top: auto;
-	display: flex;
-	flex-wrap: wrap;
-	color: white;
-}
-
-.fileuplbtn{
-	display: flex;
-	justify-content: center;
-	background-color: var(--buttonbg);
-	border: none;
-	color: white;
-	text-decoration: none;
-	padding: 12px 20px;
-	border-radius: 5px;
-	font-family: Roboto, sans-serif;
-	font-weight: 500;
-	font-size: 16px;
-	transition: all 300ms ease;
-	margin: 15px;
-}
-
-.fileuplbtn:hover {
-	background-color: var(--buttonhover);
-	cursor: pointer;
-	-webkit-transform: translateY(-2px);
-	transform: translateY(-2px);
-	
-}
-
-.contentform h2 {
-	color: var(--generaltextcolor);
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-weight: 700;
-	text-align: center;
-	font-size: 18px;
-}
-
-/* Styling of left column */
-.reminderline {
-	font-family: Roboto, sans-serif;
-	font-size: 20px;
-	margin: 10px;
-	color: var(--warn);
-	text-align: left;
-}
-
-/* Styling of right column */
-.helpline {
-	font-family: Roboto, sans-serif;
-	font-size: 20px;
-	margin: 10px;
-	color: var(--tostextcolor);
-	text-align: left;
-}
-.helpdesk {
-	text-align: center !important;
-	font-size: 20px !important;
-}
-
-/* navbar panel */
-.navbar__wrapper {
-	background-color: var(--navbarbg);
-	width: 100%;
-	transition: all 300ms ease;
-	height: 50px;
-}
-
-.navbar {
-	width: 100%;
-	background: var(--navbarbg);
-	transition: all 300ms ease;
-	overflow: hidden;
-	height: 50px;
-	position: fixed;
-	z-index: 1;
-}
-
-.navbar a {
-	position: relative;
-	display: inline-block;
-	color: #f2f2f2;
-	text-align: center;
-	text-decoration: none;
-	font-size: 15px;
-	transition: all 300ms ease-in-out;
-	height: 100%;
-	padding: 15px;
-	font-weight: bold;
-}
-
-.navbar a .links_name {
-	position: relative;
-	color: #fff;
-	font-size: 1rem;
-	font-family: Roboto, sans-serif;
-	transition: all 0.5s ease-in-out;
-	text-align: center;
-}
-
-.navbar a:before{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	width: 0;
-	content: '';
-	color: transparent;
-	background: var(--itemtabhovereffect);
-	height: 3px;
-	transition: all 300ms ease-in-out;
-	box-shadow: 0px 0px 40px 5px var(--itemtabhovereffect);
-}
-
-.navbar a:hover:before {
-	width: 100%;
-}
-
-/* LA/TOS Page CSS */
-h1 .headert {
-	color: white;
-	font-family: Major Mono Display, sans-serif;
-	text-align: center;
-	font-size: 3rem;
-}
-
-.pt {
-	color: white;
-	font-family: Major Mono Display, sans-serif;
-	text-align: center;
-	font-size: 1.5rem;
-}
-
-.faqq {
-	color: white;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-align: center;
-	font-size: 2.5rem;
-	text-transform: uppercase;
-	letter-spacing: 7px;
-	font-weight: 700;
-}
-
-.qm {
-	font-weight: bold;
-	font-size: 1.6rem;
-	color: var(--tosqm);
-}
-
-.qa__content {
-	margin-top: 25px;
-}
-
-.textcont {
-	position: relative;
-	text-align: left;
-	font-family: Roboto, sans-serif;
-	color: var(--tostextcolor);
-	margin: 5rem;
-	font-size: 1.6rem;
-	line-height: 1.4;
-	transition: all 300ms ease-in-out;
-}
-
-.tos_textline {
-	margin-top: 15px;
-}
-
-.textcont a {
-	font-family: Roboto, sans-serif;
-	color: var(--tostextcolor);
-}
-
-.pTitle {
-	position: relative;
-	font-family: Verdana, sans-serif;
-	color: var(--latostitle);
-	font-size: 25px;
-	margin-bottom: 25px;
-	margin-top: 25px;
-	font-weight: bold;
-	transition: all 300ms ease;
-}
-
-.answer {
-	color: #70eaea;
-}
-
-@media screen and (max-width: 1000px) {
-	.textcont {
-		margin: 3rem;
-	}
-
-	.pTitle {
-		display: flex;
-		justify-content: center;
-	}
-}
-
 /* Visual config tabs */
 .cfgvrow {
 	display: grid;
-	grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+	grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
 	grid-gap: 25px;
 	align-items: stretch;
-	padding: 0 50px;
+	padding: 0 10px;
 }
 
 .cfgvrow.mods{
