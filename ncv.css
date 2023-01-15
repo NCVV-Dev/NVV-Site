@@ -980,7 +980,11 @@ h1 .headert {
 .contributor2 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
-	color: lightblue;
+	background: rgb(111,150,167);
+	background: linear-gradient(170deg, rgba(111,150,167,1) 20%, rgba(167,228,255,1) 50%, rgba(111,150,167,1) 80%); 
+	background-clip: border-box;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 }
 
 .contributor3 {
@@ -992,10 +996,25 @@ h1 .headert {
 .contributor4 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
-	color: magenta;
+	background: rgb(136,74,136);
+	background: linear-gradient(170deg, rgba(136,74,136,1) 20%, rgba(255,66,255,1) 50%, rgba(136,74,136,1) 80%); 
+	background-clip: border-box;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 }
 
 .contributor5 {
+	font-family: Roboto, sans-serif;
+	font-weight: 600;
+	background: linear-gradient(170deg, rgb(20, 61, 61) 20%, rgb(99, 255, 255) 50%, rgb(26, 79, 79) 80%); 
+	background-clip: border-box;
+    background-size: 100% auto;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	text-shadow:0px 1px 2px #45efef; 
+}
+
+.contributor6 {
 	font-family: Roboto, sans-serif;
 	background-image: linear-gradient(-225deg, #18bbbb 0%, #ffffff 100%);
 	background-size: 200% auto;
@@ -1004,39 +1023,16 @@ h1 .headert {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: contr5anim 1.5s linear infinite;
+	animation: contr6anim 1.3s linear infinite;
 }
 
-@keyframes contr5anim {
+@keyframes contr6anim {
 	to {
 		background-position: 200% center;
 	}
 }
 
-
-.contributor6 {
-	font-family: Roboto, sans-serif;
-	color: #247676;
-	animation: contr6anim 3s ease-in-out infinite;
-	font-weight: 600;
-}
-
-@keyframes contr6anim {
-	0% {
-		color: #247676;
-	}
-
-	5% {
-		color: #45efef;
-	}
-
-	100% {
-		color: #247676;
-	}
-}
-
 .contributor7 {
-
 	font-family: Roboto, sans-serif;
 	color: #fff;
 	text-shadow: 0 0 7px #ffffff;
@@ -1059,32 +1055,19 @@ h1 .headert {
 
 .contributor10 {
 	font-family: Roboto, sans-serif;
-	background: radial-gradient(circle, #ff8001 01%, #ff0b56 63%, #d50007 77%);
-	background-clip: border-box;
+	color: #fff;
+	font-weight: 1000;
+	background: linear-gradient(90deg, rgba(255,128,1,1) 0%, rgba(255,11,86,1) 50%, rgba(213,0,7,1) 100%);
+    background-clip: border-box;
+    background-size: 200% auto;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
-	font-weight: 1000;
-	animation: contr10anim 3s ease-in-out infinite;
+	animation: contr10anim 1s ease-in-out infinite;
 }
 
 @keyframes contr10anim {
-	0% {
-		background: radial-gradient(circle, #ff8001 01%, #ff0b56 63%, #d50007 77%);
-		background-clip: border-box;
-		-webkit-text-fill-color: transparent;
-		-webkit-background-clip: text;
-	}
-	50% {
-		background: radial-gradient(circle, rgb(255, 181, 107) 1%, rgb(255, 74, 128) 53%, rgb(254, 78, 84) 100%);
-		background-clip: border-box;
-		-webkit-text-fill-color: transparent;
-		-webkit-background-clip: text;
-	}
-	100% {
-		background: radial-gradient(circle, #ff8001 01%, #ff0b56 63%, #d50007 77%);
-		background-clip: border-box;
-		-webkit-text-fill-color: transparent;
-		-webkit-background-clip: text;
+	to {
+		background-position: 200% center;
 	}
 }
 

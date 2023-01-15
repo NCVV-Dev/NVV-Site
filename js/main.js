@@ -1,7 +1,3 @@
-if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
-  window.location.href = "https://mobile.ncvisualsvault.cc/"
-}
-
 // Cookies
 function setCookie(cname, cvalue, exdays) {
     let d = new Date();
