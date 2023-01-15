@@ -8,6 +8,13 @@ font {
 	-webkit-font-smoothing: antialiased !important;
 }
 
+* {
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-color: #414558 transparent;
+	scrollbar-width: thin;
+}
+
 .nojs {
 	margin: auto;
 	color: rgb(253, 78, 78);
@@ -121,11 +128,8 @@ body[data-theme="ncl"] {
 	--tagbg: #18bbbbab;
 }
 
-* {
-	padding: 0;
-	box-sizing: border-box;
-	scrollbar-color: #414558 transparent;
-	scrollbar-width: thin;
+.fware {
+	color:rgb(255, 101, 101);
 }
 
 .underdev {
