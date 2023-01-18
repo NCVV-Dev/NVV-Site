@@ -94,7 +94,7 @@ body[data-theme="ncl"] {
 	background-color: black;
 	overflow-y: scroll;
 	--navbarbg: #344455;
-	--navbarbgtransparent:#344455b4;
+	--navbarbgtransparent: #344455b4;
 	--navbarbutton: #49779c;
 	--navbarbuttonhover: #40c192;
 	--warn: rgb(253, 78, 78);
@@ -129,7 +129,7 @@ body[data-theme="ncl"] {
 }
 
 .fware {
-	color:rgb(255, 101, 101);
+	color: rgb(255, 101, 101);
 }
 
 .underdev {
@@ -258,14 +258,14 @@ p {
 }
 
 /* Button upload config in main page */
-.opt__wrapper{
+.opt__wrapper {
 	margin-top: 30px;
 	margin-bottom: 60px;
 	padding: 0 50px;
 	animation-delay: 400ms;
 }
 
-.opt__submitcfg{
+.opt__submitcfg {
 	background-color: var(--buttonsubmitbg);
 	color: white;
 	text-decoration: none;
@@ -285,7 +285,7 @@ p {
 	font-size: 25px;
 }
 
-.opt__submitcfg:hover{
+.opt__submitcfg:hover {
 	background-color: var(--buttonsubmithover);
 	cursor: pointer;
 	box-shadow: 0px 0px 15px 1px var(--buttonsubmitglow);
@@ -383,7 +383,7 @@ input[type="submit"]:hover {
 }
 
 /* Styling of middle column */
-.infocolumn h1{
+.infocolumn h1 {
 	color: var(--generaltextcolor);
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-transform: uppercase;
@@ -402,7 +402,7 @@ input[type="submit"]:hover {
 	color: white;
 }
 
-.fileuplbtn{
+.fileuplbtn {
 	display: flex;
 	justify-content: center;
 	background-color: var(--buttonbg);
@@ -423,7 +423,6 @@ input[type="submit"]:hover {
 	cursor: pointer;
 	-webkit-transform: translateY(-2px);
 	transform: translateY(-2px);
-	
 }
 
 .contentform h2 {
@@ -453,6 +452,7 @@ input[type="submit"]:hover {
 	color: var(--tostextcolor);
 	text-align: left;
 }
+
 .helpdesk {
 	text-align: center !important;
 	font-size: 20px !important;
@@ -498,7 +498,7 @@ input[type="submit"]:hover {
 	text-align: center;
 }
 
-.navbar a:before{
+.navbar a:before {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -607,14 +607,14 @@ h1 .headert {
 	padding: 0 10px;
 }
 
-.cfgvrow.mods{
+.cfgvrow.mods {
 	grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
 }
 
 .cfg__tab {
 	position: relative;
 	display: flex;
-	height:auto;
+	height: auto;
 	flex-direction: column;
 	align-content: center;
 	background-color: var(--itemtabcolor);
@@ -657,13 +657,13 @@ h1 .headert {
 	overflow: hidden;
 }
 
-.cfg__image:hover{
-	cursor:zoom-in;
+.cfg__image:hover {
+	cursor: zoom-in;
 	transform: scale(1.1);
 }
 
 .cfg__image__wrapper {
- 	overflow: hidden;
+	overflow: hidden;
 }
 
 .cfg__body {
@@ -991,7 +991,7 @@ h1 .headert {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
 	background: rgb(136,74,136);
-	background: linear-gradient(170deg, rgba(136,74,136,1) 20%, rgba(255,66,255,1) 50%, rgba(136,74,136,1) 80%); 
+	background: linear-gradient(170deg, rgba(136,74,136,1) 20%, rgba(255,66,255,1) 50%, rgba(136,74,136,1) 80%);
 	background-clip: border-box;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
@@ -1000,7 +1000,7 @@ h1 .headert {
 .contributor4 {
 	font-family: Roboto, sans-serif;
 	text-decoration: none;
-	background: linear-gradient(170deg, rgba(111,150,167,1) 20%, rgba(167,228,255,1) 50%, rgba(111,150,167,1) 80%); 
+	background: linear-gradient(170deg, rgba(111,150,167,1) 20%, rgba(167,228,255,1) 50%, rgba(111,150,167,1) 80%);
 	background-clip: border-box;
 	background-size: 200% auto;
 	-webkit-text-fill-color: transparent;
@@ -1012,9 +1012,11 @@ h1 .headert {
 	0% {
 		background-position: 200% auto;
 	}
+
 	50% {
 		background-position: 200% top;
 	}
+
 	100% {
 		background-position: 200% auto;
 	}
@@ -1023,12 +1025,11 @@ h1 .headert {
 .contributor6 {
 	font-family: Roboto, sans-serif;
 	font-weight: 600;
-	background: linear-gradient(170deg, rgb(20, 61, 61) 20%, rgb(99, 255, 255) 50%, rgb(26, 79, 79) 80%); 
+	background: linear-gradient(170deg, rgb(20, 61, 61) 20%, rgb(99, 255, 255) 50%, rgb(26, 79, 79) 80%);
 	background-clip: border-box;
-    background-size: 200% auto;
+	background-size: 200% auto;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
-
 	animation: contr6anim 1.5s ease-in-out infinite;
 }
 
@@ -1054,9 +1055,11 @@ h1 .headert {
 	0% {
 		background-position: 200% auto;
 	}
+
 	50% {
 		background-position: 200% top;
 	}
+
 	100% {
 		background-position: 200% auto;
 	}
@@ -1088,8 +1091,8 @@ h1 .headert {
 	color: #fff;
 	font-weight: 1000;
 	background: linear-gradient(90deg, rgba(255,128,1,1) 0%, rgba(255,11,86,1) 50%, rgba(213,0,7,1) 100%);
-    background-clip: border-box;
-    background-size: 200% auto;
+	background-clip: border-box;
+	background-size: 200% auto;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 	animation: contr10anim 1s ease-in-out infinite;
@@ -1151,7 +1154,6 @@ h1 .headert {
 	text-decoration-color: #000000;
 	color: rgb(248, 248, 248);
 }
-
 
 /* Welcome Page */
 .welcome_overlay {
@@ -1393,18 +1395,18 @@ h1 .headert {
 	}
 }
 
-.welcome_bottomtext{
+.welcome_bottomtext {
 	position: absolute;
 	font-family: "Open Sans", sans-serif;
 	font-size: 20px;
 	font-weight: 500;
 	color: #a7bfe9;
 	transition: all 0.5s;
-	left: 0; 
-	right: 0; 
+	left: 0;
+	right: 0;
 	top: 800px;
-	margin-left: auto; 
-	margin-right: auto; 
+	margin-left: auto;
+	margin-right: auto;
 	width: 100%;
 	animation-fill-mode: forwards;
 	animation-name: wcmediaanim;
@@ -1488,25 +1490,53 @@ h1 .headert {
 	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
 	animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
-  
+
 @-webkit-keyframes fadein {
-	from {bottom: -30px; opacity: 0;} 
-	to {bottom: 0; opacity: 1;}
+	from {
+		bottom: -30px;
+		opacity: 0;
+	}
+
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
 }
-  
+
 @keyframes fadein {
-	from {bottom: -30px; opacity: 0;}
-	to {bottom: 0; opacity: 1;}
+	from {
+		bottom: -30px;
+		opacity: 0;
+	}
+
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
 }
-  
+
 @-webkit-keyframes fadeout {
-	from {bottom: 0; opacity: 1;} 
-	to {bottom: -30px; opacity: 0;}
+	from {
+		bottom: 0;
+		opacity: 1;
+	}
+
+	to {
+		bottom: -30px;
+		opacity: 0;
+	}
 }
-  
+
 @keyframes fadeout {
-	from {bottom: 0; opacity: 1;}
-	to {bottom: -30px; opacity: 0;}
+	from {
+		bottom: 0;
+		opacity: 1;
+	}
+
+	to {
+		bottom: -30px;
+		opacity: 0;
+	}
 }
 
 /* Download Count div */ 
@@ -1538,4 +1568,3 @@ h1 .headert {
 	left: 285px;
 	transform: rotate(10deg);
 }
-
