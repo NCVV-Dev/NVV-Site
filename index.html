@@ -44,10 +44,11 @@
          <a class="welcbutton" href="https://t.me/ncvisualsvault/" rel="noopener" target="_blank"><em class='bx bxl-telegram'></em></a>
          <a class="welcbutton" href="https://nullcoreproject.net/" rel="noopener" target="_blank"><em class='bx bx-border-all' style="color: #18bbbb;"></em></a>
       </div>
-      <div class="welcome_bottomtext">
-         No ads, no any kind of transactions, no third party social trackers or information-collecting services/trackers. Just for people. 
-      </div>
+      <div class="container">
+         <div class="text"></div>
+       </div>
    </div>
+
    <div class="navbar__wrapper">
       <div class="navbar">
          <a>
@@ -61,12 +62,6 @@
          </a>
          <a href="/tos/">
             <span class="links_name">LA/TOS</span>
-         </a>
-         <a onclick="switchtheme()" class="themesw" style="cursor: pointer;">
-            <span class="links_name">Switch Theme</span>
-         </a>
-         <a onclick="switchrandomizing()" class="themesw" style="cursor: pointer;">
-            <span class="links_name">Switch Shuffling</span>
          </a>
          <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener">
             <span class="links_name">Report an Issue</span>
@@ -105,6 +100,23 @@
          <div class="search__bar animate__animated animate__fadeIn">
             <input type="text" id="searchbar" placeholder="Search for visuals..." autocomplete="off" onkeyup="search()">
          </div>
+         <a onclick="switchtheme()" class="theme animate__animated animate__fadeIn">
+            <em class='bx bx-sun'></em>
+         </a>
+         <div class="utility_buttons_wrapper animate__animated animate__fadeIn">
+            <div class="utility_buttons">
+               <em class='bx bx-sort'></em>
+               <a onclick="switchrandomizing()" class="utility_button">
+                  Shuffle
+               </a>
+               <a class="utility_button">
+                  Sort By Name (In-Dev)
+               </a>
+               <a class="utility_button">
+                  Sort By Most Downloads (In-Dev)
+               </a>
+            </div>
+         </div>
          <div class="cfgvrow" id="randomize">
             <div class="cfg__wrapper animate__animated animate__fadeIn">
                <div class="cfg__tab v952__tabstyle">
@@ -142,7 +154,7 @@
                         Fatality
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="https://steamcommunity.com/profiles/76561198303076440" target="_blank" rel="noopener">HeXz</a>
+                        Uploader: <a class="default__link  " href="https://steamcommunity.com/profiles/76561198303076440" target="_blank" rel="noopener">HeXz</a>
                      </div>
                      <div class="cfg__descr">
                         Sick looking fatality-styled menu. In-game visuals are close to defaults with some changes.
@@ -306,7 +318,7 @@
                         Rijin Theme
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="https://steamcommunity.com/profiles/76561199079659947" target="_blank" rel="noopener">TwoTrick</a>
+                        Uploader: <a class="default__link  " href="https://steamcommunity.com/profiles/76561199079659947" target="_blank" rel="noopener">TwoTrick</a>
                      </div>
                      <div class="cfg__descr">
                         Clean rijin-styled visuals.
@@ -384,7 +396,7 @@
                         Green Theme
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="http://steamcommunity.com/profiles/76561198866772113" target="_blank" rel="noopener">Heart</a>
+                        Uploader: <a class="default__link  " href="http://steamcommunity.com/profiles/76561198866772113" target="_blank" rel="noopener">Heart</a>
                      </div>
                      <div class="cfg__descr">
                         Green-Themed visual config.
@@ -436,7 +448,7 @@
                         Purple Theme
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="http://steamcommunity.com/profiles/76561198866772113" target="_blank" rel="noopener">Heart</a>
+                        Uploader: <a class="default__link  " href="http://steamcommunity.com/profiles/76561198866772113" target="_blank" rel="noopener">Heart</a>
                      </div>
                      <div class="cfg__descr">
                         Just a purple version of visuals from previous "Green Theme".
@@ -937,7 +949,7 @@
                         Neverlose
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="https://steamcommunity.com/profiles/76561198303076440" target="_blank" rel="noopener">HeXz</a>
+                        Uploader: <a class="default__link  " href="https://steamcommunity.com/profiles/76561198303076440" target="_blank" rel="noopener">HeXz</a>
                      </div>
                      <div class="cfg__descr">
                         Another ported menu colorscheme from neverlose with some small ESP changes.
@@ -1015,7 +1027,7 @@
                         Material Override Only
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="https://steamcommunity.com/profiles/76561198255546265/" target="_blank" rel="noopener">eso</a>
+                        Uploader: <a class="default__link  " href="https://steamcommunity.com/profiles/76561198255546265/" target="_blank" rel="noopener">eso</a>
                      </div>
                      <div class="cfg__descr not__provided">
                         (No description provided)
@@ -1045,7 +1057,7 @@
                         Outline Only
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="https://steamcommunity.com/profiles/76561198255546265/" target="_blank" rel="noopener">eso</a>
+                        Uploader: <a class="default__link  " href="https://steamcommunity.com/profiles/76561198255546265/" target="_blank" rel="noopener">eso</a>
                      </div>
                      <div class="cfg__descr not__provided">
                         (No description provided)
@@ -1101,7 +1113,7 @@
                         Vis
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="https://steamcommunity.com/profiles/76561199035480246/" target="_blank" rel="noopener">Baan</a>
+                        Uploader: <a class="default__link  " href="https://steamcommunity.com/profiles/76561199035480246/" target="_blank" rel="noopener">Baan</a>
                      </div>
                      <div class="cfg__descr not__provided">
                         (No description provided)
@@ -1205,7 +1217,7 @@
                         The T.W.O
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="https://steamcommunity.com/profiles/76561199079659947" target="_blank" rel="noopener">TwoTrick</a>
+                        Uploader: <a class="default__link  " href="https://steamcommunity.com/profiles/76561199079659947" target="_blank" rel="noopener">TwoTrick</a>
                      </div>
                      <div class="cfg__descr">
                         A dark visual preset with a blue-green color palette.
@@ -1231,7 +1243,7 @@
                         e621
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="https://steamcommunity.com/profiles/76561199035480246/" target="_blank" rel="noopener">Baan</a>
+                        Uploader: <a class="default__link  " href="https://steamcommunity.com/profiles/76561199035480246/" target="_blank" rel="noopener">Baan</a>
                      </div>
                      <div class="cfg__descr not__provided">
                         (No description provided)
@@ -1969,7 +1981,7 @@
                         Ice Cold
                      </div>
                      <div class="cfg__author">
-                        Uploader: <a class="default__link contributor2" href="https://t.me/OutlinedBudgie" target="_blank" rel="noopener">OutlinedBudgie</a>
+                        Uploader: <a class="default__link  " href="https://t.me/OutlinedBudgie" target="_blank" rel="noopener">OutlinedBudgie</a>
                      </div>
                      <div class="cfg__descr">
                         Simple visual config, clean in design
