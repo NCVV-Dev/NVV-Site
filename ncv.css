@@ -188,7 +188,7 @@ p {
 	font-size: 1.3rem;
 	animation-delay: 300ms;
 	font-weight: bold;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 
 .solidbackground {
@@ -265,8 +265,7 @@ p {
 .opt__wrapper {
 	position: relative;
 	display: inline-grid;
-	margin-top: 30px;
-	margin-bottom: 20px;
+	margin: 30px;
 	animation-delay: 400ms;
 }
 
@@ -527,7 +526,9 @@ input[type="submit"]:hover {
 	display: flex;
 	background-color: var(--announcement);
 	margin: 10px;
+	margin-bottom: 15px;
 	height: 60px;
+	width: 480px;
 	border-radius: 5px;
 	justify-content: flex-start;
 	transition: all 300ms ease-in-out;
