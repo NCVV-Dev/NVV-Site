@@ -565,16 +565,10 @@ input[type="submit"]:hover {
 	cursor: pointer;
 }
 
-
-.theme:hover {
-	background-color: var(--buttonhover);
-	cursor: pointer;
-}
-
 /* Theme Button (separated from utility buttons) */
 .theme {
 	position: fixed;
-	top: 60px;
+	top: 50px;
 	background-color: var(--themeswitchbg);
 	color: var(--generaltextcolor);
 	padding: 7px 12px;
@@ -593,6 +587,10 @@ input[type="submit"]:hover {
 	top: 1px;
 }
 
+.theme:hover {
+	background-color: var(--buttonhover);
+	cursor: pointer;
+}
 
 /* LA/TOS Page CSS */
 h1 .headert {
