@@ -198,6 +198,7 @@ function switchrandomizing(){
     }
 }
 
+// Actual Proccess of Shuffling
 $(function() {
     if(getCookie("EnableShuffle") == "true" && localStorage.getItem('enableshuffle') == 'true'){
     let parent = $("#randomize");
@@ -220,7 +221,7 @@ $(function() {
 });
 
 // Text animation on the welcome page
-class Fun {
+class randChar {
   constructor(el) {
     this.el = el
     this.chars = '!<>-_\\/[]{}—=+*^?#________'
@@ -283,7 +284,7 @@ const phrases = [
 ]
 
 const el = document.querySelector('.text')
-const fx = new Fun(el)
+const fx = new randChar(el)
 
 let counter = 0
 const next = () => {
@@ -329,7 +330,8 @@ function sortbymostdwnl() {
     })
     parent.append(OrderedDivsByDwnl);
 }
-  
+
+// This is just dumb but it seems like it's the only way to fetch text nodes.
 function fetchTextNodesContent($target){
   return $target
   .clone()    // Clone the element
