@@ -309,7 +309,7 @@ input[type="file"] {
 }
 
 input[type="text"] {
-	width: 20em;
+	width: 22em;
 	padding: 11px 15px;
 	margin: 8px 0;
 	border: 1px solid var(--itemtaboutline);
@@ -432,11 +432,9 @@ input[type="submit"]:hover {
 .contentform h2 {
 	color: var(--generaltextcolor);
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-weight: 700;
+	font-size: 25px;
+	font-weight: 500;
 	text-align: center;
-	font-size: 18px;
 }
 
 /* Styling of left column */
@@ -460,6 +458,11 @@ input[type="submit"]:hover {
 .helpdesk {
 	text-align: center !important;
 	font-size: 20px !important;
+}
+
+/* Color modulated text for highlights on upload page */
+.colormod {
+	color: var(--itemtabhovereffect);
 }
 
 /* navbar panel */
@@ -568,10 +571,10 @@ input[type="submit"]:hover {
 /* Theme Button (separated from utility buttons) */
 .theme {
 	position: fixed;
-	top: 50px;
+	top: 0;
 	background-color: var(--themeswitchbg);
 	color: var(--generaltextcolor);
-	padding: 7px 12px;
+	padding: 7px 30px;
 	margin: 5px;
 	border-radius: 5px;
 	font-size: 18px;

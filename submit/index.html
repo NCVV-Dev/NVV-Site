@@ -81,18 +81,12 @@
         <h1 class="animate__animated animate__fadeInDown">submit config</h1>
         <div class="clm">
             <div class="infocolumn animate__animated animate__fadeInUp animate__fast">
-                <h1>TOS Reminder</h1>
+                <h1>Make sure you've read our reminders</h1>
                 <div class="reminderline">
-                    - Make sure you have default skyboxes (or none) selected in your visual settings. Otherwise it'll be denied without further reviewing.
+                    - If you were using custom skybox in your visual config you are submitting and you are not willing to upload it, please set the default skybox in visual settings. Otherwise it'll be denied without further reviewing.
                 </div>
                 <div class="reminderline">
-                    - You have a higher priority by uploading through the website. <a href="/tos/" class="other__clickablelink" rel="noopener">(Read 1.2)</a>
-                </div>
-                <div class="reminderline">
-                    - You are allowed to put screenshot links of skyboxes and download links. If link is not trusted, it'll be denied without further reviewing. <a href="/tos/" class="other__clickablelink" rel="noopener">(Read 3.0)</a>
-                </div>
-                <div class="reminderline">
-                    - Submit request with any offensive content will be denied without further reviewing. <a href="/tos/" class="other__clickablelink" rel="noopener">(Read 1.6)</a>
+                    - Submit request with any offensive content towards something or someone will be denied without further reviewing, most likely resulting in your IP suspension from using our services. <a href="/tos/" class="other__clickablelink" rel="noopener">(Read 1.6)</a>
                 </div>
             </div>
             <div class="infocolumn animate__animated animate__fadeIn">
@@ -101,12 +95,12 @@
                         <button class="fileuplbtn" id="uploadTrigger">Select File</button>
                         <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
                     </div>
-                    <h2>Enter your username<span>*</span></h2>
+                    <h2>Enter your username<span class="colormod">*</span></h2>
                     <input type="text" name="textName" id="authorName" autocomplete="off" minlength="3" maxlength="32" required>
-                    <h2>Enter your Steam/Telegram profile</h2>
-                    <input type="text" name="textSteam" id="authorSteam" maxlength="300"  autocomplete="off">
-                    <h2>Additional information/Description</h2>
-                    <input type="text" name="textDesc" id="cfgDesc" maxlength="300" autocomplete="off">
+                    <h2>Your profile <span class="colormod">Steam URL</span> (optional)</h2>
+                    <input type="text" name="textSteam" id="authorSteam" maxlength="100"  autocomplete="off">
+                    <h2>Visual config <span class="colormod">Name/Description</span> (optional)</h2>
+                    <input type="text" name="textDesc" id="cfgDesc" placeholder="If none is given, will be random" maxlength="300" autocomplete="off">
                     <div class="uploadbtnwrapper">
                         <input type="submit" value="Submit" name="submit">
                     </div>
