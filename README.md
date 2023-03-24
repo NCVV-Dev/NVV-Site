@@ -11,9 +11,11 @@
 
 ### English
 
-**NVV** aka **'Null Core - Visuals Vault'** website built in pure **HTML, CSS and JavaScript** without using any building frameworks. This repository was made in order to create update notes and provide to users an easier way to **contribute to the site**. Reaching over 10k+ downloads and counting of all the content on the website, I personally and still look forward into keeping this project up!
+**NVV** aka **'Null Core - Visuals Vault'** website built in pure **HTML, CSS and JavaScript** without using any building frameworks with the main goal to create an opportunity for Null Core software users share their visual configurations more openly to other people. This repository was made in order to create update notes and provide to users an easier way to **contribute to the site**. Reaching over 10k+ downloads and counting of all the content on the website, I personally and still look forward into keeping this project up!
 
 **Cooperated with [Fedoraware](https://fedoraware.ncvisualsvault.cc/) (Technical support has been ended at 02.01.2023)**
+
+**Hoster of Null Core giveaways - 01.14.2022 to 22.09.2022. Follow up for more!**
 
 ## Contribution
 This repository is **highly maintained**. Every issue or pull request made here will be **reviewed** and the action will be taken in the **short amount of time**.
