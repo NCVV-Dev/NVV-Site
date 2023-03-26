@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Hey there! Have a good day :) -->
 <head>
    <title>NVV - Guides</title>
    <link rel="stylesheet" type="text/css" href="/ncv.css?random=<?php echo filemtime('ncv.css'); ?>">
@@ -26,9 +27,14 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
 </head>
 
-<body data-theme="nvv" class="solidbackground">
+<body data-theme="nvv">
    <div class="bodywrapper">
       <div class="welcome_overlay">
+         <div class="welc_media">
+            <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site/" rel="noopener" target="_blank"><em class='bx bxl-github'></em></a>
+            <a class="welcbutton" href="https://t.me/ncvisualsvault/" rel="noopener" target="_blank"><em class='bx bxl-telegram'></em></a>
+            <a class="welcbutton" href="https://nullcoreproject.net/" rel="noopener" target="_blank"><em class='bx bx-border-all' style="color: #18bbbb;"></em></a>
+         </div>
          <div class="welcome_header_container">
             <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
             <div class="welcome_header2">Dedicated site to the Null Core training software for Team Fortress 2 and it's visual configs - upload your own, download and share your visual configs with others right away!</div>
@@ -37,23 +43,8 @@
             </div>
          </div>
          <div class="welcome_imgcontainer" id="randomimage"></div>
-         <div class="welc_media">
-            <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site/" rel="noopener" target="_blank"><em class='bx bxl-github'></em></a>
-            <a class="welcbutton" href="https://t.me/ncvisualsvault/" rel="noopener" target="_blank"><em class='bx bxl-telegram'></em></a>
-            <a class="welcbutton" href="https://nullcoreproject.net/" rel="noopener" target="_blank"><em class='bx bx-border-all' style="color: #18bbbb;"></em></a>
-         </div>
          <div class="container">
             <div class="text"></div>
-         </div>
-      </div>
-      <div class="navbar__wrapper">
-         <div class="navbar">
-            <a href="/" rel="noopener">
-               <span class="links_name">Main Page</span>
-            </a>
-            <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener">
-               <span class="links_name">Report an Issue</span>
-            </a>
          </div>
       </div>
       <a onclick="switchtheme()" class="theme animate__animated animate__fadeIn">
@@ -65,11 +56,75 @@
                <div class="nojs">Seems like JavaScript is not supported or disabled on your browser. Some features might not work</div>
             </div>
          </noscript>
-         <div class="cont">
-            <h1 class="headert animate__animated animate__fadeInDown">nvv - guides</h1>
-            <p class="pt animate__animated animate__fadeInDown">lost looking for cheat option?</p>
-          </div>
+
+         <div class="showmenu" onclick="showNavbar()">
+            <em class='bx bx-menu'></em>
+         </div>
+         <div class="sidebargd">
+            <a href="/" class="active">Return to NVV</a>
+            <a href="#start"><em class='bx bx-book-open'></em> Getting Started</a>
+            <a href="#aimbot"><em class='bx bx-crosshair' ></em> Aimbot</a>
+            <a href="#triggerbot"><em class='bx bxs-mouse-alt' ></em> Triggerbot</a>
+            <a href="#visuals"><em class='bx bxs-sun'></em> Visuals</a>
+            <a href="#otherfeatures"><em class='bx bx-dots-horizontal-rounded' ></em> Other Features</a>
+            <a href="#misc"><em class='bx bx-slider'></em> Misc</a>
+            <a href="#playstyles"><em class='bx bxs-bullseye' ></em> Playstyles</a>
+            <a href="#foundamistake" class="active">Found a mistake?</a>
+            <a class="hidemenu" onclick="hideNavbar()">Hide menu</a>
+         </div>
+         <div id="nf__popup" class="screenwarn">Looks like you're on phone. Navigation menu can be hidden automatically or manually!</div>
+         <div class="contentgd animate__animated animate__fadeIn">
+            <h1>NVV - Guides</h1>
+            <p id="start"># Getting Started</p>
+            <div class="writtenby">Written by <span class="admin">Admin</span></div>
+            <div class="content__text">
+               <strong>*Please note that everything on this page is a subject to change (WIP). Currently demonstrating its features.*</strong> 
+               Welcome to Null Core - Visual Vault Guides. On this page you will find everything you would ever want to know about Null Core software for Team Fortress 2, how to configure it, how to avoid common crashes, how to make your own visual config, how to set up an aimbot and so on!
+               We'll brief you on a simple markdown which will be used through all of the chapters and would help you to understand things better.
+               And if you are new to the Null Core software, let's start! Here's common blocks -
+
+               <div class="protip">
+                  <em class='bx bx-bulb'></em> This is a pro tip or a cool trick. Be like a pro!
+               </div>
+               <div>
+                  <button class="copyButton" onclick="copyCode('codeblock1')"><em class='bx bx-copy'></em> Copy</button>
+                  <div class="codesnip" id="codeblock1">
+                     Code block, for simple and reasonable things, including quick copy!
+                  </div>
+               </div>
+               <div class="warnbox">
+                  <em class='bx bxs-error-circle' ></em> There can be an issue. Or just an important note!
+               </div>
+
+               Coming to images, there's two types with first being an image and description to help you with understanding or just giving you some context:
+               <div class="image__container">
+                    <img src="/media/brokeup.png" onerror="this.src='/media/in-progress.png';">
+                  <div class="image_description">This is not how you make a visual config!</div>
+               </div>
+
+               Next one is grouped images, good for comparing something which we will definetely do.
+               <div class="groupedimg_responsive">
+                  <div class="image__container">
+                     <img src="/media/fatality.png" onerror="this.src='/media/in-progress.png';">
+                  <div class="image_description">Check this out!</div>
+                  </div>
+                  <div class="image__container">
+                     <img src="/media/flowhooks.png" onerror="this.src='/media/in-progress.png';">
+                  <div class="image_description">This looks like flowhooks!</div>
+                  </div>
+               </div>
+
+               <!--If you're not familiar with Null Core or you've never seen it, let's start with its actual User Interface (later called UI).
+               On the image below you can see the first appeareance of it once you click INS.
+               <div class="image__container">
+                  <img src="" onerror="this.src='/media/in-progress.png';">
+                <div class="image_description">At the bottom left you can see the icon you have to click to open navigation menu</div>
+               </div>-->
+
+            </div>
+         </div>
    </div>
+   <div class="solid"></div>
 </body>
 <script src="/js/main.js"></script>
 

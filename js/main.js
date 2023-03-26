@@ -56,6 +56,7 @@ document.addEventListener(
 
 // Welcome Page Functionality
 const wlcoverlay = document.querySelector(".welcome_overlay");
+
 if (getCookie("FirstTime") != false) {
 	wlcoverlay.style.opacity = 0;
 	wlcoverlay.style.display = "none"
@@ -93,18 +94,18 @@ if (getCookie("themebtn") == 'pressed') {
 	document.body.setAttribute('data-theme', 'ncl')
 } else {
 	localStorage.setItem('data-theme', 'nvv');
-	document.body.setAttribute('data-theme', 'nvv')
+	document.body.setAttribute('data-theme', 'nvv');
 }
 
 function switchtheme() {
 	if (localStorage.getItem('data-theme') == 'nvv') {
 		document.body.setAttribute('data-theme', 'ncl');
 		localStorage.setItem('data-theme', 'ncl');
-		setCookie("themebtn", "pressed", 365)
+		setCookie("themebtn", "pressed", 365);
 	} else {
 		document.body.setAttribute('data-theme', 'nvv');
 		localStorage.setItem('data-theme', 'nvv');
-		setCookie("themebtn", "notpressed", 365)
+		setCookie("themebtn", "notpressed", 365);
 	}
 }
 
@@ -113,7 +114,7 @@ let highestNumber = 0;
 document.querySelectorAll('.dwn__count').forEach(elem => {
 	let downCount = parseInt(elem.innerText.trim())
 	if (downCount > highestNumber)
-		highestNumber = downCount
+		highestNumber = downCount;
 });
 
 let icon = document.createElement("em");
@@ -358,3 +359,70 @@ function fetchTextNodesContent($target) {
 		.end() // Go back to selected element
 		.text();
 }
+
+// Try automatically hide the menu on scroll
+var onScrolling = function() {
+  if (getCookie("manuallyClosedMenu") !== "true" && getCookie("manuallyOpenedMenu") !== "true"){
+  var y = window.scrollY;
+  const sidebargd = document.querySelector(".sidebargd");
+  const sizePopup = document.querySelector(".screenwarn");
+  if (y >= 600) {
+	setTimeout(function() {
+		sidebargd.style.transition = '.5s';
+		sidebargd.style.opacity = '0';
+		sidebargd.style.visibility = 'hidden';
+
+		sizePopup.style.transition = '.5s';
+		sizePopup.style.opacity = '0';
+		sizePopup.style.visibility = 'hidden';
+	}, 200);
+  } else {
+	setTimeout(function() {
+		sidebargd.style.transition = '.5s';
+		sidebargd.style.opacity = '1';
+		sidebargd.style.visibility = 'visible';
+	}, 200);
+  }
+}
+};
+
+window.addEventListener("scroll", onScrolling);
+
+// Prevent from pop up appearing again if user has hidden menu already
+if(getCookie("manuallyClosedMenu") == "true"){
+	const sizePopup = document.querySelector(".screenwarn");
+	sizePopup.style.opacity = '0';
+	sizePopup.style.visibility = 'hidden';
+}
+
+function hideNavbar() {
+	const sidebargd = document.querySelector(".sidebargd");
+	const sizePopup = document.querySelector(".screenwarn");
+	setTimeout(function() {
+		sidebargd.style.transition = '.5s';
+		sidebargd.style.opacity = '0';
+		sidebargd.style.visibility = 'hidden';
+
+		sizePopup.style.transition = '.5s';
+		sizePopup.style.opacity = '0';
+		sizePopup.style.visibility = 'hidden';
+		setCookie("manuallyClosedMenu", "true", 365);
+	}, 500);
+};
+
+function showNavbar() {
+	const sidebargd = document.querySelector(".sidebargd");
+	setTimeout(function() {
+		sidebargd.style.transition = '.5s';
+		sidebargd.style.opacity = '1';
+		sidebargd.style.visibility = 'visible';
+		setCookie("manuallyOpenedMenu", "true", 365);
+	}, 500);
+};
+
+
+function copyCode(id){
+	var str = document.getElementById(id);
+	window.getSelection().selectAllChildren(str);
+	document.execCommand("Copy")
+} 
