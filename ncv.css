@@ -626,7 +626,7 @@ input[type="submit"]:hover {
 
 .qm {
 	font-weight: bold;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	color: var(--tosqm);
 }
 
@@ -1737,6 +1737,7 @@ div.contentgd {
 	position: fixed;
 	color: white;
 	transition: all 300ms ease-in-out;
+	z-index: 1;
 }
 
 .showmenu em:hover {
@@ -1915,12 +1916,13 @@ div.contentgd {
 	border: 2px solid var(--itemtaboutline);
 	border-radius: 5px;
 	transition: all 300ms ease-in-out;
-	max-width: 650px;
+	max-width: max-content;
 }
   
 .image__container img {
 	width: 100%;
 	height: auto;
+	max-width: 800px;
 }
   
 .image_description {
