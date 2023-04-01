@@ -63,21 +63,23 @@
          <div class="sidebargd">
             <a href="/" class="active">Return to NVV</a>
             <a href="#start"><em class='bx bx-book-open'></em> Getting Started</a>
+            <a href="#general"><em class='bx bx-border-all'></em> General Settings</a>
             <a href="#aimbot"><em class='bx bx-crosshair' ></em> Aimbot</a>
             <a href="#triggerbot"><em class='bx bxs-mouse-alt' ></em> Triggerbot</a>
             <a href="#visuals"><em class='bx bxs-sun'></em> Visuals</a>
             <a href="#otherfeatures"><em class='bx bx-dots-horizontal-rounded' ></em> Other Features</a>
             <a href="#misc"><em class='bx bx-slider'></em> Misc</a>
             <a href="#playstyles"><em class='bx bxs-bullseye' ></em> Playstyles</a>
-            <a href="#foundamistake" class="active">Found a mistake?</a>
+            <a href="#foundmistake" class="active">Found a mistake?</a>
             <a class="hidemenu" onclick="hideNavbar()">Hide menu</a>
          </div>
          <div id="nf__popup" class="screenwarn">Looks like you're on phone. Navigation menu can be hidden automatically or manually!</div>
          <div class="contentgd animate__animated animate__fadeIn">
             <h1>NVV - Guides</h1>
-            <p id="start"># Getting Started</p>
-            <div class="writtenby">Written by <span class="admin">Admin</span></div>
             <div class="content__text">
+               <p id="start"># Getting Started</p>
+               <div class="writtenby">Written by <span class="admin">Admin</span></div>
+
                <strong>*Please note that everything on this page is a subject to change (WIP) so expect bugs and if you do, you can send them to our <a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">Telegram</a>. Currently demonstrating its features.*</strong> 
                Welcome to Null Core - Visual Vault Guides. On this page you will find everything you would ever want to know about Null Core software for Team Fortress 2, how to configure it, how to avoid common crashes, how to make your own visual config, how to set up an aimbot and so on!
                We'll brief you on a simple markdown which will be used through all of the chapters and would help you to understand things better.
@@ -133,13 +135,52 @@
                 <div class="image_description">Let's call it navigation menu</div>
                </div>
 
-               Here you can change your steam name, custom name and disconnect reason, quickly reconnect to the server you're currently on (Retry button), fix your bugged in-game sound, i.e non-stopping pyros flamethrower sounds, sounds of cart moving even if it doesn't (SND_Restart button or StopSound which would be a faster option).
-               CL_FullUpdate button can also fix various things like elements of your HUD (health, ammo) being invisible for some unknown reason and Status button which will show you information about players on the server, their ping, steam IDs in console and so on.
+               Here you can change your steam name, custom name and disconnect reason, quickly reconnect to the server you're currently on (<span class="text_codesnip">Retry</span> button), fix your bugged in-game sound, i.e non-stopping pyros flamethrower sounds, sounds of cart moving even if it doesn't (<span class="text_codesnip">SND_Restart</span> button or <span class="text_codesnip">StopSound</span> which would be a faster option).
+               <span class="text_codesnip">CL_FullUpdate</span> button can also fix various things like elements of your HUD (health, ammo) being invisible for some unknown reason and <span class="text_codesnip">Status</span> button which will show you information about players on the server, their ping, steam IDs in console and so on.
                You can also notice information about <strong>Cloud Usage</strong> being shown. You see - Null Core also stores your configuration files and visual configurations in cloud, which then gets synchronized with the cloud upon closing TF2 or opening it.
 
                <div class="warnbox">
                   <em class='bx bxs-error-circle' ></em> Please note that Custom Name and Disconnect Reason no longer work in official TF2 servers
                </div>
+
+               <p id="playermanager"># Player Manager</p>
+               <div class="writtenby">Written by <span class="admin">Admin</span></div>
+               Coming to Player Manager it's straight forward - first thing you'll see is a big window with, if you're currently on server with player, players themselves including yourself and additional information like NCU or Priority, or none, if you're not in any server.
+               <div class="groupedimg_responsive">
+                  <div class="image__container">
+                     <img src="/media/guides/UI_PlayerManager.png" onerror="this.src='/media/in-progress.png';">
+                  <div class="image_description">This is what you'll see on empty server</div>
+                  </div>
+                  <div class="image__container">
+                     <img src="/media/guides/UI_PlayerManagerWPlayers.png" onerror="this.src='/media/in-progress.png';">
+                  <div class="image_description">And this is what you'll see on server with players</div>
+                  </div>
+               </div>
+               <div class="warnbox">
+                  <em class='bx bxs-error-circle' ></em> Note that "Angles" header does not work in current build of Null Core
+               </div>
+               Besides obvious headers like kills/death or players health there's two other headers which are NCU and priority.
+               You can notice there's two other tabs at the top left named "Recent" and "Stored".
+               Let's leave these tabs behind and first talk about NCU header. NCU (Null Core User) header will display yours and other peoples NCU.
+               On other side, your ESP (Extra Sensory Perception) will display other players who also use Null Core as NCP (Null Core Player).
+               <br>
+               On the image above you can notice there's three priorities, "Local Player", "Auto-Normal" and "Auto-Ignore". As they speak for themselves, they are automatic as "Auto-Ignore" will be your teammates so the cheat will prevent from shooting your own teammates but will still let you target them with Medi Gun or Crusader's Crossbow and "Auto-Normal" priority being the default priority for your opponents, which makes the Aimbot treat each target equally (priority-wise).
+               However, you can ignore (prevent Aimbot/Triggerbot from targeting specific target) any player you want by right clicking on that player no matter where or under what header and choosing the "Priority: Ignore" option. To set it back to default or let's say, unignore, click on that player again and choose "Priority: Auto" which will assign a default priority based on his team.
+               <div class="protip">
+                  <em class='bx bx-bulb'></em> Null Core automatically reacts to mp_friendlyfire 1, setting the priority of your teammates from "Auto-Ignore" to "Auto-Normal"
+               </div>
+
+               Besides these default priorities you can create your own, make your cheat shoot the target affected by that priority even if it's your teammate, automatically crit which will be discussed later on.
+               Talking about priorities, all players with custom or "Ignore" priorities are getting saved in "Stored" tab. You can export and import any priorities you want by right clicking on headers, and choosing the options you want in context menu.
+               "Recent" tab will show you every player you've played with, when you played with that player and provide you an ability to open their Steam profiles by right clicking (works the same way in "Active" tab) including an ability to export that list as well.
+               <div class="warnbox">
+                  <em class='bx bxs-error-circle' ></em> This list have a limit of 4096 recent players it can store. Therefore if you have been playing with Null Core for a very long time and have never thought about this tab, we recommend you to clean it once in a while as opening it can cause your game to crash or a very big FPS drop
+               </div>
+
+               <p id="foundmistake"># Found a Mistake?</p>
+
+               If you found any mistake, let it be a typo or part of the content providen being wrong, you can always contribute to NVV by correcting us at public <a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">Telegram</a> chat or creating a bug report at <a class="other__clickablelink" href="https://github.com/NCVV-Dev/NVV-Site/issues/new/choose" target="_blank">GitHub</a>.
+
             </div>
          </div>
    </div>

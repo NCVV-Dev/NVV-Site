@@ -1837,6 +1837,7 @@ div.contentgd {
 	color: white;
 	margin-bottom: 40px;
 	text-align: left;
+	font-size: 17px;
 }
 
 /* Different types of text blocks */
@@ -1867,6 +1868,18 @@ div.contentgd {
 	font-family: monospace;
 	padding: 10px;
 	margin: 15px 0 15px 0;
+	border-radius: 5px;
+	outline: var(--itemtaboutline) 1px solid;
+}
+
+.text_codesnip {
+	position: relative;
+	width: fit-content;
+	color: var(--generaltextcolor);
+	background-color: var(--latosbackgr);
+	font-size: 17px;
+	font-family: monospace;
+	padding: 2px;
 	border-radius: 5px;
 	outline: var(--itemtaboutline) 1px solid;
 }
