@@ -84,7 +84,6 @@
                Welcome to Null Core - Visual Vault Guides. On this page you will find everything you would ever want to know about Null Core software for Team Fortress 2, how to configure it, how to avoid common crashes, how to make your own visual config, how to set up an aimbot and so on!
                We'll brief you on a simple markdown which will be used through all of the chapters and would help you to understand things better.
                And if you are new to the Null Core software, let's start! Here's common blocks -
-
                <div class="protip">
                   <em class='bx bx-bulb'></em> This is a pro tip or a cool trick. Be like a pro!
                </div>
@@ -98,7 +97,7 @@
                   <em class='bx bxs-error-circle' ></em> There can be an issue. Or just an important note!
                </div>
 
-               Coming to images, there's simple image blocks with description to help you with understanding or just giving you some context:
+               Coming to images, there are simple image blocks with descriptions wich will help you with understanding or just giving you some context:
                <div class="image__container">
                     <img src="/media/brokeup.png" onerror="this.src='/media/in-progress.png';">
                   <div class="image_description">This is not how you make a visual config!</div>
@@ -118,6 +117,7 @@
 
                <p id="firstglance"># First Glance at the Menu</p>
                <div class="writtenby">Written by <span class="admin">Admin</span></div>
+               
                Now if you aren't familiar with Null Core or you've never seen it, let's start with its actual User Interface (later called UI).
                On the image below you can see the first appeareance of it once you have it injected in game by clicking INS.
                <div class="protip">
@@ -137,15 +137,15 @@
 
                Here you can change your steam name, custom name and disconnect reason, quickly reconnect to the server you're currently on (<span class="text_codesnip">Retry</span> button), fix your bugged in-game sound, i.e non-stopping pyros flamethrower sounds, sounds of cart moving even if it doesn't (<span class="text_codesnip">SND_Restart</span> button or <span class="text_codesnip">StopSound</span> which would be a faster option).
                <span class="text_codesnip">CL_FullUpdate</span> button can also fix various things like elements of your HUD (health, ammo) being invisible for some unknown reason and <span class="text_codesnip">Status</span> button which will show you information about players on the server, their ping, steam IDs in console and so on.
+               
                You can also notice information about <strong>Cloud Usage</strong> being shown. You see - Null Core also stores your configuration files and visual configurations in cloud, which then gets synchronized with the cloud upon closing TF2 or opening it.
-
                <div class="warnbox">
                   <em class='bx bxs-error-circle' ></em> Please note that Custom Name and Disconnect Reason no longer work in official TF2 servers
                </div>
 
                <p id="playermanager"># Player Manager</p>
                <div class="writtenby">Written by <span class="admin">Admin</span></div>
-               Coming to Player Manager it's straight forward - first thing you'll see is a big window with, if you're currently on server with player, players themselves including yourself and additional information like NCU or Priority, or none, if you're not in any server.
+               Coming to Player Manager it's straight forward - first thing you'll see is a big window with, if you're currently on server with players, players themselves including yourself and additional information like NCU or Priority, or none, if you're not in any server.
                <div class="groupedimg_responsive">
                   <div class="image__container">
                      <img src="/media/guides/UI_PlayerManager.png" onerror="this.src='/media/in-progress.png';">
@@ -159,26 +159,54 @@
                <div class="warnbox">
                   <em class='bx bxs-error-circle' ></em> Note that "Angles" header does not work in current build of Null Core
                </div>
-               Besides obvious headers like kills/death or players health there's two other headers which are NCU and priority.
-               You can notice there's two other tabs at the top left named "Recent" and "Stored".
-               Let's leave these tabs behind and first talk about NCU header. NCU (Null Core User) header will display yours and other peoples NCU.
+               
+               Skipping obvious headers like kills/deaths or players health there's two other headers which are NCU and priority.
+               You can notice there's two other tabs at the top left named "Recent" and "Stored" but let's leave these tabs behind and first talk about NCU header.
+               NCU (Null Core User) header will display yours and other peoples NCU.
                On other side, your ESP (Extra Sensory Perception) will display other players who also use Null Core as NCP (Null Core Player).
                <br>
-               On the image above you can notice there's three priorities, "Local Player", "Auto-Normal" and "Auto-Ignore". As they speak for themselves, they are automatic as "Auto-Ignore" will be your teammates so the cheat will prevent from shooting your own teammates but will still let you target them with Medi Gun or Crusader's Crossbow and "Auto-Normal" priority being the default priority for your opponents, which makes the Aimbot treat each target equally (priority-wise).
+               On two images above you can notice there's three priorities, "Local Player", "Auto-Normal" and "Auto-Ignore". As they speak for themselves, they are automatic as "Auto-Ignore" will be your teammates so the cheat will prevent from shooting your own teammates but will still let you target them with Medi Gun or Crusader's Crossbow and "Auto-Normal" priority being the default priority for your opponents, which makes the Aimbot treat each target equally (priority-wise).
                However, you can ignore (prevent Aimbot/Triggerbot from targeting specific target) any player you want by right clicking on that player no matter where or under what header and choosing the "Priority: Ignore" option. To set it back to default or let's say, unignore, click on that player again and choose "Priority: Auto" which will assign a default priority based on his team.
                <div class="protip">
-                  <em class='bx bx-bulb'></em> Null Core automatically reacts to mp_friendlyfire 1, setting the priority of your teammates from "Auto-Ignore" to "Auto-Normal"
+                  <em class='bx bx-bulb'></em> Null Core automatically reacts to mp_friendlyfire 1, setting the priority of your teammates from "Auto-Ignore" to "Auto-Normal", custom priorities which has been set to a specific player remain untouched
+               </div>
+               <div class="image__container">
+                  <img src="/media/guides/UI_DynamicPlayerManager.gif" onerror="this.src='/media/in-progress.png';">
+               <div class="image_description">Player Manager in action</div>
                </div>
 
-               Besides these default priorities you can create your own, make your cheat shoot the target affected by that priority even if it's your teammate, automatically crit which will be discussed later on.
+               Besides these default priorities you can create your own, make Aimbot shoot the target affected by that priority even if it's your teammate, automatically crit and so on which will be discussed later on.
                Talking about priorities, all players with custom or "Ignore" priorities are getting saved in "Stored" tab. You can export and import any priorities you want by right clicking on headers, and choosing the options you want in context menu.
                "Recent" tab will show you every player you've played with, when you played with that player and provide you an ability to open their Steam profiles by right clicking (works the same way in "Active" tab) including an ability to export that list as well.
                <div class="warnbox">
-                  <em class='bx bxs-error-circle' ></em> This list have a limit of 4096 recent players it can store. Therefore if you have been playing with Null Core for a very long time and have never thought about this tab, we recommend you to clean it once in a while as opening it can cause your game to crash or a very big FPS drop
+                  <em class='bx bxs-error-circle' ></em> The "Recent" list have a limit of 4096 recent players it can store. Therefore if you have been playing with Null Core for a very long time and have never thought about this tab, we recommend you to clean it once in a while as opening it can cause your game to crash or a very big FPS drop
+               </div>
+               
+               <p id="playermanager"># CVar Manager</p>
+               <div class="writtenby">Written by <span class="admin">Admin</span></div>
+               
+               Opening CVar (Console Variable) Manager in navigation menu will show a small tab with input box.
+               CVar Manager lets you bypass various console commands which are considered as a cheat console command.
+               For example, you can change your viewmodel offsets. Now, the command is considered as a cheat so we can 'set' sv_cheats to 1 to bypass it, of course server won't let you use noclip.
+               Or you can enable clip brushes on official TF2 servers without any problems.
+               <div class="groupedimg_responsive">
+                  <div class="image__container">
+                     <img src="/media/guides/UI_CVarManager.png" onerror="this.src='/media/in-progress.png';">
+                  </div>
+                  <div class="image__container">
+                     <img src="/media/guides/UI_CVarManager2.png" onerror="this.src='/media/in-progress.png';">
+                  </div>
+               </div>
+               <div class="protip">
+                  <em class='bx bx-bulb'></em> The value in brackets represents the original value of changed CVar. If there are more values than one, you have to type CVars as "var" "values"
+               </div>
+               <div class="warnbox">
+                  <em class='bx bxs-error-circle' ></em> Note that all the CVars you've changed in CVar Manger aren't saved. After closing TF2 you'll have to type CVars again.
                </div>
 
+               For more CVars you can visit <a class="other__clickablelink" href="https://developer.valvesoftware.com/wiki/List_of_TF2_console_commands_and_variables" target="_blank">list of TF2 console commands and variables</a>
+               
                <p id="foundmistake"># Found a Mistake?</p>
-
                If you found any mistake, let it be a typo or part of the content providen being wrong, you can always contribute to NVV by correcting us at public <a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">Telegram</a> chat or creating a bug report at <a class="other__clickablelink" href="https://github.com/NCVV-Dev/NVV-Site/issues/new/choose" target="_blank">GitHub</a>.
 
             </div>

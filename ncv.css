@@ -1946,6 +1946,10 @@ div.contentgd {
 	text-align: center;
 }
 
+.image_thin {
+	width: 300px;
+}
+
 /* Two images grouped */
 .groupedimg_responsive {
 	display: flex;
