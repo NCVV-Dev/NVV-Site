@@ -76,7 +76,8 @@ function WelcomeButtonAction() {
 	}, 1100);
 };
 
-// Random Image for Welcome Page (takes a while to load because it loads after the webiste NEEDSFIX)
+// Random Image for Welcome Page (takes a while to load because it loads after the webiste)
+// NEEDS FIX
 $(function() {
 	let ImageArray = new Array();
 	ImageArray[0] = "https://ncvisualsvault.cc/media/menus/raizomenu.png";
