@@ -297,7 +297,6 @@ class randChar {
 
 const phrases = [
 	'No advertisements.',
-	'No any kind of transactions.',
 	'No popular trackers.',
 	'Just for people.',
 	'Completely free.'

@@ -69,7 +69,8 @@
             <a href="#visuals"><em class='bx bxs-sun'></em> Visuals</a>
             <a href="#otherfeatures"><em class='bx bx-dots-horizontal-rounded' ></em> Other Features</a>
             <a href="#misc"><em class='bx bx-slider'></em> Misc</a>
-            <a href="#playstyles"><em class='bx bxs-bullseye' ></em> Playstyles</a>
+            <a href="#playstyles"><em class='bx bxs-bullseye' ></em> PlayStyles</a>
+            <a href="#playstyles"><em class='bx bx-message-alt-error'></em> Game crashes?</a>
             <a href="#foundmistake" class="active">Found a mistake?</a>
             <a class="hidemenu" onclick="hideNavbar()">Hide menu</a>
          </div>
@@ -140,7 +141,7 @@
                
                You can also notice information about <strong>Cloud Usage</strong> being shown. You see - Null Core also stores your configuration files and visual configurations in cloud, which then gets synchronized with the cloud upon closing TF2 or opening it.
                <div class="warnbox">
-                  <em class='bx bxs-error-circle' ></em> Please note that Custom Name and Disconnect Reason no longer work in official TF2 servers
+                  <em class='bx bxs-error-circle' ></em> Please note that Custom Name and Disconnect Reason no longer work in official TF2 servers.
                </div>
 
                <p id="playermanager"># Player Manager</p>
@@ -157,7 +158,7 @@
                   </div>
                </div>
                <div class="warnbox">
-                  <em class='bx bxs-error-circle' ></em> Note that "Angles" header does not work in current build of Null Core
+                  <em class='bx bxs-error-circle' ></em> Note that "Angles" header does not work in current build of Null Core.
                </div>
                
                Skipping obvious headers like kills/deaths or players health there's two other headers which are NCU and priority.
@@ -179,7 +180,7 @@
                Talking about priorities, all players with custom or "Ignore" priorities are getting saved in "Stored" tab. You can export and import any priorities you want by right clicking on headers, and choosing the options you want in context menu.
                "Recent" tab will show you every player you've played with, when you played with that player and provide you an ability to open their Steam profiles by right clicking (works the same way in "Active" tab) including an ability to export that list as well.
                <div class="warnbox">
-                  <em class='bx bxs-error-circle' ></em> The "Recent" list have a limit of 4096 recent players it can store. Therefore if you have been playing with Null Core for a very long time and have never thought about this tab, we recommend you to clean it once in a while as opening it can cause your game to crash or a very big FPS drop
+                  <em class='bx bxs-error-circle' ></em> The "Recent" list have a limit of 4096 recent players it can store. Therefore if you have been playing with Null Core for a very long time and have never thought about this tab, we recommend you to clean it once in a while as opening it can cause your game to crash or a very big FPS drop.
                </div>
                
                <p id="playermanager"># CVar Manager</p>
@@ -205,7 +206,32 @@
                </div>
 
                For more CVars you can visit <a class="other__clickablelink" href="https://developer.valvesoftware.com/wiki/List_of_TF2_console_commands_and_variables" target="_blank">list of TF2 console commands and variables</a>
+               <p id="general"># General Settings</p>
+               <div class="writtenby">Written by <span class="admin">Admin</span></div>
                
+               Upon opening Settings menu, you'll see a window with a lot of check boxes and other tabs inside which can get a bit confusing at first, but don't worry, we'll go through each, what it does and should you enable it.
+               Of course, Null Core's menu isn't perfect, it has a quite a lot of broken features, some cheat limitations only an experienced user might know and so on, we'll try to break down each thing.
+               <div class="image__container">
+                  <img src="/media/guides/UI_General.png" onerror="this.src='/media/in-progress.png';">
+                  <div class="image_description">Settings menu</div>
+               </div>
+               We'll start from top to bottom and from left to right.
+
+               <p id="playermanager"># Configs</p>
+
+               Null Core has two types of configuration files - the first of them is the one indicated in the picture above (that is, config named "Default 1") which will save and contain almost everything - from the aimbot settings to the simple text for spam in the chat.
+               You're given 3 actions you can perform with this configuration - Reset your selected config, import and export with little corresponding icons on the right.
+               You can click on the arrow pointing down to open dropdown menu of all configs.
+               <div class="protip">
+                  <em class='bx bx-bulb' ></em> Null Core can only store 12 configurations which are given to you by default (From "Default 1" to "Default 12"), you cannot create more but you can only reset the ones you don't need. Be more wise when making a lot of configs!
+               </div>
+
+               Down below in the Settings menu you can set hotkey to quickly load your config but it's a bit different. No matter what key you choose in dropdown menu, you will still have to press F1-F12 with the key you have chosen (Unless it's "None")
+               <div class="image__container">
+                  <img src="/media/guides/UI_HotloadKey.png" onerror="this.src='/media/in-progress.png';">
+                  <div class="image_description">Setting a Hotload key</div>
+               </div>
+
                <p id="foundmistake"># Found a Mistake?</p>
                If you found any mistake, let it be a typo or part of the content providen being wrong, you can always contribute to NVV by correcting us at public <a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">Telegram</a> chat or creating a bug report at <a class="other__clickablelink" href="https://github.com/NCVV-Dev/NVV-Site/issues/new/choose" target="_blank">GitHub</a>.
 
