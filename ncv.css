@@ -1835,7 +1835,7 @@ div.contentgd {
 
 .writtenby {
 	color: white;
-	margin-bottom: 40px;
+	margin-bottom: 15px;
 	text-align: left;
 	font-size: 17px;
 }
@@ -1886,17 +1886,18 @@ div.contentgd {
 
 .copyButton {
 	position: relative;
-	width: 128px;
+	width: 100px;
 	top: 8px;
-	padding: 5px 10px;
+	padding: 5px 7px;
 	border: none;
 	border-radius: 5px;
 	background-color: var(--buttonsubmitbg);
 	color: white;
 	text-align: center;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 15px;
 	transition: all 300ms ease-in-out;
+	font-weight: bold;
 }
 
 .copyButton:hover{
