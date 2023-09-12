@@ -76,8 +76,8 @@ function WelcomeButtonAction() {
 	}, 1100);
 };
 
-// Random Image for Welcome Page (takes a while to load because it loads after the webiste)
-// NEEDS FIX
+// Random Image for Welcome Page (takes a while to load because it loads after the website)
+// TODO: Fix
 $(function() {
 	let ImageArray = new Array();
 	ImageArray[0] = "https://ncvisualsvault.cc/media/menus/raizomenu.png";
@@ -161,6 +161,7 @@ function search() {
 }
 
 // Notification System
+// TODO: What is this even? Refactor
 $(function() {
 	let e = document.getElementById("nf__popup");
 	"success" == getCookie("submit") ?
