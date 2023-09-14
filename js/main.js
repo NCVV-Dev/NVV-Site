@@ -207,7 +207,7 @@ function switchrandomizing() {
 
 // Actual Proccess of Shuffling
 $(function() {
-	if (getCookie("EnableShuffle") == "true" && localStorage.getItem('enableshuffle') == 'true') {
+	if (getCookie("EnableShuffle") == "true" || localStorage.getItem('enableshuffle') == 'true') {
 		let parent = $("#randomize");
 		let divs = parent.children();
 		divs.sort(function(a, b) {
