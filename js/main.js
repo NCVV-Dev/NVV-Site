@@ -361,41 +361,6 @@ function fetchTextNodesContent($target) {
 		.text();
 }
 
-// Try automatically hide the menu on scroll
-var onScrolling = function() {
-  if (getCookie("manuallyClosedMenu") !== "true" && getCookie("manuallyOpenedMenu") !== "true"){
-  var y = window.scrollY;
-  const sidebargd = document.querySelector(".sidebargd");
-  const sizePopup = document.querySelector(".screenwarn");
-  if (y >= 600) {
-	setTimeout(function() {
-		sidebargd.style.transition = '.5s';
-		sidebargd.style.opacity = '0';
-		sidebargd.style.visibility = 'hidden';
-
-		sizePopup.style.transition = '.5s';
-		sizePopup.style.opacity = '0';
-		sizePopup.style.visibility = 'hidden';
-	}, 200);
-  } else {
-	setTimeout(function() {
-		sidebargd.style.transition = '.5s';
-		sidebargd.style.opacity = '1';
-		sidebargd.style.visibility = 'visible';
-	}, 200);
-  }
-}
-};
-
-window.addEventListener("scroll", onScrolling);
-
-// Prevent from pop up appearing again if user has hidden menu already
-if(getCookie("manuallyClosedMenu") == "true"){
-	const sizePopup = document.querySelector(".screenwarn");
-	sizePopup.style.opacity = '0';
-	sizePopup.style.visibility = 'hidden';
-}
-
 function hideNavbar() {
 	const sidebargd = document.querySelector(".sidebargd");
 	const sizePopup = document.querySelector(".screenwarn");
@@ -403,10 +368,6 @@ function hideNavbar() {
 		sidebargd.style.transition = '.5s';
 		sidebargd.style.opacity = '0';
 		sidebargd.style.visibility = 'hidden';
-
-		sizePopup.style.transition = '.5s';
-		sizePopup.style.opacity = '0';
-		sizePopup.style.visibility = 'hidden';
 		setCookie("manuallyClosedMenu", "true", 365);
 	}, 500);
 };
@@ -421,7 +382,8 @@ function showNavbar() {
 	}, 500);
 };
 
-
+// Deprecated method of copying text.
+// TODO: New method
 function copyCode(id){
 	var str = document.getElementById(id);
 	window.getSelection().selectAllChildren(str);
