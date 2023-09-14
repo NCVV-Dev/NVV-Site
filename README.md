@@ -11,7 +11,7 @@
 
 ### English
 
-**NVV** aka **'Null Core - Visuals Vault'** website built in pure **HTML, CSS and JavaScript** without using any building frameworks with the main goal to create an opportunity for Null Core software users share their visual configurations more openly to other people. This repository was made in order to create update notes and provide to users an easier way to **contribute to the site**. Reaching over 10k+ downloads and counting of all the content on the website, I personally and still look forward into keeping this project up!
+**NVV** aka **'Null Core - Visuals Vault'** website built in pure **HTML, CSS and JavaScript** without using any building frameworks with the ultimate goal to create an opportunity for Null Core software users share their visual configurations more openly to other people. This repository was made in order to create update notes and provide to users an easier way to **contribute to the site**. Reaching over 15k+ downloads and counting, I personally look forward into keeping this project up as long as I can!
 
 **Cooperated with [Fedoraware](https://fedoraware.ncvisualsvault.cc/) (Technical support has been ended at 02.01.2023)**
 
@@ -30,7 +30,7 @@ Some of the files will not appear in this repository such as **.php** files or d
 
 ### Russian (Русский)
 
-**NVV** также известный как **'Null Core — Visuals Vault'**, написанный на чистом **HTML, CSS и JavaScript** без использования каких-либо фреймворков. Этот репозиторий был создан для того, чтобы упростить создание логов об обновлениях и предоставить пользователям более простой способ **вносить свой вклад в данный проект**.
+**NVV** также известный как **'Null Core — Visuals Vault'**, написанный на чистом **HTML, CSS и JavaScript** с конечной целью создать возможность для пользователей программного обеспечения Null Core более открыто делиться своими визуальными конфигурациями между собой. Этот репозиторий был создан чтобы предоставить пользователям более простой способ **вносить свой вклад** в данный проект.
 
 ## Участие
 Данный репозиторий **имеет приоритет для разработчика**. Каждая созданная здесь **проблема или пожелание** будут рассмотрены, и действие будет предпринято в **короткий промежуток времени**.
