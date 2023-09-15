@@ -162,16 +162,16 @@ function search() {
 
 // Notification System
 // TODO: What is this even? Refactor
-$(function() {
-	let e = document.getElementById("nf__popup");
-	"success" == getCookie("submit") ?
-		((e.style.color = "let(--buttonsubmitbg)"), (e.innerHTML = "Visual config submitted!"), (e.className = "show")) :
-		"fail" == getCookie("submit") && ((e.style.color = "var(--warn)"), (e.innerHTML = "Something went wrong :("), (e.className = "show")),
-		eraseCookie("submit"),
-		setTimeout(function() {
-			e.className = e.className.replace("show", "");
-		}, 3e3);
-});
+//$(function() {
+//	let e = document.getElementById("nf__popup");
+//	"success" == getCookie("submit") ?
+//		((e.style.color = "let(--buttonsubmitbg)"), (e.innerHTML = "Visual config submitted!"), (e.className = "show")) :
+//		"fail" == getCookie("submit") && ((e.style.color = "var(--warn)"), (e.innerHTML = "Something went wrong :("), (e.className = "show")),
+//		eraseCookie("submit"),
+//		setTimeout(function() {
+//			e.className = e.className.replace("show", "");
+//		}, 3e3);
+//});
 
 // Trigger for Upload Button
 $("#uploadTrigger").click(function() {
