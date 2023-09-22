@@ -76,8 +76,7 @@ function WelcomeButtonAction() {
 	}, 1100);
 };
 
-// Random Image for Welcome Page (takes a while to load because it loads after the website)
-// TODO: Fix
+// Random Image for Welcome Page (loads after main website image)
 $(function() {
 	let ImageArray = new Array();
 	ImageArray[0] = "https://ncvisualsvault.cc/media/menus/raizomenu.png";
@@ -131,7 +130,7 @@ document.querySelectorAll('.dwn__count').forEach(elem => {
 	}
 });
 
-// Init every picuture for preview
+// Init every picture for preview
 function initpicture() {
 	let e = document.querySelectorAll(".cfgvrow img"),
 		c = document.querySelector("#preview"),
@@ -161,7 +160,7 @@ function search() {
 }
 
 // Notification System
-// TODO: What is this even? Refactor
+// Refactor
 //$(function() {
 //	let e = document.getElementById("nf__popup");
 //	"success" == getCookie("submit") ?
@@ -383,7 +382,7 @@ function showNavbar() {
 };
 
 // Deprecated method of copying text.
-// TODO: New method
+// New method needed
 function copyCode(id){
 	var str = document.getElementById(id);
 	window.getSelection().selectAllChildren(str);
