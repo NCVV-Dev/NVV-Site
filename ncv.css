@@ -841,53 +841,6 @@ input[type="submit"]:hover {
 	font-size: 20px;
 	top: 2px;
 }
-
-.upload_info {
-	position: relative;
-	top: 4px;
-	left: 15px;
-	color: var(--generaltextcolor);
-}
-
-.upload_info em {
-	font-size: 27px;
-}
-
-.upload_info:hover {
-	cursor: pointer;
-}
-
-.upload_info.tooltip {
-	position: relative;
-	z-index: 4;
-}
-
-.upload_info.tooltip:before {
-	display: block;
-	opacity: 0;
-	pointer-events: none;
-	position: absolute;
-	background: var(--latosbackgr);
-	border-radius: 3px;
-	color: var(--generaltextcolor);
-	content: attr(data-title);
-	font-size: 14px;
-	padding: 6px 10px;
-	bottom: 45px;
-	left: -11px;
-	white-space: nowrap;
-}
-
-.upload_info.tooltip:before {
-	transform: translate3d(0,-10px,0);
-	transition: all 150ms ease-in-out;
-}
-
-.upload_info.tooltip:hover:before {
-	opacity: 1;
-	transform: translate3d(0,0,0);
-}
-
   
 /* Background of image preview */
 #preview {
