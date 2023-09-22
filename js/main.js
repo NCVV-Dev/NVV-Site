@@ -178,7 +178,7 @@ $("#uploadTrigger").click(function() {
 });
 
 // Shuffling Visual Configs Randomly
-var t = document.getElementById("nf__popup");
+let t = document.getElementById("nf__popup");
 
 function switchrandomizing() {
 	if (getCookie("EnableShuffle") == "true") {
@@ -320,7 +320,7 @@ function sortbyname() {
 	let parent = $("#randomize");
 	let divs = parent.children();
 
-	var OrderedDivsByName = divs.sort(function(a, b) {
+	let OrderedDivsByName = divs.sort(function(a, b) {
 		return $(a).find(".cfg__title").text() > $(b).find(".cfg__title").text();
 	});
 
@@ -331,7 +331,7 @@ function sortbyname() {
 function sortbymostdwnl() {
 	let parent = $("#randomize");
 	let divs = parent.children();
-	var OrderedDivsByDwnl = divs.sort(function(a, b) {
+	let OrderedDivsByDwnl = divs.sort(function(a, b) {
 		// Fetch raw values
 		const aRaw = fetchTextNodesContent($(a).find(".dwn__count"));
 		const bRaw = fetchTextNodesContent($(b).find(".dwn__count"));
@@ -353,16 +353,16 @@ function sortbymostdwnl() {
 // This is just dumb but it seems like it's the only way to fetch text nodes
 function fetchTextNodesContent($target) {
 	return $target
-		.clone() // Clone the element
+		.clone()    // Clone the element
 		.children() // Select all the children
-		.remove() // Remove all the children
-		.end() // Go back to selected element
+		.remove()   // Remove all the children
+		.end()      // Go back to selected element
 		.text();
 }
 
 function hideNavbar() {
 	const sidebargd = document.querySelector(".sidebargd");
-	const sizePopup = document.querySelector(".screenwarn");
+
 	setTimeout(function() {
 		sidebargd.style.transition = '.5s';
 		sidebargd.style.opacity = '0';
@@ -384,7 +384,7 @@ function showNavbar() {
 // Deprecated method of copying text.
 // New method needed
 function copyCode(id){
-	var str = document.getElementById(id);
+	let str = document.getElementById(id);
 	window.getSelection().selectAllChildren(str);
 	document.execCommand("Copy")
 } 
