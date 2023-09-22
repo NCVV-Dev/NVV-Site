@@ -229,7 +229,7 @@ $(function () {
 });
 
 // Text Animation on the Welcome Page
-class randChar {
+class randchar {
     constructor(el) {
         this.el = el
         this.chars = '!<>-_\\/[]{}—=+*^?#________'
@@ -305,7 +305,7 @@ const phrases = [
 ]
 
 const el = document.querySelector('.text')
-const fx = new randChar(el)
+const fx = new randchar(el)
 
 let counter = 0
 const next = () => {
