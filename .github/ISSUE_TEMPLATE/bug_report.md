@@ -23,11 +23,8 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop:**
- - Browser [e.g. chrome, safari]
-
-**Smartphone:**
- - Device: [e.g. iPhone6]
+**Device or browser:**
+ - Browser [e.g. iPhone6, chrome, safari]
 
 **Additional context**
 Add any other context about the problem here.
