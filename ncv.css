@@ -552,6 +552,9 @@ input[type="submit"]:hover {
 	border-radius: 5px;
 	justify-content: flex-start;
 	transition: all 300ms ease-in-out;
+    position: sticky;
+    top: 55px;
+    z-index: 2;
 }
 
 .utility_buttons {

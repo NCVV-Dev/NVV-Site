@@ -26,7 +26,7 @@ function eraseCookie(e) {
     document.cookie = e + "=; Max-Age=-99999999;";
 }
 
-// Page Loader
+// Page loader
 document.addEventListener(
     "DOMContentLoaded",
     function e() {
@@ -54,7 +54,7 @@ document.addEventListener(
     !1
 );
 
-// Welcome Page Functionality
+// Welcome page functionality
 const wlcoverlay = document.querySelector(".welcome_overlay");
 
 if (getCookie("FirstTime") != false) {
@@ -76,7 +76,7 @@ function WelcomeButtonAction() {
     }, 1100);
 };
 
-// Random Image for Welcome Page (loads after main website image)
+// Random image for welcome page (loads after main website image)
 $(function () {
     let ImageArray = new Array();
     ImageArray[0] = "https://ncvisualsvault.cc/media/menus/raizomenu.png";
@@ -88,7 +88,7 @@ $(function () {
     return document.getElementById("randomimage").innerHTML = '<img src="' + ImageArray[number] + '" />';
 })
 
-// Theme Switch Functionality
+// Theme switch functionality
 if (getCookie("themebtn") == 'pressed') {
     localStorage.setItem('data-theme', 'ncl');
     document.body.setAttribute('data-theme', 'ncl')
@@ -130,7 +130,7 @@ document.querySelectorAll('.dwn__count').forEach(elem => {
     }
 });
 
-// Init every picture for preview
+// Init images for preview
 function initpicture() {
     let e = document.querySelectorAll(".cfgvrow img"),
         c = document.querySelector("#preview"),
@@ -146,7 +146,7 @@ function initpicture() {
     });
 }
 
-// Search Functionality
+// Search functionality
 function search() {
     let input = document.getElementById('searchbar').value
     input = input.toLowerCase();
@@ -161,26 +161,34 @@ function search() {
     }
 }
 
-// Notification System
-// Refactor
-//$(function() {
-//	let e = document.getElementById("nf__popup");
-//	"success" == getCookie("submit") ?
-//		((e.style.color = "let(--buttonsubmitbg)"), (e.innerHTML = "Visual config submitted!"), (e.className = "show")) :
-//		"fail" == getCookie("submit") && ((e.style.color = "var(--warn)"), (e.innerHTML = "Something went wrong :("), (e.className = "show")),
-//		eraseCookie("submit"),
-//		setTimeout(function() {
-//			e.className = e.className.replace("show", "");
-//		}, 3e3);
-//});
+// Pop-up for future use
+let t = document.getElementById("nf__popup");
 
-// Trigger for Upload Button
+if (window.location.pathname == '/') {
+    // Notification system for uploading
+    $(function () {
+            if (getCookie("submit") == 'success') {
+                t.style.color = "var(--buttonsubmitbg)";
+                t.innerHTML = "Visual config submitted.";
+                t.className = "show";
+                eraseCookie("submit");
+            } else if (getCookie("submit") == 'fail') {
+                t.style.color = "var(--warn)";
+                t.innerHTML = "Failed to submit your visual config :(";
+                t.className = "show";
+                eraseCookie("submit");
+            }
+
+            setTimeout(function () {
+                t.className = t.className.replace("show", "");
+            }, 3000);
+    });
+}
+
+// Upload button trigger
 $("#uploadTrigger").click(function () {
     $("#uploadFile").click()
 });
-
-// Shuffling Visual Configs Randomly
-let t = document.getElementById("nf__popup");
 
 function switchrandomizing() {
     if (getCookie("EnableShuffle") == "true") {
@@ -206,28 +214,29 @@ function switchrandomizing() {
     }
 }
 
-// Actual Proccess of Shuffling
-$(function () {
-    if (getCookie("EnableShuffle") == "true" || localStorage.getItem('enableshuffle') == 'true') {
-        let parent = $("#randomize");
-        let divs = parent.children();
-        divs.sort(function (a, b) {
-            return 0.5 - Math.random();
-        });
-        parent.append(divs);
+// Shuffling proccess
+if (window.location.pathname == '/') {
+    $(function () {
+        if (getCookie("EnableShuffle") == "true" || localStorage.getItem('enableshuffle') == 'true') {
+            let parent = $("#randomize");
+            let divs = parent.children();
+            divs.sort(function (a, b) {
+                return 0.5 - Math.random();
+            });
+            parent.append(divs);
 
-        t.style.color = "var(--buttonsubmitbg)";
-        t.innerHTML = "Shuffling visual configs...";
-        t.className = "show";
-        setTimeout(function () {
-            t.className = t.className.replace("show", "");
-        }, 3000);
-    } else {
-        localStorage.setItem('enableshuffle', 'false');
-        setCookie("EnableShuffle", "false", 365)
-    }
-});
-
+            t.style.color = "var(--buttonsubmitbg)";
+            t.innerHTML = "Shuffling visual configs...";
+            t.className = "show";
+            setTimeout(function () {
+                t.className = t.className.replace("show", "");
+            }, 3000);
+        } else {
+            localStorage.setItem('enableshuffle', 'false');
+            setCookie("EnableShuffle", "false", 365)
+        }
+    });
+}
 // Text Animation on the Welcome Page
 class randchar {
     constructor(el) {
@@ -327,6 +336,13 @@ function sortbyname() {
     });
 
     parent.append(OrderedDivsByName);
+
+    t.style.color = "var(--buttonsubmitbg)";
+    t.innerHTML = "Sorted!";
+    t.className = "show";
+    setTimeout(function () {
+        t.className = t.className.replace("show", "");
+    }, 3000);
 }
 
 // Sort visual configs by highest downloads
@@ -350,9 +366,16 @@ function sortbymostdwnl() {
         return bParsed - aParsed;
     })
     parent.append(OrderedDivsByDwnl);
+
+    t.style.color = "var(--buttonsubmitbg)";
+    t.innerHTML = "Sorted!";
+    t.className = "show";
+    setTimeout(function () {
+        t.className = t.className.replace("show", "");
+    }, 3000);
 }
 
-// This is just dumb but it seems like it's the only way to fetch text nodes
+// Fetch text nodes
 function fetchTextNodesContent($target) {
     return $target
         .clone()    // Clone the element
@@ -362,6 +385,7 @@ function fetchTextNodesContent($target) {
         .text();
 }
 
+// NVV - Guides navbar
 function hideNavbar() {
     const sidebargd = document.querySelector(".sidebargd");
 
@@ -370,7 +394,7 @@ function hideNavbar() {
         sidebargd.style.opacity = '0';
         sidebargd.style.visibility = 'hidden';
         setCookie("manuallyClosedMenu", "true", 365);
-    }, 500);
+    }, 100);
 };
 
 function showNavbar() {
@@ -380,13 +404,13 @@ function showNavbar() {
         sidebargd.style.opacity = '1';
         sidebargd.style.visibility = 'visible';
         setCookie("manuallyOpenedMenu", "true", 365);
-    }, 500);
+    }, 100);
 };
 
-// Deprecated method of copying text.
-// New method needed
+// Text copy
 function copyCode(id) {
     let str = document.getElementById(id);
     window.getSelection().selectAllChildren(str);
-    document.execCommand("Copy")
+    document.execCommand("Copy");
+    window.getSelection().removeAllRanges();
 } 
