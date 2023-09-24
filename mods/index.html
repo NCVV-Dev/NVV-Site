@@ -1,614 +1,741 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Hey there! Have a good day :) -->
+
 <head>
-   <title>NVV - Mods</title>
-   <link rel="stylesheet" type="text/css" href="/ncv.css?v=<?php echo filemtime('ncv.css'); ?>">
-   <meta charset="UTF-8">
-   <meta property="og:type" content="website">
-   <meta property="og:url" content="https://ncvisualsvault.cc/mods/">
-   <meta property="og:image" content="https://ncvisualsvault.cc/media/nvv_big.png">
-   <meta property="og:title" content="Visuals Vault Mods">
-   <meta property="og:description" content="All the tf2 mods you need for smooth gameplay">
-   <meta property="twitter:card" content="summary_large_image">
-   <meta name="description" content="All the tf2 mods you need for smooth gameplay">
-   <meta name="keywords" content="Null Core Visuals, Null Core Cheat Visuals, NC Visuals, Null Core Visuals Config, NC Visuals Config, Null Core Visuals Vault, NC Visuals Vault, NCVV, NVV, ncc visuals, Nullcore visuals, nc visuals, nullcore visuals">
-   <meta name="theme-color" content="#414949">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha384-Gu3KVV2H9d+yA4QDpVB7VcOyhJlAVrcXd0thEjr4KznfaFPLe0xQJyonVxONa4ZC" crossorigin="anonymous">
-   <link rel="icon" href="/media/nvv.ico" type="image/x-icon">
-   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" integrity="sha384-szzW+tv8NF9jnkb0sE8BJLynVZ+vy3EkdLAUSHZ/R0lgsVZh6VbOTZnvdAC1RIZf" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
+    <title>NVV - Mods</title>
+    <link rel="stylesheet" type="text/css" href="/ncv.css?v=<?php echo filemtime('ncv.css'); ?>">
+    <meta charset="UTF-8">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ncvisualsvault.cc/mods/">
+    <meta property="og:image" content="https://ncvisualsvault.cc/media/nvv_big.png">
+    <meta property="og:title" content="Visuals Vault Mods">
+    <meta property="og:description" content="All the tf2 mods you need for smooth gameplay">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta name="description" content="All the tf2 mods you need for smooth gameplay">
+    <meta name="keywords" content="Null Core Visuals, Null Core Cheat Visuals, NC Visuals, Null Core Visuals Config, NC Visuals Config, Null Core Visuals Vault, NC Visuals Vault, NCVV, NVV, ncc visuals, Nullcore visuals, nc visuals, nullcore visuals">
+    <meta name="theme-color" content="#414949">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://ncvisualsvault.cc/dwnl/display.php"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha384-Gu3KVV2H9d+yA4QDpVB7VcOyhJlAVrcXd0thEjr4KznfaFPLe0xQJyonVxONa4ZC" crossorigin="anonymous">
+    <link rel="icon" href="/media/nvv.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" integrity="sha384-szzW+tv8NF9jnkb0sE8BJLynVZ+vy3EkdLAUSHZ/R0lgsVZh6VbOTZnvdAC1RIZf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
 </head>
 
 <body data-theme="nvv" onload="initpicture()">
-   <div class="welcome_overlay">
-      <div class="welc_media">
-         <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site/" rel="noopener" target="_blank"><em class='bx bxl-github'></em></a>
-         <a class="welcbutton" href="https://t.me/ncvisualsvault/" rel="noopener" target="_blank"><em class='bx bxl-telegram'></em></a>
-         <a class="welcbutton" href="https://nullcoreproject.net/" rel="noopener" target="_blank"><em class='bx bx-border-all' style="color: #18bbbb;"></em></a>
-      </div>
-      <div class="welcome_header_container">
-         <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
-         <div class="welcome_header2">Dedicated site to the Null Core training software for Team Fortress 2 and it's visual configs - upload your own, download and share your visual configs with others right away!</div>
-         <div class="downbuttons">
-            <a class="welcbutton" onclick="WelcomeButtonAction()">Start Exploring</a>
-         </div>
-      </div>
-      <div class="welcome_imgcontainer" id="randomimage"></div>
-      <div class="container">
-         <div class="text"></div>
-      </div>
-   </div>
-   <div class="navbar__wrapper">
-      <div class="navbar">
-         <a href="/" rel="noopener">
-            <span class="links_name">Main Page</span>
-         </a>
-         <a href="/tos/" rel="noopener">
-            <span class="links_name">LA/TOS</span>
-         </a>
-         <a href="/guides/">
-            <span class="links_name">Guides</span>
-         </a>
-         <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener">
-            <span class="links_name">Report an Issue</span>
-         </a>
-         <a href="https://fedoraware.ncvisualsvault.cc/" rel="noopener">
-            <span class="links_name">Visit <span class="fware">FVV</span></span>
-         </a>
-      </div>
-   </div>
-   <a onclick="switchtheme()" class="theme animate__animated animate__fadeIn">
-      <em class='bx bx-sun'></em>
-   </a>
-   <div class="bodywrapper">
-      <div id="modal__overlay"></div>
-      <div id="progress"></div>
-      <noscript>
-         <div class="announcement">
-            <div class="nojs">Seems like JavaScript is not supported or disabled on your browser. Some features might not work</div>
-         </div>
-      </noscript>
-      <h1 class="animate__animated animate__fadeInDown">mods vault</h1>
-      <p class="animate__animated animate__fadeInDown">all the tf2 mods you need for smooth gameplay</p>
-      <div class="cont">
-         <div class="opt__wrapper animate__animated animate__fadeInDown">
-            <a href="submit/" class="opt__submitcfg">Submit Mod or Skybox</a>
-         </div>
-         <div class="cfgvrow mods">
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                        Overhaul Animaiton Pack
-                     </div>
-                     <div class="cfg__author mods">
-                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__descr">
-                        All-In-One overhaul animation pack. Does not include pyro animations.
-                     </div>
-                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=72" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
+    <div class="welcome_overlay">
+        <div class="welc_media">
+            <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site/" rel="noopener" target="_blank"><em class='bx bxl-github'></em></a>
+            <a class="welcbutton" href="https://t.me/ncvisualsvault/" rel="noopener" target="_blank"><em class='bx bxl-telegram'></em></a>
+            <a class="welcbutton" href="https://nullcoreproject.net/" rel="noopener" target="_blank"><em class='bx bx-border-all' style="color: #18bbbb;"></em></a>
+        </div>
+        <div class="welcome_header_container">
+            <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
+            <div class="welcome_header2">Dedicated site to the Null Core training software for Team Fortress 2 and it's
+                visual configs - upload your own, download and share your visual configs with others right away!</div>
+            <div class="downbuttons">
+                <a class="welcbutton" onclick="WelcomeButtonAction()">Start Exploring</a>
             </div>
+        </div>
+        <div class="welcome_imgcontainer" id="randomimage"></div>
+        <div class="container">
+            <div class="text"></div>
+        </div>
+    </div>
+    <div class="navbar__wrapper">
+        <div class="navbar">
+            <a href="/" rel="noopener">
+                <span class="links_name">Main Page</span>
+            </a>
+            <a href="/tos/" rel="noopener">
+                <span class="links_name">LA/TOS</span>
+            </a>
+            <a href="/guides/">
+                <span class="links_name">Guides</span>
+            </a>
+            <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener">
+                <span class="links_name">Report an Issue</span>
+            </a>
+            <a href="https://fedoraware.ncvisualsvault.cc/" rel="noopener">
+                <span class="links_name">Visit <span class="fware">FVV</span></span>
+            </a>
+        </div>
+    </div>
+    <a onclick="switchtheme()" class="theme animate__animated animate__fadeIn">
+        <em class='bx bx-sun'></em>
+    </a>
+    <div class="bodywrapper">
+        <div id="modal__overlay"></div>
+        <div id="progress"></div>
+        <noscript>
+            <div class="announcement">
+                <div class="nojs">Seems like JavaScript is not supported or disabled on your browser. Some features
+                    might not work</div>
+            </div>
+        </noscript>
+        <h1 class="animate__animated animate__fadeInDown">mods vault</h1>
+        <p class="animate__animated animate__fadeInDown">all the tf2 mods you need for smooth gameplay</p>
+        <div class="cont">
+            <div class="opt__wrapper animate__animated animate__fadeInDown">
+                <a href="submit/" class="opt__submitcfg">Submit Mod or Skybox</a>
+            </div>
+            <div class="cfgvrow mods">
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-                <div class="cfg__tab">
-                   <div class="cfg__body">
-                      <div class="cfg__title mods">
-                        Clear Water
-                      </div>
-                      <div class="cfg__author mods">
-                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                      </div>
-                      <div class="cfg__descr">
-                        Replaces water textures with one-colored texture for better visibility
-                      </div>
-                      <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=73" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                      </div>
-                   </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Overhaul Animaiton Pack
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                All-In-One overhaul animation pack. Does not include pyro animations
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=72"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('72')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-                <div class="cfg__tab">
-                   <div class="cfg__body">
-                      <div class="cfg__title mods">
-                        Removal Pack
-                      </div>
-                      <div class="cfg__author mods">
-                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                      </div>
-                      <div class="cfg__descr">
-                        Disables unnecessary things like ambient sounds or tutorial tips for you
-                      </div>
-                      <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=74" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                      </div>
-                   </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Clear Water
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Replaces water textures with one-colored texture for better visibility
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=73"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('73')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-                <div class="cfg__tab">
-                   <div class="cfg__body">
-                      <div class="cfg__title mods">
-                        Taunt Fix
-                      </div>
-                      <div class="cfg__author mods">
-                        Author: <a href="https://t.me/OutlinedBudgie" class="default__link contributor2" target="_blank" rel="noopener">OutlinedBudgie</a>
-                      </div>
-                      <div class="cfg__descr">
-                        Never miss taunting players ever again
-                      </div>
-                      <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=75" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                      </div>
-                   </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Removal Pack
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Disables unnecessary things like ambient sounds or tutorial tips for you
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=74"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('74')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-                <div class="cfg__tab">
-                   <div class="cfg__body">
-                      <div class="cfg__title mods">
-                        Transparent Spawn Doors
-                      </div>
-                      <div class="cfg__author mods">
-                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                      </div>
-                      <div class="cfg__descr">
-                        Makes all the spawn doors transparent for better visibility
-                      </div>
-                      <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=76" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                      </div>
-                   </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Taunt Fix
+                            </div>
+                            <div class="cfg__author mods">
+                                Author: <a href="https://t.me/OutlinedBudgie" class="default__link contributor2"
+                                    target="_blank" rel="noopener">OutlinedBudgie</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Never miss taunting players ever again
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=75"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('75')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-                <div class="cfg__tab">
-                   <div class="cfg__body">
-                      <div class="cfg__title mods">
-                        Understable Pyro
-                      </div>
-                      <div class="cfg__author mods">
-                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                      </div>
-                      <div class="cfg__descr">
-                        Replaces all sounds for pyro making him able to speak
-                      </div>
-                      <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=77" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                      </div>
-                   </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Transparent Spawn Doors
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Makes all the spawn doors transparent for better visibility
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=76"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('76')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-                <div class="cfg__tab">
-                   <div class="cfg__body">
-                      <div class="cfg__title mods">
-                        Flat Textures
-                      </div>
-                      <div class="cfg__author mods">
-                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                      </div>
-                      <div class="cfg__descr">
-                        Makes all world textures flat, has a slight FPS boost
-                      </div>
-                      <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=78" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                      </div>
-                   </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Understable Pyro
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Replaces all sounds for pyro making him able to speak
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=77"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('77')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-                <div class="cfg__tab">
-                   <div class="cfg__body">
-                      <div class="cfg__title mods">
-                        High Quality Textures
-                      </div>
-                      <div class="cfg__author mods">
-                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                      </div>
-                      <div class="cfg__descr">
-                        Replaces all class and weapons textures to better ones
-                      </div>
-                      <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=79" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                      </div>
-                   </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Flat Textures
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Makes all world textures flat, has a slight FPS boost
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=78"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('78')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-                <div class="cfg__tab">
-                   <div class="cfg__body">
-                      <div class="cfg__title mods">
-                        HL1 Footstep Sounds
-                      </div>
-                      <div class="cfg__author mods">
-                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                      </div>
-                      <div class="cfg__descr">
-                        Replaces footsteps sounds from Half-Life 1
-                      </div>
-                      <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=80" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                      </div>
-                   </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                High Quality Textures
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Replaces all class and weapons textures to better ones
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=79"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('79')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-                <div class="cfg__tab">
-                   <div class="cfg__body">
-                      <div class="cfg__title mods">
-                        Pulsing KS Sheens
-                      </div>
-                      <div class="cfg__author mods">
-                        Uploader: <a class="default__link contributor" target="_blank" rel="noopener" href="http://steamcommunity.com/profiles/76561198258919721">krawi</a>
-                      </div>
-                      <div class="cfg__descr">
-                        Makes killstreak weapons sheen cover all weapon and pulse
-                      </div>
-                      <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=81" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                      </div>
-                   </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                HL1 Footstep Sounds
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Replaces footsteps sounds from Half-Life 1
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=80"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('80')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-                <div class="cfg__tab">
-                   <div class="cfg__body">
-                      <div class="cfg__title mods">
-                        Quiet Noicemakers
-                      </div>
-                      <div class="cfg__author mods">
-                        Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                      </div>
-                      <div class="cfg__descr">
-                        Makes all noisemakers sounds barely noticable
-                      </div>
-                      <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=82" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                      </div>
-                   </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Pulsing KS Sheens
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link contributor" target="_blank" rel="noopener" href="http://steamcommunity.com/profiles/76561198258919721">krawi</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Makes killstreak weapons sheen cover all weapon and pulse
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=81"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('81')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
 
-             <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                       Unique Rockets
-                     </div>
-                     <div class="cfg__author mods">
-                       Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__descr">
-                       Replaces the default rocket model with variety of others depending on the rocket launcher
-                     </div>
-                     <div class="cfg__downloadbtn">
-                       <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=83" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Quiet Noicemakers
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Makes all noisemakers sounds barely noticable
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=82"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('82')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Unique Rockets
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Replaces the default rocket model with variety of others depending on the rocket launcher
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=83"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('83')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Altered FireFX
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Replaces any fire/afterburn animations with much more eye-friendly particles
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=84"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('84')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Aligned Medigun Beam
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Aligns medigun beam to the actual medigun barrel as well as smoothing the beam
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=85"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('85')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Consistent Kill Icons
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Replaces some of the killfeed weapon icons with more detailed ones
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=86"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('86')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                mat_phog 0 Fix
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Fixes blacked out props and models, i.e the shop in MvM mode
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=87" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('87')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Subtle Lens Flares
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Replaces glow and lens flares to make them more appealing to the eye
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=88" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('88')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Giblet Overhaul
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Fixes blood on gibs and applies physics to them
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=89" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('89')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Instant Bullets
+                            </div>
+                            <div class="cfg__author mods">
+                                Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__descr">
+                                Adds tracers to the hitscan weapons. Requires "r_drawtracers_firstperson 1"
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=90" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('90')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                       Altered FireFX
-                     </div>
-                     <div class="cfg__author mods">
-                       Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__descr">
-                       Replaces any fire/afterburn animations with much more eye-friendly particles
-                     </div>
-                     <div class="cfg__downloadbtn">
-                       <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=84" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
+            <div id="skyboxes">
+                skyboxes
             </div>
 
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                       Aligned Medigun Beam
-                     </div>
-                     <div class="cfg__author mods">
-                       Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__descr">
-                        Aligns medigun beam to the actual medigun barrel as well as smoothing the beam
-                     </div>
-                     <div class="cfg__downloadbtn">
-                       <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=85" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
+            <div class="cfgvrow">
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__image__wrapper">
+                            <img class="cfg__image" loading="lazy" src="/media/skybox/sky_roze.jpeg" alt="">
+                        </div>
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Sky Roze
+                            </div>
+                            <div class="cfg__author mods nodescr">
+                                Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=91"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('91')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__image__wrapper">
+                            <img class="cfg__image" loading="lazy" src="/media/skybox/purpush.jpg" alt="">
+                        </div>
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Purpush
+                            </div>
+                            <div class="cfg__author mods nodescr">
+                                Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=92"
+                                    rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('92')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__image__wrapper">
+                            <img class="cfg__image" loading="lazy" src="/media/skybox/moon_sky.png" alt="">
+                        </div>
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Moon Sky
+                            </div>
+                            <div class="cfg__author mods nodescr">
+                                Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=93" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('93')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__image__wrapper">
+                            <img class="cfg__image" loading="lazy" src="/media/skybox/night_mountain.png" alt="">
+                        </div>
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Night Mountain
+                            </div>
+                            <div class="cfg__author mods nodescr">
+                                Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=94" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('94')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__image__wrapper">
+                            <img class="cfg__image" loading="lazy" src="/media/skybox/alpine_night.png" alt="">
+                        </div>
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Alpine Night
+                            </div>
+                            <div class="cfg__author mods nodescr">
+                                Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=95" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('95')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__image__wrapper">
+                            <img class="cfg__image" loading="lazy" src="/media/skybox/not_quite_dusk.png" alt="">
+                        </div>
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Not Quite Dusk
+                            </div>
+                            <div class="cfg__author mods nodescr">
+                                Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=96" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__image__wrapper">
+                            <img class="cfg__image" loading="lazy" src="/media/skybox/pink_night.png" alt="">
+                        </div>
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Pink Night
+                            </div>
+                            <div class="cfg__author mods nodescr">
+                                Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=97" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('97')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cfg__wrapper animate__animated animate__fadeIn">
+                    <div class="cfg__tab">
+                        <div class="cfg__image__wrapper">
+                            <img class="cfg__image" loading="lazy" src="/media/skybox/sky_tropic.jpg" alt="">
+                        </div>
+                        <div class="cfg__body">
+                            <div class="cfg__title mods">
+                                Sky Tropic
+                            </div>
+                            <div class="cfg__author mods nodescr">
+                                Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
+                            </div>
+                            <div class="cfg__downloadbtn">
+                                <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=98" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                                <div class="dwn__count">
+                                    <script>ccount_display('98')</script>
+                                    <em class='bx bxs-download'></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                       Consistent Kill Icons
-                     </div>
-                     <div class="cfg__author mods">
-                       Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__descr">
-                        Replaces some of the killfeed weapon icons with more detailed ones
-                     </div>
-                     <div class="cfg__downloadbtn">
-                       <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=86" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                       mat_phog 0 Fix
-                     </div>
-                     <div class="cfg__author mods">
-                       Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__descr">
-                        Fixes blacked out props and models, i.e the shop in MvM mode
-                     </div>
-                     <div class="cfg__downloadbtn">
-                       <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=87" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                       Subtle Lens Flares
-                     </div>
-                     <div class="cfg__author mods">
-                       Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__descr">
-                        Replaces glow and lens flares to make them more appealing to the eye
-                     </div>
-                     <div class="cfg__downloadbtn">
-                       <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=88" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                        Giblet Overhaul
-                     </div>
-                     <div class="cfg__author mods">
-                       Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__descr">
-                        Fixes blood on gibs and applies physics to them
-                     </div>
-                     <div class="cfg__downloadbtn">
-                       <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=89" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                       Instant Bullets
-                     </div>
-                     <div class="cfg__author mods">
-                       Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__descr">
-                        Adds tracers to the hitscan weapons. Requires "r_drawtracers_firstperson 1"
-                     </div>
-                     <div class="cfg__downloadbtn">
-                       <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=90" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-
-         </div>
-
-         
-
-         <h1 id="skyboxes">skyboxes</h1>
-
-         <div class="cfgvrow">
-            
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__image__wrapper">
-                     <img class="cfg__image" loading="lazy" src="/media/skybox/sky_roze.jpeg" alt="">
-                  </div>
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                        Sky Roze
-                     </div>
-                     <div class="cfg__author mods nodescr">
-                        Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=91" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__image__wrapper">
-                     <img class="cfg__image" loading="lazy" src="/media/skybox/purpush.jpg" alt="">
-                  </div>
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                        Purpush
-                     </div>
-                     <div class="cfg__author mods nodescr">
-                        Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=92" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__image__wrapper">
-                     <img class="cfg__image" loading="lazy" src="/media/skybox/moon_sky.png" alt="">
-                  </div>
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                        Moon Sky
-                     </div>
-                     <div class="cfg__author mods nodescr">
-                        Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=93" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__image__wrapper">
-                     <img class="cfg__image" loading="lazy" src="/media/skybox/night_mountain.png" alt="">
-                  </div>
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                        Night Mountain
-                     </div>
-                     <div class="cfg__author mods nodescr">
-                        Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=94" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__image__wrapper">
-                     <img class="cfg__image" loading="lazy" src="/media/skybox/alpine_night.png" alt="">
-                  </div>
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                        Alpine Night
-                     </div>
-                     <div class="cfg__author mods nodescr">
-                        Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=95" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__image__wrapper">
-                     <img class="cfg__image" loading="lazy" src="/media/skybox/not_quite_dusk.png" alt="">
-                  </div>
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                        Not Quite Dusk
-                     </div>
-                     <div class="cfg__author mods nodescr">
-                        Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=96" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__image__wrapper">
-                     <img class="cfg__image" loading="lazy" src="/media/skybox/pink_night.png" alt="">
-                  </div>
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                        Pink Night
-                     </div>
-                     <div class="cfg__author mods nodescr">
-                        Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=97" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="cfg__wrapper animate__animated animate__fadeIn">
-               <div class="cfg__tab">
-                  <div class="cfg__image__wrapper">
-                     <img class="cfg__image" loading="lazy" src="/media/skybox/sky_tropic.jpg" alt="">
-                  </div>
-                  <div class="cfg__body">
-                     <div class="cfg__title mods">
-                        Sky Tropic
-                     </div>
-                     <div class="cfg__author mods nodescr">
-                        Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                     </div>
-                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn" href="https://ncvisualsvault.cc/dwnl/click.php?id=98" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-         </div>
-      </div>
-      <div id="preview" class="animate__animated animate__fadeIn" onclick="this.style.display='none';"></div>
-   </div>
+        </div>
+        <div id="preview" class="animate__animated animate__fadeIn" onclick="this.style.display='none';"></div>
+    </div>
 </body>
 <script src="/js/main.js"></script>
 
