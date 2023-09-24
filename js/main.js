@@ -110,25 +110,27 @@ function switchtheme() {
 }
 
 // Find the most downloaded config and assign icon with text to the tab
-let highestNumber = 0;
-document.querySelectorAll('.dwn__count').forEach(elem => {
-    let downCount = parseInt(elem.innerText.trim())
-    if (downCount > highestNumber)
-        highestNumber = downCount;
-});
+if (!window.location.pathname == '/mods/') {
+    let highestNumber = 0;
+    document.querySelectorAll('.dwn__count').forEach(elem => {
+        let downCount = parseInt(elem.innerText.trim())
+        if (downCount > highestNumber)
+            highestNumber = downCount;
+    });
 
-let icon = document.createElement("em");
-const popular = document.createElement('div');
-popular.textContent = 'Popular!';
-icon.className = "bx bxs-hot tooltip";
-icon.style = "color: var(--buttonhover);";
+    let icon = document.createElement("em");
+    const popular = document.createElement('div');
+    popular.textContent = 'Popular!';
+    icon.className = "bx bxs-hot tooltip";
+    icon.style = "color: var(--buttonhover);";
 
-document.querySelectorAll('.dwn__count').forEach(elem => {
-    if (parseInt(elem.innerText.trim()) == highestNumber) {
-        elem.appendChild(icon.cloneNode(true));
-        elem.appendChild(popular.cloneNode(true));
-    }
-});
+    document.querySelectorAll('.dwn__count').forEach(elem => {
+        if (parseInt(elem.innerText.trim()) == highestNumber) {
+            elem.appendChild(icon.cloneNode(true));
+            elem.appendChild(popular.cloneNode(true));
+        }
+    });
+}
 
 // Init images for preview
 function initpicture() {
