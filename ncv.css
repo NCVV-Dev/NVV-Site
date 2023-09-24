@@ -632,11 +632,17 @@ input[type="submit"]:hover {
     font-size: 1.5rem;
     color: var(--tosqm);
     transition: all 300ms;
+
     &:hover {
-        box-shadow: 0 5px 20px rgba(0,0,0,.8);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.13);
         transform: translateY(-10px) scale(1.02);
         cursor: pointer;
-      }
+    }
+}
+
+.answer {
+    color: #70eaea;
+    transition: all 300ms;
 }
 
 .qa__content {
@@ -672,10 +678,6 @@ input[type="submit"]:hover {
     margin-top: 25px;
     font-weight: bold;
     transition: all 300ms ease;
-}
-
-.answer {
-    color: #70eaea;
 }
 
 @media screen and (max-width: 1000px) {
