@@ -1146,8 +1146,8 @@ input[type="submit"]:hover {
 
 .admin {
     font-family: Roboto, sans-serif;
-    text-shadow: 2px 2px 4px #ff0000;
-    background: radial-gradient(circle, #ff8001 01%, #ff0b56 63%, #d50007 77%);
+    text-shadow: 0 0 2px #ff0052;
+    background: radial-gradient(circle, #ff8001 10%, #ff0b56 63%, #d50007 97%);
     background-clip: border-box;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
