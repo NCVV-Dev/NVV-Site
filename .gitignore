@@ -1,9 +1,10 @@
 # Ignore .php files
 *.php
 
-# Ignore .zip and .rar files
+# Ignore archive files
 *.zip
 *.rar
+*.7z
 
 # Ignore .txt files
 *.txt
