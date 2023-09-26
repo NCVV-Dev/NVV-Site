@@ -179,8 +179,11 @@
                 you can notice there's two other tabs at the top left named "Recent" and "Stored" but let's leave these tabs behind and first talk about NCU header.<br>
                 NCU (Null Core User) header will display yours and other peoples NCU.
                 On other side, your ESP (Extra Sensory Perception) will display other players who also use Null Core as NCP (Null Core Player).
-                On two images above you can notice there's three priorities, "Local Player", "Auto-Normal" and "Auto-Ignore". As they speak for themselves, they are automatic as "Auto-Ignore" will be your teammates so the cheat will prevent from shooting your own teammates but will still let you target them with Medi Gun or Crusader's Crossbow and "Auto-Normal" priority being the default priority for your opponents, which makes the Aimbot treat each target equally (priority-wise).
-                However, you can ignore (prevent Aimbot/Triggerbot from targeting specific target) any player you want by right clicking on that player no matter where or under what header and choosing the "Priority: Ignore" option. To set it back to default or let's say, unignore, click on that player again and choose "Priority: Auto" which will assign a default priority based on his team.
+                On two images above you can notice there's three priorities, "Local Player", "Auto-Normal" and "Auto-Ignore".
+                As they speak for themselves, they are automatic as "Auto-Ignore" will prevent from shooting your own teammates but will still let you target them with Medi Gun or Crusader's Crossbow. 
+                "Auto-Normal" priority being the default priority for your opponents, which makes the Aimbot treat each target equally (priority-wise).
+                However, you can ignore (prevent Aimbot/Triggerbot from targeting specific target) any player you want by right clicking on that player no matter where or under what header and choosing the "Priority: Ignore" option.
+                To set it back to default or let's say, unignore, click on that player again and choose "Priority: Auto" which will assign a default priority based on his team.
                 
                 <div class="protip">
                     <em class='bx bx-bulb'></em> Null Core automatically detects mp_friendlyfire 1, setting the priority of your teammates from "Auto-Ignore" to "Auto-Normal", custom priorities which has been set to a specific player will always remain untouched!
@@ -191,14 +194,15 @@
                 </div>
 
                 Besides these default priorities you can create your own, make aimbot shoot the target affected by that priority even if it's your teammate, automatically crit and so on which will be discussed later on.
-                Talking about priorities, all players with custom or "Ignore" priorities are getting saved in "Stored" tab. You can export and import any priorities you want by right clicking on headers, and choosing the options you want in context menu.
+                Talking about priorities, all players with custom or "Ignore" priorities are getting saved in "Stored" tab.
+                You can export and import any priorities you want by right clicking on headers, and choosing the options you want in context menu.
                 "Recent" tab will show you every player you've played with, when you played with that player and provide you an ability to open their Steam profiles by right clicking (works the same way in "Active" tab) including an ability to export that list as well.
                 
                 <div class="warnbox">
                     <em class='bx bxs-error-circle'></em> The "Recent" list has a limit of 4096 recent players it can store. Therefore if you have been playing with Null Core for a very long time and have never thought about this tab, we recommend you to clean it once in a while as opening it can cause your game to crash or a big FPS drop.
                 </div>
 
-                <p id="playermanager"># CVar Manager</p>
+                <p id="cvarmanager"># CVar Manager</p>
                 <div class="writtenby">Written by <span class="admin">Admin</span></div>
 
                 Opening CVar (Console Variable) Manager in navigation menu will show a small tab with input box.
@@ -236,21 +240,56 @@
 
                 We'll start from top to bottom and from left to right.
 
-                <p id="playermanager"># Configs</p>
+                <p id="configs"># Configs</p>
                 <div class="writtenby">Written by <span class="admin">Admin</span></div>
 
-                Null Core has two types of configuration files - the first of them is the one indicated in the picture above (that is, config named "Default 1" in General tab) which will save and contain almost everything - from the aimbot settings to the simple text for spam in the chat.
+                Null Core has two types of configuration files or, presets - the first of them is the ones indicated in the picture above (that is, preset named "Default 1" in General tab) which contain almost everything - from the aimbot settings to the simple text for spam in the chat.
                 You're given 3 actions you can perform with this configuration - Reset your selected config, import and export with little corresponding icons on the right.
                 You can click on the arrow pointing down to open dropdown menu of all configs.
+                
                 <div class="protip">
-                    <em class='bx bx-bulb'></em> Null Core can only store 12 configurations which are given to you by default (From "Default 1" to "Default 12"), you cannot create more but you can only reset the ones you don't need. Be more wise when making a lot of configs!
+                    <em class='bx bx-bulb'></em> Null Core only have 12 configuration slots which are given to you by default (From "Default 1" to "Default 12"), you cannot create more but you can reset the ones you don't need. If you are importing a config, make sure you have chosen an empty slot because it will be overwritten. Be more wise when creating/importing configs!
                 </div>
-
+                
                 Down below in the Settings menu you can set hotkey to quickly load your config but it's a bit different.
                 No matter what key you choose in dropdown menu, you will still have to press F1-F12 with the key you have chosen unless it is set to "None" which will make the cheat load your configs by just pressing F1-F12 buttons.
+                
                 <div class="image__container">
                     <img src="/media/guides/UI_HotloadKey.png" onerror="this.src='/media/in-progress.png';" alt="">
                     <div class="image_description">Setting a Hotload key</div>
+                </div>
+                
+                <p id="networking"># Networking</p>
+                <div class="writtenby">Written by <span class="admin">Admin</span> and <span class="contributor">krawi <em class='bx bxs-badge-check'></em></span></div>
+
+                Networking tab is located right below configs tab, leaving you with three options - "NCU Visibility", "Optimize Networking" and "No Lerp".
+                
+                <div class="image__container">
+                    <img src="/media/guides/UI_Networking.png" onerror="this.src='/media/in-progress.png';" alt="">
+                </div>
+
+                Simply put, NCU Visibility lets you see other Null Core users.
+                For example if you are using default visual config which comes with Null Core software by default, this is what you'll see:
+
+                <div class="groupedimg_responsive">
+                    <div class="image__container">
+                        <img src="/media/guides/" onerror="this.src='/media/in-progress.png';" alt="">
+                        <div class="image_description">NCU Visibility enabled</div>
+                    </div>
+                    <div class="image__container">
+                        <img src="/media/guides/" onerror="this.src='/media/in-progress.png';" alt="">
+                        <div class="image_description">NCU Visibility disabled</div>
+                    </div>
+                </div>
+
+                "Optimize networking" option will do what it says. It will apply the best networking options based on the server you're currently connected to. It is recommended to leave this option on.
+                <br>
+                "No lerp" will disable interpolation. Source's interpolation system prevents the jittery motion of players and eneteties by buffering server updates and then interpolating the gaps between these updates.
+                With Null Core, you can disable the interpolation to gain a slight time advantage and overall accuracy with hitscan weapons. 
+                <br>
+                You can read more about this topic here - <a class="other__clickablelink" href="https://developer.valvesoftware.com/wiki/Interpolation" target="_blank">Valve Developer Community - Interpolation</a>
+                <div class="protip">
+                    <em class='bx bx-bulb'></em> We highly recommend disabling "No lerp" feature before joining any community made server since it is detectable by some custom Anti-Cheats. You're free as a bird to use it on Valve servers!
                 </div>
 
                 <p id="foundmistake"># Contributing</p>
