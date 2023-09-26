@@ -26,6 +26,27 @@ function eraseCookie(e) {
     document.cookie = e + "=; Max-Age=-99999999;";
 }
 
+// Theme switch functionality
+if (getCookie("themebtn") == 'pressed') {
+    localStorage.setItem('data-theme', 'ncl');
+    document.body.setAttribute('data-theme', 'ncl')
+} else {
+    localStorage.setItem('data-theme', 'nvv');
+    document.body.setAttribute('data-theme', 'nvv');
+}
+
+function switchtheme() {
+    if (localStorage.getItem('data-theme') == 'nvv') {
+        document.body.setAttribute('data-theme', 'ncl');
+        localStorage.setItem('data-theme', 'ncl');
+        setCookie("themebtn", "pressed", 365);
+    } else {
+        document.body.setAttribute('data-theme', 'nvv');
+        localStorage.setItem('data-theme', 'nvv');
+        setCookie("themebtn", "notpressed", 365);
+    }
+}
+
 // Page loader
 document.addEventListener(
     "DOMContentLoaded",
@@ -78,39 +99,18 @@ function WelcomeButtonAction() {
 
 // Random image for welcome page (loads after main website image)
 $(function () {
-    let ImageArray = new Array();
-    ImageArray[0] = "https://ncvisualsvault.cc/media/menus/raizomenu.png";
-    ImageArray[1] = "https://ncvisualsvault.cc/media_optimized/menus/mh4menu.jpg";
-    ImageArray[2] = "https://ncvisualsvault.cc/media/menus/LBAmenu.png";
-    ImageArray[3] = "https://ncvisualsvault.cc/media/menus/animemenu.png";
-    ImageArray[4] = "https://ncvisualsvault.cc/media/menus/coldbluemenu.png";
+    const ImageArray = [
+        "https://ncvisualsvault.cc/media/menus/raizomenu.png",
+        "https://ncvisualsvault.cc/media_optimized/menus/mh4menu.jpg",
+        "https://ncvisualsvault.cc/media/menus/LBAmenu.png",
+        "https://ncvisualsvault.cc/media/menus/animemenu.png",
+        "https://ncvisualsvault.cc/media/menus/coldbluemenu.png"
+    ];
     let number = Math.floor(Math.random() * ImageArray.length);
     return document.getElementById("randomimage").innerHTML = '<img src="' + ImageArray[number] + '" />';
 })
 
-// Theme switch functionality
-if (getCookie("themebtn") == 'pressed') {
-    localStorage.setItem('data-theme', 'ncl');
-    document.body.setAttribute('data-theme', 'ncl')
-} else {
-    localStorage.setItem('data-theme', 'nvv');
-    document.body.setAttribute('data-theme', 'nvv');
-}
-
-function switchtheme() {
-    if (localStorage.getItem('data-theme') == 'nvv') {
-        document.body.setAttribute('data-theme', 'ncl');
-        localStorage.setItem('data-theme', 'ncl');
-        setCookie("themebtn", "pressed", 365);
-    } else {
-        document.body.setAttribute('data-theme', 'nvv');
-        localStorage.setItem('data-theme', 'nvv');
-        setCookie("themebtn", "notpressed", 365);
-    }
-}
-
 // Find the most downloaded config and assign icon with text to the tab
-if (!window.location.pathname == '/mods/') {
     let highestNumber = 0;
     document.querySelectorAll('.dwn__count').forEach(elem => {
         let downCount = parseInt(elem.innerText.trim())
@@ -119,18 +119,15 @@ if (!window.location.pathname == '/mods/') {
     });
 
     let icon = document.createElement("em");
-    const popular = document.createElement('div');
-    popular.textContent = 'Popular!';
     icon.className = "bx bxs-hot tooltip";
     icon.style = "color: var(--buttonhover);";
 
     document.querySelectorAll('.dwn__count').forEach(elem => {
         if (parseInt(elem.innerText.trim()) == highestNumber) {
             elem.appendChild(icon.cloneNode(true));
-            elem.appendChild(popular.cloneNode(true));
         }
     });
-}
+
 
 // Init images for preview
 function initpicture() {
