@@ -48,32 +48,44 @@ function switchtheme() {
 }
 
 // Page loader
-document.addEventListener(
-    "DOMContentLoaded",
-    function e() {
-        let t = document.getElementById("progress"),
-            n = document.images,
-            o = 0,
-            r = n.length;
-        if (0 == r) return l();
+(function() {
+    function id(v) {
+        return document.getElementById(v)
+    }
 
-        function i() {
-            let e = (((100 / r) * (o += 1)) << 0) + "%";
-            if (((t.style.width = e), o === r)) return l();
+    function loadbar() {
+        let prog = id("progress"),
+            img = document.images,
+            c = 0,
+            tot = img.length;
+        if (tot == 0) {
+            return doneLoading()
         }
 
-        function l() {
-            setTimeout(function () {
-                (t.style.opacity = "none"), (t.style.opacity = 0);
-            }, 1800);
+        function imgLoaded() {
+            c += 1;
+            let perc = ((100 / tot * c) << 0) + "%";
+            prog.style.width = perc;
+            if (c === tot) {
+                return doneLoading()
+            }
         }
-        for (let s = 0; s < r; s += 1) {
-            let $ = new Image();
-            ($.onload = i), ($.onerror = i), ($.src = n[s].src);
+
+        function doneLoading() {
+            setTimeout(function() {
+                prog.style.opacity = "none";
+                prog.style.opacity = 0
+            }, 1800)
         }
-    },
-    !1
-);
+        for (let i = 0; i < tot; i += 1) {
+            let tImg = new Image();
+            tImg.onload = imgLoaded;
+            tImg.onerror = imgLoaded;
+            tImg.src = img[i].src
+        }
+    }
+    document.addEventListener('DOMContentLoaded', loadbar, false)
+}());
 
 // Welcome page functionality
 const wlcoverlay = document.querySelector(".welcome_overlay");
@@ -151,7 +163,7 @@ function search() {
     input = input.toLowerCase();
     let cfgw = document.getElementsByClassName('cfg__wrapper');
 
-    for (i = 0; i < cfgw.length; i++) {
+    for (let i = 0; i < cfgw.length; i++) {
         if (!cfgw[i].innerHTML.toLowerCase().includes(input)) {
             cfgw[i].style.display = "none";
         } else {
@@ -237,7 +249,7 @@ if (window.location.pathname == '/') {
     });
 }
 // Text Animation on the Welcome Page
-class randchar {
+class Randchar {
     constructor(el) {
         this.el = el
         this.chars = '!<>-_\\/[]{}—=+*^?#________'
@@ -313,7 +325,7 @@ const phrases = [
 ]
 
 const el = document.querySelector('.text')
-const fx = new randchar(el)
+const fx = new Randchar(el)
 
 let counter = 0
 const next = () => {
