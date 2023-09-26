@@ -930,13 +930,6 @@ input[type="submit"]:hover {
     transition: 0.5s ease-in-out;
 }
 
-.not-found {
-    font-family: Roboto, sans-serif;
-    font-size: 20px;
-    margin-top: 30px;
-    color: var(--tostextcolor);
-}
-
 .skyboxes {
     color: var(--headercolor);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
