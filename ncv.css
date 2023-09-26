@@ -1024,6 +1024,12 @@ input[type="submit"]:hover {
     color: rgb(98, 252, 206);
 }
 
+.contributor em {
+    position: absolute;
+    margin-top: 3px;
+    margin-left: 2px;
+}
+
 .contributor2 {
     font-family: Roboto, sans-serif;
     text-decoration: none;
