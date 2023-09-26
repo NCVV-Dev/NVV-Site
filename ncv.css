@@ -457,6 +457,7 @@ input[type="submit"]:hover {
     margin-top: 10px;
     color: var(--warn);
     text-align: center;
+    transition: all 200ms ease-in-out;
 }
 
 /* Styling of right column */
@@ -680,6 +681,11 @@ input[type="submit"]:hover {
     .pTitle {
         display: flex;
         justify-content: center;
+    }
+
+    .reminderline {
+        margin-left: 80px;
+        margin-right: 80px;
     }
 }
 
@@ -1022,12 +1028,6 @@ input[type="submit"]:hover {
     font-family: Roboto, sans-serif;
     text-decoration: none;
     color: rgb(98, 252, 206);
-}
-
-.contributor em {
-    position: absolute;
-    margin-top: 3px;
-    margin-left: 2px;
 }
 
 .contributor2 {
@@ -1719,6 +1719,11 @@ div.contentgd {
     .hidemenu {
         visibility: visible;
         display: block;
+    }
+
+    .reminderline {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
 }
