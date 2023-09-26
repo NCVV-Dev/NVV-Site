@@ -66,11 +66,12 @@
             <a href="/" class="active">Return to NVV</a>
             <a href="#start"><em class='bx bx-book-open'></em> Getting Started</a>
             <a href="#general"><em class='bx bx-border-all'></em> General Settings</a>
-            <a href="#aimbot"><em class='bx bx-crosshair'></em> Aimbot</a>
-            <a href="#triggerbot"><em class='bx bxs-mouse-alt'></em> Triggerbot</a>
             <a href="#visuals"><em class='bx bxs-sun'></em> Visuals</a>
-            <a href="#otherfeatures"><em class='bx bx-dots-horizontal-rounded'></em> Other Features</a>
+            <a href="#binds"><em class='bx bxs-spreadsheet'></em> Binds</a>
+            <a href="#aimbot"><em class='bx bx-crosshair'></em> Aim Bot</a>
+            <a href="#triggerbot"><em class='bx bxs-mouse-alt'></em> Trigger Bot</a>
             <a href="#misc"><em class='bx bx-slider'></em> Misc</a>
+            <a href="#otherfeatures"><em class='bx bx-dots-horizontal-rounded'></em> Other Features</a>
             <a href="#playstyles"><em class='bx bxs-bullseye'></em> PlayStyles</a>
             <a href="#gamecrash"><em class='bx bx-message-alt-error'></em> Game crashes?</a>
             <a href="#otherguides"><em class='bx bxs-carousel'></em> Other Guides</a>
@@ -86,11 +87,11 @@
 
                 <strong>Please note that everything on this page is a subject to change (WIP) so expect bugs/typos and if you do, you can send them to our <a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank">Telegram</a>. Currently demonstrating its features.</strong>
                 <br><br>
-                
+
                 Welcome to Null Core - Visual Vault Guides. On this page you will find everything you would ever want to know about Null Core software for Team Fortress 2, how to configure it, how to avoid common crashes, how to make your own visual config, how to set up an aimbot and so on!
                 We'll brief you on a simple markdown which will be used through all of the chapters and would help you to understand things better.
                 Let's start! Here's common blocks -
-                
+
                 <div class="protip">
                     <em class='bx bx-bulb'></em> This is a pro tip or a cool trick. Be like a pro!
                 </div>
@@ -105,14 +106,14 @@
                 </div>
 
                 Coming to images, there are simple image blocks with descriptions wich will help you with understanding or just giving you some context:
-                
+
                 <div class="image__container">
                     <img src="/media/brokeup.png" onerror="this.src='/media/in-progress.png';" alt="">
                     <div class="image_description">This is not how you make a visual config!</div>
                 </div>
 
                 And grouped images, good for comparing something which we will definetely do.
-                
+
                 <div class="groupedimg_responsive">
                     <div class="image__container">
                         <img src="/media/fatality.png" onerror="this.src='/media/in-progress.png';" alt="">
@@ -129,7 +130,7 @@
 
                 Now if you aren't familiar with Null Core or you've never seen it let's start with its actual User Interface (later called UI).
                 On the image below you can see the first appeareance of it once you have it injected in game by clicking INS by default.
-                
+
                 <div class="protip">
                     <em class='bx bx-bulb'></em> Null Core will always remind you the button to open the cheat once you load in TF2 with it by notification
                 </div>
@@ -140,27 +141,27 @@
 
                 Upon clicking on the icon, you'll see the menu with tabs and quick-acess console commands for your own comfort pop up.
                 Let's break it down - no need to hurry.
-                
+
                 <div class="image__container">
                     <img src="/media/guides/UI_Menu.png" onerror="this.src='/media/in-progress.png';" alt="">
                     <div class="image_description">Let's call it navigation menu</div>
                 </div>
 
                 Here you can change your steam name, custom name and disconnect reason, quickly reconnect to the server you're currently on (<span class="text_codesnip">Retry</span> button), fix your bugged in-game sound, i.e non-stopping pyros flamethrower sounds, sounds of cart moving even if it doesn't (<span class="text_codesnip">SND_Restart</span> button or <span class="text_codesnip">StopSound</span> which would be a faster option).
-                
+
                 <span class="text_codesnip">CL_FullUpdate</span> button can also fix various things like elements of your HUD (health, ammo) being invisible and <span class="text_codesnip">Status</span> button which will show you information about players on the server, their ping, steam IDs and so on in your in-game console.
 
                 You can also notice information about <strong>Cloud Usage</strong> being shown. Null Core stores your configuration files and visual configurations in cloud which then gets synchronized with the cloud upon closing TF2 or starting your loader.
-                
+
                 <div class="warnbox">
                     <em class='bx bxs-error-circle'></em> Note that Custom Name and Disconnect Reason no longer work in official TF2 servers.
                 </div>
 
                 <p id="playermanager"># Player Manager</p>
                 <div class="writtenby">Written by <span class="admin">Admin</span></div>
-                
+
                 Coming to Player Manager it's straight forward - first thing you'll see is a big window with, if you're currently on server with players, players themselves including yourself and additional information like NCU or Priority, or none, if you're not in any server.
-                
+
                 <div class="groupedimg_responsive">
                     <div class="image__container">
                         <img src="/media/guides/UI_PlayerManager.png" onerror="this.src='/media/in-progress.png';" alt="">
@@ -180,11 +181,11 @@
                 NCU (Null Core User) header will display yours and other peoples NCU.
                 On other side, your ESP (Extra Sensory Perception) will display other players who also use Null Core as NCP (Null Core Player).
                 On two images above you can notice there's three priorities, "Local Player", "Auto-Normal" and "Auto-Ignore".
-                As they speak for themselves, they are automatic as "Auto-Ignore" will prevent from shooting your own teammates but will still let you target them with Medi Gun or Crusader's Crossbow. 
+                As they speak for themselves, they are automatic as "Auto-Ignore" will prevent from shooting your own teammates but will still let you target them with Medi Gun or Crusader's Crossbow.
                 "Auto-Normal" priority being the default priority for your opponents, which makes the Aimbot treat each target equally (priority-wise).
                 However, you can ignore (prevent Aimbot/Triggerbot from targeting specific target) any player you want by right clicking on that player no matter where or under what header and choosing the "Priority: Ignore" option.
                 To set it back to default or let's say, unignore, click on that player again and choose "Priority: Auto" which will assign a default priority based on his team.
-                
+
                 <div class="protip">
                     <em class='bx bx-bulb'></em> Null Core automatically detects mp_friendlyfire 1, setting the priority of your teammates from "Auto-Ignore" to "Auto-Normal", custom priorities which has been set to a specific player will always remain untouched!
                 </div>
@@ -197,7 +198,7 @@
                 Talking about priorities, all players with custom or "Ignore" priorities are getting saved in "Stored" tab.
                 You can export and import any priorities you want by right clicking on headers, and choosing the options you want in context menu.
                 "Recent" tab will show you every player you've played with, when you played with that player and provide you an ability to open their Steam profiles by right clicking (works the same way in "Active" tab) including an ability to export that list as well.
-                
+
                 <div class="warnbox">
                     <em class='bx bxs-error-circle'></em> The "Recent" list has a limit of 4096 recent players it can store. Therefore if you have been playing with Null Core for a very long time and have never thought about this tab, we recommend you to clean it once in a while as opening it can cause your game to crash or a big FPS drop.
                 </div>
@@ -209,7 +210,7 @@
                 CVar Manager lets you bypass various console commands which are considered as a cheat console command.
                 For example, you can change your viewmodel offsets. Now, the command is considered as a cheat so we can 'set' sv_cheats to 1 to bypass it, of course server won't let you use noclip.
                 Or you can enable clip brushes on official TF2 servers without any problems.
-                
+
                 <div class="groupedimg_responsive">
                     <div class="image__container">
                         <img src="/media/guides/UI_CVarManager.png" onerror="this.src='/media/in-progress.png';" alt="">
@@ -232,7 +233,7 @@
 
                 Upon opening Settings menu, you'll see a window with a lot of check boxes and other tabs inside which can get a bit confusing at first, but don't worry, we'll go through each, what it does and should you enable it.
                 Of course, Null Core's menu isn't perfect, it has a quite a lot of broken features, some cheat limitations only an experienced user might know and so on, we'll try to break down each thing.
-                
+
                 <div class="image__container">
                     <img src="/media/guides/UI_General.png" onerror="this.src='/media/in-progress.png';" alt="">
                     <div class="image_description">Settings menu</div>
@@ -246,24 +247,24 @@
                 Null Core has two types of configuration files or, presets - the first of them is the ones indicated in the picture above (that is, preset named "Default 1" in General tab) which contain almost everything - from the aimbot settings to the simple text for spam in the chat.
                 You're given 3 actions you can perform with this configuration - Reset your selected config, import and export with little corresponding icons on the right.
                 You can click on the arrow pointing down to open dropdown menu of all configs.
-                
+
                 <div class="protip">
                     <em class='bx bx-bulb'></em> Null Core only have 12 configuration slots which are given to you by default (From "Default 1" to "Default 12"), you cannot create more but you can reset the ones you don't need. If you are importing a config, make sure you have chosen an empty slot because it will be overwritten. Be more wise when creating/importing configs!
                 </div>
-                
+
                 Down below in the Settings menu you can set hotkey to quickly load your config but it's a bit different.
                 No matter what key you choose in dropdown menu, you will still have to press F1-F12 with the key you have chosen unless it is set to "None" which will make the cheat load your configs by just pressing F1-F12 buttons.
-                
+
                 <div class="image__container">
                     <img src="/media/guides/UI_HotloadKey.png" onerror="this.src='/media/in-progress.png';" alt="">
                     <div class="image_description">Setting a Hotload key</div>
                 </div>
-                
+
                 <p id="networking"># Networking</p>
                 <div class="writtenby">Written by <span class="admin">Admin</span> and <span class="contributor">krawi <em class='bx bxs-badge-check'></em></span></div>
 
                 Networking tab is located right below configs tab, leaving you with three options - "NCU Visibility", "Optimize Networking" and "No Lerp".
-                
+
                 <div class="image__container">
                     <img src="/media/guides/UI_Networking.png" onerror="this.src='/media/in-progress.png';" alt="">
                 </div>
@@ -285,7 +286,7 @@
                 "Optimize networking" option will do what it says. It will apply the best networking options based on the server you're currently connected to. It is recommended to leave this option on.
                 <br>
                 "No lerp" will disable interpolation. Source's interpolation system prevents the jittery motion of players and eneteties by buffering server updates and then interpolating the gaps between these updates.
-                With Null Core, you can disable the interpolation to gain a slight time advantage and overall accuracy with hitscan weapons. 
+                With Null Core, you can disable the interpolation to gain a slight time advantage and overall accuracy with hitscan weapons.
                 <br>
                 You can read more about this topic here - <a class="other__clickablelink" href="https://developer.valvesoftware.com/wiki/Interpolation" target="_blank">Valve Developer Community - Interpolation</a>
                 <div class="protip">
