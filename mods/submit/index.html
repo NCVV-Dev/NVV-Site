@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Hey there! Have a good day :) -->
+
 <head>
     <title>NVV - Mod Submit Page</title>
     <link rel="stylesheet" type="text/css" href="/ncv.css?v=<?php echo filemtime('ncv.css'); ?>">
@@ -56,6 +58,9 @@
             <a href="/tos/" rel="noopener">
                 <span class="links_name">LA/TOS</span>
             </a>
+            <a href="/guides/">
+                <span class="links_name">Guides</span>
+            </a>
             <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener">
                 <span class="links_name">Report an Issue</span>
             </a>
@@ -78,7 +83,7 @@
         <h1 class="animate__animated animate__fadeInDown">submit mod</h1>
         <div class="clm">
             <div class="infocolumn animate__animated animate__fadeInUp animate__fast">
-                <h1>TOS Reminder</h1>
+                <h1>Make sure you've read our reminders</h1>
                 <div class="reminderline">
                     - Make sure you're putting a link from a trusted (by NVV) source (Google Drive, Discord, Gamebanana). Otherwise it'll be denied without further reviewing.
                 </div>
@@ -91,9 +96,9 @@
             </div>
             <div class="infocolumn animate__animated animate__fadeIn">
                 <form class="contentform" action="upload.php" method="post" enctype="multipart/form-data">
-                    <h2>Enter your username<span>*</span></h2>
+                    <h2>Enter your <span class="colormod">Username</span>*</h2>
                     <input type="text" name="textName" id="authorName" autocomplete="off" required>
-                    <h2>Enter your Steam/Telegram profile<span>*</span></h2>
+                    <h2>Your profile <span class="colormod">Steam URL</span> (optional)</h2>
                     <input type="text" name="textSteam" id="authorSteam" autocomplete="off" required>
                     <h2>Enter your mod link<span>*</span></h2>
                     <input type="text" name="textLink" id="modLink" autocomplete="off" required>
