@@ -380,26 +380,21 @@ input[type="submit"]:hover {
 
 /* Column grid for submit page */
 .clm {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 60vh));
+    display: block;
     position: relative;
-    align-items: stretch;
     padding: 0 20px;
     justify-content: center;
-    flex-wrap: nowrap;
 }
 
 /* Columns for submit page */
 .infocolumn {
-    display: flex;
     height: auto;
-    flex-direction: column;
     align-content: center;
     border-radius: 10px;
     margin: 20px;
     transition-duration: .5s;
     overflow: hidden;
-    user-select: none;
+    text-align: center;
 }
 
 /* Styling of middle column */
@@ -457,9 +452,11 @@ input[type="submit"]:hover {
 .reminderline {
     font-family: Roboto, sans-serif;
     font-size: 20px;
-    margin: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 10px;
     color: var(--warn);
-    text-align: left;
+    text-align: center;
 }
 
 /* Styling of right column */
@@ -468,12 +465,7 @@ input[type="submit"]:hover {
     font-size: 20px;
     margin: 10px;
     color: var(--tostextcolor);
-    text-align: left;
-}
-
-.helpdesk {
-    text-align: center !important;
-    font-size: 20px !important;
+    text-align: center;
 }
 
 /* Color modulated text for highlights on upload page */
@@ -1843,7 +1835,7 @@ div.contentgd {
     color: var(--warn);
 }
 
-/* Handling future images and gifs */
+/* Handling images and gifs */
 .image__container {
     position: relative;
     margin: 10px 0 10px 10px;
@@ -1871,7 +1863,34 @@ div.contentgd {
     width: 300px;
 }
 
-/* Two images grouped */
+/* Grouped images */
 .groupedimg_responsive {
     display: flex;
+}
+
+/* LoadingBar.js */
+.ldBar {
+    position: relative;
+}
+
+.ldBar svg {
+    margin-top: 18px;
+}
+
+.ldBar.label-center>.ldBar-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 3px #fff;
+}
+
+.ldBar-label:after {
+    content: "%";
+    display: inline;
+}
+
+.ldBar.no-percent .ldBar-label:after {
+    content: "";
 }
