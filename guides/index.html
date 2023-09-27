@@ -184,7 +184,7 @@
                 As they speak for themselves, they are automatic as "Auto-Ignore" will prevent from shooting your own teammates but will still let you target them with Medi-Gun or Crusader's Crossbow.
                 "Auto-Normal" priority being the default priority for your opponents, which makes Aim Bot treat each target equally (priority-wise).
                 However, you can ignore (prevent Aim Bot/Trigger Bot from targeting specific target) any player you want by right clicking on that player no matter where or under what header and choosing the "Priority: Ignore" option.
-                To set it back to default or let's say, unignore, click on that player again and choose "Priority: Auto" which will assign a default priority based on his team.
+                To set it back to default or let's say, unignore, click on that player in player manager again and choose "Priority: Auto" which will assign a default priority based on that player's team.
 
                 <div class="protip">
                     <em class='bx bx-bulb'></em> Null Core automatically detects mp_friendlyfire 1, setting the priority of your teammates from "Auto-Ignore" to "Auto-Normal", custom priorities which has been set to a specific player will always remain untouched!
@@ -272,7 +272,7 @@
                 Simply put, NCU Visibility lets you see other Null Core users and vise-versa.
                 For example if you are using default visual config which comes with Null Core by default, this is what you'll see:
 
-                <div class="groupedimg_responsive">
+                <div class="groupedimg_responsive restricted">
                     <div class="image__container">
                         <img src="/media/guides/Visuals_NCU_Shown.png" onerror="this.src='/media/in-progress.png';" alt="">
                         <div class="image_description">NCU Visibility enabled</div>
@@ -288,15 +288,94 @@
                 "No lerp" will disable interpolation. Source's interpolation system prevents the jittery motion of players and entities by buffering server updates and then interpolating the gaps between these updates.
                 With Null Core, you can disable the interpolation to gain a slight time advantage and overall accuracy with hitscan weapons.
                 <br>
-                You can read more about this topic here - <a class="other__clickablelink" href="https://developer.valvesoftware.com/wiki/Interpolation" target="_blank">Valve Developer Community - Interpolation</a>
+                You can read more about interpolation here - <a class="other__clickablelink" href="https://developer.valvesoftware.com/wiki/Interpolation" target="_blank">Valve Developer Community - Interpolation</a>
+
                 <div class="protip">
                     <em class='bx bx-bulb'></em> We highly recommend disabling "No lerp" feature before joining any community made server since it is detectable by some custom Anti-Cheats. You're free as a bird to use it on Valve servers!
                 </div>
 
-                <p id="foundmistake"># Contributing</p>
+                <p id="generalmisc"># General Misc Settings</p>
+                <div class="writtenby">Written by <span class="admin">Admin</span></div>
+
+                While we finish this page off, we have only a couple more settings left in the same general tab.
+
+                <div class="image__container">
+                    <img src="/media/guides/UI_General_Misc.png" onerror="this.src='/media/in-progress.png';" alt="">
+                </div>
+
+                Null Core is supplied with very handy tooltips if you hover over any setting so understanding them shouldn't be a big problem! However sometimes it still can get a little confusing.
+                <br>
+                Let's get things as simple as we can - "Suppress CPU Throttle" disables CPU throttling when you're alt-tabbed out of the game, resulting in game having very low FPS.
+                <br>
+                "Block MOTD" - Blocks "Message Of The Day", a window which welcomes you to a TF2 server. Very useful and is recommended to have it on.
+                <br>
+                "Show Enemy Classes" (New) - Shows enemy class icons in scoreboard. It is recommended to have it on.
+                <br>
+                "Message Queue Send Delay" - A delay that is given before sending another message using "Chat Spam" feature. It is recommended to have it on "5.00"
+                <br>
+                
+                <p id="otherguides"># Other Guides</p>
+                <p id="viewmodeleditor_install" class="gd_smaller">## Viewmodel Editor Installation</p>
+                <div class="writtenby">Written by <span class="admin">Admin</span></div>
+
+                If you're struggling with a manual installation and can't look at text in a eye-blinding notepad, this is for you!
+                Viewmodel Editor installation is pretty easy, now it's bundled with fixed viewmodels and a ready to use preset so the only thing you have to do is tweak viewmodels to your liking!
+                <br><br>
+                Let's start by downloading the mod and install it the way we do with most of the mods - <a class="other__clickablelink" href="https://ncvisualsvault.cc/dwnl/click.php?id=118" target="_blank">Direct Download</a>
+                <br>
+                Drag and drop the folder from the zip into your custom folder located at<span class="snapcodesnip">Steam\steamapps\common\Team Fortress 2\tf\custom</span>
+                <br>
+                Open the folder you just extracted and you should see this with the same path
+
+                <div class="image__container">
+                    <img src="/media/guides/VME_Folder.png" onerror="this.src='/media/in-progress.png';" alt="">
+                </div>
+
+                <div class="protip">
+                    <em class='bx bx-bulb'></em> If you don't want to tweak stuff yourself, use a ready preset for moving viewmodel slightly to the right in presets folder. Open "admins guns" and replace the files inside that folder with the original ones you see on the screenshot! Good to proceed!
+                </div>
+
+                If you want to make your own class presets by editing settings_'classname', you can either look at positions and X,Y,Z coordinates here or by opening two images inside a folder
+                
+                <div class="protip">
+                    <em class='bx bx-bulb'></em> Make sure you've set all of the same positions on all animations inside settings file or the viewmodel position/rotation will be reset back to default i.e when inspecting a gun!
+                </div>
+                <div class="groupedimg_responsive">
+                    <div class="image__container">
+                        <img src="/media/guides/VME_Position.jpg" onerror="this.src='/media/in-progress.png';" alt="">
+                        <div class="image_description">Positions</div>
+                    </div>
+                    <div class="image__container">
+                        <img src="/media/guides/VME_Rotation.jpg" onerror="this.src='/media/in-progress.png';" alt="">
+                        <div class="image_description">Rotations</div>
+                    </div>
+                </div>
+
+                You can also disable the animations you don't want and make them static, for example idle animation of a gun
+                <br>
+                Done tweaking your own viewmodel positions? Run the _GENERATE.bat file!
+
+                <div class="groupedimg_responsive">
+                    <div class="image__container">
+                        <img src="/media/guides/VME_BATMain.png" onerror="this.src='/media/in-progress.png';" alt="">
+                        <div class="image_description">Once you see this window, press 1 or 2 depending on if you want to install settings on all classes</div>
+                    </div>
+                    <div class="image__container">
+                        <img src="/media/guides/VME_BATOverride.png" onerror="this.src='/media/in-progress.png';" alt="">
+                        <div class="image_description">Press y and press enter!</div>
+                    </div>
+                </div>
+
+                If everything runs smoothly, congrats! You now have viewmodels with position and rotation
+
+                <div class="image__container">
+                    <img src="/media/guides/VME_BATDone.png" onerror="this.src='/media/in-progress.png';" alt="">
+                </div>
+
+                <p id="contributing"># Contributing</p>
 
                 Found a mistake? Something is broken? Noticed a typo or would like to give a better explanation? You can always contribute to NVV by correcting us at public <a class="other__clickablelink" href="https://t.me/ncvisualsvault" target="_blank" rel="noopener">Telegram</a> chat or creating a bug report at <a class="other__clickablelink" href="https://github.com/NCVV-Dev/NVV-Site/issues/new/choose" target="_blank" rel="noopener">GitHub</a>.<br>
-                Want to add your own topic, correct numbers, text, make it more fancy? Please use links above and specify your reason!
+                Want to add your own topic, correct numbers, text, make it more fancy? Please use links above and contact us!
 
             </div>
         </div>
@@ -304,5 +383,6 @@
     <div class="solid"></div>
 </body>
 <script src="/js/main.js"></script>
+<script src="/js/paragraphs.js"></script>
 
 </html>
