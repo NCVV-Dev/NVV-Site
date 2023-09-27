@@ -1739,6 +1739,16 @@ div.contentgd {
     text-align: left;
     text-transform: none;
     margin-bottom: 5px;
+    transition: all 300ms ease-in-out;
+}
+
+.contentgd p:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.gd_smaller {
+    font-size: 20px !important;
 }
 
 .content__text {
@@ -1870,4 +1880,8 @@ div.contentgd {
 /* Grouped images */
 .groupedimg_responsive {
     display: flex;
+}
+
+.restricted {
+    max-width: 1150px;
 }
