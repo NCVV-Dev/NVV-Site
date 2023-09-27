@@ -48,7 +48,7 @@ function switchtheme() {
 }
 
 // Page loader
-(function() {
+(function () {
     function id(v) {
         return document.getElementById(v)
     }
@@ -72,7 +72,7 @@ function switchtheme() {
         }
 
         function doneLoading() {
-            setTimeout(function() {
+            setTimeout(function () {
                 prog.style.opacity = "none";
                 prog.style.opacity = 0
             }, 1800)
@@ -123,22 +123,22 @@ $(function () {
 })
 
 // Find the most downloaded config and assign icon with text to the tab
-    let highestNumber = 0;
-    document.querySelectorAll('.dwn__count').forEach(elem => {
-        let downCount = parseInt(elem.innerText.trim())
-        if (downCount > highestNumber)
-            highestNumber = downCount;
-    });
+let highestNumber = 0;
+document.querySelectorAll('.dwn__count').forEach(elem => {
+    let downCount = parseInt(elem.innerText.trim())
+    if (downCount > highestNumber)
+        highestNumber = downCount;
+});
 
-    let icon = document.createElement("em");
-    icon.className = "bx bxs-hot tooltip";
-    icon.style = "color: var(--buttonhover);";
+let icon = document.createElement("em");
+icon.className = "bx bxs-hot tooltip";
+icon.style = "color: var(--buttonhover);";
 
-    document.querySelectorAll('.dwn__count').forEach(elem => {
-        if (parseInt(elem.innerText.trim()) == highestNumber) {
-            elem.appendChild(icon.cloneNode(true));
-        }
-    });
+document.querySelectorAll('.dwn__count').forEach(elem => {
+    if (parseInt(elem.innerText.trim()) == highestNumber) {
+        elem.appendChild(icon.cloneNode(true));
+    }
+});
 
 
 // Init images for preview
@@ -424,4 +424,4 @@ function copyCode(id) {
     window.getSelection().selectAllChildren(str);
     document.execCommand("Copy");
     window.getSelection().removeAllRanges();
-} 
+}
