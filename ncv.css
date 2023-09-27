@@ -1798,6 +1798,19 @@ div.contentgd {
     outline: var(--itemtaboutline) 1px solid;
 }
 
+.snapcodesnip {
+    position: relative;
+    width: fit-content;
+    color: var(--generaltextcolor);
+    background-color: var(--latosbackgr);
+    font-size: 17px;
+    font-family: monospace;
+    padding: 4px;
+    margin-left: 5px;
+    border-radius: 5px;
+    outline: var(--itemtaboutline) 1px solid;
+}
+
 .text_codesnip {
     position: relative;
     width: fit-content;
