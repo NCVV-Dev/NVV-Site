@@ -725,10 +725,21 @@ input[type="submit"]:hover {
     top: 0px;
     background-color: var(--tagbg);
     color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 5px;
     border-radius: 3px;
     z-index: 1;
+}
+
+.tag a {
+    text-decoration: none;
+    color: var(--generaltextcolor);
+    transition: all 300ms ease-in-out;
+}
+
+.tag a:hover {
+    cursor: pointer;
+    color: var(--linkhover);
 }
 
 .cfg__tab:hover {
@@ -774,7 +785,7 @@ input[type="submit"]:hover {
 }
 
 .cfg__title.mods {
-    font-size: 20px;
+    margin-top: 10px;
 }
 
 .cfg__author {
@@ -1897,4 +1908,9 @@ div.contentgd {
 
 .restricted {
     max-width: 1150px;
+}
+
+.paragraph_active {
+    transition: all 400ms ease-in-out;
+    color: var(--buttonsubmithover);
 }
