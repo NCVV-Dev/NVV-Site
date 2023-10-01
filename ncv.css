@@ -1920,8 +1920,9 @@ div.contentgd {
     background-color: var(--announcement);
     width: fit-content;
     margin-top: 10px;
-    padding: 10px;
+    padding: 20px;
     font-size: 15px;
+    border-radius: 5px;
 }
 
 .verify_button {
