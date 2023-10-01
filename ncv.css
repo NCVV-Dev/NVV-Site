@@ -1910,7 +1910,34 @@ div.contentgd {
     max-width: 1150px;
 }
 
+/* Click/Hover effect for paragraphs.js */
 .paragraph_active {
     transition: all 400ms ease-in-out;
     color: var(--buttonsubmithover);
+}
+
+.needs_verification {
+    background-color: var(--announcement);
+    width: fit-content;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.verify_button {
+    position: relative;
+    background-color: var(--buttonsubmitbg);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 5px;
+    border-radius: 3px;
+    font-family: Roboto, sans-serif;
+    transition: all 300ms ease-in-out;
+}
+
+.verify_button:hover {
+    background-color: var(--buttonsubmithover);
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 1px var(--buttonsubmitglow);
 }
