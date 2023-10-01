@@ -73,9 +73,9 @@
             <a href="#misc"><em class='bx bx-slider'></em> Misc</a>
             <a href="#otherfeatures"><em class='bx bx-dots-horizontal-rounded'></em> Other Features</a>
             <a href="#playstyles"><em class='bx bxs-bullseye'></em> PlayStyles</a>
-            <a href="#gamecrash"><em class='bx bx-message-alt-error'></em> Game crashes?</a>
+            <a href="#gamecrash"><em class='bx bx-message-alt-error'></em> Game Crashes?</a>
             <a href="#otherguides"><em class='bx bxs-carousel'></em> Other Guides</a>
-            <a href="#foundmistake" class="active">Found a mistake?</a>
+            <a href="#foundmistake" class="active">Found a Mistake?</a>
             <a class="hidemenu" onclick="hideNavbar()">Hide menu</a>
         </div>
 
@@ -245,11 +245,11 @@
                 <div class="writtenby">Written by <span class="admin">Admin</span></div>
 
                 Null Core has two types of configuration files or, presets - the first of them is the ones indicated in the picture above (that is, preset named "Default 1" in General tab) which contain almost everything - from the aim bot settings to the simple text for spam in the chat.
-                You're given 3 actions you can perform with this configuration - Reset your selected config, import and export with little corresponding icons on the right.
+                You're given 3 actions you can perform with the preset/config you have selected - Reset your selected config, import or export with little corresponding icons on the right.
                 You can click on the arrow pointing down to open dropdown menu of all configs.
 
                 <div class="protip">
-                    <em class='bx bx-bulb'></em> Null Core only have 12 configuration slots which are given to you by default (From "Default 1" to "Default 12"), you cannot create more but you can reset the ones you don't need. If you are importing a config, make sure you have chosen an empty slot because it will be overwritten. Be more wise when creating/importing configs!
+                    <em class='bx bx-bulb'></em> Null Core only have 12 configuration slots which are given to you by default (From "Default 1" to "Default 12"), you cannot create more but you can reset the ones you don't need. If you are importing a config, make sure you have chosen an empty slot, if needed, because it will be overwritten. Be more wise when creating/importing configs!
                 </div>
 
                 Down below in the Settings menu you can set hotkey to quickly load your config but it's a bit different.
@@ -283,15 +283,16 @@
                     </div>
                 </div>
 
-                "Optimize networking" option will do what it says. It will apply the best networking options based on the server you're currently connected to. It is recommended to leave this option on.
+                "Optimize networking" option does what it says. It will apply the best networking options and rates based on the server you're currently connected to.
+                It is recommended to leave this option on since it does not interfere with community anti-cheat therefore it is safe to keep on.
                 <br>
                 "No lerp" will disable interpolation. Source's interpolation system prevents the jittery motion of players and entities by buffering server updates and then interpolating the gaps between these updates.
-                With Null Core, you can disable the interpolation to gain a slight time advantage and overall accuracy with hitscan weapons.
+                With Null Core, you can disable the interpolation to gain a slight time advantage and overall accuracy with hitscan weapons. It is recommended to have the feature on but only in case if you are comfortable with jittery entity movements or want to gain extra accuracy.
                 <br>
                 You can read more about interpolation here - <a class="other__clickablelink" href="https://developer.valvesoftware.com/wiki/Interpolation" target="_blank">Valve Developer Community - Interpolation</a>
 
                 <div class="protip">
-                    <em class='bx bx-bulb'></em> We highly recommend disabling "No lerp" feature before joining any community made server since it is detectable by some custom Anti-Cheats. You're free as a bird to use it on Valve servers!
+                    <em class='bx bx-bulb'></em> We highly recommend disabling "No lerp" feature before joining any community made server since it is detectable by community Anti-Cheats. We also suggest you to turn "No Lerp" off if you're playing with projectiles so the predicted trajectory will be much smoother!
                 </div>
 
                 <p id="generalmisc"># General Misc Settings</p>
@@ -303,16 +304,35 @@
                     <img src="/media/guides/UI_General_Misc.png" onerror="this.src='/media/in-progress.png';" alt="">
                 </div>
 
-                Null Core is supplied with very handy tooltips if you hover over any setting so understanding them shouldn't be a big problem! However sometimes it still can get a little confusing.
+                Don't forget that Null Core is supplied with very handy tooltips if you hover over any setting so understanding them shouldn't be a big problem!
+                For the most part we'll talk about why and for what reason you should enable it the feature!
                 <br>
                 Let's get things as simple as we can - "Suppress CPU Throttle" disables CPU throttling when you're alt-tabbed out of the game, resulting in game having very low FPS.
+                We recommend to have this feature on if you are running the game in borderless or windowed mode as sudden FPS drops when the game is out of focus can be a little frustruating.
                 <br>
-                "Block MOTD" - Blocks "Message Of The Day", a window which welcomes you to a TF2 server. Very useful and is recommended to have it on.
+                "Block MOTD" - Blocks "Message Of The Day", a window which welcomes you to a TF2 server.
+                Very useful and is recommended to have it on.
                 <br>
-                "Show Enemy Classes" (New) - Shows enemy class icons in scoreboard. It is recommended to have it on.
+                "Show Enemy Classes" (New) - Shows enemy class icons in scoreboard.
+                It is recommended to have the feature on.
                 <br>
-                "Message Queue Send Delay" - A delay that is given before sending another message using "Chat Spam" feature. It is recommended to have it on "5.00"
+                "Message Queue Send Delay" - A delay that is given before sending another message using "Chat Spam" feature.
+                It is recommended to have it on "5.00" to prevent you getting temporarily muted.
                 <br>
+                "Ping Reducer" - Reduces your ping to a certain point. Recommended to use with "Fake Latency" paired to achieve legitimate ping.
+
+                <div class="protip">
+                    <em class='bx bx-bulb'></em> While this does normalize your ping to more believable numbers in scoreboard when used with "Fake Latency", 'status' console command would still show your ping along with "Fake Latency" 
+                </div>
+
+                "Fake Latency" -
+
+                <div class="needs_verification">
+                    This chapter needs information verification or more context. If you have found a mistake, please report it!<br><br>
+                    <a href="" class="verify_button">
+                        I have a better explanation
+                    </a>
+                </div>
 
                 <p id="otherguides"># Other Guides</p>
                 <p id="viewmodeleditor_install" class="gd_smaller">## Viewmodel Editor Installation</p>
@@ -335,11 +355,9 @@
                     <em class='bx bx-bulb'></em> If you don't want to tweak stuff yourself, use a ready preset for moving viewmodel slightly to the right in presets folder. Open "admins guns" and replace the files inside that folder with the original ones you see on the screenshot! Good to proceed!
                 </div>
 
-                If you want to make your own class presets by editing settings_'classname', you can either look at positions and X,Y,Z coordinates here or by opening two images inside a folder
+                If you want to make your own class presets by editing settings_'classname', you can either look at positions and X,Y,Z coordinates here or by opening two images inside a mod folder
+                <br>
 
-                <div class="protip">
-                    <em class='bx bx-bulb'></em> Make sure you've set all of the same positions on all animations inside settings file or the viewmodel position/rotation will be reset back to default i.e when inspecting a gun!
-                </div>
                 <div class="groupedimg_responsive">
                     <div class="image__container">
                         <img src="/media/guides/VME_Position.jpg" onerror="this.src='/media/in-progress.png';" alt="">
@@ -351,14 +369,19 @@
                     </div>
                 </div>
 
-                You can also disable the animations you don't want and make them static, for example idle animation of a gun
-                <br>
-                Done tweaking your own viewmodel positions? Run the _GENERATE.bat file!
+                In the following setting files you can edit pretty much everything you need - Positions of specific weapons, primaries, secondary's, inspection animations, removing a left hand or enable static animations!
+                These settings are pretty easy to understand once you open one of them if you wanna tweak the positions yourself.
+                
+                <div class="protip">
+                    <em class='bx bx-bulb'></em> Make sure you've set all of the same positions on all animations inside settings file or the viewmodel position/rotation will be reset back to default i.e when inspecting a gun!
+                </div>
+
+                Done tweaking your own viewmodel positions or installing one of the presets? Run the <span class="snapcodesnip">_GENERATE.bat</span> file!
 
                 <div class="groupedimg_responsive">
                     <div class="image__container">
                         <img src="/media/guides/VME_BATMain.png" onerror="this.src='/media/in-progress.png';" alt="">
-                        <div class="image_description">Once you see this window, press 1 or 2 depending on if you want to install settings on all classes</div>
+                        <div class="image_description">Once you see this window, press 1 or 2 depending on if you want to install settings on all classes or a specific one, hit enter</div>
                     </div>
                     <div class="image__container">
                         <img src="/media/guides/VME_BATOverride.png" onerror="this.src='/media/in-progress.png';" alt="">
@@ -366,7 +389,7 @@
                     </div>
                 </div>
 
-                If everything runs smoothly, congrats! You now have viewmodels with position and rotation
+                If everything runs smoothly and you'll see the window as displayed above, congrats, you now have viewmodels with positions and rotations set!
 
                 <div class="image__container">
                     <img src="/media/guides/VME_BATDone.png" onerror="this.src='/media/in-progress.png';" alt="">
