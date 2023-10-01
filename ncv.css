@@ -1916,6 +1916,7 @@ div.contentgd {
     color: var(--buttonsubmithover);
 }
 
+/* Chapter verification */
 .needs_verification {
     background-color: var(--announcement);
     width: fit-content;
