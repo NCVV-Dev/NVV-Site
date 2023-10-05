@@ -4,7 +4,7 @@ $(function () {
     $('p').click(function () {
         // Scroll to the clicked paragraph
         let clickParagraph = $(this).attr('id')
-        clickParagraph.href = h;
+        clickParagraph.href = clickParagraph;
         document.location.href = '#' + clickParagraph;
 
         let paragraph = $(this)

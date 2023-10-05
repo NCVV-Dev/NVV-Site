@@ -209,6 +209,7 @@ function switchrandomizing() {
         t.style.color = "var(--warn)";
         t.innerHTML = "Visual config shuffle disabled";
         t.className = "show";
+
         setTimeout(function () {
             t.className = t.className.replace("show", "");
         }, 3000);
@@ -216,8 +217,9 @@ function switchrandomizing() {
         setCookie("EnableShuffle", "true", 365);
 
         t.style.color = "var(--buttonsubmitbg)";
-        t.innerHTML = "Visual config shuffle enabled!";
+        t.innerHTML = "Visual config shuffle enabled";
         t.className = "show";
+
         setTimeout(function () {
             t.className = t.className.replace("show", "");
         }, 3000);
@@ -342,7 +344,6 @@ if (getCookie("FirstTime") != "False") {
 function sortbyname() {
     let parent = $("#randomize");
     let divs = parent.children();
-
     let OrderedDivsByName = divs.sort(function (a, b) {
         return $(a).find(".cfg__title").text() > $(b).find(".cfg__title").text();
     });
@@ -352,6 +353,7 @@ function sortbyname() {
     t.style.color = "var(--buttonsubmitbg)";
     t.innerHTML = "Sorted!";
     t.className = "show";
+
     setTimeout(function () {
         t.className = t.className.replace("show", "");
     }, 3000);
@@ -362,10 +364,10 @@ function sortbymostdwnl() {
     let parent = $("#randomize");
     let divs = parent.children();
     let OrderedDivsByDwnl = divs.sort(function (a, b) {
+
         // Fetch raw values
         const aRaw = fetchTextNodesContent($(a).find(".dwn__count"));
         const bRaw = fetchTextNodesContent($(b).find(".dwn__count"));
-
         const aParsed = parseInt(aRaw);
         const bParsed = parseInt(bRaw);
 
