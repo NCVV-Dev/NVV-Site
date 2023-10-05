@@ -27,23 +27,21 @@ function eraseCookie(e) {
 }
 
 // Theme switch functionality
-if (getCookie("themebtn") == 'pressed') {
-    localStorage.setItem('data-theme', 'ncl');
-    document.body.setAttribute('data-theme', 'ncl')
+if (getCookie("Theme") == 'NVV') {
+    setCookie("Theme", "NVV", 365);
+    document.body.setAttribute('data-theme', 'nvv')
 } else {
-    localStorage.setItem('data-theme', 'nvv');
-    document.body.setAttribute('data-theme', 'nvv');
+    setCookie("Theme", "NCL", 365);
+    document.body.setAttribute('data-theme', 'ncl');
 }
 
 function switchtheme() {
-    if (localStorage.getItem('data-theme') == 'nvv') {
+    if (getCookie("Theme") == 'NVV') {
         document.body.setAttribute('data-theme', 'ncl');
-        localStorage.setItem('data-theme', 'ncl');
-        setCookie("themebtn", "pressed", 365);
+        setCookie("Theme", "NCL", 365);
     } else {
         document.body.setAttribute('data-theme', 'nvv');
-        localStorage.setItem('data-theme', 'nvv');
-        setCookie("themebtn", "notpressed", 365);
+        setCookie("Theme", "NVV", 365);
     }
 }
 
@@ -118,28 +116,30 @@ $(function () {
         "https://ncvisualsvault.cc/media/menus/animemenu.png",
         "https://ncvisualsvault.cc/media/menus/coldbluemenu.png"
     ];
+
     let number = Math.floor(Math.random() * ImageArray.length);
     return document.getElementById("randomimage").innerHTML = '<img src="' + ImageArray[number] + '" />';
 })
 
 // Find the most downloaded config and assign icon with text to the tab
-let highestNumber = 0;
-document.querySelectorAll('.dwn__count').forEach(elem => {
-    let downCount = parseInt(elem.innerText.trim())
-    if (downCount > highestNumber)
-        highestNumber = downCount;
-});
+$(function () {
+    let highestNumber = 0;
+    document.querySelectorAll('.dwn__count').forEach(elem => {
+        let downCount = parseInt(elem.innerText.trim())
+        if (downCount > highestNumber)
+            highestNumber = downCount;
+    });
 
-let icon = document.createElement("em");
-icon.className = "bx bxs-hot tooltip";
-icon.style = "color: var(--buttonhover);";
+    let icon = document.createElement("em");
+    icon.className = "bx bxs-hot tooltip";
+    icon.style = "color: var(--buttonhover);";
 
-document.querySelectorAll('.dwn__count').forEach(elem => {
-    if (parseInt(elem.innerText.trim()) == highestNumber) {
-        elem.appendChild(icon.cloneNode(true));
-    }
-});
-
+    document.querySelectorAll('.dwn__count').forEach(elem => {
+        if (parseInt(elem.innerText.trim()) == highestNumber) {
+            elem.appendChild(icon.cloneNode(true));
+        }
+    });
+})
 
 // Init images for preview
 function initpicture() {
