@@ -107,7 +107,8 @@ function WelcomeButtonAction() {
     }, 1100);
 };
 
-// Random image for welcome page (loads after main website image)
+// Showcase random image for welcome page
+// NOTE: Loads after website images 
 $(function () {
     const ImageArray = [
         "https://ncvisualsvault.cc/media/menus/raizomenu.png",
@@ -141,7 +142,7 @@ $(function () {
     });
 })
 
-// Init images for preview
+// Initialize images for preview
 function initpicture() {
     let e = document.querySelectorAll(".cfgvrow img"),
         c = document.querySelector("#preview"),
@@ -172,7 +173,7 @@ function search() {
     }
 }
 
-// Pop-up for future use
+// Define pop-up for future use
 let t = document.getElementById("nf__popup");
 
 if (window.location.pathname == '/') {
@@ -204,7 +205,6 @@ $("#uploadTrigger").click(function () {
 function switchrandomizing() {
     if (getCookie("EnableShuffle") == "true") {
         setCookie("EnableShuffle", "false", 365);
-        localStorage.setItem('enableshuffle', 'false');
 
         t.style.color = "var(--warn)";
         t.innerHTML = "Visual config shuffle disabled";
@@ -214,7 +214,6 @@ function switchrandomizing() {
         }, 3000);
     } else {
         setCookie("EnableShuffle", "true", 365);
-        localStorage.setItem('enableshuffle', 'true');
 
         t.style.color = "var(--buttonsubmitbg)";
         t.innerHTML = "Visual config shuffle enabled!";
@@ -228,7 +227,7 @@ function switchrandomizing() {
 // Shuffling proccess
 if (window.location.pathname == '/') {
     $(function () {
-        if (getCookie("EnableShuffle") == "true" || localStorage.getItem('enableshuffle') == 'true') {
+        if (getCookie("EnableShuffle") == "true") {
             let parent = $("#randomize");
             let divs = parent.children();
             divs.sort(function (a, b) {
@@ -243,99 +242,101 @@ if (window.location.pathname == '/') {
                 t.className = t.className.replace("show", "");
             }, 3000);
         } else {
-            localStorage.setItem('enableshuffle', 'false');
             setCookie("EnableShuffle", "false", 365)
         }
     });
 }
+
 // Text Animation on the Welcome Page
-class Randchar {
-    constructor(el) {
-        this.el = el
-        this.chars = '!<>-_\\/[]{}—=+*^?#________'
-        this.update = this.update.bind(this)
-    }
-
-    setText(newText) {
-        const oldText = this.el.innerText
-        const length = Math.max(oldText.length, newText.length)
-        const promise = new Promise((resolve) => this.resolve = resolve)
-        this.queue = []
-        for (let i = 0; i < length; i++) {
-            const from = oldText[i] || ''
-            const to = newText[i] || ''
-            const start = Math.floor(Math.random() * 40)
-            const end = start + Math.floor(Math.random() * 40)
-            this.queue.push({
-                from,
-                to,
-                start,
-                end
-            })
+if (getCookie("FirstTime") != "False") {
+    class Randchar {
+        constructor(el) {
+            this.el = el
+            this.chars = '!<>-_\\/[]{}—=+*^?#________'
+            this.update = this.update.bind(this)
         }
-        cancelAnimationFrame(this.frameRequest)
-        this.frame = 0
-        this.update()
-        return promise
-    }
 
-    update() {
-        let output = ''
-        let complete = 0
-        for (let i = 0, n = this.queue.length; i < n; i++) {
-            let {
-                from,
-                to,
-                start,
-                end,
-                char
-            } = this.queue[i]
-            if (this.frame >= end) {
-                complete++
-                output += to
-            } else if (this.frame >= start) {
-                if (!char || Math.random() < 0.28) {
-                    char = this.randomChar()
-                    this.queue[i].char = char
+        setText(newText) {
+            const oldText = this.el.innerText
+            const length = Math.max(oldText.length, newText.length)
+            const promise = new Promise((resolve) => this.resolve = resolve)
+            this.queue = []
+            for (let i = 0; i < length; i++) {
+                const from = oldText[i] || ''
+                const to = newText[i] || ''
+                const start = Math.floor(Math.random() * 40)
+                const end = start + Math.floor(Math.random() * 40)
+                this.queue.push({
+                    from,
+                    to,
+                    start,
+                    end
+                })
+            }
+            cancelAnimationFrame(this.frameRequest)
+            this.frame = 0
+            this.update()
+            return promise
+        }
+
+        update() {
+            let output = ''
+            let complete = 0
+            for (let i = 0, n = this.queue.length; i < n; i++) {
+                let {
+                    from,
+                    to,
+                    start,
+                    end,
+                    char
+                } = this.queue[i]
+                if (this.frame >= end) {
+                    complete++
+                    output += to
+                } else if (this.frame >= start) {
+                    if (!char || Math.random() < 0.28) {
+                        char = this.randomChar()
+                        this.queue[i].char = char
+                    }
+                    output += `<span class="dud">${char}</span>`
+                } else {
+                    output += from
                 }
-                output += `<span class="dud">${char}</span>`
+            }
+
+            this.el.innerHTML = output
+            if (complete === this.queue.length) {
+                this.resolve()
             } else {
-                output += from
+                this.frameRequest = requestAnimationFrame(this.update)
+                this.frame++
             }
         }
-
-        this.el.innerHTML = output
-        if (complete === this.queue.length) {
-            this.resolve()
-        } else {
-            this.frameRequest = requestAnimationFrame(this.update)
-            this.frame++
+        randomChar() {
+            return this.chars[Math.floor(Math.random() * this.chars.length)]
         }
     }
-    randomChar() {
-        return this.chars[Math.floor(Math.random() * this.chars.length)]
+
+    const phrases = [
+        'No advertisements.',
+        'No popular trackers.',
+        'Just for people.',
+        'Completely free.'
+    ]
+
+    const el = document.querySelector('.text')
+    const fx = new Randchar(el)
+
+    let counter = 0
+    const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+            setTimeout(next, 800)
+        })
+        counter = (counter + 1) % phrases.length
     }
+
+    next()
 }
-
-const phrases = [
-    'No advertisements.',
-    'No popular trackers.',
-    'Just for people.',
-    'Completely free.'
-]
-
-const el = document.querySelector('.text')
-const fx = new Randchar(el)
-
-let counter = 0
-const next = () => {
-    fx.setText(phrases[counter]).then(() => {
-        setTimeout(next, 800)
-    })
-    counter = (counter + 1) % phrases.length
-}
-
-next()
 
 // Sort visual configs by name
 function sortbyname() {
@@ -364,16 +365,17 @@ function sortbymostdwnl() {
         // Fetch raw values
         const aRaw = fetchTextNodesContent($(a).find(".dwn__count"));
         const bRaw = fetchTextNodesContent($(b).find(".dwn__count"));
-        // DEBUG: Show raw parsed values
-        //console.log('raw values:', `a: "${aRaw}"`, `b: "${bRaw}"`);
 
         const aParsed = parseInt(aRaw);
         const bParsed = parseInt(bRaw);
 
         // DEBUG: Show parsed values
-        //console.log('parsed values:', `a: "${aParsed}"`, `b: "${bParsed}"`);
+        // console.log('parsed values:', `a: "${aParsed}"`, `b: "${bParsed}"`);
 
-        //Compare the values
+        // DEBUG: Show raw parsed values
+        // console.log('raw values:', `a: "${aRaw}"`, `b: "${bRaw}"`);
+
+        // Compare the values
         return bParsed - aParsed;
     })
     parent.append(OrderedDivsByDwnl);
@@ -419,6 +421,7 @@ function showNavbar() {
 };
 
 // Text copy
+// DEPRECATED: execCommand()
 function copyCode(id) {
     let str = document.getElementById(id);
     window.getSelection().selectAllChildren(str);
