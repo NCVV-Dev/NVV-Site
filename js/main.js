@@ -184,6 +184,7 @@ if (window.location.pathname == '/') {
             t.innerHTML = "Visual config submitted.";
             t.className = "show";
             eraseCookie("submit");
+        // Use 'else if' to prevent showing a pop up every page load
         } else if (getCookie("submit") == 'fail') {
             t.style.color = "var(--warn)";
             t.innerHTML = "Failed to submit your visual config :(";
