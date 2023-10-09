@@ -75,6 +75,7 @@ function switchtheme() {
                 prog.style.opacity = 0
             }, 1800)
         }
+        
         for (let i = 0; i < tot; i += 1) {
             let tImg = new Image();
             tImg.onload = imgLoaded;
