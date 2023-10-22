@@ -29,18 +29,27 @@ function eraseCookie(e) {
 // Check if user is using mobile device
 var isMobile;
 
-if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
-    isMobile = true;
+function isUserMobile() {
+    if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
+        isMobile = true;
+        setCookie("isMobile", "true", 365)
 
-    //Replace the CSS file for mobile devices for better readability
+        return true;
+    } else {
+        isMobile = false;
+        setCookie("isMobile", "false", 365)
 
-    //console.log("[isMobile] User is using mobile device/agent.. Trying to inject mobile CSS rules")
+        return false;
+    }
+}
 
-    //$('head').append('<link rel="stylesheet" type="text/css" href="mobile.css">');
-
-    //console.log("[isMobile] Done!")
-} else {
-    isMobile = false;
+//Replace the CSS file for mobile devices for better readability
+function ApplyMobileRules() {
+    if (isUserMobile() == true) {
+        //console.log("[isMobile] User is using mobile device/agent.. Trying to inject mobile CSS rules")
+        $('head').append('<link rel="stylesheet" type="text/css" href="mobile.css">');
+        //console.log("[isMobile] Done!")
+    }
 }
 
 // Theme switch functionality
@@ -189,7 +198,7 @@ let notificationLock = false;
  * @param {Number} showDuration 
  * Duration of the notification to be shown in seconds
  */
-function notifyUser(textColor = "var(--buttonsubmitbg)", textMsg, lockNotification = false, showDuration = 3) {
+function notifyUser(textMsg, textColor = "var(--buttonsubmitbg)", lockNotification = false, showDuration = 3) {
     // Sanity checks
     if (!textMsg || !textMsg.replace(/\s/g, '').length) {
         console.log("[Notifications] Tried to send Null/Empty/Undefined text! Stopping...", textMsg);
@@ -221,7 +230,7 @@ function notifyUser(textColor = "var(--buttonsubmitbg)", textMsg, lockNotificati
     // Hook the 'show' class while it exists to assign the animation
     var $popupshowdiv = $("#nf__popup.show")
     $popupshowdiv.css('animation', 'fadein 0.5s, fadeout 0.5s ' + showDuration + 's');
-    
+
     let timeout_ms = showDuration * 1000 + 300;
 
     // Clean up and fade out (based on a duration set)
@@ -234,9 +243,9 @@ function notifyUser(textColor = "var(--buttonsubmitbg)", textMsg, lockNotificati
 
 // Check if user had a submission before
 if (getCookie("submit") == 'success') {
-    notifyUser("var(--buttonsubmitbg)", "Visual config submitted! It will appear on the website in the next couple days!", true, 7);
+    notifyUser("Visual config submitted! It will appear on the website in the next couple days!", "var(--buttonsubmitbg)", true, 7);
 } else if (getCookie("submit") == 'fail') {
-    notifyUser("var(--buttonsubmitbg)", "Failed to submit your visual config. Please check if everything is right and try again.", true, 7);
+    notifyUser("Failed to submit your visual config. Please check if everything is right and try again.", "var(--buttonsubmitbg)", true, 7);
 }
 
 // Upload button trigger
@@ -247,10 +256,10 @@ $("#uploadTrigger").click(function () {
 function switchrandomizing() {
     if (getCookie("EnableShuffle") == "true") {
         setCookie("EnableShuffle", "false", 365);
-        notifyUser("var(--warn)", "Visual config shuffle disabled", false, 3);
+        notifyUser("Visual config shuffle disabled", "var(--warn)");
     } else {
         setCookie("EnableShuffle", "true", 365);
-        notifyUser("var(--buttonsubmitbg)", "Visual config shuffle enabled", false, 3);
+        notifyUser("Visual config shuffle enabled");
     }
 }
 
@@ -266,7 +275,7 @@ function ShuffleVisuals() {
 
         parent.append(divs);
 
-        notifyUser("var(--buttonsubmitbg)", "Shuffling visual configs", false, 3);
+        notifyUser("Shuffling visual configs");
 
     } else {
         setCookie("EnableShuffle", "false", 365)
@@ -375,7 +384,7 @@ function sortbyname() {
 
     parent.append(OrderedDivsByName);
 
-    notifyUser("var(--buttonsubmitbg)", "Sorted by name!", false);
+    notifyUser("Sorted by name!");
 }
 
 // Sort visual configs by highest downloads
@@ -401,7 +410,7 @@ function sortbymostdwnl() {
     })
     parent.append(OrderedDivsByDwnl);
 
-    notifyUser("var(--buttonsubmitbg)", "Sorted by downloads!", false);
+    notifyUser("Sorted by downloads!");
 }
 
 // Fetch text nodes
@@ -444,4 +453,6 @@ function copyCode(id) {
     window.getSelection().selectAllChildren(str);
     document.execCommand("Copy");
     window.getSelection().removeAllRanges();
+
+    notifyUser("Text copied!");
 }
