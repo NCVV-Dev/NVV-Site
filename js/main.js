@@ -26,6 +26,23 @@ function eraseCookie(e) {
     document.cookie = e + "=; Max-Age=-99999999;";
 }
 
+// Check if user is using mobile device
+var isMobile;
+
+if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
+    isMobile = true;
+
+    //Replace the CSS file for mobile devices for better readability
+
+    //console.log("[isMobile] User is using mobile device/agent.. Trying to inject mobile CSS rules")
+
+    //$('head').append('<link rel="stylesheet" type="text/css" href="mobile.css">');
+
+    //console.log("[isMobile] Done!")
+} else {
+    isMobile = false;
+}
+
 // Theme switch functionality
 if (getCookie("Theme") == 'NVV') {
     setCookie("Theme", "NVV", 365);
@@ -46,45 +63,43 @@ function switchtheme() {
 }
 
 // Page loader
-(function () {
+function loadImages() {
     function id(v) {
         return document.getElementById(v)
     }
 
-    function loadbar() {
-        let prog = id("progress"),
-            img = document.images,
-            c = 0,
-            tot = img.length;
-        if (tot == 0) {
+    let prog = id("progress"),
+        img = document.images,
+        loadedimages = 0,
+        totalimages = img.length;
+    if (totalimages == 0) {
+        return doneLoading()
+    }
+
+    function imgLoaded() {
+        loadedimages += 1;
+        let linewidth = ((100 / totalimages * loadedimages) << 0) + "%";
+        prog.style.width = linewidth;
+
+        if (loadedimages === totalimages) {
             return doneLoading()
         }
-
-        function imgLoaded() {
-            c += 1;
-            let perc = ((100 / tot * c) << 0) + "%";
-            prog.style.width = perc;
-            if (c === tot) {
-                return doneLoading()
-            }
-        }
-
-        function doneLoading() {
-            setTimeout(function () {
-                prog.style.opacity = "none";
-                prog.style.opacity = 0
-            }, 1800)
-        }
-        
-        for (let i = 0; i < tot; i += 1) {
-            let tImg = new Image();
-            tImg.onload = imgLoaded;
-            tImg.onerror = imgLoaded;
-            tImg.src = img[i].src
-        }
     }
-    document.addEventListener('DOMContentLoaded', loadbar, false)
-}());
+
+    function doneLoading() {
+        setTimeout(function () {
+            prog.style.opacity = "none";
+            prog.style.opacity = 0
+        }, 1800)
+    }
+
+    for (let i = 0; i < totalimages; i += 1) {
+        let tImg = new Image();
+        tImg.onload = imgLoaded;
+        tImg.onerror = imgLoaded;
+        tImg.src = img[i].src
+    }
+};
 
 // Welcome page functionality
 const wlcoverlay = document.querySelector(".welcome_overlay");
@@ -112,19 +127,22 @@ function WelcomeButtonAction() {
 // NOTE: Loads after website images 
 $(function () {
     const ImageArray = [
-        "https://ncvisualsvault.cc/media/menus/raizomenu.png",
-        "https://ncvisualsvault.cc/media_optimized/menus/mh4menu.jpg",
-        "https://ncvisualsvault.cc/media/menus/LBAmenu.png",
-        "https://ncvisualsvault.cc/media/menus/animemenu.png",
-        "https://ncvisualsvault.cc/media/menus/coldbluemenu.png"
+        "/media/menus/raizomenu.png",
+        "/media_optimized/menus/mh4menu.jpg",
+        "/media/menus/LBAmenu.png",
+        "/media/menus/animemenu.png",
+        "/media/menus/coldbluemenu.png",
+        "/media/menus/draculathememenu.png",
+        "/media/menus/kalimenu.png",
+        "/media/menus/hrmmenu.png"
     ];
 
     let number = Math.floor(Math.random() * ImageArray.length);
     return document.getElementById("randomimage").innerHTML = '<img src="' + ImageArray[number] + '" />';
 })
 
-// Find the most downloaded config and assign icon with text to the tab
-$(function () {
+// Find the most downloaded config and assign icon to the tab
+function findMostDownloaded() {
     let highestNumber = 0;
     document.querySelectorAll('.dwn__count').forEach(elem => {
         let downCount = parseInt(elem.innerText.trim())
@@ -140,22 +158,6 @@ $(function () {
         if (parseInt(elem.innerText.trim()) == highestNumber) {
             elem.appendChild(icon.cloneNode(true));
         }
-    });
-})
-
-// Initialize images for preview
-function initpicture() {
-    let e = document.querySelectorAll(".cfgvrow img"),
-        c = document.querySelector("#preview"),
-        r = {
-            "background-size": "60%"
-        };
-    e.forEach((e) => {
-        e.addEventListener("click", function () {
-            c.style.backgroundImage = "url(" + e.src + ")";
-            c.style.display = "block";
-            Object.assign(c.style, r);
-        });
     });
 }
 
@@ -174,29 +176,67 @@ function search() {
     }
 }
 
-// Define pop-up for future use
-let t = document.getElementById("nf__popup");
+let notificationLock = false;
 
-if (window.location.pathname == '/') {
-    // Notification system for uploading
-    $(function () {
-        if (getCookie("submit") == 'success') {
-            t.style.color = "var(--buttonsubmitbg)";
-            t.innerHTML = "Visual config submitted.";
-            t.className = "show";
-            eraseCookie("submit");
-        // Use 'else if' to prevent showing a pop up every page load
-        } else if (getCookie("submit") == 'fail') {
-            t.style.color = "var(--warn)";
-            t.innerHTML = "Failed to submit your visual config :(";
-            t.className = "show";
-            eraseCookie("submit");
-        }
+/**
+ * Sends a notification at the bottom of the screen for current user
+ * @param {String} textColor
+ * Defines a color for the message. var(), HEX and rgb() values
+ * @param {String} textMsg
+ * Message that is being sent by notification
+ * @param {Boolean} lockNotification
+ * Prevent notification being overwriten by the next notification until it stops showing
+ * @param {Number} showDuration 
+ * Duration of the notification to be shown in seconds
+ */
+function notifyUser(textColor = "var(--buttonsubmitbg)", textMsg, lockNotification = false, showDuration = 3) {
+    // Sanity checks
+    if (!textMsg || !textMsg.replace(/\s/g, '').length) {
+        console.log("[Notifications] Tried to send Null/Empty/Undefined text! Stopping...", textMsg);
 
-        setTimeout(function () {
-            t.className = t.className.replace("show", "");
-        }, 3000);
-    });
+        return;
+    } else if (notificationLock == true) {
+        console.log("[Notifications] Tried to show a notification but previous notification is still playing. Skipping...");
+
+        return;
+    }
+
+    // Hook the notification element
+    let notifydiv = document.getElementById("nf__popup");
+
+    // Assign the data given from parameters
+    notifydiv.style.color = textColor;
+    notifydiv.innerHTML = textMsg;
+
+    // If lockNotification was set to true, the next notifications will be blocked
+    if (lockNotification == true) {
+        notificationLock = true;
+    }
+
+    // If it was submittion, clean up
+    eraseCookie("submit");
+
+    notifydiv.className = "show";
+
+    // Hook the 'show' class while it exists to assign the animation
+    var $popupshowdiv = $("#nf__popup.show")
+    $popupshowdiv.css('animation', 'fadein 0.5s, fadeout 0.5s ' + showDuration + 's');
+    
+    let timeout_ms = showDuration * 1000 + 300;
+
+    // Clean up and fade out (based on a duration set)
+    setTimeout(function () {
+        notifydiv.className = notifydiv.className.replace("show", "");
+        notificationLock = false;
+        $popupshowdiv.css('animation', 'none');
+    }, timeout_ms);
+}
+
+// Check if user had a submission before
+if (getCookie("submit") == 'success') {
+    notifyUser("var(--buttonsubmitbg)", "Visual config submitted! It will appear on the website in the next couple days!", true, 7);
+} else if (getCookie("submit") == 'fail') {
+    notifyUser("var(--buttonsubmitbg)", "Failed to submit your visual config. Please check if everything is right and try again.", true, 7);
 }
 
 // Upload button trigger
@@ -207,52 +247,35 @@ $("#uploadTrigger").click(function () {
 function switchrandomizing() {
     if (getCookie("EnableShuffle") == "true") {
         setCookie("EnableShuffle", "false", 365);
-
-        t.style.color = "var(--warn)";
-        t.innerHTML = "Visual config shuffle disabled";
-        t.className = "show";
-
-        setTimeout(function () {
-            t.className = t.className.replace("show", "");
-        }, 3000);
+        notifyUser("var(--warn)", "Visual config shuffle disabled", false, 3);
     } else {
         setCookie("EnableShuffle", "true", 365);
-
-        t.style.color = "var(--buttonsubmitbg)";
-        t.innerHTML = "Visual config shuffle enabled";
-        t.className = "show";
-
-        setTimeout(function () {
-            t.className = t.className.replace("show", "");
-        }, 3000);
+        notifyUser("var(--buttonsubmitbg)", "Visual config shuffle enabled", false, 3);
     }
 }
 
 // Shuffling proccess
-if (window.location.pathname == '/') {
-    $(function () {
-        if (getCookie("EnableShuffle") == "true") {
-            let parent = $("#randomize");
-            let divs = parent.children();
-            divs.sort(function (a, b) {
-                return 0.5 - Math.random();
-            });
-            parent.append(divs);
+function ShuffleVisuals() {
+    if (getCookie("EnableShuffle") == "true") {
+        let parent = $("#randomize");
+        let divs = parent.children();
 
-            t.style.color = "var(--buttonsubmitbg)";
-            t.innerHTML = "Shuffling visual configs...";
-            t.className = "show";
-            setTimeout(function () {
-                t.className = t.className.replace("show", "");
-            }, 3000);
-        } else {
-            setCookie("EnableShuffle", "false", 365)
-        }
-    });
-}
+        divs.sort(function (a, b) {
+            return 0.5 - Math.random();
+        });
+
+        parent.append(divs);
+
+        notifyUser("var(--buttonsubmitbg)", "Shuffling visual configs", false, 3);
+
+    } else {
+        setCookie("EnableShuffle", "false", 365)
+    }
+};
+
 
 // Text Animation on the Welcome Page
-if (getCookie("FirstTime") != "False") {
+if (getCookie("FirstTime") != "false") {
     class Randchar {
         constructor(el) {
             this.el = el
@@ -352,13 +375,7 @@ function sortbyname() {
 
     parent.append(OrderedDivsByName);
 
-    t.style.color = "var(--buttonsubmitbg)";
-    t.innerHTML = "Sorted!";
-    t.className = "show";
-
-    setTimeout(function () {
-        t.className = t.className.replace("show", "");
-    }, 3000);
+    notifyUser("var(--buttonsubmitbg)", "Sorted by name!", false);
 }
 
 // Sort visual configs by highest downloads
@@ -384,12 +401,7 @@ function sortbymostdwnl() {
     })
     parent.append(OrderedDivsByDwnl);
 
-    t.style.color = "var(--buttonsubmitbg)";
-    t.innerHTML = "Sorted!";
-    t.className = "show";
-    setTimeout(function () {
-        t.className = t.className.replace("show", "");
-    }, 3000);
+    notifyUser("var(--buttonsubmitbg)", "Sorted by downloads!", false);
 }
 
 // Fetch text nodes
@@ -403,6 +415,7 @@ function fetchTextNodesContent($target) {
 }
 
 // NVV - Guides navbar
+// TODO: It's all broken
 function hideNavbar() {
     const sidebargd = document.querySelector(".sidebargd");
 

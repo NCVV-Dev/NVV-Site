@@ -51,7 +51,7 @@ body[data-theme="nvv"] {
     --headercolor: #ffffff;
     --pcolor: #ffffff;
     --generaltextcolor: #ffffff;
-    --itemtabcolor: #414558;
+    --itemtabcolor: #2a293f;
     --itemtaboutline: #6b66c0;
     --itemtabhover: #353277;
     --itemtabhovereffect: #6b66c0;
@@ -254,7 +254,7 @@ p {
     height: 10px;
 }
 
-/* Progress line */
+/* Progress line / Page loader */
 #progress {
     position: fixed !important;
     z-index: 95 !important;
@@ -593,7 +593,7 @@ input[type="submit"]:hover {
     border-radius: 5px;
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    z-index: 10;
+    z-index: 3;
     display: block;
     transition: all 300ms ease-in-out;
 }
@@ -871,11 +871,12 @@ input[type="submit"]:hover {
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
     background-size: contain;
     background-repeat: no-repeat no-repeat;
     background-position: center center;
     background-color: var(--imagepreview);
-    transition: all 300ms;
+    transition: all 300ms ease-in-out;
 }
 
 /* Text on the end of the cfg page */
@@ -1199,10 +1200,36 @@ input[type="submit"]:hover {
 }
 
 .banned {
-    text-decoration: line-through;
-    text-decoration-thickness: 4px;
-    text-decoration-color: #000000;
     color: rgb(248, 248, 248);
+}
+
+.banned:hover {
+    color: rgb(248, 248, 248);
+}
+
+.banned__tabstyle {
+    background: rgb(51, 51, 51);
+    border: 1px solid rgb(63, 63, 63);
+}
+
+.banned__tabstyle:hover {
+    border: 1px solid rgb(83, 83, 83);
+}
+
+.banned__color {
+    background-color: rgb(68, 68, 68);
+}
+
+.banned__color:hover {
+    background-color: rgb(83, 83, 83);
+}
+
+.banned__textbox {
+    background-color: var(--warn);
+    font-size: 10px;
+    text-decoration: none;
+    position: relative;
+    bottom: 3px;
 }
 
 /* Welcome Page */
@@ -1447,7 +1474,6 @@ input[type="submit"]:hover {
     .downbuttons {
         width: 100%;
     }
-
 }
 
 .welcome_bottomtext {
@@ -1507,8 +1533,6 @@ input[type="submit"]:hover {
 
 #nf__popup.show {
     visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 @-webkit-keyframes fadein {
