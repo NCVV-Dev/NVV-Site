@@ -25,7 +25,8 @@
         "authorIconClass": "bx bxs-zap",
         "contributeRole": "contributor10",
         "steamUrl": "http://steamcommunity.com/profiles/76561198388506317",
-        "downloadId": 3
+        "downloadId": 3,
+        "tagType": "communityChoice"
     },
     {
         "title": "Floowhooks",
@@ -55,7 +56,8 @@
         "authorIconClass": "bx bxs-hot",
         "contributeRole": "contributor8",
         "steamUrl": "https://t.me/The_Cluster",
-        "downloadId": 6
+        "downloadId": 6,
+        "tagType": "devChoice"
     },
     {
         "title": "Elite Dangerous",
@@ -127,7 +129,7 @@
         "media": "/media_optimized/hrm.jpg",
         "author": "harmony",
         "authorIconClass": "",
-        "contributeRole": "",
+        "contributeRole": "banned",
         "steamUrl": "https://t.me/harmony_zt",
         "downloadId": 14
     },
@@ -223,7 +225,8 @@
         "authorIconClass": "bx bxs-hot",
         "contributeRole": "contributor8",
         "steamUrl": "https://t.me/The_Cluster",
-        "downloadId": 25
+        "downloadId": 25,
+        "tagType": "devChoice"
     },
     {
         "title": "Half-Life:Source UI",
@@ -241,7 +244,8 @@
         "authorIconClass": "bx bxs-hot",
         "contributeRole": "contributor8",
         "steamUrl": "https://t.me/The_Cluster",
-        "downloadId": 27
+        "downloadId": 27,
+        "tagType": "devChoice"
     },
     {
         "title": "Old Nullcore",
@@ -328,7 +332,8 @@
         "authorIconClass": "",
         "contributeRole": "contributor2",
         "steamUrl": "https://steamcommunity.com/profiles/76561198255546265/",
-        "downloadId": 36
+        "downloadId": 36,
+        "tagType": "devChoice"
     },
     {
         "title": "F2i's",
@@ -552,7 +557,8 @@
         "authorIconClass": "bx bxs-zap",
         "contributeRole": "contributor10",
         "steamUrl": "http://steamcommunity.com/profiles/76561198388506317",
-        "downloadId": 61
+        "downloadId": 61,
+        "tagType": "devChoice"
     },
     {
         "title": "Epic",
@@ -774,6 +780,7 @@
         "authorIconClass": "",
         "contributeRole": "",
         "steamUrl": "http://steamcommunity.com/profiles/76561199391832430 ",
-        "downloadId": 111
+        "downloadId": 111,
+        "tagType": "devChoice"
     }
 ]
