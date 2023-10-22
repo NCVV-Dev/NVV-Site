@@ -1,6 +1,5 @@
 function renderJSON(json) {
     //console.log("rendered", json)
-    // TODO: Support all of the tag elements
 
     let html = `<div class="cfgvrow" id="randomize">`
 
@@ -8,6 +7,7 @@ function renderJSON(json) {
         html += `
         <div class="cfg__wrapper animate__animated animate__fadeIn">
             <div class="cfg__tab ${!!data.contributeRole ? `${getContributorCSSClass(data)}__tabstyle` : ""}">
+                ${getAuthorTag(data)}
                 <div class="cfg__image__wrapper">
                     <img class="cfg__image" id="cfg__image" loading="lazy" src="${data.media}" onerror="this.src='/media/in-progress.png';" alt="" onclick="openPreviewImage('${data.media}')">
                 </div>
@@ -48,7 +48,8 @@ function renderJSON(json) {
     // Find most downloaded visual config and append an icon to it
     findMostDownloaded();
     ShuffleVisuals();
-    loadImages()
+    loadImages();
+    ApplyMobileRules();
     
     endTime = performance.now()
     console.log(`All done! Took us ${endTime - startTime}ms.`)
@@ -98,14 +99,31 @@ function getContributorCSSClass(data) {
     }
 }
 
+function getAuthorTag(data) {
+    if(data.tagType == "devChoice"){
+        return `<div class="tag">Devs choice <em class='bx bxs-star'></em></div>`
+    } else if(data.tagType == "communityChoice"){
+        return `<div class="tag">Chosen by community <em class='bx bxs-medal'></em></div>`
+    } else {
+        return ""
+    }
+}
+
 // Larger image preview on click
 // TODO: Don't define background-size in JS, find a better way of scaling images on click
 function openPreviewImage(mediaUrl) {
     const screenprev = document.querySelector('#preview');
-    const backgroundstyles = {
+    let backgroundstyles = {
         "background-size": 'auto',
         "opacity": '0'
     };
+
+    if(isUserMobile() == true){
+        backgroundstyles = {
+            "background-size": '100%',
+            "opacity": '0'
+        };
+    }
 
     screenprev.style.display = 'block';
     Object.assign(screenprev.style, backgroundstyles);
