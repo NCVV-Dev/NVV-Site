@@ -51,7 +51,7 @@ body[data-theme="nvv"] {
     --headercolor: #ffffff;
     --pcolor: #ffffff;
     --generaltextcolor: #ffffff;
-    --itemtabcolor: #2a293f;
+    --itemtabcolor: #2b2c44;
     --itemtaboutline: #6b66c0;
     --itemtabhover: #353277;
     --itemtabhovereffect: #6b66c0;
@@ -725,7 +725,7 @@ input[type="submit"]:hover {
     top: 0px;
     background-color: var(--tagbg);
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 5px;
     border-radius: 3px;
     z-index: 1;
@@ -760,7 +760,7 @@ input[type="submit"]:hover {
 }
 
 .cfg__image:hover {
-    cursor: zoom-in;
+    cursor: pointer;
     transform: scale(1.1);
 }
 
