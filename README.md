@@ -25,10 +25,10 @@ This repository is under a strict **maintenance**. Every issue or pull request m
 ### How can I contribute?
 - **Pinpointing any bugs or issues (Please choose "Bug Report" template in "Issues" tab)**
 - **Creating a pull request**
-- **Creating a suggestion (Please choose the "Feature Request" template in "Issues" tab)**
+- **Suggesting a feature (Please choose the "Feature Request" template in "Issues" tab)**
 
 ## Files
-Some of the files will not appear in this repository such as **.php** files or downloadable content of mods page.
+Some of the files in this repository will not appear such as **.php** files, moderation pages (admin panels), content of mods page.
 
 ### Russian (Русский)
 
