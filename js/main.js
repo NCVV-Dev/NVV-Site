@@ -43,7 +43,7 @@ function isUserMobile() {
     }
 }
 
-//Replace the CSS file for mobile devices for better readability
+// Replace the CSS file for mobile devices for better readability
 function ApplyMobileRules() {
     if (isUserMobile() == true) {
         //console.log("[isMobile] User is using mobile device/agent.. Trying to inject mobile CSS rules")
@@ -52,7 +52,7 @@ function ApplyMobileRules() {
     }
 }
 
-// Theme switch functionality
+// Themes functionality
 if (getCookie("Theme") == 'NVV') {
     setCookie("Theme", "NVV", 365);
     document.body.setAttribute('data-theme', 'nvv')
@@ -222,9 +222,6 @@ function notifyUser(textMsg, textColor = "var(--buttonsubmitbg)", lockNotificati
         notificationLock = true;
     }
 
-    // If it was submittion, clean up
-    eraseCookie("submit");
-
     notifydiv.className = "show";
 
     // Hook the 'show' class while it exists to assign the animation
@@ -241,11 +238,13 @@ function notifyUser(textMsg, textColor = "var(--buttonsubmitbg)", lockNotificati
     }, timeout_ms);
 }
 
-// Check if user had a submission before
+// Check if user had a visual config submission before
 if (getCookie("submit") == 'success') {
     notifyUser("Visual config submitted! It will appear on the website in the next couple days!", "var(--buttonsubmitbg)", true, 7);
+    eraseCookie("submit");
 } else if (getCookie("submit") == 'fail') {
     notifyUser("Failed to submit your visual config. Please check if everything is right and try again.", "var(--buttonsubmitbg)", true, 7);
+    eraseCookie("submit");
 }
 
 // Upload button trigger

@@ -1,6 +1,7 @@
+// Visually display the contents of data.json
 function renderJSON(json) {
     //console.log("rendered", json)
-
+    // Start with a template
     let html = `<div class="cfgvrow" id="randomize">`
 
     for (const data of json) {
@@ -39,16 +40,21 @@ function renderJSON(json) {
     // Put all JSON entries converted into HTML inside the div element
     document.getElementById("templatecontainer").innerHTML = html;
 
-    var endTime = performance.now()
+    let endTime = performance.now()
 
     console.log(`Finished templating! Took us ${endTime - startTime}ms. Running remaining functions...`)
 
     startTime = performance.now()
 
-    // Find most downloaded visual config and append an icon to it
+    // When templating is done, run remaining functions
+
+    // Find the most downloaded visual config and append an icon to it
     findMostDownloaded();
+    // Shuffle visuals if enabled
     ShuffleVisuals();
+    // Start displaying a loader
     loadImages();
+    // If user is om mobile, apply CSS rules
     ApplyMobileRules();
     
     endTime = performance.now()
@@ -99,6 +105,7 @@ function getContributorCSSClass(data) {
     }
 }
 
+// If visual config has an unique tag, display it
 function getAuthorTag(data) {
     if(data.tagType == "devChoice"){
         return `<div class="tag">Devs choice <em class='bx bxs-star'></em></div>`
@@ -135,7 +142,7 @@ function openPreviewImage(mediaUrl) {
     screenprev.style.backgroundImage = `url(${mediaUrl})`;
 }
 
-// Fades out image preview on click
+// Fade out image preview on click
 function fadeOutPreviewImage() {
     const previewelem = document.querySelector("#preview");
 
