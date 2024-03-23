@@ -17,7 +17,7 @@
 
 🤝 **Cooperated with [Fedoraware](https://fedoraware.ncvisualsvault.cc/) (Technical support ended at 02.01.2023)**
 
-🏅 **Hoster of Null Core subscription giveaways - 01.14.2022 to 22.09.2022. Follow up for more!**
+🏅 **Hoster of Null Core subscription giveaways - 14.01.2022 to 22.09.2022. Follow up for more!**
 
 ## Contribution
 This repository is under a strict **maintenance**. Every issue or pull request made in this repository will be **reviewed** and the action will be taken in the **shortest amount of time**.
