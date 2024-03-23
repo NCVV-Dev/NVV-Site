@@ -125,11 +125,10 @@
     },
     {
         "title": "Purple Insanity",
-        "description": "Purplish color scheme.",
         "media": "/media_optimized/hrm.jpg",
         "author": "harmony",
         "authorIconClass": "",
-        "contributeRole": "banned",
+        "contributeRole": "bx bxs-user-rectangle",
         "steamUrl": "https://t.me/harmony_zt",
         "downloadId": 14
     },
