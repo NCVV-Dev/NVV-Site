@@ -127,8 +127,8 @@
         "title": "Purple Insanity",
         "media": "/media_optimized/hrm.jpg",
         "author": "harmony",
-        "authorIconClass": "",
-        "contributeRole": "bx bxs-user-rectangle",
+        "authorIconClass": "bx bxs-user-rectangle",
+        "contributeRole": "",
         "steamUrl": "https://t.me/harmony_zt",
         "downloadId": 14
     },
