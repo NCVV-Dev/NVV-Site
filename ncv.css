@@ -1201,6 +1201,8 @@ input[type="submit"]:hover {
 
 .banned {
     color: rgb(248, 248, 248);
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
 }
 
 .banned:hover {
@@ -1517,7 +1519,7 @@ input[type="submit"]:hover {
     font-weight: 500;
 }
 
-/* Notification Styles */
+/* Notifications */
 #nf__popup {
     visibility: hidden;
     width: 100%;
@@ -1583,7 +1585,7 @@ input[type="submit"]:hover {
     }
 }
 
-/* Download Count div */
+/* Download Counter */
 .dwn__count {
     position: relative;
     display: flow-root;
@@ -1608,20 +1610,6 @@ input[type="submit"]:hover {
     font-size: 13px;
     color: var(--buttonhover);
     font-weight: 600;
-}
-
-/* Hat */
-.chrat {
-    position: relative;
-}
-
-.crhat img {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    top: 115px;
-    left: 285px;
-    transform: rotate(10deg);
 }
 
 /* GUIDES PAGE CSS */
