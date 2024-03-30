@@ -27,7 +27,7 @@ function eraseCookie(e) {
 }
 
 // Check if user is using mobile device
-var isMobile;
+let isMobile;
 
 function isUserMobile() {
     if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
@@ -225,7 +225,7 @@ function notifyUser(textMsg, textColor = "var(--buttonsubmitbg)", lockNotificati
     notifydiv.className = "show";
 
     // Hook the 'show' class while it exists to assign the animation
-    var $popupshowdiv = $("#nf__popup.show")
+    let $popupshowdiv = $("#nf__popup.show")
     $popupshowdiv.css('animation', 'fadein 0.5s, fadeout 0.5s ' + showDuration + 's');
 
     let timeout_ms = showDuration * 1000 + 300;

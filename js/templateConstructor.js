@@ -155,7 +155,7 @@ function fadeOutPreviewImage() {
     }, 500);
 }
 
-var startTime = performance.now()
+let startTime = performance.now()
 
 // Fetch JSON from the file, wait for response, direct the data to renderJSON()
 fetch('/js/data.json').then(response => response.json()).then(json => renderJSON(json));
