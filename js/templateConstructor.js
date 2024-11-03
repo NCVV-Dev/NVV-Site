@@ -54,8 +54,10 @@ function renderJSON(json) {
     ShuffleVisuals();
     // Start displaying a loader
     loadImages();
-    // If user is om mobile, apply CSS rules
+    // If user is on mobile, apply CSS rules
     ApplyMobileRules();
+    // Set random image on welcome screen
+    setRandomImage()
     
     endTime = performance.now()
     console.log(`All done! Took us ${endTime - startTime}ms.`)

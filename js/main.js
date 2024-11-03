@@ -134,7 +134,10 @@ function WelcomeButtonAction() {
 
 // Showcase random image for welcome page
 // NOTE: Loads after website images 
-$(function () {
+let prevNumber
+let number
+
+function setRandomImage() {
     const ImageArray = [
         "/media/menus/raizomenu.png",
         "/media_optimized/menus/mh4menu.jpg",
@@ -146,9 +149,18 @@ $(function () {
         "/media/menus/hrmmenu.png"
     ];
 
-    let number = Math.floor(Math.random() * ImageArray.length);
+    // To prevent same image from displaying
+    if (prevNumber = number) {
+        //do nothing :/
+    }
+
+    number = Math.floor(Math.random() * ImageArray.length);
+    prevNumber = number;
+
     return document.getElementById("randomimage").innerHTML = '<img src="' + ImageArray[number] + '" />';
-})
+}
+
+setInterval(setRandomImage, 5000);
 
 // Find the most downloaded config and assign icon to the tab
 function findMostDownloaded() {

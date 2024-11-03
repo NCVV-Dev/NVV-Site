@@ -1317,12 +1317,10 @@ input[type="submit"]:hover {
 }
 
 .welcome_imgcontainer {
-    position: absolute;
-    left: 60%;
-    top: 150px;
-    padding-top: 50px;
+    position: relative;
+    bottom: 300px;
+    left: 100px;
     transition: all 0.3s ease-in-out;
-    height: 500px;
     --animate-duration: .3s;
 }
 
