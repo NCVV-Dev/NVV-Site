@@ -1316,37 +1316,29 @@ input[type="submit"]:hover {
     }
 }
 
-.welcome_imgcontainer {
-    position: relative;
-    bottom: 300px;
-    left: 100px;
-    transition: all 0.3s ease-in-out;
-    --animate-duration: .3s;
-}
-
 .welcome_imgcontainer img {
-    position: absolute;
+    position: relative;
     pointer-events: none;
-    top: 15px;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-name: wcimganim;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-delay: 300ms;
+    z-index: -1;
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    animation-duration: 1.5s;
 }
 
-@keyframes wcimganim {
-    0% {
-        opacity: 0;
-        top: 15px;
-    }
+.wcimg:nth-child(1) {
+    filter: blur(4px);
+    top: 150px;
+}
 
-    100% {
-        top: 0;
-        opacity: 1;
-    }
+.wcimg:nth-child(2) {
+    filter: blur(2px);
+    top: 50px;
+    animation-delay: 200ms;
+}
+
+.wcimg:nth-child(3) {
+    animation-delay: 300ms;
 }
 
 .downbuttons {

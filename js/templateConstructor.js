@@ -56,8 +56,6 @@ function renderJSON(json) {
     loadImages();
     // If user is on mobile, apply CSS rules
     ApplyMobileRules();
-    // Set random image on welcome screen
-    setRandomImage()
     
     endTime = performance.now()
     console.log(`All done! Took us ${endTime - startTime}ms.`)

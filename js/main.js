@@ -132,28 +132,6 @@ function WelcomeButtonAction() {
     }, 1100);
 };
 
-// Showcase random image for welcome page
-// NOTE: Loads after website images 
-
-function setRandomImage() {
-    const ImageArray = [
-        "/media/menus/raizomenu.png",
-        "/media_optimized/menus/mh4menu.jpg",
-        "/media/menus/LBAmenu.png",
-        "/media/menus/animemenu.png",
-        "/media/menus/coldbluemenu.png",
-        "/media/menus/draculathememenu.png",
-        "/media/menus/kalimenu.png",
-        "/media/menus/hrmmenu.png"
-    ];
-
-    let number = Math.floor(Math.random() * ImageArray.length);
-
-    return document.getElementById("randomimage").innerHTML = '<img src="' + ImageArray[number] + '" />';
-}
-
-setInterval(setRandomImage, 5000);
-
 // Find the most downloaded config and assign icon to the tab
 function findMostDownloaded() {
     let highestNumber = 0;
