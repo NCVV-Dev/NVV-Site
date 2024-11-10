@@ -55,7 +55,7 @@ body[data-theme="nvv"] {
     --headercolor: #ffffff;
     --pcolor: #ffffff;
     --generaltextcolor: #ffffff;
-    --itemtabcolor: #18192b;
+    --itemtabcolor: #2d2f4b;
     --itemtaboutline: #6b66c0;
     --itemtabhover: #353277;
     --itemtabhovereffect: #6b66c0;
@@ -346,12 +346,12 @@ input[type="text"] {
 }
 
 #searchbar {
-    width: 20em;
+    width: 14.5em;
     margin-bottom: 50px;
 }
 
 #searchbar:focus {
-    width: 25em;
+    width: 20em;
 }
 
 input[type="text"]:focus {
@@ -588,8 +588,8 @@ input[type="submit"]:hover {
 /* Theme Button (separated from utility buttons) */
 .theme {
     position: fixed;
-    top: 0;
-    right: 5px;
+    top: 50px;
+    right: 1px;
     background-color: var(--themeswitchbg);
     color: var(--generaltextcolor);
     padding: 7px 30px;
@@ -1465,6 +1465,7 @@ input[type="submit"]:hover {
 
     .welcome_header2 {
         width: 100%;
+        padding: 50px;
     }
 
     .downbuttons {
@@ -1697,10 +1698,6 @@ div.contentgd {
     h1 {
         margin-top: 130px;
     }
-
-    .theme {
-        top: 55px;
-    }
 }
 
 @media screen and (max-width:700px) {
@@ -1715,13 +1712,6 @@ div.contentgd {
         float: none;
         position: relative;
         padding: 10px;
-    }
-
-    .theme {
-        top: 2px;
-        margin: 0;
-        right: 2px;
-        padding: 5px 10px;
     }
 
     h1 {
