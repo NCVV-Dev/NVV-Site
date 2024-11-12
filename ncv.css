@@ -1374,6 +1374,7 @@ input[type="submit"]:hover {
     margin-top: 10px;
     width: 160px;
     z-index: 3;
+    border: none;
 }
 
 .welcbutton:hover {

@@ -45,7 +45,7 @@ function isUserMobile() {
 
 // Replace the CSS file for mobile devices for better readability
 function ApplyMobileRules() {
-    if (isUserMobile() == true) {
+    if (isUserMobile()) {
         //console.log("[isMobile] User is using mobile device/agent.. Trying to inject mobile CSS rules")
         $('head').append('<link rel="stylesheet" type="text/css" href="mobile.css">');
         //console.log("[isMobile] Done!")
@@ -186,7 +186,7 @@ function notifyUser(textMsg, textColor = "var(--buttonsubmitbg)", lockNotificati
         console.log("[Notifications] Tried to send Null/Empty/Undefined text! Stopping...", textMsg);
 
         return;
-    } else if (notificationLock == true) {
+    } else if (notificationLock) {
         console.log("[Notifications] Tried to show a notification but previous notification is still playing. Skipping...");
 
         return;
@@ -200,7 +200,7 @@ function notifyUser(textMsg, textColor = "var(--buttonsubmitbg)", lockNotificati
     notifydiv.innerHTML = textMsg;
 
     // If lockNotification was set to true, the next notifications will be blocked
-    if (lockNotification == true) {
+    if (lockNotification) {
         notificationLock = true;
     }
 
@@ -313,7 +313,6 @@ function fetchTextNodesContent($target) {
 }
 
 // NVV - Guides navbar
-// TODO: It's all broken
 function hideNavbar() {
     const sidebargd = document.querySelector(".sidebargd");
 
