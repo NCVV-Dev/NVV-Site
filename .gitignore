@@ -17,3 +17,8 @@
 
 # Ignore .properties files
 *.properties
+
+# Ignore other
+*inc*
+*admin*
+*.vpk
