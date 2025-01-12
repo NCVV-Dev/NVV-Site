@@ -193,21 +193,26 @@ body[data-theme="ncl"] {
 
 h1 {
     color: var(--headercolor);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    font-size: 40px;
     font-weight: 700;
+    font-family: "Open Sans",sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0px;
     text-align: center;
     font-size: 2.3rem;
     margin-top: 80px;
     transition: all 300ms ease-in-out;
 }
 
+h1 span {
+    color:var(--featureditem)
+}
+
 p {
     color: var(--pcolor);
     font-family: monospace;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 18px;
     animation-delay: 300ms;
     font-weight: bold;
     margin-bottom: 40px;
@@ -588,7 +593,7 @@ input[type="submit"]:hover {
 /* Theme Button (separated from utility buttons) */
 .theme {
     position: fixed;
-    top: 50px;
+    top: 49px;
     right: 1px;
     background-color: var(--themeswitchbg);
     color: var(--generaltextcolor);
