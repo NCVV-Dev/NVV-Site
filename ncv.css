@@ -195,7 +195,7 @@ h1 {
     color: var(--headercolor);
     font-size: 40px;
     font-weight: 700;
-    font-family: "Open Sans",sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0px;
     text-align: center;
@@ -205,7 +205,7 @@ h1 {
 }
 
 h1 span {
-    color:var(--featureditem)
+    color: var(--featureditem)
 }
 
 p {
@@ -286,7 +286,7 @@ p {
     position: relative;
 }
 
-/* Button upload config in main page */
+/* Button submit visual config in main page */
 .opt__wrapper {
     position: relative;
     display: inline-grid;
@@ -306,12 +306,9 @@ p {
     letter-spacing: 1px;
 }
 
-.errorstate {
-    position: relative;
-    top: 4px;
-    margin-left: 5px;
-    color: var(--warn);
-    font-size: 25px;
+.undermntc {
+    color: red;
+    font-weight: 700;
 }
 
 .opt__submitcfg:hover {
@@ -847,6 +844,7 @@ input[type="submit"]:hover {
     text-overflow: ellipsis;
 }
 
+/* Download Buttons */
 .cfg__dwnbtn {
     background-color: var(--buttonbg);
     color: white;
@@ -861,8 +859,8 @@ input[type="submit"]:hover {
 .cfg__dwnbtn:hover {
     background-color: var(--buttonhover);
     cursor: pointer;
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
 }
 
 .cfg__downloadbtn em {
@@ -972,7 +970,7 @@ input[type="submit"]:hover {
 /* Announcement */
 .announcement {
     position: fixed;
-    height: auto;
+    height: inherit;
     background-color: var(--announcement);
     overflow: hidden;
     transition: all 1s;
@@ -982,7 +980,6 @@ input[type="submit"]:hover {
 }
 
 .announcetext {
-    position: relative;
     margin: auto;
     color: white;
     font-size: 20px;
@@ -1004,18 +1001,6 @@ input[type="submit"]:hover {
     text-align: center;
     color: var(--linkhover);
     text-decoration: none;
-}
-
-#dynamicannc {
-    position: relative;
-    margin: auto;
-    color: var(--tostextcolor);
-    font-size: 25px;
-    font-weight: 700;
-    font-family: Coda, sans-serif;
-    letter-spacing: 1px;
-    top: .7rem;
-    transition: all 1s;
 }
 
 /* Reworked link styles and types */
