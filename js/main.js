@@ -154,16 +154,22 @@ function findMostDownloaded() {
 
 // Search functionality
 function search() {
-    let input = document.getElementById('searchbar').value
-    input = input.toLowerCase();
-    let cfgw = document.getElementsByClassName('cfg__wrapper');
+    const input = document.getElementById('searchbar').value.trim().toLowerCase();
+    const cfgWrappers = document.querySelectorAll('.cfg__wrapper');
+    let matchFound = false;
 
-    for (let i = 0; i < cfgw.length; i++) {
-        if (!cfgw[i].innerHTML.toLowerCase().includes(input)) {
-            cfgw[i].style.display = "none";
+    cfgWrappers.forEach(wrapper => {
+        const content = wrapper.textContent.toLowerCase();
+        if (content.includes(input)) {
+            wrapper.style.display = "block";
+            matchFound = true;
         } else {
-            cfgw[i].style.display = "block";
+            wrapper.style.display = "none";
         }
+    });
+
+    if (!matchFound && input) {
+        notifyUser("No matches found!", "var(--buttonsubmitbg)", true, 3)
     }
 }
 
@@ -334,13 +340,23 @@ function showNavbar() {
     }, 100);
 };
 
-// Text copy
-// DEPRECATED: execCommand()
+// Text copy using Clipboard API
 function copyCode(id) {
-    let str = document.getElementById(id);
-    window.getSelection().selectAllChildren(str);
-    document.execCommand("Copy");
-    window.getSelection().removeAllRanges();
+    const element = document.getElementById(id);
 
-    notifyUser("Text copied!");
+    if (!element) {
+        console.error(`Element with ID '${id}' not found.`);
+        notifyUser("Error: Element not found.", "var(--error-color)");
+        return;
+    }
+    const textToCopy = element.textContent || element.innerText;
+
+    navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+            notifyUser("Text copied!");
+        })
+        .catch((err) => {
+            console.error("Failed to copy text: ", err);
+            notifyUser("Failed to copy text.", "var(--error-color)");
+        });
 }

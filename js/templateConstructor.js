@@ -23,7 +23,7 @@ function renderJSON(json) {
                         ${!!data.description ? data.description : "(No description provided)"}
                     </div>
                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn ${!!data.contributeRole ? `${getContributorCSSClass(data)}__color` : ""}" href="https://ncvisualsvault.cc/dwnl/click.php?id=${data.downloadId}" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                        <a class="cfg__dwnbtn ${!!data.contributeRole ? `${getContributorCSSClass(data)}__color` : ""}" href="https://visuals.nullcore.net//dwnl/click.php?id=${data.downloadId}" rel="noopener">Download <em class='bx bxs-download'></em></a>
                         <div class="dwn__count">
                             ${ccount[data.downloadId]['c'].formatThousands("<?php echo $ccount_settings['notation']; ?>")}
                             <em class='bx bxs-download'></em>
@@ -116,42 +116,98 @@ function getAuthorTag(data) {
     }
 }
 
-// Larger image preview on click
-// TODO: Don't define background-size in JS, find a better way of scaling images on click
+// Larger image preview with animation and click-to-close functionality
 function openPreviewImage(mediaUrl) {
-    const screenprev = document.querySelector('#preview');
-    let backgroundstyles = {
-        "background-size": 'auto',
-        "opacity": '0'
-    };
+    const screenPrev = document.querySelector('#preview');
 
-    if(isUserMobile() == true){
-        backgroundstyles = {
-            "background-size": '100%',
-            "opacity": '0'
-        };
+    if (!screenPrev) {
+        console.error("Preview element not found.");
+        return;
     }
 
-    screenprev.style.display = 'block';
-    Object.assign(screenprev.style, backgroundstyles);
+    // Ensure it's visible and styled for centering
+    screenPrev.style.display = 'flex';
+    screenPrev.style.justifyContent = 'center';
+    screenPrev.style.alignItems = 'center';
+    screenPrev.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    screenPrev.style.position = 'fixed';
+    screenPrev.style.top = '0';
+    screenPrev.style.left = '0';
+    screenPrev.style.width = '100vw';
+    screenPrev.style.height = '100vh';
+    screenPrev.style.zIndex = '999';
+    screenPrev.style.opacity = '0';
+    screenPrev.style.transition = 'opacity 0.5s ease-in-out';
 
-    setTimeout(function () {
-        screenprev.style.opacity = 1
-    }, 100);
+    // Create a container for the image if it doesn't exist
+    let imgContainer = screenPrev.querySelector('.img-container');
+    if (!imgContainer) {
+        imgContainer = document.createElement('div');
+        imgContainer.className = 'img-container';
+        imgContainer.style.position = 'relative';
+        imgContainer.style.maxWidth = '90%';
+        imgContainer.style.maxHeight = '80%';
+        imgContainer.style.borderRadius = '8px';
+        imgContainer.style.overflow = 'hidden'; // Prevents overflow for rounded corners
+        imgContainer.style.zIndex = '1000'; // Ensure it's above the background
+        screenPrev.appendChild(imgContainer);
+    }
 
-    screenprev.style.backgroundImage = `url(${mediaUrl})`;
+    // Add the image to the container
+    let img = imgContainer.querySelector('img');
+    if (!img) {
+        img = document.createElement('img');
+        img.style.width = '100%';
+        img.style.height = 'auto';
+        img.style.display = 'block';
+        img.style.borderRadius = '8px';
+        imgContainer.appendChild(img);
+    }
+    img.src = mediaUrl;
+
+    // Add a close button
+    let closeButton = screenPrev.querySelector('.close-btn');
+    if (!closeButton) {
+        closeButton = document.createElement('button');
+        closeButton.textContent = 'Close';
+        closeButton.className = 'close-btn';
+        closeButton.style.position = 'absolute';
+        closeButton.style.top = '10px';
+        closeButton.style.right = '10px';
+        closeButton.style.padding = '10px';
+        closeButton.style.background = 'rgba(0, 0, 0, 0.7)';
+        closeButton.style.color = '#fff';
+        closeButton.style.border = 'none';
+        closeButton.style.cursor = 'pointer';
+        closeButton.style.zIndex = '1001'; // Above everything else
+        closeButton.style.borderRadius = '4px';
+
+        closeButton.addEventListener('click', () => {
+            closePreviewImage(screenPrev);
+        });
+
+        screenPrev.appendChild(closeButton);
+    }
+
+    // Fade-in effect
+    setTimeout(() => {
+        screenPrev.style.opacity = '1';
+    }, 50);
+
+    // Close preview when clicking outside the image
+    screenPrev.addEventListener('click', (event) => {
+        if (!imgContainer.contains(event.target)) {
+            closePreviewImage(screenPrev);
+        }
+    });
 }
 
-// Fade out image preview on click
-function fadeOutPreviewImage() {
-    const previewelem = document.querySelector("#preview");
-
-    setTimeout(function () {
-        previewelem.style.opacity = 0;
-    }, 100);
-
-    setTimeout(function () {
-        previewelem.style.display = "none"
+// Close the preview image
+function closePreviewImage(screenPrev) {
+    screenPrev.style.opacity = '0'; // Smooth fade-out effect
+    setTimeout(() => {
+        screenPrev.style.display = 'none';
+        screenPrev.innerHTML = ''; // Clean up the content for the next preview
     }, 500);
 }
 
