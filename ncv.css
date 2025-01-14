@@ -1039,15 +1039,26 @@ input[type="submit"]:hover {
 .contributor2 {
     font-family: Roboto, sans-serif;
     text-decoration: none;
-    color: #436c8e;
+    background: linear-gradient(170deg, #2a5470, #4c92c3);
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: contr2anim 3s linear infinite;
+}
+
+@keyframes contr2anim {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .contributor4 {
     font-family: Roboto, sans-serif;
     text-decoration: none;
     background: linear-gradient(170deg, rgba(111, 150, 167, 1) 20%, rgba(167, 228, 255, 1) 50%, rgba(111, 150, 167, 1) 80%);
-    background-clip: border-box;
-    background-size: 200% auto;
+    background-size: 300% auto;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     animation: contr4anim 4s ease-in-out infinite;
@@ -1055,32 +1066,33 @@ input[type="submit"]:hover {
 
 @keyframes contr4anim {
     0% {
-        background-position: 200% auto;
+        background-position: 0% 50%;
     }
-
     50% {
-        background-position: 200% top;
+        background-position: 100% 50%;
     }
-
     100% {
-        background-position: 200% auto;
+        background-position: 0% 50%;
     }
 }
 
 .contributor5 {
     font-family: Roboto, sans-serif;
-    background-image: linear-gradient(-225deg, #18bbbb 0%, #ffffff 100%);
+    background: linear-gradient(270deg, #18bbbb, #ffffff, #18bbbb);
     background-size: 200% auto;
     color: #fff;
     font-weight: 600;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: contr5anim 1.3s linear infinite;
+    animation: contr5anim 1.5s linear infinite;
 }
 
 @keyframes contr5anim {
-    to {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
         background-position: 200% center;
     }
 }
@@ -1088,25 +1100,23 @@ input[type="submit"]:hover {
 .contributor6 {
     font-family: Roboto, sans-serif;
     font-weight: 600;
-    background: linear-gradient(170deg, rgb(20, 61, 61) 20%, rgb(99, 255, 255) 50%, rgb(26, 79, 79) 80%);
+    background: linear-gradient(170deg, #0f3d3e, #b963ff, #1a4f4f);
     background-clip: border-box;
-    background-size: 200% auto;
+    background-size: 300% auto;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    animation: contr6anim 3.5s ease-in-out infinite;
+    animation: contr6anim 4s ease-in-out infinite;
 }
 
 @keyframes contr6anim {
     0% {
-        background-position: 200% auto;
+        background-position: 0% 50%;
     }
-
     50% {
-        background-position: 200% top;
+        background-position: 100% 50%;
     }
-
     100% {
-        background-position: 200% auto;
+        background-position: 0% 50%;
     }
 }
 
@@ -1140,7 +1150,7 @@ input[type="submit"]:hover {
     background-size: 200% auto;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    animation: contr10anim 1s ease-in-out infinite;
+    animation: contr10anim 1.5s ease-in-out infinite;
 }
 
 @keyframes contr10anim {
