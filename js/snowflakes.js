@@ -6,13 +6,13 @@
   var browserHeight;
 
   // Specify the number of snowflakes you want visible
-  var numberOfSnowflakes = 70;
+  var numberOfSnowflakes = 100;
 
   // Flag to reset the position of the snowflakes
   var resetPosition = false;
 
   // Handle accessibility
-  var enableAnimations = false;
+  var enableAnimations = true;
   var reduceMotionQuery = matchMedia("(prefers-reduced-motion)");
 
   // Handle animation accessibility preferences 
