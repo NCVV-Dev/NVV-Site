@@ -173,12 +173,13 @@ body[data-theme="ncl"] {
 .solid {
     transition: all 300ms ease-in-out;
     background: linear-gradient(152deg, var(--grbackground) 0%, var(--grbackground2) 65%, var(--grbackground3) 100%);
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
-    z-index: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
-
 h1 {
     color: var(--headercolor);
     font-size: 40px;
