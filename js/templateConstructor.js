@@ -23,7 +23,7 @@ function renderJSON(json) {
                         ${!!data.description ? data.description : "(No description provided)"}
                     </div>
                     <div class="cfg__downloadbtn">
-                        <a class="cfg__dwnbtn ${!!data.contributeRole ? `${getContributorCSSClass(data)}__color` : ""}" href="https://visuals.nullcore.net//dwnl/click.php?id=${data.downloadId}" rel="noopener">Download <em class='bx bxs-download'></em></a>
+                        <a class="cfg__dwnbtn ${!!data.contributeRole ? `${getContributorCSSClass(data)}__color` : ""}" href="https://visuals.nullcore.net/dwnl/click.php?id=${data.downloadId}" rel="noopener">Download <em class='bx bxs-download'></em></a>
                         <div class="dwn__count">
                             ${ccount[data.downloadId]['c'].formatThousands("<?php echo $ccount_settings['notation']; ?>")}
                             <em class='bx bxs-download'></em>

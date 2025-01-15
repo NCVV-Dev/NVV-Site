@@ -26,32 +26,6 @@ function eraseCookie(e) {
     document.cookie = e + "=; Max-Age=-99999999;";
 }
 
-// Check if user is using mobile device
-let isMobile;
-
-function isUserMobile() {
-    if (navigator.userAgent.toLowerCase().match(/mobile/i)) {
-        isMobile = true;
-        setCookie("isMobile", "true", 365)
-
-        return true;
-    } else {
-        isMobile = false;
-        setCookie("isMobile", "false", 365)
-
-        return false;
-    }
-}
-
-// Replace the CSS file for mobile devices for better readability
-function ApplyMobileRules() {
-    if (isUserMobile()) {
-        //console.log("[isMobile] User is using mobile device/agent.. Trying to inject mobile CSS rules")
-        $('head').append('<link rel="stylesheet" type="text/css" href="mobile.css">');
-        //console.log("[isMobile] Done!")
-    }
-}
-
 // Themes functionality
 if (getCookie("Theme") == 'NVV') {
     setCookie("Theme", "NVV", 365);
