@@ -5,8 +5,6 @@
 
 <div align="center"><img src="https://sonarcloud.io/api/project_badges/measure?project=NCVV-Dev_NVV-Site&metric=reliability_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=NCVV-Dev_NVV-Site&metric=ncloc"> <img src="https://sonarcloud.io/api/project_badges/measure?project=NCVV-Dev_NVV-Site&metric=sqale_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=NCVV-Dev_NVV-Site&metric=security_rating"> <img src="https://sonarcloud.io/api/project_badges/measure?project=NCVV-Dev_NVV-Site&metric=bugs"> <img src="https://sonarcloud.io/api/project_badges/measure?project=NCVV-Dev_NVV-Site&metric=sqale_index"></div>
 
-<h3 align="center"> No ads, no transactions, no third party social trackers or information-collecting services. Just for people. For free.</h3>
-
 ## Introduction
 
 ### English
@@ -15,9 +13,9 @@
 
 📈 Reaching over 20k+ overall downloads and counting!
 
-🤝 **Cooperated with [Fedoraware](https://fedoraware.ncvisualsvault.cc/) (Technical support ended at 02.01.2023)**
-
 🏅 **Hoster of Null Core subscription giveaways - 14.01.2022 to 22.09.2022. Follow up for more!**
+
+🤝 **Now is an official and independent part of [Null Core Website](https://visuals.nullcore.net/)**
 
 ## Contribution
 This repository is under a strict **maintenance**. Every issue or pull request made in this repository will be **reviewed** and the action will be taken in the **shortest amount of time**.
