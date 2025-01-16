@@ -54,8 +54,6 @@ function renderJSON(json) {
     ShuffleVisuals();
     // Start displaying a loader
     loadImages();
-    // If user is on mobile, apply CSS rules
-    ApplyMobileRules();
     
     endTime = performance.now()
     console.log(`All done! Took us ${endTime - startTime}ms.`)

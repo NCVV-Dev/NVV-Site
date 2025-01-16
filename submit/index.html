@@ -78,41 +78,33 @@
         <div id="progress"></div>
         <h1 class="animate__animated animate__fadeInDown">submit config</h1>
         <div class="clm">
-            <div class="infocolumn animate__animated animate__fadeInDown animate__fast">
-                <h1>Make sure you've read our reminders</h1>
-                <div class="reminderline">
-                    If you were using custom skybox in your visual config you are submitting, attach a trusted link with the skybox or set the default skybox in visual settings. Otherwise your submit request will be denied without further reviewing.
-                </div>
-                <div class="reminderline">
-                    Submit request with any offensive content towards something or someone will be denied without further reviewing, most likely resulting in your IP suspension from using our services. <a href="/tos/" class="other__clickablelink" rel="noopener">(Read 1.6)</a>
-                </div>
-            </div>
             <div class="infocolumn animate__animated animate__fadeIn">
                 <form class="contentform" action="upload.php" method="post" enctype="multipart/form-data">
-                    <div class="uploadbtnwrapper">
-                        <button class="fileuplbtn" id="uploadTrigger">Select File</button>
-                        <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
-                    </div>
                     <h2>Enter your <span class="colormod">Username</span>*</h2>
                     <input type="text" name="textName" id="authorName" autocomplete="off" minlength="3" maxlength="32" required>
                     <h2>Your profile <span class="colormod">Steam URL</span> (optional)</h2>
-                    <input type="text" name="textSteam" id="authorSteam" maxlength="100" autocomplete="off">
-                    <h2>Visual config <span class="colormod">Name/Description</span> (optional, separate by slash)</h2>
-                    <input type="text" name="textDesc" id="cfgDesc" placeholder="If none is given, will be random" maxlength="300" autocomplete="off">
+                    <input type="text" name="textSteam" id="authorSteam" placeholder="https://steamcommunity.com/id(profiles)/" maxlength="100" autocomplete="off">
+                    <h2>Visual Config <span class="colormod">Name</span>*</h2>
+                    <input type="text" name="textCfgName" id="cfgName" maxlength="300" autocomplete="off">
+                    <h2>Visual Config <span class="colormod">Description</span> (optional)</h2>
+                    <input type="text" name="textDesc" id="cfgDesc" maxlength="300" autocomplete="off">
                     <div class="uploadbtnwrapper">
+                        <div class="uploadbtnwrapper">
+                            <button class="fileuplbtn" id="uploadTrigger">Select File</button>
+                            <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
+                        </div>
                         <input type="submit" value="Submit" name="submit">
                     </div>
                 </form>
             </div>
             <div class="infocolumn animate__animated animate__fadeIn">
-                <h1>Help Desk</h1>
                 <div class="helpline">
                     <span class="qm">Having more than one visual config to upload?</span><br>
-                    You can always send all of them in one at our <a href="https://t.me/ncvisualsvault" class="other__clickablelink" rel="noopener">Telegram</a>
+                    Instead of uploading each one of them individually, you can always send them all in one at our <a href="https://t.me/ncvisualsvault" class="other__clickablelink" rel="noopener">Telegram</a>
                 </div>
                 <div class="helpline">
                     <span class="qm">Username is required but you still don't want to type it in?</span><br>
-                    You can still put N/A in your username field, it's not permitted to do so and the visual config will appear under "Admin" name
+                    Indicate that you do not want to give out your username. Type in N/A or none/empty/blank in your username field and the visual config will appear under "Admin" username!
                 </div>
             </div>
         </div>

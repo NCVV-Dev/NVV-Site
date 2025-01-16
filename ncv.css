@@ -315,7 +315,7 @@ input[type="file"] {
 }
 
 input[type="text"] {
-    width: 22em;
+    width: 30em;
     padding: 11px 15px;
     margin: 8px 0;
     border: 1px solid var(--itemtaboutline);
@@ -368,36 +368,6 @@ input[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
-/* Column grid for submit page */
-.clm {
-    display: block;
-    position: relative;
-    padding: 0 20px;
-    justify-content: center;
-}
-
-/* Columns for submit page */
-.infocolumn {
-    height: auto;
-    align-content: center;
-    border-radius: 10px;
-    margin: 20px;
-    transition-duration: .5s;
-    overflow: hidden;
-    text-align: center;
-}
-
-/* Styling of middle column */
-.infocolumn h1 {
-    color: var(--generaltextcolor);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    text-align: center;
-    font-size: 23px;
-    margin: 20px;
-}
 
 .uploadbtnwrapper {
     justify-content: center;
@@ -1029,6 +999,7 @@ input[type="submit"]:hover {
     text-decoration: none;
     background: linear-gradient(170deg, #2a5470, #4c92c3);
     color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
     animation: contr2anim 3s linear infinite;
 }
@@ -1048,6 +1019,7 @@ input[type="submit"]:hover {
     background: linear-gradient(170deg, rgba(111, 150, 167, 1) 20%, rgba(167, 228, 255, 1) 50%, rgba(111, 150, 167, 1) 80%);
     background-size: 300% auto;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
     animation: contr4anim 4s ease-in-out infinite;
 }
@@ -1511,7 +1483,7 @@ input[type="submit"]:hover {
     text-align: center;
     padding: 16px;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     bottom: 0;
     font-size: 15px;
     font-weight: 700;
