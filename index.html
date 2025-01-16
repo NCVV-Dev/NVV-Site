@@ -69,7 +69,28 @@
             </div>
         </div>
         <div class="announcement sticky">
-            <div class="announcetext">Website is under maintenance. Expect instability or unavailable features.</div>
+            <div class="announcetext">Website is under maintenance. Expect instability or unavailable features. Visual config submission coming soon...</div>
+        </div>
+        <div class="submit__cfg__modal" style="opacity: 0; display: none;">
+            <form class="contentform" action="submit/upload.php" method="post" enctype="multipart/form-data">
+
+                <h2>Enter your <span class="colormod">Username</span>*</h2>
+                <input type="text" name="textName" id="authorName" autocomplete="off" minlength="3" maxlength="32" required>
+                <h2>Your profile <span class="colormod">Steam URL</span> (optional)</h2>
+                <div class="">(i.e https://steamcommunity.com/id(profiles)/)</div>
+                <input type="text" name="textSteam" id="authorSteam" maxlength="100" autocomplete="off">
+                <h2>Visual Config <span class="colormod">Name</span>*</h2>
+                <input type="text" name="textCfgName" id="cfgName" maxlength="300" autocomplete="off">
+                <h2>Visual Config <span class="colormod">Description</span> (optional)</h2>
+                <input type="text" name="textDesc" id="cfgDesc" maxlength="300" autocomplete="off">
+                <div class="uploadbtnwrapper">
+                    <div class="uploadbtnwrapper">
+                        <button class="fileuplbtn" id="uploadTrigger">Select File</button>
+                        <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
+                    </div>
+                    <input type="submit" value="Submit" name="submit">
+                </div>
+            </form>
         </div>
         <button onclick="switchtheme()" class="theme animate__animated animate__fadeIn">
             <em class='bx bx-sun'></em>
@@ -83,7 +104,7 @@
             <p class="animate__animated animate__fadeInDown">all your null core visual configs in one place</p>
             <div class="cont">
                 <div class="opt__wrapper animate__animated animate__fadeInDown">
-                    <a href="/submit/" class="opt__submitcfg">Submit Visual Config</a>
+                    <button onclick="openUploadModal()" class="opt__submitcfg undermntc">Submit Visual Config</button>
                 </div>
                 <div class="search__bar animate__animated animate__fadeIn">
                     <input type="text" id="searchbar" placeholder="Search for visuals..." autocomplete="off" onkeyup="search()">

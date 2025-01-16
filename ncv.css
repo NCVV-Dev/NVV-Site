@@ -283,6 +283,7 @@ p {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    border: none;
     border-radius: 3px;
     font-family: Roboto, sans-serif;
     transition: all 300ms ease-in-out;
@@ -315,7 +316,7 @@ input[type="file"] {
 }
 
 input[type="text"] {
-    width: 30em;
+    width: 20em;
     padding: 11px 15px;
     margin: 8px 0;
     border: 1px solid var(--itemtaboutline);
@@ -432,6 +433,19 @@ input[type="submit"]:hover {
 /* Color modulated text for highlights on upload page */
 .colormod {
     color: var(--itemtabhovereffect);
+}
+
+.submit__cfg__modal {
+    margin: 0;
+    padding-top: 80px;
+    width: 450px;
+    background-color: var(--navbarbg);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    z-index: 3;
+    text-align: center;
+    border-right: 1px solid var(--featureditem);
 }
 
 /* navbar panel */
@@ -946,11 +960,10 @@ input[type="submit"]:hover {
 .announcetext {
     margin: auto;
     color: white;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 16px;
     font-family: Coda, sans-serif;
     letter-spacing: 1px;
-    transition: all 1s;
+    transition: all 300ms;
 }
 
 .announcement a {
