@@ -26,6 +26,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
+        <link rel="preload" href="/media/menus/coldbluemenu.png" as="image">
+        <link rel="preload" href="/media/menus/raizomenu.png" as="image">
+        <link rel="preload" href="/media/menus/animemenu.png" as="image">
     </head>
 
     <body data-theme="ncl">
@@ -69,15 +72,19 @@
             </div>
         </div>
         <div class="announcement sticky">
-            <div class="announcetext">Website is under maintenance. Expect instability or unavailable features. Visual config submission coming soon...</div>
+            <div class="announcetext">Website is under maintenance. Expect instability or unavailable features. Visual config submission is up now!</div>
         </div>
-        <div class="submit__cfg__modal" style="opacity: 0; display: none;">
+        <div id="notification" class="notification hidden">
+            <h4 id="notification-title"></h4>
+            <p id="notification-message"></p>
+        </div>
+        <div id ="modal" class="submit__cfg__modal">
             <form class="contentform" action="submit/upload.php" method="post" enctype="multipart/form-data">
-
+                <div class="submit__cfg__modal__maintext">Submit your own visual config right now!</div>
                 <h2>Enter your <span class="colormod">Username</span>*</h2>
                 <input type="text" name="textName" id="authorName" autocomplete="off" minlength="3" maxlength="32" required>
                 <h2>Your profile <span class="colormod">Steam URL</span> (optional)</h2>
-                <div class="">(i.e https://steamcommunity.com/id(profiles)/)</div>
+                <div class="cfg__modal__smalltext">https://steamcommunity.com/id(profiles)/</div>
                 <input type="text" name="textSteam" id="authorSteam" maxlength="100" autocomplete="off">
                 <h2>Visual Config <span class="colormod">Name</span>*</h2>
                 <input type="text" name="textCfgName" id="cfgName" maxlength="300" autocomplete="off">
@@ -104,7 +111,7 @@
             <p class="animate__animated animate__fadeInDown">all your null core visual configs in one place</p>
             <div class="cont">
                 <div class="opt__wrapper animate__animated animate__fadeInDown">
-                    <button onclick="openUploadModal()" class="opt__submitcfg undermntc">Submit Visual Config</button>
+                    <button onclick="openUploadModal()" class="opt__submitcfg">Submit Visual Config</button>
                 </div>
                 <div class="search__bar animate__animated animate__fadeIn">
                     <input type="text" id="searchbar" placeholder="Search for visuals..." autocomplete="off" onkeyup="search()">
@@ -119,7 +126,8 @@
                 </div>
                 <div id="templatecontainer"></div>
             </div>
-            <div id="preview"></div>
+            <div id="preview"><div class="close-btn"></div></div>
+            <div class="overlay" id="overlay"></div>
             <script src="/js/main.js"></script>
             <script src="/js/templateConstructor.js"></script>
             <script src="/js/snowflakes.js"></script>

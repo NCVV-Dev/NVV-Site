@@ -26,6 +26,115 @@ function eraseCookie(e) {
     document.cookie = e + "=; Max-Age=-99999999;";
 }
 
+// Check for if use uploaded something
+checkForUpload();
+
+function showNotification(title, message, isSuccess = true) {
+    const notification = document.getElementById('notification');
+    const notificationTitle = document.getElementById('notification-title');
+    const notificationMessage = document.getElementById('notification-message');
+
+    notificationTitle.textContent = title;
+    notificationMessage.textContent = message;
+
+
+    notification.className = 'notification show';
+    if (!isSuccess) {
+        notification.classList.add('failure');
+    }
+
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            notification.className = 'notification hidden';
+        }, 500);
+    }, 5000);
+}
+
+function checkForUpload() {
+    const uploadStatus = getCookie('upload_status');
+
+    // Success
+    if (uploadStatus === 'success') {
+        const fileName = getCookie('file_name');
+        const authorName = getCookie('author_name');
+
+        showNotification(
+            'File was submittied successfully!',
+            `File: ${fileName}\nUploader: ${authorName}`,
+            true
+        );
+
+        // Play audio
+        const audio = new Audio('/media/ding.mp3');
+        audio.volume = 0.4;
+        audio.play();
+
+    } else if (uploadStatus === 'failure') {
+        // Fail
+        const errMsg = getCookie("error_message");
+        // Play audio
+        const audio = new Audio('/media/fail.mp3');
+        audio.volume = 0.4;
+        audio.play();
+
+        let resultMsg = errMsg.replaceAll("+", " ");
+        showNotification(
+            'Error trying to submit your visual config!',
+            `Reason: ${resultMsg}`,
+            false
+        );
+    }
+
+    eraseCookie("upload_status");
+    eraseCookie("error_message");
+    eraseCookie("file_name");
+    eraseCookie("author_name")
+}
+
+
+
+// Prevent from soft-lock if spamming
+let opened;
+
+// Submit pop up modal
+function openUploadModal() {
+    if (opened == 1) {
+        return
+    }
+
+    const modal = document.getElementById('modal');
+    const overlay = document.getElementById('overlay');
+
+    modal.classList.add('active');
+    overlay.style.display = 'block';
+
+    setTimeout(function () {
+        overlay.classList.add('active');
+    }, 50);
+
+    // Close on click
+    overlay.addEventListener('click', closeUploadModal);
+    opened = 1;
+}
+
+function closeUploadModal() {
+    if (opened == 0) {
+        return
+    }
+
+    const modal = document.getElementById('modal');
+    const overlay = document.getElementById('overlay');
+
+    overlay.classList.remove('active');
+    modal.classList.remove('active');
+
+    setTimeout(function () {
+        overlay.style.display = 'none';
+        opened = 0;
+    }, 500);
+}
+
 // Themes functionality
 if (getCookie("Theme") == 'NVV') {
     setCookie("Theme", "NVV", 365);
@@ -220,7 +329,7 @@ function switchrandomizing() {
         notifyUser("Visual config shuffle disabled", "var(--warn)");
     } else {
         setCookie("EnableShuffle", "true", 365);
-        notifyUser("Visual config shuffle enabled");
+        ShuffleVisuals();
     }
 }
 

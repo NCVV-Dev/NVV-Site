@@ -3,6 +3,7 @@ function renderJSON(json) {
     //console.log("rendered", json)
     // Start with a template
     let html = `<div class="cfgvrow" id="randomize">`
+    let endTime = performance.now()
 
     for (const data of json) {
         html += `
@@ -40,8 +41,6 @@ function renderJSON(json) {
     // Put all JSON entries converted into HTML inside the div element
     document.getElementById("templatecontainer").innerHTML = html;
 
-    let endTime = performance.now()
-
     console.log(`Finished templating! Took us ${endTime - startTime}ms. Running remaining functions...`)
 
     startTime = performance.now()
@@ -54,9 +53,6 @@ function renderJSON(json) {
     ShuffleVisuals();
     // Start displaying a loader
     loadImages();
-    
-    endTime = performance.now()
-    console.log(`All done! Took us ${endTime - startTime}ms.`)
 }
 
 // If there's no profile URL given, <span> is used instead
@@ -95,7 +91,6 @@ function getContributorCSSClass(data) {
         case "contributor4": return "contr4"
         case "contributor5": return "contr5"
         case "contributor6": return "contr6"
-        case "contributor7": return "contr7"
         case "contributor8": return "contr8"
         case "contributor9": return "contr9"
         case "contributor10": return "contr10"
@@ -105,16 +100,16 @@ function getContributorCSSClass(data) {
 
 // If visual config has an unique tag, display it
 function getAuthorTag(data) {
-    if(data.tagType == "devChoice"){
+    if (data.tagType == "devChoice") {
         return `<div class="tag">Devs choice <em class='bx bxs-star'></em></div>`
-    } else if(data.tagType == "communityChoice"){
+    } else if (data.tagType == "communityChoice") {
         return `<div class="tag">Chosen by community <em class='bx bxs-medal'></em></div>`
     } else {
         return ""
     }
 }
 
-// Larger image preview with animation and click-to-close functionality
+// Larger image preview
 function openPreviewImage(mediaUrl) {
     const screenPrev = document.querySelector('#preview');
 
@@ -138,6 +133,7 @@ function openPreviewImage(mediaUrl) {
     screenPrev.style.transition = 'opacity 0.5s ease-in-out';
 
     // Create a container for the image if it doesn't exist
+    // Check if this this needed
     let imgContainer = screenPrev.querySelector('.img-container');
     if (!imgContainer) {
         imgContainer = document.createElement('div');
@@ -146,12 +142,12 @@ function openPreviewImage(mediaUrl) {
         imgContainer.style.maxWidth = '90%';
         imgContainer.style.maxHeight = '80%';
         imgContainer.style.borderRadius = '8px';
-        imgContainer.style.overflow = 'hidden'; // Prevents overflow for rounded corners
-        imgContainer.style.zIndex = '1000'; // Ensure it's above the background
+        imgContainer.style.overflow = 'hidden';
+        imgContainer.style.zIndex = '1000';
         screenPrev.appendChild(imgContainer);
     }
 
-    // Add the image to the container
+    // Adding image
     let img = imgContainer.querySelector('img');
     if (!img) {
         img = document.createElement('img');
@@ -163,31 +159,6 @@ function openPreviewImage(mediaUrl) {
     }
     img.src = mediaUrl;
 
-    // Add a close button
-    let closeButton = screenPrev.querySelector('.close-btn');
-    if (!closeButton) {
-        closeButton = document.createElement('button');
-        closeButton.textContent = 'Close';
-        closeButton.className = 'close-btn';
-        closeButton.style.position = 'absolute';
-        closeButton.style.top = '10px';
-        closeButton.style.right = '10px';
-        closeButton.style.padding = '10px';
-        closeButton.style.background = 'rgba(0, 0, 0, 0.7)';
-        closeButton.style.color = '#fff';
-        closeButton.style.border = 'none';
-        closeButton.style.cursor = 'pointer';
-        closeButton.style.zIndex = '1001'; // Above everything else
-        closeButton.style.borderRadius = '4px';
-
-        closeButton.addEventListener('click', () => {
-            closePreviewImage(screenPrev);
-        });
-
-        screenPrev.appendChild(closeButton);
-    }
-
-    // Fade-in effect
     setTimeout(() => {
         screenPrev.style.opacity = '1';
     }, 50);
@@ -202,10 +173,10 @@ function openPreviewImage(mediaUrl) {
 
 // Close the preview image
 function closePreviewImage(screenPrev) {
-    screenPrev.style.opacity = '0'; // Smooth fade-out effect
+    screenPrev.style.opacity = '0';
     setTimeout(() => {
         screenPrev.style.display = 'none';
-        screenPrev.innerHTML = ''; // Clean up the content for the next preview
+        screenPrev.innerHTML = '';
     }, 500);
 }
 
