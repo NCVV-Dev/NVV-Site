@@ -26,7 +26,7 @@ function eraseCookie(e) {
     document.cookie = e + "=; Max-Age=-99999999;";
 }
 
-// Check for if use uploaded something
+// Check for if user uploaded
 checkForUpload();
 
 function showNotification(title, message, isSuccess = true) {

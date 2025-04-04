@@ -768,7 +768,7 @@
         "author": "Marli",
         "authorIconClass": "",
         "contributeRole": "",
-        "steamUrl": "http://steamcommunity.com/profiles/76561199001724138 ",
+        "steamUrl": "http://steamcommunity.com/profiles/76561199001724138",
         "downloadId": 110
     },
     {
@@ -778,8 +778,78 @@
         "author": "lndig0",
         "authorIconClass": "",
         "contributeRole": "",
-        "steamUrl": "http://steamcommunity.com/profiles/76561199391832430 ",
+        "steamUrl": "http://steamcommunity.com/profiles/76561199391832430",
         "downloadId": 111,
         "tagType": "devChoice"
+    },
+    {
+        "title": "Angel",
+        "media": "media/angel.jpg",
+        "author": "weapon_smg1",
+        "authorIconClass": "bx bxs-star",
+        "contributeRole": "contributorV",
+        "steamUrl": "https://steamcommunity.com/profiles/76561199655938182",
+        "downloadId": 120,
+        "tagType": ""
+    },
+    {
+        "title": "3D Box",
+        "media": "media/3dbox.jpg",
+        "author": "weapon_smg1",
+        "authorIconClass": "bx bxs-star",
+        "contributeRole": "contributorV",
+        "steamUrl": "https://steamcommunity.com/profiles/76561199655938182",
+        "downloadId": 119,
+        "tagType": ""
+    },
+    {
+        "title": "Artica",
+        "media": "media/artica.jpg",
+        "author": "weapon_smg1",
+        "authorIconClass": "bx bxs-star",
+        "contributeRole": "contributorV",
+        "steamUrl": "https://steamcommunity.com/profiles/76561199655938182",
+        "downloadId": 121,
+        "tagType": ""
+    },
+    {
+        "title": "Arch Linux",
+        "media": "media/archlinux.jpg",
+        "author": "weapon_smg1",
+        "authorIconClass": "bx bxs-star",
+        "contributeRole": "contributorV",
+        "steamUrl": "https://steamcommunity.com/profiles/76561199655938182",
+        "downloadId": 122,
+        "tagType": ""
+    },
+    {
+        "title": "Hioshiru",
+        "media": "media/archlinux.jpg",
+        "author": "weapon_smg1",
+        "authorIconClass": "bx bxs-star",
+        "contributeRole": "contributorV",
+        "steamUrl": "https://steamcommunity.com/profiles/76561199655938182",
+        "downloadId": 123,
+        "tagType": ""
+    },
+    {
+        "title": "Pink",
+        "media": "media/pink.jpg",
+        "author": "weapon_smg1",
+        "authorIconClass": "bx bxs-star",
+        "contributeRole": "contributorV",
+        "steamUrl": "https://steamcommunity.com/profiles/76561199655938182",
+        "downloadId": 124,
+        "tagType": ""
+    },
+    {
+        "title": "Royal Hack",
+        "media": "media/royalhack.jpg",
+        "author": "weapon_smg1",
+        "authorIconClass": "bx bxs-star",
+        "contributeRole": "contributorV",
+        "steamUrl": "https://steamcommunity.com/profiles/76561199655938182",
+        "downloadId": 125,
+        "tagType": ""
     }
 ]

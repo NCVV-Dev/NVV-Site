@@ -57,7 +57,7 @@ body[data-theme="nvv"] {
     --headercolor: #ffffff;
     --pcolor: #ffffff;
     --generaltextcolor: #ffffff;
-    --itemtabcolor: #2d2f4b;
+    --itemtabcolor: #222438;
     --itemtaboutline: #6b66c0;
     --itemtabhover: #353277;
     --itemtabhovereffect: #6b66c0;
@@ -68,7 +68,7 @@ body[data-theme="nvv"] {
     --buttonsubmithover: #41bd8f;
     --buttonsubmitglow: #41bd904d;
     --tabcontents: rgba(171, 154, 255, 0.1);
-    --announcement: #3a3e52;
+    --announcement: #2a304e;
     --iconshield: #ff80bf;
     --featureditem: #ff80bf;
     /* LA/TOS THEME */
@@ -465,7 +465,6 @@ input[type="submit"]:hover {
 .overlay.active {
     opacity: 1;
 }
-
 
 /* navbar panel */
 .navbar__wrapper {
@@ -1037,7 +1036,7 @@ input[type="submit"]:hover {
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px 5px #1420ffe8, 0px 0px 3px #afcbfc;
+    text-shadow: 0px 0px 3px #1420ffe8, 0px 0px 2px #649dff;
 }
 
 .contributorVMAX {

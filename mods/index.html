@@ -26,9 +26,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Major+Mono+Display">
+        <link rel="preload" href="/media/menus/coldbluemenu.png" as="image">
+        <link rel="preload" href="/media/menus/raizomenu.png" as="image">
+        <link rel="preload" href="/media/menus/animemenu.png" as="image">
     </head>
 
-    <body data-theme="ncl" onload="initpicture()">
+    <body data-theme="ncl">
+        <div class="snowflake"></div>
         <div class="welcome_overlay">
             <div class="welc_media">
                 <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site/" rel="noopener" target="_blank"><em class='bx bxl-github'></em></a>
@@ -49,7 +53,6 @@
             </div>
         </div>
         <div class="navbar__wrapper">
-            <div class="snowflake"></div>
             <div class="navbar">
                 <a href="/" rel="noopener">
                     <span class="links_name">Main Page</span>
@@ -68,6 +71,27 @@
         <div class="announcement sticky">
             <div class="announcetext">Website is under maintenance. Expect instability or unavailable features. Visual config submission is up now!</div>
         </div>
+        <div id="modal" class="submit__cfg__modal">
+            <form class="contentform" action="" method="post" enctype="multipart/form-data">
+                <div class="submit__cfg__modal__maintext">Submit your TF2 right now!</div>
+                <h2>Enter your <span class="colormod">Username</span>*</h2>
+                <input type="text" name="textName" id="authorName" autocomplete="off" minlength="3" maxlength="32" required>
+                <h2>Your profile <span class="colormod">Steam URL</span> (optional)</h2>
+                <div class="cfg__modal__smalltext">https://steamcommunity.com/id(profiles)/</div>
+                <input type="text" name="textSteam" id="authorSteam" maxlength="100" autocomplete="off">
+                <h2>Visual Config <span class="colormod">Name</span>*</h2>
+                <input type="text" name="textCfgName" id="cfgName" maxlength="300" autocomplete="off">
+                <h2>Visual Config <span class="colormod">Description</span> (optional)</h2>
+                <input type="text" name="textDesc" id="cfgDesc" maxlength="300" autocomplete="off">
+                <div class="uploadbtnwrapper">
+                    <div class="uploadbtnwrapper">
+                        <button class="fileuplbtn" id="uploadTrigger">Select File</button>
+                        <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
+                    </div>
+                    <input type="submit" value="Submit" name="submit">
+                </div>
+            </form>
+        </div>
         <button onclick="switchtheme()" class="theme animate__animated animate__fadeIn">
             <em class='bx bx-sun'></em>
         </button>
@@ -78,7 +102,7 @@
             <p class="animate__animated animate__fadeInDown">all the tf2 mods you need for smooth gameplay</p>
             <div class="cont">
                 <div class="opt__wrapper animate__animated animate__fadeInDown">
-                    <a href="#" class="opt__submitcfg undermntc">Submit Mod or Skybox</a>
+                    <button class="opt__submitcfg">Submit TF2 Mod</button>
                 </div>
                 <div class="cfgvrow mods">
                     <div class="cfg__wrapper animate__animated animate__fadeIn">
@@ -305,23 +329,6 @@
                     <div class="cfg__wrapper animate__animated animate__fadeIn">
                         <div class="cfg__tab">
                             <div class="cfg__body">
-                                <div class="cfg__title mods"> Aligned Medigun Beam </div>
-                                <div class="cfg__author mods"> Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                                </div>
-                                <div class="cfg__descr"> Aligns medigun beam to the actual medigun barrel as well as smoothing the beam </div>
-                                <div class="cfg__downloadbtn">
-                                    <a class="cfg__dwnbtn" href="https://visuals.nullcore.net/dwnl/click.php?id=85" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                                    <div class="dwn__count">
-                                        <script>ccount_display('85')</script>
-                                        <em class='bx bxs-download'></em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg__wrapper animate__animated animate__fadeIn">
-                        <div class="cfg__tab">
-                            <div class="cfg__body">
                                 <div class="cfg__title mods"> Consistent Kill Icons </div>
                                 <div class="cfg__author mods"> Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
                                 </div>
@@ -441,23 +448,6 @@
                     <div class="cfg__wrapper animate__animated animate__fadeIn">
                         <div class="cfg__tab">
                             <div class="cfg__body">
-                                <div class="cfg__title mods"> Color Coded Charge Meter </div>
-                                <div class="cfg__author mods"> Uploader: <a class="default__link admin" target="_blank" rel="noopener">Admin</a>
-                                </div>
-                                <div class="cfg__descr"> Tells you how much damage is charged by changing colors </div>
-                                <div class="cfg__downloadbtn">
-                                    <a class="cfg__dwnbtn" href="https://visuals.nullcore.net/dwnl/click.php?id=114" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                                    <div class="dwn__count">
-                                        <script>ccount_display('114')</script>
-                                        <em class='bx bxs-download'></em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg__wrapper animate__animated animate__fadeIn">
-                        <div class="cfg__tab">
-                            <div class="cfg__body">
                                 <div class="cfg__title mods"> Developer Textures v2 </div>
                                 <div class="cfg__author mods"> Uploader: <a class="default__link" target="_blank" rel="noopener">JackJacob</a>
                                 </div>
@@ -527,163 +517,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="skyboxes"> skyboxes </div>
-                <div class="cfgvrow">
-                    <div class="cfg__wrapper animate__animated animate__fadeIn">
-                        <div class="cfg__tab">
-                            <div class="cfg__image__wrapper">
-                                <img class="cfg__image" loading="lazy" src="/media/skybox/sky_roze.jpeg" alt="">
-                            </div>
-                            <div class="cfg__body">
-                                <div class="cfg__title mods"> Sky Roze </div>
-                                <div class="cfg__author mods nodescr"> Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                                </div>
-                                <div class="cfg__downloadbtn">
-                                    <a class="cfg__dwnbtn" href="https://visuals.nullcore.net/dwnl/click.php?id=91" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                                    <div class="dwn__count">
-                                        <script>ccount_display('91')</script>
-                                        <em class='bx bxs-download'></em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg__wrapper animate__animated animate__fadeIn">
-                        <div class="cfg__tab">
-                            <div class="cfg__image__wrapper">
-                                <img class="cfg__image" loading="lazy" src="/media/skybox/purpush.jpg" alt="">
-                            </div>
-                            <div class="cfg__body">
-                                <div class="cfg__title mods"> Purpush </div>
-                                <div class="cfg__author mods nodescr"> Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                                </div>
-                                <div class="cfg__downloadbtn">
-                                    <a class="cfg__dwnbtn" href="https://visuals.nullcore.net/dwnl/click.php?id=92" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                                    <div class="dwn__count">
-                                        <script>ccount_display('92')</script>
-                                        <em class='bx bxs-download'></em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg__wrapper animate__animated animate__fadeIn">
-                        <div class="cfg__tab">
-                            <div class="cfg__image__wrapper">
-                                <img class="cfg__image" loading="lazy" src="/media/skybox/moon_sky.png" alt="">
-                            </div>
-                            <div class="cfg__body">
-                                <div class="cfg__title mods"> Moon Sky </div>
-                                <div class="cfg__author mods nodescr"> Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                                </div>
-                                <div class="cfg__downloadbtn">
-                                    <a class="cfg__dwnbtn" href="https://visuals.nullcore.net/dwnl/click.php?id=93" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                                    <div class="dwn__count">
-                                        <script>ccount_display('93')</script>
-                                        <em class='bx bxs-download'></em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg__wrapper animate__animated animate__fadeIn">
-                        <div class="cfg__tab">
-                            <div class="cfg__image__wrapper">
-                                <img class="cfg__image" loading="lazy" src="/media/skybox/night_mountain.png" alt="">
-                            </div>
-                            <div class="cfg__body">
-                                <div class="cfg__title mods"> Night Mountain </div>
-                                <div class="cfg__author mods nodescr"> Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                                </div>
-                                <div class="cfg__downloadbtn">
-                                    <a class="cfg__dwnbtn" href="https://visuals.nullcore.net/dwnl/click.php?id=94" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                                    <div class="dwn__count">
-                                        <script>ccount_display('94')</script>
-                                        <em class='bx bxs-download'></em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg__wrapper animate__animated animate__fadeIn">
-                        <div class="cfg__tab">
-                            <div class="cfg__image__wrapper">
-                                <img class="cfg__image" loading="lazy" src="/media/skybox/alpine_night.png" alt="">
-                            </div>
-                            <div class="cfg__body">
-                                <div class="cfg__title mods"> Alpine Night </div>
-                                <div class="cfg__author mods nodescr"> Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                                </div>
-                                <div class="cfg__downloadbtn">
-                                    <a class="cfg__dwnbtn" href="https://visuals.nullcore.net/dwnl/click.php?id=95" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                                    <div class="dwn__count">
-                                        <script>ccount_display('95')</script>
-                                        <em class='bx bxs-download'></em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg__wrapper animate__animated animate__fadeIn">
-                        <div class="cfg__tab">
-                            <div class="cfg__image__wrapper">
-                                <img class="cfg__image" loading="lazy" src="/media/skybox/not_quite_dusk.png" alt="">
-                            </div>
-                            <div class="cfg__body">
-                                <div class="cfg__title mods"> Not Quite Dusk </div>
-                                <div class="cfg__author mods nodescr"> Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                                </div>
-                                <div class="cfg__downloadbtn">
-                                    <a class="cfg__dwnbtn" href="https://visuals.nullcore.net/dwnl/click.php?id=96" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                                    <div class="dwn__count">
-                                        <script>ccount_display('96')</script>
-                                        <em class='bx bxs-download'></em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg__wrapper animate__animated animate__fadeIn">
-                        <div class="cfg__tab">
-                            <div class="cfg__image__wrapper">
-                                <img class="cfg__image" loading="lazy" src="/media/skybox/pink_night.png" alt="">
-                            </div>
-                            <div class="cfg__body">
-                                <div class="cfg__title mods"> Pink Night </div>
-                                <div class="cfg__author mods nodescr"> Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                                </div>
-                                <div class="cfg__downloadbtn">
-                                    <a class="cfg__dwnbtn" href="https://visuals.nullcore.net/dwnl/click.php?id=97" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                                    <div class="dwn__count">
-                                        <script>ccount_display('97')</script>
-                                        <em class='bx bxs-download'></em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cfg__wrapper animate__animated animate__fadeIn">
-                        <div class="cfg__tab">
-                            <div class="cfg__image__wrapper">
-                                <img class="cfg__image" loading="lazy" src="/media/skybox/sky_tropic.jpg" alt="">
-                            </div>
-                            <div class="cfg__body">
-                                <div class="cfg__title mods"> Sky Tropic </div>
-                                <div class="cfg__author mods nodescr"> Uploader: <a class="default__link admin" href="" target="_blank" rel="noopener">Admin</a>
-                                </div>
-                                <div class="cfg__downloadbtn">
-                                    <a class="cfg__dwnbtn" href="https://visuals.nullcore.net/dwnl/click.php?id=98" rel="noopener">Download <em class='bx bxs-download'></em></a>
-                                    <div class="dwn__count">
-                                        <script>ccount_display('98')</script>
-                                        <em class='bx bxs-download'></em>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div id="preview" class="animate__animated animate__fadeIn" onclick="this.style.display='none';"></div>
+            <div class="overlay" id="overlay"></div>
         </div>
     </body>
     <script src="/js/main.js"></script>

@@ -1,9 +1,9 @@
 // Visually display the contents of data.json
 function renderJSON(json) {
     //console.log("rendered", json)
+
     // Start with a template
     let html = `<div class="cfgvrow" id="randomize">`
-    let endTime = performance.now()
 
     for (const data of json) {
         html += `
@@ -41,9 +41,9 @@ function renderJSON(json) {
     // Put all JSON entries converted into HTML inside the div element
     document.getElementById("templatecontainer").innerHTML = html;
 
-    console.log(`Finished templating! Took us ${endTime - startTime}ms. Running remaining functions...`)
+    endTime = performance.now()
 
-    startTime = performance.now()
+    console.log(`Finished templating! Took us ${endTime - startTime}ms. Running remaining functions...`)
 
     // When templating is done, run remaining functions
 
