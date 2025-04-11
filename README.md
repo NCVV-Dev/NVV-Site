@@ -15,7 +15,7 @@
 
 🏅 **Hoster of Null Core subscription giveaways - 14.01.2022 to 22.09.2022. Follow up for more!**
 
-🤝 **Now is an official and independent part of [Null Core Website](https://visuals.nullcore.net/)**
+🤝 **Now is an official and independent part of [Null Core Project Ltd](https://visuals.nullcore.net/)**
 
 ## Contribution
 This repository is under a strict **maintenance**. Every issue or pull request made in this repository will be **reviewed** and the action will be taken in the **shortest amount of time**.
