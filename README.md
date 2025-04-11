@@ -11,7 +11,7 @@
 
 **NVV** aka **'Null Core - Visuals Vault'** website built in pure **HTML, CSS and JavaScript** with the ultimate goal to create an opportunity for Null Core Software users share their visual configurations more openly with each other and give others to try them out. This repository was made in order to create update notes and provide to users an easier way to **contribute to the project**.
 
-📈 Reaching over 20k+ overall downloads and counting!
+📈 Reaching over 70k+ overall downloads and counting!
 
 🏅 **Hoster of Null Core subscription giveaways - 14.01.2022 to 22.09.2022. Follow up for more!**
 
