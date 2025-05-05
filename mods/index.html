@@ -32,7 +32,6 @@
     </head>
 
     <body data-theme="ncl">
-        <div class="snowflake"></div>
         <div class="welcome_overlay">
             <div class="welc_media">
                 <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site/" rel="noopener" target="_blank"><em class='bx bxl-github'></em></a>
@@ -52,49 +51,56 @@
                 <img class="wcimg animate__animated animate__fadeInUpBig" src="/media/menus/animemenu.png" alt="">
             </div>
         </div>
-        <div class="navbar__wrapper">
-            <div class="navbar">
-                <a href="/" rel="noopener">
+        <div class="navbar">
+            <div class="navbar-links">
+                <a href="/" rel="noopener" class="nav-link">
+                    <i class="fas fa-box-open"></i>
                     <span class="links_name">Main Page</span>
                 </a>
-                <a href="/tos/" rel="noopener">
+                <a href="/tos/" class="nav-link">
+                    <i class="fas fa-file-contract"></i>
                     <span class="links_name">LA/TOS</span>
                 </a>
-                <a href="/guides/">
+                <a href="/guides/" class="nav-link">
+                    <i class="fas fa-book"></i>
                     <span class="links_name">Guides</span>
                 </a>
-                <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener">
-                    <span class="links_name">Report an Issue</span>
+                <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener" class="nav-link">
+                    <i class="fas fa-bug"></i>
+                    <span class="links_name">Report Issue</span>
                 </a>
             </div>
-        </div>
-        <div class="announcement sticky">
-            <div class="announcetext">Website is under maintenance. Expect instability or unavailable features. Visual config submission is up now!</div>
+            
+            <button onclick="switchtheme()" class="theme-toggle">
+                <i class='bx bxs-moon'></i>
+                <span class="theme-text">Dark Mode</span>
+            </button>
+
+            <div class="announcement">
+                <div class="announcetext">
+                    <i class='bx bxs-info-circle'></i>
+                    <span>Website is under maintenance. Expect instability or unavailable features. Visual config submission is up now!</span>
+                </div>
+            </div>
         </div>
         <div id="modal" class="submit__cfg__modal">
-            <form class="contentform" action="" method="post" enctype="multipart/form-data">
-                <div class="submit__cfg__modal__maintext">Submit your TF2 right now!</div>
+            <form class="contentform" action="upload.php" method="post" enctype="multipart/form-data">
+                <div class="submit__cfg__modal__maintext">Submit your TF2 mod right now!</div>
                 <h2>Enter your <span class="colormod">Username</span>*</h2>
                 <input type="text" name="textName" id="authorName" autocomplete="off" minlength="3" maxlength="32" required>
                 <h2>Your profile <span class="colormod">Steam URL</span> (optional)</h2>
                 <div class="cfg__modal__smalltext">https://steamcommunity.com/id(profiles)/</div>
                 <input type="text" name="textSteam" id="authorSteam" maxlength="100" autocomplete="off">
-                <h2>Visual Config <span class="colormod">Name</span>*</h2>
+                <h2>Mod <span class="colormod">Link</span>*</h2>
                 <input type="text" name="textCfgName" id="cfgName" maxlength="300" autocomplete="off">
-                <h2>Visual Config <span class="colormod">Description</span> (optional)</h2>
-                <input type="text" name="textDesc" id="cfgDesc" maxlength="300" autocomplete="off">
                 <div class="uploadbtnwrapper">
                     <div class="uploadbtnwrapper">
-                        <button class="fileuplbtn" id="uploadTrigger">Select File</button>
                         <input type="file" name="fileName" accept=".ncvp" class="hidden" id="uploadFile" autocomplete="off" required>
                     </div>
                     <input type="submit" value="Submit" name="submit">
                 </div>
             </form>
         </div>
-        <button onclick="switchtheme()" class="theme animate__animated animate__fadeIn">
-            <em class='bx bx-sun'></em>
-        </button>
         <div class="bodywrapper">
             <div id="modal__overlay"></div>
             <div id="progress"></div>
@@ -102,7 +108,7 @@
             <p class="animate__animated animate__fadeInDown">all the tf2 mods you need for smooth gameplay</p>
             <div class="cont">
                 <div class="opt__wrapper animate__animated animate__fadeInDown">
-                    <button class="opt__submitcfg">Submit TF2 Mod</button>
+                    <button onclick="openUploadModal()" class="opt__submitcfg">Submit TF2 Mod</button>
                 </div>
                 <div class="cfgvrow mods">
                     <div class="cfg__wrapper animate__animated animate__fadeIn">
@@ -516,12 +522,12 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="overlay" id="overlay"></div>
         </div>
     </body>
     <script src="/js/main.js"></script>
-    <script src="/js/snowflakes.js"></script>
 
 </html>

@@ -20,7 +20,7 @@
         <script src="https://visuals.nullcore.net/dwnl/display.php"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha384-Gu3KVV2H9d+yA4QDpVB7VcOyhJlAVrcXd0thEjr4KznfaFPLe0xQJyonVxONa4ZC" crossorigin="anonymous">
         <link rel="icon" href="/media/nvv.ico" type="image/x-icon">
-        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" integrity="sha384-42kyIPf7HDYLkGffmxDhSx/3Z/53wGBs3nD6wEFxsbeDc7rMO6mkYbkAcpRsnMU2" crossorigin="anonymous">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Coda">
@@ -32,12 +32,17 @@
     </head>
 
     <body data-theme="ncl">
-        <div class="snowflake"></div>
         <div class="welcome_overlay">
-            <div class="welc_media">
-                <a class="welcbutton" href="https://github.com/harmonyzt/NVV-Site/" rel="noopener" target="_blank"><em class='bx bxl-github'></em></a>
-                <a class="welcbutton" href="https://t.me/ncvisualsvault/" rel="noopener" target="_blank"><em class='bx bxl-telegram'></em></a>
-                <a class="welcbutton" href="https://nullcoreproject.net/" rel="noopener" target="_blank"><em class='bx bx-border-all' style="color: #18bbbb;"></em></a>
+            <div class="social-buttons">
+                <a href="https://github.com/harmonyzt/NVV-Site/" class="social-btn" target="_blank">
+                    <em class='bx bxl-github'></em>
+                </a>
+                <a href="https://t.me/ncvisualsvault/" class="social-btn" target="_blank">
+                    <em class='bx bxl-telegram'></em>
+                </a>
+                <a href="https://nullcoreproject.net/" class="social-btn" target="_blank">
+                    <em class='bx bx-border-all'></em>
+                </a>
             </div>
             <div class="welcome_header_container">
                 <div class="welcome_header">Welcome to Null Core - Visuals Vault</div>
@@ -52,27 +57,43 @@
                 <img class="wcimg animate__animated animate__fadeInUpBig" src="/media/menus/animemenu.png" alt="">
             </div>
         </div>
-        <div class="navbar__wrapper">
+        <div class="header-container">
             <div class="navbar">
-                <a href="/mods/" rel="noopener">
-                    <span class="links_name">Mods Page</span>
-                </a>
-                <a href="https://visuals.nullcore.net//dwnl/click.php?id=downloadmaster" rel="noopener">
-                    <span class="links_name">Download All Visuals</span>
-                </a>
-                <a href="/tos/">
-                    <span class="links_name">LA/TOS</span>
-                </a>
-                <a href="/guides/">
-                    <span class="links_name">Guides</span>
-                </a>
-                <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener">
-                    <span class="links_name">Report an Issue</span>
-                </a>
+                <div class="navbar-links">
+                    <a href="/mods/" rel="noopener" class="nav-link">
+                        <i class="fas fa-box-open"></i>
+                        <span class="links_name">Mods Page</span>
+                    </a>
+                    <a href="https://visuals.nullcore.net//dwnl/click.php?id=downloadmaster" rel="noopener" class="nav-link">
+                        <i class="fas fa-download"></i>
+                        <span class="links_name">Download All</span>
+                    </a>
+                    <a href="/tos/" class="nav-link">
+                        <i class="fas fa-file-contract"></i>
+                        <span class="links_name">LA/TOS</span>
+                    </a>
+                    <a href="/guides/" class="nav-link">
+                        <i class="fas fa-book"></i>
+                        <span class="links_name">Guides</span>
+                    </a>
+                    <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener" class="nav-link">
+                        <i class="fas fa-bug"></i>
+                        <span class="links_name">Report Issue</span>
+                    </a>
+                </div>
+                
+                <button onclick="switchtheme()" class="theme-toggle">
+                    <i class='bx bxs-moon'></i>
+                    <span class="theme-text">Dark Mode</span>
+                </button>
+
+                <div class="announcement">
+                    <div class="announcetext">
+                        <i class='bx bxs-info-circle'></i>
+                        <span>Website is under maintenance. Expect instability or unavailable features. Visual config submission is up now!</span>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="announcement sticky">
-            <div class="announcetext">Website is under maintenance. Expect instability or unavailable features. Visual config submission is up now!</div>
         </div>
         <div id="notification" class="notification hidden">
             <h4 id="notification-title"></h4>
@@ -99,9 +120,6 @@
                 </div>
             </form>
         </div>
-        <button onclick="switchtheme()" class="theme animate__animated animate__fadeIn">
-            <em class='bx bx-sun'></em>
-        </button>
         <div id="nf__popup"></div>
         <div class="bodywrapper">
             <div id="modal__overlay"></div>
@@ -114,15 +132,40 @@
                 <div class="opt__wrapper animate__animated animate__fadeInDown">
                     <button onclick="openUploadModal()" class="opt__submitcfg">Submit Visual Config</button>
                 </div>
-                <div class="search__bar animate__animated animate__fadeIn">
-                    <input type="text" id="searchbar" placeholder="Search for visuals..." autocomplete="off" onkeyup="search()">
+                <div class="search-container animate__animated animate__fadeIn">
+                    <div class="search-bar">
+                        <em class='bx bx-search search-icon'></em>
+                        <input type="text" 
+                               id="searchbar" 
+                               placeholder="Search for visuals..." 
+                               autocomplete="off" 
+                               onkeyup="search()"
+                               aria-label="Search for visuals">
+                        <button class="search-clear" id="searchClear" onclick="clearSearch()">
+                            <em class='bx bx-x'></em>
+                        </button>
+                    </div>
                 </div>
-                <div class="utility_buttons_wrapper animate__animated animate__fadeIn">
-                    <div class="utility_buttons">
+                <div class="sort-controls animate__animated animate__fadeIn">
+                    <div class="sort-toggle" onclick="toggleSortMenu()">
                         <em class='bx bx-sort'></em>
-                        <a onclick="switchrandomizing()" class="utility_button"> Shuffle Visuals </a>
-                        <a class="utility_button" onclick="sortbyname()"> Sort by Name </a>
-                        <a class="utility_button" onclick="sortbymostdwnl()"> Sort by Downloads </a>
+                        <span>Sort</span>
+                        <em class='bx bx-chevron-down'></em>
+                    </div>
+                    <div class="sort-menu" id="sortMenu">
+                        <div class="sort-option" onclick="switchrandomizing()">
+                            <em class='bx bx-shuffle'></em>
+                            <span>Shuffle Visuals</span>
+                            <div class="sort-toggle-switch" id="shuffleToggle"></div>
+                        </div>
+                        <div class="sort-option" onclick="sortbyname()">
+                            <em class='bx bx-sort-a-z'></em>
+                            <span>Sort by Name</span>
+                        </div>
+                        <div class="sort-option" onclick="sortbymostdwnl()">
+                            <em class='bx bx-download'></em>
+                            <span>Sort by Downloads</span>
+                        </div>
                     </div>
                 </div>
                 <div id="templatecontainer"></div>
@@ -133,7 +176,6 @@
             <div class="overlay" id="overlay"></div>
             <script src="/js/main.js"></script>
             <script src="/js/templateConstructor.js"></script>
-            <script src="/js/snowflakes.js"></script>
         </div>
     </body>
 

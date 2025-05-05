@@ -92,8 +92,6 @@ function checkForUpload() {
     eraseCookie("author_name")
 }
 
-
-
 // Prevent from soft-lock if spamming
 let opened;
 
@@ -135,14 +133,33 @@ function closeUploadModal() {
     }, 500);
 }
 
-// Themes functionality
+// Themes
+function updateThemeButton() {
+    const themeToggle = document.querySelector('.theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+    const themeText = themeToggle.querySelector('.theme-text');
+
+    if (getCookie("Theme") == 'NVV') {
+        themeIcon.classList.remove('bxs-sun');
+        themeIcon.classList.add('bxs-moon');
+        themeText.textContent = 'Dark Mode';
+        themeToggle.classList.add('active-theme');
+    } else {
+        themeIcon.classList.remove('bxs-moon');
+        themeIcon.classList.add('bxs-sun');
+        themeText.textContent = 'Light Mode';
+        themeToggle.classList.remove('active-theme');
+    }
+}
+
 if (getCookie("Theme") == 'NVV') {
     setCookie("Theme", "NVV", 365);
-    document.body.setAttribute('data-theme', 'nvv')
+    document.body.setAttribute('data-theme', 'nvv');
 } else {
     setCookie("Theme", "NCL", 365);
     document.body.setAttribute('data-theme', 'ncl');
 }
+updateThemeButton();
 
 function switchtheme() {
     if (getCookie("Theme") == 'NVV') {
@@ -152,6 +169,8 @@ function switchtheme() {
         document.body.setAttribute('data-theme', 'nvv');
         setCookie("Theme", "NVV", 365);
     }
+
+    updateThemeButton();
 }
 
 // Page loader
@@ -237,26 +256,46 @@ function findMostDownloaded() {
 
 // Search functionality
 function search() {
-    const input = document.getElementById('searchbar').value.trim().toLowerCase();
-    const cfgWrappers = document.querySelectorAll('.cfg__wrapper');
-    let matchFound = false;
+    const input = document.getElementById('searchbar');
+    const filter = input.value.toUpperCase();
+    const items = document.querySelectorAll('.cfg__wrapper');
+    const clearBtn = document.getElementById('searchClear');
+    clearBtn.classList.toggle('visible', filter.length > 0);
 
-    cfgWrappers.forEach(wrapper => {
-        const content = wrapper.textContent.toLowerCase();
-        if (content.includes(input)) {
-            wrapper.style.display = "block";
-            matchFound = true;
+    if (filter.length === 0) {
+        items.forEach(item => {
+            item.classList.remove('hidden-by-search');
+        });
+        return;
+    }
+
+    let foundResults = false;
+
+    items.forEach(item => {
+        const title = item.querySelector('.cfg__title').textContent.toUpperCase();
+        const desc = item.querySelector('.cfg__descr').textContent.toUpperCase();
+        const author = item.querySelector('.cfg__author').textContent.toUpperCase();
+
+        if (title.includes(filter) || desc.includes(filter) || author.includes(filter)) {
+            item.classList.remove('hidden-by-search');
+            foundResults = true;
         } else {
-            wrapper.style.display = "none";
+            item.classList.add('hidden-by-search');
         }
     });
 
-    if (!matchFound && input) {
-        notifyUser("No matches found!", "var(--buttonsubmitbg)", true, 3)
+    if (!foundResults) {
+        notifyUser("No results found for '" + input.value + "'", "var(--warn)");
     }
 }
 
-let notificationLock = false;
+function clearSearch() {
+    const input = document.getElementById('searchbar');
+    input.value = '';
+    input.focus();
+    search(); // trigger search to show all items (hacky)
+    document.getElementById('searchClear').classList.remove('visible');
+}
 
 /**
  * Sends a notification at the bottom of the screen for current user
@@ -269,49 +308,91 @@ let notificationLock = false;
  * @param {Number} showDuration 
  * Duration of the notification to be shown in seconds
  */
+const notificationQueue = [];
+let isNotificationShowing = false;
+let notificationCount = 0;
+const notificationMargin = 50;
+
 function notifyUser(textMsg, textColor = "var(--buttonsubmitbg)", lockNotification = false, showDuration = 3) {
-    // Sanity checks
-    if (!textMsg || !textMsg.replace(/\s/g, '').length) {
-        console.log("[Notifications] Tried to send Null/Empty/Undefined text! Stopping...", textMsg);
+    if (!textMsg || !textMsg.replace(/\s/g, '').length) return;
 
-        return;
-    } else if (notificationLock) {
-        console.log("[Notifications] Tried to show a notification but previous notification is still playing. Skipping...");
+    const notifyElement = document.createElement('div');
+    notifyElement.className = 'notification-message';
+    notifyElement.style.color = textColor;
+    notifyElement.innerHTML = textMsg;
+    notifyElement.dataset.id = Date.now();
 
-        return;
-    }
-
-    // Hook the notification element
-    let notifydiv = document.getElementById("nf__popup");
-
-    // Assign the data given from parameters
-    notifydiv.style.color = textColor;
-    notifydiv.innerHTML = textMsg;
-
-    // If lockNotification was set to true, the next notifications will be blocked
     if (lockNotification) {
-        notificationLock = true;
+        notifyElement.classList.add('lock-notification');
     }
 
-    notifydiv.className = "show";
+    const currentPosition = notificationCount * notificationMargin;
+    notifyElement.style.bottom = `${20 + currentPosition}px`;
 
-    // Hook the 'show' class while it exists to assign the animation
-    let $popupshowdiv = $("#nf__popup.show")
-    $popupshowdiv.css('animation', 'fadein 0.5s, fadeout 0.5s ' + showDuration + 's');
+    document.body.appendChild(notifyElement);
+    notificationCount++;
 
-    let timeout_ms = showDuration * 1000 + 300;
+    setTimeout(() => {
+        notifyElement.classList.add('show');
+    }, 10);
 
-    // Clean up and fade out (based on a duration set)
-    setTimeout(function () {
-        notifydiv.className = notifydiv.className.replace("show", "");
-        notificationLock = false;
-        $popupshowdiv.css('animation', 'none');
-    }, timeout_ms);
+    // Deleting the notification after showing
+    setTimeout(() => {
+        notifyElement.classList.remove('show');
+
+        // after animation end
+        setTimeout(() => {
+            notifyElement.remove();
+            notificationCount--;
+            updateNotificationsPosition();
+        }, 500);
+    }, showDuration * 1000);
+}
+
+function updateNotificationsPosition() {
+    const notifications = document.querySelectorAll('.notification-message');
+    notifications.forEach((notify, index) => {
+        notify.style.bottom = `${20 + (index * notificationMargin)}px`;
+    });
+}
+
+function processNotificationQueue() {
+    if (notificationQueue.length === 0) {
+        isNotificationShowing = false;
+        return;
+    }
+
+    isNotificationShowing = true;
+    const notification = notificationQueue.shift();
+
+    // create new element
+    const notifyElement = document.createElement('div');
+    notifyElement.className = 'notification-message';
+    notifyElement.style.color = notification.textColor;
+    notifyElement.innerHTML = notification.textMsg;
+
+    const offset = 60 * document.querySelectorAll('.notification-message').length;
+    notifyElement.style.bottom = `${20 + offset}px`;
+
+    document.body.appendChild(notifyElement);
+
+    setTimeout(() => {
+        notifyElement.classList.add('show');
+    }, 10);
+
+    const timeout = notification.showDuration * 1000;
+    setTimeout(() => {
+        notifyElement.classList.remove('show');
+        setTimeout(() => {
+            notifyElement.remove();
+            processNotificationQueue();
+        }, 500);
+    }, timeout);
 }
 
 // Check if user had a visual config submission before
 if (getCookie("submit") == 'success') {
-    notifyUser("Visual config submitted! It will appear on the website in the next couple days!", "var(--buttonsubmitbg)", true, 7);
+    notifyUser("Visual config submitted! It will appear on the website in 1-6 bussiness days", "var(--buttonsubmitbg)", true, 7);
     eraseCookie("submit");
 } else if (getCookie("submit") == 'fail') {
     notifyUser("Failed to submit your visual config. Please check if everything is right and try again.", "var(--buttonsubmitbg)", true, 7);
@@ -323,6 +404,33 @@ $("#uploadTrigger").click(function () {
     $("#uploadFile").click()
 });
 
+// Toggle sort menu visibility
+function toggleSortMenu() {
+    const menu = document.getElementById('sortMenu');
+    const toggle = document.querySelector('.sort-toggle');
+    menu.classList.toggle('active');
+    toggle.classList.toggle('active');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function (event) {
+    const sortControls = document.querySelector('.sort-controls');
+    if (!sortControls.contains(event.target)) {
+        document.getElementById('sortMenu').classList.remove('active');
+        document.querySelector('.sort-toggle').classList.remove('active');
+    }
+});
+
+// Update shuffle toggle state
+function updateShuffleToggle() {
+    const toggle = document.getElementById('shuffleToggle');
+    if (getCookie("EnableShuffle") == "true") {
+        toggle.classList.add('active');
+    } else {
+        toggle.classList.remove('active');
+    }
+}
+
 function switchrandomizing() {
     if (getCookie("EnableShuffle") == "true") {
         setCookie("EnableShuffle", "false", 365);
@@ -331,7 +439,14 @@ function switchrandomizing() {
         setCookie("EnableShuffle", "true", 365);
         ShuffleVisuals();
     }
+
+    updateShuffleToggle();
 }
+
+// toggle state on load
+document.addEventListener('DOMContentLoaded', function () {
+    updateShuffleToggle();
+});
 
 // Shuffling proccess
 function ShuffleVisuals() {
@@ -345,7 +460,7 @@ function ShuffleVisuals() {
 
         parent.append(divs);
 
-        notifyUser("Shuffling visual configs");
+        notifyUser("Visual config shuffle is enabled! Shuffled configs");
 
     } else {
         setCookie("EnableShuffle", "false", 365)

@@ -50,32 +50,34 @@
                     <img class="wcimg animate__animated animate__fadeInUpBig" src="/media/menus/animemenu.png" alt="">
                 </div>
             </div>
-            <div class="navbar__wrapper">
-                <div class="snowflake"></div>
-                <div class="navbar">
-                    <a href="/" rel="noopener">
+            <div class="navbar">
+                <div class="navbar-links">
+                    <a href="/" rel="noopener" class="nav-link">
+                        <i class="fas fa-box-open"></i>
                         <span class="links_name">Main Page</span>
                     </a>
-                    <a href="/mods/" rel="noopener">
-                        <span class="links_name">Mods Page</span>
-                    </a>
-                    <a href="https://visuals.nullcore.net/dwnl/click.php?id=downloadmaster" rel="noopener">
-                        <span class="links_name">Download All Visuals</span>
-                    </a>
-                    <a href="/guides/">
+                    <a href="/guides/" class="nav-link">
+                        <i class="fas fa-book"></i>
                         <span class="links_name">Guides</span>
                     </a>
-                    <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener">
-                        <span class="links_name">Report an Issue</span>
+                    <a href="https://github.com/harmonyzt/NVV-Site/issues/new/choose" target="_blank" rel="noopener" class="nav-link">
+                        <i class="fas fa-bug"></i>
+                        <span class="links_name">Report Issue</span>
                     </a>
                 </div>
+                
+                <button onclick="switchtheme()" class="theme-toggle">
+                    <i class='bx bxs-moon'></i>
+                    <span class="theme-text">Dark Mode</span>
+                </button>
+
+                <div class="announcement">
+                    <div class="announcetext">
+                        <i class='bx bxs-info-circle'></i>
+                        <span>Website is under maintenance. Expect instability or unavailable features. Visual config submission is up now!</span>
+                    </div>
+                </div>
             </div>
-            <div class="announcement sticky">
-                <div class="announcetext">Website is under maintenance. Expect instability or unavailable features. Visual config submission is up now!</div>
-            </div>
-            <button onclick="switchtheme()" class="theme animate__animated animate__fadeIn">
-                <em class='bx bx-sun'></em>
-            </button>
             <div class="bodywrapper">
                 <div id="progress"></div>
                 <div class="cont">
@@ -152,6 +154,5 @@
             <div class="solid"></div>
     </body>
     <script src="/js/main.js"></script>
-    <script src="/js/snowflakes.js"></script>
 
 </html>
